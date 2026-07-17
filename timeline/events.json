@@ -1,0 +1,304 @@
+[
+  {
+    "d": "2014-11-04",
+    "dl": "Nov 4, 2014",
+    "e": "permit",
+    "cat": "storm",
+    "t": "MassDEP Order of Conditions issued",
+    "x": "Wetlands Protection Act file #5-1127; recorded Bk 33797 Pg 168 (Jan 13, 2015). Sets the perpetual conservation conditions on the site.",
+    "refs": [
+      {
+        "t": "Order of Conditions (23 pp.)",
+        "d": "regulatory/order-of-conditions-2014"
+      }
+    ]
+  },
+  {
+    "d": "2014-11-25",
+    "dl": "Nov 25, 2014",
+    "e": "permit",
+    "cat": "gov",
+    "t": "Planning Board OSRD Site Plan Decision",
+    "x": "Beverly Planning Board approves the Open Space Residential Design subdivision (Bk 33792 Pg 502), with the definitive-subdivision approval (Pg 499) and Special Permit #137-14 allowing a fee in lieu of on-site affordable units (Pg 507) — all recorded 1/12/2015. Plan by Hayes Engineering — Plan No. 73, Plan Book 446.",
+    "refs": [
+      {
+        "t": "OSRD decision",
+        "d": "founding/planning-board-decision-2014"
+      },
+      {
+        "t": "subdivision approval",
+        "d": "founding/subdivision-approval-2014"
+      },
+      {
+        "t": "Special Permit #137-14",
+        "d": "founding/special-permit-fee-in-lieu-2014"
+      },
+      {
+        "t": "the recorded plan",
+        "d": "plans/subdivision-plan-book"
+      }
+    ]
+  },
+  {
+    "d": "2015-12-09",
+    "dl": "Dec 9, 2015",
+    "e": "permit",
+    "cat": "gov",
+    "t": "Founding instruments recorded",
+    "x": "Declaration of Trust (Bk 34576 Pg 486), Covenants & Easements (Pg 477) and Restrictive Covenants (Pg 471) recorded at the Essex South Registry. Developer: DUC Residential LLC / Paul DiBiase; drafted by Brian McGrail.",
+    "refs": [
+      {
+        "t": "Declaration of Trust",
+        "d": "founding/trust-declaration-2015"
+      },
+      {
+        "t": "Covenants & Easements",
+        "d": "founding/covenants-easements-2015"
+      },
+      {
+        "t": "Restrictive Covenants",
+        "d": "founding/restrictive-covenants-2015"
+      },
+      {
+        "t": "Form G covenant",
+        "d": "founding/form-g-covenant-2015"
+      }
+    ]
+  },
+  {
+    "d": "2016-09-16",
+    "dl": "Sep 16, 2016",
+    "e": "dev",
+    "cat": "prop",
+    "t": "Common land deeded to the HOA; First Amendment recorded",
+    "x": "DUC Residential conveys Open Space Parcel C (5.04 ac, 100 Pond View) to the association for $1 (Bk 35266 Pg 472) and, the same day, records the First Amendment to the Trust (Bk 35266 Pg 467): mailbox and mailbox-post maintenance becomes a Trust purpose, with the City bearing no liability for plow/sanding damage. (The amendment surfaced in the 2026-07-17 registry sweep.)",
+    "refs": [
+      {
+        "t": "First Amendment (registry image)",
+        "d": "founding/trust-first-amendment-2016"
+      }
+    ]
+  },
+  {
+    "d": "2017-10-10",
+    "dl": "Oct 10, 2017",
+    "e": "dev",
+    "cat": "storm",
+    "t": "Stormwater Certificate of Compliance issued",
+    "x": "Beverly Conservation Commission issues the WPA Form 8B with seven perpetual On-Going Conditions; recorded Bk 36443 Pg 213 (Dec 29, 2017).",
+    "refs": [
+      {
+        "t": "Certificate of Compliance",
+        "d": "regulatory/certificate-of-compliance-2017"
+      },
+      {
+        "t": "the O&M plan it enforces",
+        "d": "regulatory/stormwater-om-plan"
+      }
+    ]
+  },
+  {
+    "d": "2018-01-03",
+    "dl": "Jan 3, 2018",
+    "e": "takeover",
+    "cat": "gov",
+    "t": "First owner board seated",
+    "x": "The Appointment and Acceptance of Successor Trustees are executed, seating the first five-owner board for a two-year term (instruments recorded at the Registry in early 2018).",
+    "refs": [
+      {
+        "t": "acceptance of trusteeship (recorded)",
+        "d": "governance/trustee-acceptance-successors-2018"
+      }
+    ]
+  },
+  {
+    "d": "2018-02-02",
+    "dl": "Feb–Mar 2018",
+    "e": "takeover",
+    "cat": "gov",
+    "t": "Developer hand-off recorded",
+    "x": "Paul DiBiase's resignation as developer-trustee and the successor-trustee appointments are recorded at the Essex South Registry — control of the association formally passes to the owners.",
+    "refs": [
+      {
+        "t": "developer resignation",
+        "d": "governance/trustee-resignation-developer-2018"
+      },
+      {
+        "t": "successor appointment",
+        "d": "governance/trustee-appointment-successors-2018"
+      },
+      {
+        "t": "acceptance",
+        "d": "governance/trustee-acceptance-successors-2018"
+      }
+    ]
+  },
+  {
+    "d": "2019-04-27",
+    "dl": "Apr 26–30, 2019",
+    "e": "takeover",
+    "cat": "people",
+    "t": "Trustee resignation — #14",
+    "x": "A trustee from #14 resigns from the board; the resignation instrument is recorded at the Registry on April 30, 2019.",
+    "refs": [
+      {
+        "t": "resignation (recorded)",
+        "d": "governance/trustee-resignation-14pv-2019"
+      }
+    ]
+  },
+  {
+    "d": "2019-07-22",
+    "dl": "Jul 22, 2019",
+    "e": "takeover",
+    "cat": "people",
+    "t": "Successor trustee appointed — #11",
+    "x": "A homeowner at #11 is appointed to the vacant trustee seat by per-household vote; the appointment instrument is recorded at the Registry.",
+    "refs": [
+      {
+        "t": "appointment (recorded)",
+        "d": "governance/trustee-appointment-11pv-2019"
+      }
+    ]
+  },
+  {
+    "d": "2019-11-25",
+    "dl": "Nov 25, 2019",
+    "e": "takeover",
+    "cat": "people",
+    "t": "Successor trustee appointed — #6",
+    "x": "A homeowner at #6 is appointed to a second board vacancy with more than 75% owner consent; the appointment instrument is recorded at the Registry in January 2020.",
+    "refs": [
+      {
+        "t": "appointment (recorded 2020)",
+        "d": "governance/trustee-appointment-6pv-2020"
+      }
+    ]
+  },
+  {
+    "d": "2019-10-15",
+    "dl": "Oct 15, 2019",
+    "e": "steady",
+    "cat": "people",
+    "t": "#11 trustee resignation recorded",
+    "x": "The #11 trustee's resignation is eRecorded at the Registry on October 15, 2019 — the same day as that home's sale.",
+    "refs": [
+      {
+        "t": "resignation (eRecorded)",
+        "d": "governance/trustee-resignation-11pv-2020"
+      }
+    ]
+  },
+  {
+    "d": "2021-07-13",
+    "dl": "Jul 13, 2021",
+    "e": "steady",
+    "cat": "storm",
+    "t": "Buffer-zone permitting done right — NOI → Order of Conditions",
+    "x": "A homeowner planning a fenced terraced lawn in the buffer files a Notice of Intent (DEP #5-1341, prepared by Seekamp Environmental; ~600 sq ft of grading, the wetland ~30 ft below the yard). The Commission hears it and issues the Order of Conditions the same evening, 4-0 — and a complete Certificate of Compliance closes the file on an as-built in August 2022. The lane's model example of the buffer-zone process working.",
+    "refs": [
+      {
+        "t": "NOI & Order — minutes excerpt",
+        "d": "regulatory/concom-minutes-2021-07-13-excerpt"
+      },
+      {
+        "t": "Certificate of Compliance — minutes excerpt",
+        "d": "regulatory/concom-minutes-2022-08-02-excerpt"
+      }
+    ]
+  },
+  {
+    "d": "2021-12-07",
+    "dl": "Dec 7, 2021",
+    "e": "steady",
+    "cat": "storm",
+    "t": "After-the-fact filing regularizes completed patio work",
+    "x": "Already-completed patio construction and landscaping at a home on the lane come to the Commission by an after-the-fact Request for Determination of Applicability (filed 11/19/2021). At a special meeting the Commission reviews the permeable construction and the 50-foot No-Build line and issues a Negative 3 Determination with conditions, 4-0 — retroactive approval is possible, but it runs through the same review.",
+    "refs": [
+      {
+        "t": "minutes excerpt",
+        "d": "regulatory/concom-minutes-2021-12-07-excerpt"
+      },
+      {
+        "t": "12/7/2021 city minutes",
+        "u": "https://www.beverlyma.gov/AgendaCenter/ViewFile/Minutes/_12072021-626"
+      }
+    ]
+  },
+  {
+    "d": "2021-11-19",
+    "dl": "Nov 19, 2021",
+    "e": "steady",
+    "cat": "people",
+    "t": "Trustee resignation — #16",
+    "x": "A trustee from #16 resigns from the board; the resignation instrument is recorded at the Registry on November 19, 2021.",
+    "refs": [
+      {
+        "t": "resignation (recorded)",
+        "d": "governance/trustee-resignation-16pv-2022"
+      }
+    ]
+  },
+  {
+    "d": "2022-03-11",
+    "dl": "Mar 2022",
+    "e": "steady",
+    "cat": "people",
+    "t": "Trustee turnover recorded",
+    "x": "Board turnover reaches the record: a #16 trustee's resignation (recorded May 2022) and a successor appointment from #11 (recorded June 2022) at the Registry."
+  },
+  {
+    "d": "2022-07-01",
+    "dl": "FY2023",
+    "e": "steady",
+    "cat": "fin",
+    "t": "Common-parcel assessment goes to $0",
+    "x": "Beverly's assessed value of the 5-acre common parcel (100 Pond View Lane) drops from $75,600 to $0 beginning FY2023 and holds through FY2026 — the association's annual real-estate tax on the open space ends. The assessor database does not state the mechanism of the change.",
+    "refs": [
+      {
+        "t": "assessment history",
+        "d": "plans/assessor-history-100-pond-view"
+      },
+      {
+        "t": "FY2026 card",
+        "d": "plans/assessor-card-100-pond-view-fy2026"
+      },
+      {
+        "t": "a 2018 tax bill",
+        "d": "finances/re-tax-bill-2018-q1"
+      }
+    ]
+  },
+  {
+    "d": "2024-11-26",
+    "dl": "Nov 26, 2024",
+    "e": "steady",
+    "cat": "storm",
+    "t": "Enforcement Order — unpermitted work on the common parcel",
+    "x": "After the Conservation Agent identifies an unpermitted stone retaining wall on the intermittent stream bank and a patio in the buffer zone of the HOA's common parcel, the ConCom issues an Enforcement Order requiring an after-the-fact filing.",
+    "refs": [
+      {
+        "t": "discovery — minutes excerpt",
+        "d": "regulatory/concom-minutes-2024-09-24-excerpt"
+      },
+      {
+        "t": "Enforcement Order — minutes excerpt",
+        "d": "regulatory/concom-minutes-2024-11-26-excerpt"
+      }
+    ]
+  },
+  {
+    "d": "2025-07-01",
+    "dl": "Jul 1, 2025",
+    "e": "treeq",
+    "cat": "storm",
+    "t": "Negative 3 Determination — 100 Pond View",
+    "x": "The ConCom resolves the common-parcel enforcement: the walls, patio, and knotweed management are permitted after the fact, with conditions — including no further alteration of areas under Commission jurisdiction on the parcel.",
+    "refs": [
+      {
+        "t": "minutes excerpt",
+        "d": "regulatory/concom-minutes-2025-07-01-excerpt"
+      }
+    ]
+  }
+]

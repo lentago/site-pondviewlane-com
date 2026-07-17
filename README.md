@@ -28,30 +28,33 @@ the guide copy, and reviews the output; Claude writes the code and the tooling.
 The maintainer is an infrastructure operator, not a software engineer — please
 don't read this repo as a portfolio of one.
 
-## Public-record-only, published through a firewall
+## Public-record-only, and self-contained
 
 Everything here traces to a **public record** (Southern Essex Registry of Deeds,
-City of Beverly filings/minutes, the assessor, MassDEP). The site is generated
-and published **one-way from a private source repository**: a publish tool there
-emits only the public-record subset (documents recorded or publicly filed, the
-public timeline, an explicit attachment allowlist), runs a firewall gate that
-blocks any resident name or private-source material, and pushes the result here.
-Internal association records — meeting minutes, budgets, insurance, vendor
-invoices, correspondence — are **not** public records and never reach this repo.
+City of Beverly filings/minutes, the assessor, MassDEP). This repo is **fully
+self-contained**: it holds its own source — the recorded documents and their
+metadata (`library/`), the public timeline (`timeline/events.json`), and the
+site imagery (`attachments/`) — and a build-time generator turns that source
+into the site's pages. There is no external dependency and no internal
+association material: meeting minutes, budgets, insurance, vendor invoices, and
+correspondence are **not** public records and are simply not here.
 
-Because the content arrives pre-generated, **this repo has no build-time content
-sync** — `npm run build` is a plain `astro build` over the committed content.
+A content-hygiene check (`scripts/check-content.mjs`) guards the invariant — no
+resident names outside the recorded documents, every library document marked as
+a public record, every image on an explicit allowlist.
 
 ## What's here
 
 | Path | Purpose |
 |---|---|
 | `src/content/docs/guides/` | The eight hand-written resident guides — the site's prose (start here, governance, common land, stormwater, wetlands, assessments, records, trees). |
-| `src/content/docs/library/` · `public/library/` | Generated document-library pages and the recorded instruments / city filings they embed (public records). |
-| `src/content/docs/timeline.md` | The generated public-records chronology. |
+| `library/` | **Source of record:** `manifest.json` (document metadata) + `files/` (the recorded instruments / city filings) + `text/` (searchable text extracts). |
+| `timeline/events.json` | **Source:** the public-records chronology, one entry per dated event. |
+| `attachments/` | **Source:** the maps, plans, and diagrams the guides embed (the allowlist the generator publishes). |
+| `scripts/sync-content.mjs` | The build-time generator: turns `library/` + `timeline/` + `attachments/` into the site's content collections + the Ask index. |
+| `scripts/check-content.mjs` | The content-hygiene check (public-record-only invariant). |
 | `src/components/` · `src/pages/` · `src/styles/` | The Ask widget/dock, the report-an-issue form, the footer, and the site styling. |
 | `functions/ask/handler.mjs` | The "Ask" answer Lambda (reference copy; vendored to solidago `modules/ask-lambda`). |
-| `public/ask/rag-index.json` | The client-side retrieval index (guides + public library + timeline). |
 | `Dockerfile` / `nginx.conf` | Packages the built `dist/` into an `nginx` container on port `8080` with a `/health` endpoint for the ALB. |
 | `.github/workflows/deploy.yml` · `ci.yml` | Build → ECR → ECS rollout via OIDC on push to `main`; the PR `Build` gate. |
 
@@ -59,9 +62,13 @@ sync** — `npm run build` is a plain `astro build` over the committed content.
 
 ```bash
 npm install
-npm run build      # → dist/ (static HTML, Pagefind search, no content sync)
+npm run build      # runs the content generator (sync) then astro build → dist/
 npm run preview    # local preview
 ```
+
+The `sync` step (hooked before `dev`/`build`) regenerates the document pages,
+the timeline, and the Ask index from `library/` + `timeline/` + `attachments/`,
+so the generated output isn't committed — the source is. 
 
 Docker copies `dist/` into `nginx` (`:8080`, `/health`); GitHub Actions builds
 the image, pushes it to ECR, and rolls the ECS service via the solidago platform
