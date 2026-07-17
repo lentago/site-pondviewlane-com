@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 592" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif">
+  <title>Who owns and maintains what — private lots (each owner), the public lane (the City), the association's common Parcel C, and a wetland-regulation layer over the resource areas</title>
+  <desc>An ownership schematic, not a map. Three cards show who owns and maintains each part of the neighborhood — the 16 homeowners, the City of Beverly, and the association — and a band below shows that wetland regulation applies on top, whoever owns the land.</desc>
+  <rect width="900" height="592" fill="#fbfaf7"/>
+
+  <text x="450" y="38" text-anchor="middle" font-size="19" font-weight="700" fill="#1f2d24">Who owns — and maintains — what</text>
+  <text x="450" y="59" text-anchor="middle" font-size="12.5" fill="#4a5a4e">Private lots, the public lane, and the association's common parcel — plus a regulatory layer over the wetlands</text>
+
+  <!-- ============ CARD 1 — the homeowners (brown) ============ -->
+  <rect x="30" y="92" width="264" height="326" rx="11" fill="#f6f1ea" stroke="#c39a6f" stroke-width="1.5"/>
+  <path d="M30 103 Q30 92 41 92 L283 92 Q294 92 294 103 L294 140 L30 140 Z" fill="#8a5a2b"/>
+  <text x="162" y="116" text-anchor="middle" font-size="15.5" font-weight="700" fill="#ffffff">The 16 homeowners</text>
+  <text x="162" y="132" text-anchor="middle" font-size="10.5" fill="#ffffff" opacity="0.9">each lot's owner</text>
+  <g font-size="11.5" fill="#4a4032">
+    <text x="46" y="166">Own and maintain their own lot —</text>
+    <text x="46" y="185">the house and the yard.</text>
+    <text x="46" y="223">The recorded lot covenants apply:</text>
+    <text x="46" y="242">architectural approval, use, fencing,</text>
+    <text x="46" y="261">and upkeep rules.</text>
+  </g>
+  <line x1="46" y1="372" x2="278" y2="372" stroke="#c39a6f" stroke-width="1" stroke-dasharray="4 3"/>
+  <g font-size="10.5" font-style="italic" fill="#6b5a42">
+    <text x="46" y="390">the record —</text>
+    <text x="46" y="405">Restrictive Covenants · Bk 34576 Pg 471</text>
+  </g>
+
+  <!-- ============ CARD 2 — the association (green) ============ -->
+  <rect x="318" y="92" width="264" height="326" rx="11" fill="#e8efe9" stroke="#6aa085" stroke-width="1.5"/>
+  <path d="M318 103 Q318 92 329 92 L571 92 Q582 92 582 103 L582 140 L318 140 Z" fill="#2f6b4f"/>
+  <text x="450" y="116" text-anchor="middle" font-size="15.5" font-weight="700" fill="#ffffff">The association</text>
+  <text x="450" y="132" text-anchor="middle" font-size="10.5" fill="#ffffff" opacity="0.9">all 16 owners together · 6.25% share each</text>
+  <g font-size="11.5" fill="#28402f">
+    <text x="334" y="166">Owns Open Space Parcel C —</text>
+    <text x="334" y="185">5.04 ac (100 Pond View), preserved</text>
+    <text x="334" y="204">in a natural state forever, open to</text>
+    <text x="334" y="223">every owner.</text>
+    <text x="334" y="256">Also maintains the stormwater</text>
+    <text x="334" y="275">system (recorded O&amp;M plan) and</text>
+    <text x="334" y="294">the 20-ft emergency access to Ice</text>
+    <text x="334" y="313">House Lane.</text>
+  </g>
+  <line x1="334" y1="372" x2="566" y2="372" stroke="#6aa085" stroke-width="1" stroke-dasharray="4 3"/>
+  <g font-size="10.5" font-style="italic" fill="#4a5a4e">
+    <text x="334" y="390">the record —</text>
+    <text x="334" y="405">Declaration of Trust · Bk 34576 Pg 486</text>
+  </g>
+
+  <!-- ============ CARD 3 — the City (warm grey / pavement) ============ -->
+  <rect x="606" y="92" width="264" height="326" rx="11" fill="#efece5" stroke="#aca592" stroke-width="1.5"/>
+  <path d="M606 103 Q606 92 617 92 L859 92 Q870 92 870 103 L870 140 L606 140 Z" fill="#6f6a5e"/>
+  <text x="738" y="116" text-anchor="middle" font-size="15.5" font-weight="700" fill="#ffffff">City of Beverly</text>
+  <text x="738" y="132" text-anchor="middle" font-size="10.5" fill="#ffffff" opacity="0.9">the public street</text>
+  <g font-size="11.5" fill="#403c34">
+    <text x="622" y="166">Pond View Lane is an accepted</text>
+    <text x="622" y="185">public way.</text>
+    <text x="622" y="223">The City maintains it — plowing and</text>
+    <text x="622" y="242">trash / recycling collection. The</text>
+    <text x="622" y="261">association carries no cost for the</text>
+    <text x="622" y="280">lane, and no fee title to it.</text>
+  </g>
+  <line x1="622" y1="372" x2="854" y2="372" stroke="#aca592" stroke-width="1" stroke-dasharray="4 3"/>
+  <g font-size="10.5" font-style="italic" fill="#5a5448">
+    <text x="622" y="390">the record —</text>
+    <text x="622" y="405">MassDOT Road Inventory: Beverly maintains</text>
+  </g>
+
+  <!-- ============ BAND — the regulatory overlay (water/wetland blue) ============ -->
+  <rect x="30" y="438" width="840" height="130" rx="11" fill="#dcebf0" stroke="#7fb3c4" stroke-width="1.5"/>
+  <path d="M30 449 Q30 438 41 438 L859 438 Q870 438 870 449 L870 482 L30 482 Z" fill="#3f7f96"/>
+  <text x="50" y="466" font-size="14.5" font-weight="700" fill="#ffffff">A regulated layer sits on top — whoever owns the land beneath</text>
+  <g font-size="12" fill="#22485a">
+    <text x="50" y="507">Kelleher Pond (not the association's), the stream and wetland corridor, and the wetland buffer are regulated by the</text>
+    <text x="50" y="527">Beverly Conservation Commission and the state Wetlands Protection Act — those rules apply regardless of who holds title.</text>
+  </g>
+  <text x="50" y="553" font-size="10.5" font-style="italic" fill="#3d5866">the record — Order of Conditions (2014) / MassDEP · Conservation Commission jurisdiction</text>
+</svg>

@@ -1,0 +1,502 @@
+/* Pond View Lane — brand layer over Starlight.
+   Palette: white-pine green (accent), pond blue (links/secondary),
+   limestone cream (light bg). Serif display for an archival feel. */
+
+:root {
+  --pvl-pine: #2f6b4f;
+  --pvl-pine-deep: #1d3a2a;
+  --pvl-pond: #4a90a4;
+  --sl-font-headings: Georgia, 'Times New Roman', serif;
+}
+
+/* accent palette (dark theme) */
+:root {
+  --sl-color-accent-low: #12291d;
+  --sl-color-accent: #2f6b4f;
+  --sl-color-accent-high: #a8d5bf;
+}
+/* accent palette (light theme) */
+:root[data-theme='light'] {
+  --sl-color-accent-low: #d8eadf;
+  --sl-color-accent: #2f6b4f;
+  --sl-color-accent-high: #1d3a2a;
+  --sl-color-bg: #faf8f3;
+  --sl-color-bg-nav: #f4f1e8;
+  --sl-color-bg-sidebar: #f4f1e8;
+}
+
+h1, h2, h3, h4, .site-title {
+  font-family: var(--sl-font-headings);
+  letter-spacing: 0.01em;
+}
+
+/* ---------- home splash ---------- */
+/* Compact hero (2026-07-17): the Ask box is the homepage's real hero.
+   Shrink the pine-mark image (Starlight default: min(70%, 20rem)) and the
+   splash hero's tall padding (default clamps up to 10rem) so the box sits
+   in the first screenful instead of below it. */
+.hero > img { width: min(40%, 8rem); }
+@media (min-width: 50rem) {
+  .hero { padding-block: clamp(1.5rem, calc(0.5rem + 3vmin), 3rem); }
+}
+
+.pvl-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
+  gap: 1rem;
+  margin: 2rem 0;
+}
+.pvl-stat {
+  border: 1px solid var(--sl-color-gray-5);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  text-align: center;
+  background: var(--sl-color-bg-nav);
+}
+.pvl-stat b {
+  display: block;
+  font-size: 1.6rem;
+  font-family: var(--sl-font-headings);
+  color: var(--sl-color-accent-high);
+}
+.pvl-stat span { font-size: 0.85rem; color: var(--sl-color-gray-3); }
+
+/* ---------- home aerial ---------- */
+.pvl-aerial { margin: 2.5rem 0 0.5rem; }
+.pvl-aerial img {
+  width: 100%;
+  border-radius: 0.75rem;
+  border: 1px solid var(--sl-color-gray-5);
+  box-shadow: 0 6px 24px rgb(29 58 42 / 0.18);
+}
+.pvl-aerial figcaption {
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--sl-color-gray-3);
+  margin-top: 0.6rem;
+}
+
+/* ---------- library document pages ---------- */
+.doc-viewer {
+  width: 100%;
+  height: 75vh;
+  border: 1px solid var(--sl-color-gray-5);
+  border-radius: 0.5rem;
+  background: #fff;
+}
+.doc-image {
+  max-width: 100%;
+  border: 1px solid var(--sl-color-gray-5);
+  border-radius: 0.5rem;
+}
+.doc-download { font-size: 0.9rem; }
+/* Phones can't render inline PDFs (iOS shows only page 1, Android often nothing) —
+   swap the embed for a prominent open-in-new-tab button and let the extracted
+   text below carry the page. */
+@media (max-width: 48rem) {
+  iframe.doc-viewer { display: none; }
+  a.doc-download {
+    display: inline-block;
+    padding: 0.6rem 1.1rem;
+    border: 1px solid var(--sl-color-accent);
+    border-radius: 0.4rem;
+    background: var(--sl-color-accent-low);
+    font-size: 1rem;
+    text-decoration: none;
+  }
+}
+.doc-text {
+  max-height: 24rem;
+  overflow: auto;
+  white-space: pre-wrap;
+  font-size: 0.8rem;
+}
+
+/* ---------- full-width feature pages ---------- */
+.pvl-wide .sl-container { max-width: 100% !important; }
+.pvl-wide main { padding-inline: 1rem; }
+
+/* .tl-btn survives the interactive-timeline page's 2026-07-16 retirement —
+   the Ask widget's submit button uses it */
+.tl-btn {
+  border: 1px solid var(--sl-color-gray-5);
+  border-radius: 0.4rem;
+  background: var(--sl-color-bg-nav);
+  color: var(--sl-color-gray-2);
+  font-size: 0.9rem;
+  padding: 0.15rem 0.6rem;
+  cursor: pointer;
+}
+
+/* ---------- ask ---------- */
+#ask-log {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin: 1rem 0;
+}
+#ask-log:empty { margin: 0; }
+.ask-msg {
+  border-radius: 0.6rem;
+  padding: 0.7rem 1rem;
+  max-width: 46rem;
+  font-size: 0.95rem;
+}
+.ask-q { background: var(--sl-color-accent-low); align-self: flex-end; }
+.ask-a { background: var(--sl-color-bg-nav); border: 1px solid var(--sl-color-gray-5); }
+.ask-a p { margin: 0.5rem 0; }
+.ask-a p:first-child { margin-top: 0; }
+.ask-a ul { margin: 0.5rem 0; padding-left: 1.3rem; }
+.ask-a li { margin: 0.2rem 0; }
+.ask-a .sources { font-size: 0.8rem; margin-top: 0.5rem; color: var(--sl-color-gray-3); }
+#ask-form { display: flex; gap: 0.5rem; }
+#ask-input {
+  flex: 1;
+  min-width: 0; /* let it shrink below the input's intrinsic size — keeps 320px screens from overflowing */
+  padding: 0.6rem 0.9rem;
+  border: 1px solid var(--sl-color-gray-5);
+  border-radius: 0.5rem;
+  background: var(--sl-color-bg);
+  color: var(--sl-color-text);
+  font-size: 1rem;
+}
+#ask-input:focus {
+  outline: none;
+  border-color: var(--pvl-pine);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--pvl-pine) 22%, transparent);
+}
+.ask-notice {
+  border: 1px dashed var(--sl-color-gray-4);
+  border-radius: 0.5rem;
+  padding: 0.6rem 0.9rem;
+  font-size: 0.85rem;
+  color: var(--sl-color-gray-3);
+}
+.ask-foot {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 0.6rem;
+}
+.ask-disclaimer {
+  font-size: 0.75rem;
+  color: var(--sl-color-gray-4);
+  margin: 0;
+}
+.ask-clear {
+  flex-shrink: 0;
+  border: 1px solid var(--sl-color-gray-5);
+  border-radius: 999px;
+  background: var(--sl-color-bg-nav);
+  color: var(--sl-color-gray-3);
+  font-size: 0.75rem;
+  padding: 0.2rem 0.7rem;
+  cursor: pointer;
+}
+.ask-clear:hover { color: var(--sl-color-text); border-color: var(--sl-color-gray-4); }
+
+/* "Report an issue" link under every page footer (Footer.astro override) */
+.report-issue {
+  margin-top: 1rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--sl-color-gray-6);
+  font-size: 0.8rem;
+}
+.report-issue a { color: var(--sl-color-gray-3); }
+.report-issue a:hover { color: var(--sl-color-accent-high); }
+
+/* the wetland-proximity map the widget attaches to wetland answers */
+.ask-map { margin: 0.75rem 0 0.25rem; }
+.ask-map img {
+  max-width: 100%;
+  border: 1px solid var(--sl-color-gray-5);
+  border-radius: 0.4rem;
+}
+.ask-map figcaption {
+  font-size: 0.75rem;
+  color: var(--sl-color-gray-3);
+  margin-top: 0.25rem;
+}
+
+/* prominent homepage variant */
+.ask-hero {
+  margin: 1rem 0 2.5rem;
+  padding: 1.5rem 1.6rem 1.3rem;
+  border: 1px solid color-mix(in srgb, var(--pvl-pine) 30%, var(--sl-color-gray-5));
+  border-top: 5px solid var(--pvl-pine);
+  border-radius: 0.9rem;
+  background:
+    radial-gradient(120% 100% at 0% 0%, color-mix(in srgb, var(--pvl-pine) 9%, var(--sl-color-bg-nav)) 0%, var(--sl-color-bg-nav) 60%);
+  box-shadow: 0 6px 24px rgb(29 58 42 / 0.12);
+}
+.ask-hero-head h2 {
+  margin: 0 0 0.35rem;
+  font-size: 1.5rem;
+  background: linear-gradient(92deg, var(--pvl-pine-deep) 20%, var(--pvl-pond) 90%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+:root[data-theme='dark'] .ask-hero-head h2 {
+  background: linear-gradient(92deg, #a8d5bf 15%, #8fd0e8 90%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.ask-hero-head p {
+  margin: 0 0 1rem;
+  font-size: 0.92rem;
+  color: var(--sl-color-gray-2);
+  max-width: 44rem;
+}
+.ask-hero #ask-input { padding: 0.7rem 1rem; font-size: 1.05rem; }
+.ask-hero .tl-btn { padding-inline: 1.3rem; font-size: 1.05rem; }
+
+/* ---------- floating Ask dock (every page without an inline widget) ---------- */
+.ask-float {
+  position: fixed;
+  right: 1.1rem;
+  bottom: 1.1rem;
+  z-index: 40;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.6rem;
+}
+.ask-float .sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+}
+.ask-float-btn {
+  width: 3.4rem;
+  height: 3.4rem;
+  border-radius: 50%;
+  border: 1px solid color-mix(in srgb, var(--pvl-pine-deep) 45%, transparent);
+  background: var(--pvl-pine);
+  color: #fff;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  box-shadow: 0 6px 20px rgb(29 58 42 / 0.35);
+  transition: transform 0.12s, background 0.12s;
+}
+.ask-float-btn:hover { background: var(--pvl-pine-deep); transform: scale(1.06); }
+.ask-float-btn svg { width: 1.6rem; height: 1.6rem; }
+.ask-float-panel {
+  width: min(26rem, calc(100vw - 2rem));
+  max-height: calc(100dvh - 7rem);
+  overflow-y: auto;
+  border: 1px solid color-mix(in srgb, var(--pvl-pine) 30%, var(--sl-color-gray-5));
+  border-top: 4px solid var(--pvl-pine);
+  border-radius: 0.8rem;
+  background: var(--sl-color-bg);
+  box-shadow: 0 12px 40px rgb(0 0 0 / 0.28);
+  padding: 0.8rem 0.95rem;
+}
+.ask-float-head {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  margin-bottom: 0.5rem;
+}
+.ask-float-head strong { flex: 1; font-family: var(--sl-font-headings); font-size: 1rem; }
+.ask-float-full,
+.ask-float-close {
+  border: 0;
+  background: none;
+  color: var(--sl-color-gray-3);
+  font-size: 1.1rem;
+  line-height: 1;
+  cursor: pointer;
+  text-decoration: none;
+  padding: 0.15rem;
+}
+.ask-float-full:hover,
+.ask-float-close:hover { color: var(--sl-color-text); }
+.ask-float-close { font-size: 1.5rem; }
+/* dock-variant widget: the transcript scrolls inside the panel */
+.ask-dock #ask-log {
+  max-height: min(19rem, 45vh);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding-right: 0.2rem;
+}
+.ask-dock .ask-msg { font-size: 0.9rem; }
+@media print { .ask-float { display: none; } }
+
+/* ================= fun-color pass (2026-07-15) ================= */
+
+/* hero title: pine→pond gradient */
+.hero h1 {
+  background: linear-gradient(92deg, var(--pvl-pine-deep) 20%, var(--pvl-pond) 90%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+:root[data-theme='dark'] .hero h1 {
+  background: linear-gradient(92deg, #a8d5bf 15%, #8fd0e8 90%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* stat cards — each its own tint */
+.pvl-stat { border-top: 4px solid var(--c, var(--pvl-pine)); background: color-mix(in srgb, var(--c, var(--pvl-pine)) 8%, var(--sl-color-bg-nav)); }
+.pvl-stat b { color: var(--c, var(--pvl-pine)); }
+:root[data-theme='dark'] .pvl-stat b { color: color-mix(in srgb, var(--c, var(--pvl-pine)) 55%, white); }
+.pvl-stat:nth-child(1) { --c: #2f6b4f; }
+.pvl-stat:nth-child(2) { --c: #4a90a4; }
+.pvl-stat:nth-child(3) { --c: #8a5a2b; }
+.pvl-stat:nth-child(4) { --c: #b08a00; }
+.pvl-stat:nth-child(5) { --c: #946ba4; }
+.pvl-stat:nth-child(6) { --c: #c2622a; }
+
+/* home cards — cycling accent edges + icon tints */
+.card { border-top: 4px solid var(--c, var(--sl-color-gray-5)) !important; }
+.card:nth-child(6n+1) { --c: #2f6b4f; }
+.card:nth-child(6n+2) { --c: #b08a00; }
+.card:nth-child(6n+3) { --c: #3d8b37; }
+.card:nth-child(6n+4) { --c: #8a5a2b; }
+.card:nth-child(6n+5) { --c: #4a90a4; }
+.card:nth-child(6n+6) { --c: #946ba4; }
+.card .icon { color: var(--c) !important; }
+
+/* tinted blockquotes */
+.sl-markdown-content blockquote {
+  border-inline-start-color: var(--pvl-pond);
+  background: color-mix(in srgb, var(--pvl-pond) 7%, transparent);
+  border-radius: 0 0.5rem 0.5rem 0;
+  padding: 0.5rem 1rem;
+}
+
+/* ---------- vertical timeline (the generated /timeline/ page) ----------
+   Sections group by era (neutral chrome); COLOR encodes the event type via
+   the per-item --cat variable set inline by sync-content.mjs. */
+.vtl { margin-top: 1.5rem; }
+.vtl-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin: 0.8rem 0 0.4rem;
+}
+.vtl-key {
+  --cat: var(--pvl-pine);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  border: 1px solid var(--sl-color-gray-5);
+  border-radius: 999px;
+  padding: 0.14rem 0.7rem;
+  background: color-mix(in srgb, var(--cat) 10%, transparent);
+}
+.vtl-key::before {
+  content: '';
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--cat);
+}
+.vtl-era { margin: 2.2rem 0; }
+.vtl-head {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: linear-gradient(90deg, color-mix(in srgb, var(--sl-color-gray-5) 55%, transparent), transparent 70%);
+  border-left: 6px solid var(--sl-color-gray-4);
+  border-radius: 0.5rem;
+  padding: 0.5rem 0.9rem !important;
+  margin: 0 0 1rem !important;
+  border-bottom: none !important;
+}
+.vtl-icon { font-size: 1.35rem; line-height: 1; }
+.vtl-items {
+  position: relative;
+  margin-left: 0.9rem;
+  padding-left: 1.7rem;
+  border-left: 3px solid var(--sl-color-gray-5);
+}
+.vtl-item { --cat: var(--pvl-pine); position: relative; margin: 1rem 0; }
+.vtl-dot {
+  position: absolute;
+  left: calc(-1.7rem - 9px);
+  top: 0.5rem;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: var(--sl-color-bg);
+  border: 4px solid var(--cat);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--cat) 25%, transparent);
+}
+.vtl-card {
+  background: var(--sl-color-bg-nav);
+  border: 1px solid var(--sl-color-gray-5);
+  border-left: 4px solid var(--cat);
+  border-radius: 0.6rem;
+  padding: 0.65rem 1rem;
+  box-shadow: 0 2px 10px rgb(0 0 0 / 0.06);
+  transition: transform 0.12s ease;
+}
+.vtl-card:hover { transform: translateX(3px); }
+.vtl-date {
+  display: inline-block;
+  font-family: var(--sl-font-headings);
+  font-weight: 700;
+  font-size: 0.76rem;
+  letter-spacing: 0.02em;
+  color: #fff;
+  background: var(--cat);
+  padding: 0.12rem 0.65rem;
+  border-radius: 999px;
+  margin-bottom: 0.3rem;
+}
+.vtl-cat {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--cat);
+  margin-left: 0.5rem;
+}
+.vtl-card p { margin: 0.15rem 0 0 !important; font-size: 0.94rem; }
+.vtl-refs {
+  font-size: 0.85rem !important;
+  color: var(--sl-color-gray-3);
+  border-top: 1px dashed var(--sl-color-gray-5);
+  margin-top: 0.5rem !important;
+  padding-top: 0.35rem;
+}
+
+/* ---------- touch ergonomics ---------- */
+/* Chips and small buttons get taller tap targets on touch devices only —
+   desktop keeps the compact look. */
+@media (pointer: coarse) {
+  .tl-btn { padding: 0.45rem 0.8rem; }
+}
+
+/* ---------- table scroll affordance ---------- */
+/* Edge fades signal that a wide table scrolls sideways; toggled by
+   /js/table-fade.js, which wraps overflowing tables in .table-fade. */
+.table-fade { position: relative; }
+.table-fade::before,
+.table-fade::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 2rem;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.15s;
+  z-index: 1;
+}
+.table-fade::before { left: 0; background: linear-gradient(to right, var(--sl-color-bg), transparent); }
+.table-fade::after { right: 0; background: linear-gradient(to left, var(--sl-color-bg), transparent); }
+.table-fade.fade-l::before { opacity: 1; }
+.table-fade.fade-r::after { opacity: 1; }

@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 430" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif">
+  <title>The wetland buffer bands — 25-foot no-disturbance, 50-foot no-build, 100-foot Conservation Commission jurisdiction</title>
+  <rect width="900" height="430" fill="#fbfaf7"/>
+
+  <!-- ground line -->
+  <rect x="40" y="300" width="820" height="6" fill="#8a5a2b" opacity="0.5"/>
+
+  <!-- bands (measured from wetland edge at x=780 leftward; 1 ft = 5.2 px) -->
+  <!-- beyond 100 ft -->
+  <rect x="40" y="120" width="220" height="180" fill="#e8efe9"/>
+  <!-- 50-100 buffer -->
+  <rect x="260" y="120" width="260" height="180" fill="#d3e4d6"/>
+  <!-- 25-50 no-build -->
+  <rect x="520" y="120" width="130" height="180" fill="#b9d4be"/>
+  <!-- 0-25 no-disturb -->
+  <rect x="650" y="120" width="130" height="180" fill="#93bd9d"/>
+  <!-- wetland -->
+  <rect x="780" y="120" width="80" height="180" fill="#9ec4d8"/>
+  <path d="M780 300 q20 -8 40 0 t40 0 v6 h-80 z" fill="#4a90a4"/>
+
+  <!-- band boundary lines -->
+  <line x1="780" y1="100" x2="780" y2="306" stroke="#2f6b4f" stroke-width="2.5"/>
+  <line x1="650" y1="130" x2="650" y2="306" stroke="#2f6b4f" stroke-width="1.5" stroke-dasharray="6 4"/>
+  <line x1="520" y1="130" x2="520" y2="306" stroke="#2f6b4f" stroke-width="1.5" stroke-dasharray="6 4"/>
+  <line x1="260" y1="130" x2="260" y2="306" stroke="#2f6b4f" stroke-width="1.5" stroke-dasharray="2 4"/>
+
+  <!-- house on upland side -->
+  <g>
+    <rect x="80" y="240" width="110" height="60" fill="#f3efe6" stroke="#6b6b6b" stroke-width="1.5"/>
+    <path d="M70 240 L135 200 L200 240 Z" fill="#a04f3f" stroke="#6b6b6b" stroke-width="1.5"/>
+    <rect x="122" y="266" width="26" height="34" fill="#6b6b6b"/>
+  </g>
+
+  <!-- trees -->
+  <g fill="#2f6b4f">
+    <path d="M330 300 l16 -52 l16 52 z"/><rect x="343" y="300" width="6" height="0"/>
+    <path d="M330 268 l16 -44 l16 44 z"/>
+    <path d="M420 300 l14 -46 l14 46 z"/><path d="M420 272 l14 -38 l14 38 z"/>
+    <path d="M560 300 l15 -50 l15 50 z"/><path d="M560 270 l15 -42 l15 42 z"/>
+    <path d="M690 300 l16 -54 l16 54 z"/><path d="M690 268 l16 -46 l16 46 z"/>
+  </g>
+  <!-- cattails in wetland -->
+  <g stroke="#2f6b4f" stroke-width="2.5" fill="none">
+    <line x1="800" y1="300" x2="800" y2="262"/><line x1="816" y1="300" x2="816" y2="255"/>
+    <line x1="832" y1="300" x2="832" y2="266"/>
+  </g>
+  <g fill="#8a5a2b">
+    <rect x="797" y="252" width="6" height="14" rx="3"/><rect x="813" y="245" width="6" height="14" rx="3"/>
+    <rect x="829" y="256" width="6" height="14" rx="3"/>
+  </g>
+
+  <!-- no-disturb marker post -->
+  <g>
+    <rect x="646" y="236" width="8" height="64" fill="#8a5a2b"/>
+    <rect x="628" y="222" width="44" height="20" rx="3" fill="#fdf7e3" stroke="#8a5a2b" stroke-width="1.5"/>
+    <text x="650" y="236" font-size="11" text-anchor="middle" fill="#6b3d1f">⚠</text>
+  </g>
+
+  <!-- distance arrows -->
+  <g stroke="#44403a" stroke-width="1.2" fill="#44403a" font-size="13">
+    <line x1="650" y1="330" x2="780" y2="330"/>
+    <text x="715" y="348" text-anchor="middle">25 ft</text>
+    <line x1="520" y1="330" x2="650" y2="330" stroke-dasharray="3 3"/>
+    <text x="585" y="348" text-anchor="middle">50 ft</text>
+    <line x1="260" y1="330" x2="520" y2="330" stroke-dasharray="1 3"/>
+    <text x="390" y="348" text-anchor="middle">100 ft</text>
+  </g>
+
+  <!-- band labels -->
+  <g font-size="13.5" fill="#1f2d24">
+    <text x="150" y="145" text-anchor="middle" font-weight="600">Outside</text>
+    <text x="150" y="162" text-anchor="middle" font-weight="600">jurisdiction</text>
+    <text x="150" y="181" text-anchor="middle" font-size="12" fill="#4a5a4e">(wetland rules end;</text>
+    <text x="150" y="196" text-anchor="middle" font-size="12" fill="#4a5a4e">covenants still apply)</text>
+    <text x="390" y="145" text-anchor="middle" font-weight="600">Buffer zone</text>
+    <text x="390" y="163" text-anchor="middle" font-size="12" fill="#33463a">Conservation Commission</text>
+    <text x="390" y="178" text-anchor="middle" font-size="12" fill="#33463a">review (RDA / NOI) to cut,</text>
+    <text x="390" y="193" text-anchor="middle" font-size="12" fill="#33463a">grade, or clear</text>
+    <text x="390" y="212" text-anchor="middle" font-size="11.5" fill="#33463a" font-style="italic">no herbicides / pesticides /</text>
+    <text x="390" y="226" text-anchor="middle" font-size="11.5" fill="#33463a" font-style="italic">sodium ice-melt anywhere ≤100 ft</text>
+    <text x="585" y="145" text-anchor="middle" font-weight="600">No-Build</text>
+    <text x="585" y="163" text-anchor="middle" font-size="12" fill="#2d4033">city ordinance</text>
+    <text x="585" y="178" text-anchor="middle" font-size="12" fill="#2d4033">bars construction</text>
+    <text x="715" y="145" text-anchor="middle" font-weight="600">No-Disturbance</text>
+    <text x="715" y="163" text-anchor="middle" font-size="12" fill="#24382b">no activity or</text>
+    <text x="715" y="178" text-anchor="middle" font-size="12" fill="#24382b">structures at all</text>
+    <text x="715" y="196" text-anchor="middle" font-size="11.5" font-style="italic" fill="#24382b">marked boundary posts</text>
+    <text x="820" y="145" text-anchor="middle" font-weight="600" fill="#173242">Wetland</text>
+    <text x="820" y="162" text-anchor="middle" font-size="12" fill="#2d4c5e">resource</text>
+    <text x="820" y="177" text-anchor="middle" font-size="12" fill="#2d4c5e">area</text>
+  </g>
+
+  <!-- title + caption -->
+  <text x="450" y="46" text-anchor="middle" font-size="19" font-weight="700" fill="#1f2d24">The regulated bands around a wetland edge</text>
+  <text x="450" y="68" text-anchor="middle" font-size="13" fill="#4a5a4e">Wetlands Protection Act (M.G.L. c.131 §40) + Beverly ordinance ch. 287 — distances from the surveyed wetland line</text>
+  <text x="450" y="395" text-anchor="middle" font-size="12" fill="#6b6b63" font-style="italic">Schematic, not to scale. The authoritative wetland line for the neighborhood is the surveyed delineation on Plan Book 446/73, Sheet 8.</text>
+</svg>

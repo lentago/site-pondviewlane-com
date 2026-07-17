@@ -1,0 +1,792 @@
+---
+title: "Order of Conditions (WPA Form 5) — DEP #5-1127"
+description: "Stormwater & Regulatory · 2014-11-04"
+sidebar:
+  order: 1
+---
+
+<iframe src="/library/regulatory/order-of-conditions-2014.pdf" title="Order of Conditions (WPA Form 5) — DEP #5-1127" class="doc-viewer" loading="lazy"></iframe>
+
+<a class="doc-download" href="/library/regulatory/order-of-conditions-2014.pdf" target="_blank" rel="noopener">Open PDF in a new tab ↗</a>
+<script>(function(){var m=location.hash.match(/^#page=(\d+)$/);if(!m)return;var f=document.querySelector('iframe.doc-viewer');if(f)f.src=f.getAttribute('src').split('#')[0]+'#page='+m[1];var a=document.querySelector('a.doc-download');if(a)a.href=a.getAttribute('href').split('#')[0]+'#page='+m[1];})()</script>
+
+| | |
+|---|---|
+| **Date** | 2014-11-04 |
+| **Category** | Stormwater & Regulatory |
+| **Status** | Public record — recorded or publicly filed |
+| **Recording** | Bk 33797 Pg 168 (rec. 1/13/2015) |
+| **Pages** | 23 |
+| **Size** | 2.2 MB |
+| **Notes** | Pulled from the Southern Essex Registry (salemdeeds.com) 2026-07-15 — closes the wiki's longest-standing records gap. 23-page registry scan (no text layer): WPA Form 5 with general conditions pp. 1–12; Beverly ConCom Findings pp. 13–15 (lots with wetland resources: 7, 8, 9, 13, 14, 15 & 16; 25-ft No-Disturb-Zone partial waiver for roadway-shoulder grading and the level spreader); Special & Standard Conditions pp. 16–23 (¶3 on p. 16 is the origin of the 25-ft NDZ marker duty the 2017 Certificate of Compliance carried forward in perpetuity). |
+
+<details>
+<summary>Extracted text (searchable)</summary>
+<pre class="doc-text">ORDER OF CONDITIONS (WPA FORM 5) — MassDEP File #5-1127
+Registry stamp: 2015011300320 Bk:33797 Pg:168, 01/13/2015 01:59 CONDN Pg 1/23
+23-page recorded instrument: WPA Form 5 (pp. 1–11), List of Approved Plans (p. 12),
+Beverly Conservation Commission Findings (pp. 13–15), Beverly Conservation Commission
+Special &amp; Standard Conditions (pp. 16–23).
+
+================================================================
+Massachusetts Department of Environmental Protection
+Bureau of Resource Protection - Wetlands
+WPA Form 5 — Order of Conditions
+Massachusetts Wetlands Protection Act M.G.L. c. 131, §40
+
+Provided by MassDEP: 5-1127 (MassDEP File #). City/Town: Beverly
+
+A. General Information
+
+1. From: Beverly Conservation Commission
+2. This issuance is for (check one): [X] a. Order of Conditions  [ ] b. Amended Order of Conditions
+3. To: Applicant: Paul DiBiase, DUC Residential, LLC, P.O. Box 780, Lynnfield, MA 01940
+4. Property Owner (if different from applicant): Walker Realty, LLC, 2 Lan Drive, Westford, MA 01886
+5. Project Location: Essex Street (#232 Essex Street &amp; off Ice House Lane), Beverly;
+   Assessors Map/Plat Number: Map 44; Parcel/Lot Number: Lot 31
+   Latitude and Longitude, if known: 42d34m00Ns / 70d55m56Ws
+6. Property recorded at the Registry of Deeds for: Essex County; Book 27973, Page 299
+7. Dates: Date Notice of Intent Filed: July 10, 2014; Date Public Hearing Closed: October 12, 2014;
+   Date of Issuance: November 4, 2014
+8. Final Approved Plans and Other Documents: See Attached List of Approved Plans &amp; Other Documents
+
+B. Findings
+
+1. Findings pursuant to the Massachusetts Wetlands Protection Act:
+   Following the review of the above-referenced Notice of Intent and based on the information
+   provided in this application and presented at the public hearing, this Commission finds that
+   the areas in which work is proposed is significant to the following interests of the Wetlands
+   Protection Act (the Act). Check all that apply:
+   a. [X] Public Water Supply   b. [ ] Land Containing Shellfish   c. [X] Prevention of Pollution
+   d. [X] Private Water Supply  e. [X] Fisheries                   f. [X] Protection of Wildlife Habitat
+   g. [X] Groundwater Supply    h. [X] Storm Damage Prevention     i. [X] Flood Control
+
+2. This Commission hereby finds the project, as proposed, is: (check one of the following boxes)
+   Approved subject to:
+   a. [X] the following conditions which are necessary in accordance with the performance
+   standards set forth in the wetlands regulations. This Commission orders that all work shall
+   be performed in accordance with the Notice of Intent referenced above, the following
+   General Conditions, and any other special conditions attached to this Order. To the extent
+   that the following conditions modify or differ from the plans, specifications, or other
+   proposals submitted with the Notice of Intent, these conditions shall control.
+
+   Denied because:
+   b. [ ] the proposed work cannot be conditioned to meet the performance standards set forth
+   in the wetland regulations. [...]
+   c. [ ] the information submitted by the applicant is not sufficient to describe the site, the work,
+   or the effect of the work on the interests identified in the Wetlands Protection Act. [...]
+
+3. [X] Buffer Zone Impacts: Shortest distance between limit of project disturbance and the
+   wetland resource area specified in 310 CMR 10.02(1)(a): 5+/- linear feet
+
+   Inland Resource Area Impacts (4–9): none checked (Bank; Bordering Vegetated Wetland;
+   Land Under Waterbodies and Waterways; Bordering Land Subject to Flooding; Isolated Land
+   Subject to Flooding; Riverfront Area — all blank).
+   Coastal Resource Area Impacts (10–21): none checked.
+   22. [ ] Restoration/Enhancement; 23. [ ] Stream Crossing(s): blank.
+
+C. General Conditions Under Massachusetts Wetlands Protection Act
+(The following conditions are only applicable to Approved projects.)
+
+1. Failure to comply with all conditions stated herein, and with all related statutes and other
+   regulatory measures, shall be deemed cause to revoke or modify this Order.
+2. The Order does not grant any property rights or any exclusive privileges; it does not
+   authorize any injury to private property or invasion of private rights.
+3. This Order does not relieve the permittee or any other person of the necessity of complying
+   with all other applicable federal, state, or local statutes, ordinances, bylaws, or regulations.
+4. The work authorized hereunder shall be completed within three years from the date of this
+   Order unless either of the following apply:
+   a. the work is a maintenance dredging project as provided for in the Act; or
+   b. the time for completion has been extended to a specified date more than three years,
+      but less than five years, from the date of issuance. If this Order is intended to be valid
+      for more than three years, the extension date and the special circumstances warranting
+      the extended time period are set forth as a special condition in this Order.
+5. This Order may be extended by the issuing authority for one or more periods of up to three
+   years each upon application to the issuing authority at least 30 days prior to the expiration
+   date of the Order.
+6. If this Order constitutes an Amended Order of Conditions, this Amended Order of
+   Conditions does not extend the issuance date of the original Final Order of Conditions and
+   the Order will expire on [blank] unless extended in writing by the Department.
+7. Any fill used in connection with this project shall be clean fill. Any fill shall contain no trash,
+   refuse, rubbish, or debris, including but not limited to lumber, bricks, plaster, wire, lath,
+   paper, cardboard, pipe, tires, ashes, refrigerators, motor vehicles, or parts of any of the
+   foregoing.
+8. This Order is not final until all administrative appeal periods from this Order have elapsed,
+   or if such an appeal has been taken, until all proceedings before the Department have been
+   completed.
+9. No work shall be undertaken until the Order has become final and then has been recorded
+   in the Registry of Deeds or the Land Court for the district in which the land is located, within
+   the chain of title of the affected property. In the case of recorded land, the Final Order shall
+   also be noted in the Registry's Grantor Index under the name of the owner of the land upon
+   which the proposed work is to be done. In the case of the registered land, the Final Order
+   shall also be noted on the Land Court Certificate of Title of the owner of the land upon
+   which the proposed work is done. The recording information shall be submitted to the
+   Conservation Commission on the form at the end of this Order, which form must be
+   stamped by the Registry of Deeds, prior to the commencement of work.
+10. A sign shall be displayed at the site not less then two square feet or more than three
+    square feet in size bearing the words, "Massachusetts Department of Environmental
+    Protection" [or, "MassDEP"] "File Number 5-1127"
+11. Where the Department of Environmental Protection is requested to issue a Superseding
+    Order, the Conservation Commission shall be a party to all agency proceedings and
+    hearings before MassDEP.
+12. Upon completion of the work described herein, the applicant shall submit a Request for
+    Certificate of Compliance (WPA Form 8A) to the Conservation Commission.
+13. The work shall conform to the plans and special conditions referenced in this order.
+14. Any change to the plans identified in Condition #13 above shall require the applicant to
+    inquire of the Conservation Commission in writing whether the change is significant enough
+    to require the filing of a new Notice of Intent.
+15. The Agent or members of the Conservation Commission and the Department of
+    Environmental Protection shall have the right to enter and inspect the area subject to this
+    Order at reasonable hours to evaluate compliance with the conditions stated in this Order,
+    and may require the submittal of any data deemed necessary by the Conservation
+    Commission or Department for that evaluation.
+16. This Order of Conditions shall apply to any successor in interest or successor in control of
+    the property subject to this Order and to any contractor or other person performing work
+    conditioned by this Order.
+17. Prior to the start of work, and if the project involves work adjacent to a Bordering Vegetated
+    Wetland, the boundary of the wetland in the vicinity of the proposed work area shall be
+    marked by wooden stakes or flagging. Once in place, the wetland boundary markers shall
+    be maintained until a Certificate of Compliance has been issued by the Conservation
+    Commission.
+18. All sedimentation barriers shall be maintained in good repair until all disturbed areas have
+    been fully stabilized with vegetation or other means. At no time shall sediments be
+    deposited in a wetland or water body. During construction, the applicant or his/her designee
+    shall inspect the erosion controls on a daily basis and shall remove accumulated sediments
+    as needed. The applicant shall immediately control any erosion problems that occur at the
+    site and shall also immediately notify the Conservation Commission, which reserves the
+    right to require additional erosion and/or damage prevention controls it may deem
+    necessary. Sedimentation barriers shall serve as the limit of work unless another limit of
+    work line has been approved by this Order.
+
+    NOTICE OF STORMWATER CONTROL AND MAINTENANCE REQUIREMENTS
+
+19. The work associated with this Order (the "Project") is (1) [X] is not (2) [ ] subject to the
+    Massachusetts Stormwater Standards. If the work is subject to the Stormwater Standards,
+    then the project is subject to the following conditions:
+    a) All work, including site preparation, land disturbance, construction and redevelopment,
+       shall be implemented in accordance with the construction period pollution prevention and
+       erosion and sedimentation control plan and, if applicable, the Stormwater Pollution
+       Prevention Plan required by the National Pollution Discharge Elimination System
+       Construction General Permit as required by Stormwater Condition 8. Construction period
+       erosion, sedimentation and pollution control measures and best management practices
+       (BMPs) shall remain in place until the site is fully stabilized.
+    b) No stormwater runoff may be discharged to the post-construction stormwater BMPs
+       unless and until a Registered Professional Engineer provides a Certification that:
+       i. all construction period BMPs have been removed or will be removed by a date certain
+       specified in the Certification. For any construction period BMPs intended to be converted
+       to post construction operation for stormwater attenuation, recharge, and/or treatment, the
+       conversion is allowed by the MassDEP Stormwater Handbook BMP specifications and that
+       the BMP has been properly cleaned or prepared for post construction operation, including
+       removal of all construction period sediment trapped in inlet and outlet control structures;
+       ii. as-built final construction BMP plans are included, signed and stamped by a Registered
+       Professional Engineer, certifying the site is fully stabilized;
+       iii. any illicit discharges to the stormwater management system have been removed, as per
+       the requirements of Stormwater Standard 10;
+       iv. all post-construction stormwater BMPs are installed in accordance with the plans
+       (including all planting plans) approved by the issuing authority, and have been inspected to
+       ensure that they are not damaged and that they are in proper working condition;
+       v. any vegetation associated with post-construction BMPs is suitably established to
+       withstand erosion.
+    c) The landowner is responsible for BMP maintenance until the issuing authority is notified
+       that another party has legally assumed responsibility for BMP maintenance. Prior to
+       requesting a Certificate of Compliance, or Partial Certificate of Compliance, the responsible
+       party (defined in General Condition 18(e)) shall execute and submit to the issuing authority
+       an Operation and Maintenance Compliance Statement ("O&amp;M Statement) for the
+       Stormwater BMPs identifying the party responsible for implementing the stormwater BMP
+       Operation and Maintenance Plan ("O&amp;M Plan") and certifying the following: i.) the O&amp;M
+       Plan is complete and will be implemented upon receipt of the Certificate of Compliance,
+       and ii.) the future responsible parties shall be notified in writing of their ongoing legal
+       responsibility to operate and maintain the stormwater management BMPs and implement
+       the Stormwater Pollution Prevention Plan.
+    d) Post-construction pollution prevention and source control shall be implemented in
+       accordance with the long-term pollution prevention plan section of the approved
+       Stormwater Report and, if applicable, the Stormwater Pollution Prevention Plan required by
+       the National Pollution Discharge Elimination System Multi-Sector General Permit.
+    e) Unless and until another party accepts responsibility, the landowner, or owner of any
+       drainage easement, assumes responsibility for maintaining each BMP. To overcome this
+       presumption, the landowner of the property must submit to the issuing authority a legally
+       binding agreement of record, acceptable to the issuing authority, evidencing that another
+       entity has accepted responsibility for maintaining the BMP, and that the proposed
+       responsible party shall be treated as a permittee for purposes of implementing the
+       requirements of Conditions 18(f) through 18(k) with respect to that BMP. Any failure of the
+       proposed responsible party to implement the requirements of Conditions 18(f) through
+       18(k) with respect to that BMP shall be a violation of the Order of Conditions or Certificate
+       of Compliance. In the case of stormwater BMPs that are serving more than one lot, the
+       legally binding agreement shall also identify the lots that will be serviced by the stormwater
+       BMPs. A plan and easement deed that grants the responsible party access to perform the
+       required operation and maintenance must be submitted along with the legally binding
+       agreement.
+    f) The responsible party shall operate and maintain all stormwater BMPs in accordance
+       with the design plans, the O&amp;M Plan, and the requirements of the Massachusetts
+       Stormwater Handbook.
+    g) The responsible party shall:
+       1. Maintain an operation and maintenance log for the last three (3) consecutive
+          calendar years of inspections, repairs, maintenance and/or replacement of the
+          stormwater management system or any part thereof, and disposal (for disposal the
+          log shall indicate the type of material and the disposal location);
+       2. Make the maintenance log available to MassDEP and the Conservation
+          Commission ("Commission") upon request; and
+       3. Allow members and agents of the MassDEP and the Commission to enter and
+          inspect the site to evaluate and ensure that the responsible party is in compliance
+          with the requirements for each BMP established in the O&amp;M Plan approved by the
+          issuing authority.
+    h) All sediment or other contaminants removed from stormwater BMPs shall be disposed
+       of in accordance with all applicable federal, state, and local laws and regulations.
+    i) Illicit discharges to the stormwater management system as defined in 310 CMR 10.04
+       are prohibited.
+    j) The stormwater management system approved in the Order of Conditions shall not be
+       changed without the prior written approval of the issuing authority.
+    k) Areas designated as qualifying pervious areas for the purpose of the Low Impact Site
+       Design Credit (as defined in the MassDEP Stormwater Handbook, Volume 3, Chapter 1,
+       Low Impact Development Site Design Credits) shall not be altered without the prior written
+       approval of the issuing authority.
+    l) Access for maintenance, repair, and/or replacement of BMPs shall not be withheld.
+       Any fencing constructed around stormwater BMPs shall include access gates and shall be
+       at least six inches above grade to allow for wildlife passage.
+
+    Special Conditions: [blank on the form — see the attached Beverly Conservation
+    Commission Findings and Special &amp; Standard Conditions]
+
+D. Findings Under Municipal Wetlands Bylaw or Ordinance
+
+1. Is a municipal wetlands bylaw or ordinance applicable? [X] Yes [ ] No
+2. The Beverly Conservation Commission hereby finds (check one that applies):
+   a. [ ] that the proposed work cannot be conditioned to meet the standards set forth in a
+      municipal ordinance or bylaw [...]
+   b. [X] that the following additional conditions are necessary to comply with a municipal
+      ordinance or bylaw: Beverly Wetlands Protection Ordinance &amp; Regulations, Art. XXXVII
+      et. seq.
+3. The Commission orders that all work shall be performed in accordance with the following
+   conditions and with the Notice of Intent referenced above. To the extent that the following
+   conditions modify or differ from the plans, specifications, or other proposals submitted with
+   the Notice of Intent, the conditions shall control.
+   The special conditions relating to municipal ordinance or bylaw are as follows:
+   Beverly Conservation Commission Findings (see attached)
+   Beverly Conservation Commission Special &amp; Standard Conditions (see attahced) [sic]
+
+E. Signatures
+
+This Order is valid for three years, unless otherwise specified as a special condition pursuant
+to General Conditions #4, from the date of issuance. 1. Date of Issuance: 11/4/2014
+2. Number of Signers: 5
+Signatures: [five signatures; largely illegible — one reads Anthony Paluzzi]
+[X] by certified mail, return receipt requested, on November 4, 2014
+
+F. Appeals
+
+The applicant, the owner, any person aggrieved by this Order, any owner of land abutting the
+land subject to this Order, or any ten residents of the city or town in which such land is located,
+are hereby notified of their right to request the appropriate MassDEP Regional Office to issue a
+Superseding Order of Conditions. The request must be made by certified mail or hand delivery
+to the Department, with the appropriate filing fee and a completed Request of Departmental
+Action Fee Transmittal Form, as provided in 310 CMR 10.03(7) within ten business days from
+the date of issuance of this Order. A copy of the request shall at the same time be sent by
+certified mail or hand delivery to the Conservation Commission and to the applicant, if he/she is
+not the appellant.
+
+Any appellants seeking to appeal the Department's Superseding Order associated with this
+appeal will be required to demonstrate prior participation in the review of this project. Previous
+participation in the permit proceeding means the submission of written information to the
+Conservation Commission prior to the close of the public hearing, requesting a Superseding
+Order, or providing written information to the Department prior to issuance of a Superseding
+Order.
+
+The request shall state clearly and concisely the objections to the Order which is being
+appealed and how the Order does not contribute to the protection of the interests identified in
+the Massachusetts Wetlands Protection Act (M.G.L. c. 131, § 40), and is inconsistent with the
+wetlands regulations (310 CMR 10.00). To the extent that the Order is based on a municipal
+ordinance or bylaw, and not on the Massachusetts Wetlands Protection Act or regulations, the
+Department has no appellate jurisdiction.
+
+================================================================
+List of Approved Plans &amp; Other Documents
+232 Essex Street &amp; Off Ice House Lane, Map 44 Lot 31
+DEP File #5-1127
+
+1. OSRD Site &amp; Index Plan Essex Crossing Beverly, Mass. Index Sheet 1 of 1, Sheet 1 of 11,
+   prepared by Hayes Engineering, Inc., stamped and signed by Peter Ogren, Scale 1"=100',
+   dated September 30, 2014;
+2. OSRD Site &amp; Definitive Plan Essex Crossing Beverly, Mass. Definitive Sheet 1 of 2, Sheet 2
+   of 11, prepared by Hayes Engineering, Inc., stamped and signed by Thomas Winslow, Scale
+   1"=40', dated September 30, 2014;
+3. OSRD Site &amp; Definitive Plan Essex Crossing Beverly, Mass. Definitive Sheet 2 of 2, Sheet 3
+   of 11, prepared by Hayes Engineering, Inc., stamped and signed by Thomas Winslow, Scale
+   1"=40', dated September 30, 2014;
+4. OSRD Site &amp; Existing Conditions Plan Essex Crossing Beverly, Mass. Existing Sheet 1 of 2,
+   Sheet 4 of 11, prepared by Hayes Engineering, Inc., stamped and signed by Peter Ogren,
+   Scale 1"=40', dated September 30, 2014;
+5. OSRD Site &amp; Existing Conditions Plan Essex Crossing Beverly, Mass. Existing Sheet 2 of 2,
+   Sheet 5 of 11, prepared by Hayes Engineering, Inc., stamped and signed by Peter Ogren,
+   Scale 1"=40', dated September 30, 2014;
+6. OSRD Site &amp; Definitive Plan &amp; Profile Essex Crossing Beverly, Mass. Profile Sheet 1 of 1,
+   Sheet 6 of 11, prepared by Hayes Engineering, Inc., stamped and signed by Peter Ogren,
+   Scale 1"=40' (Hor) &amp; 4' (Vert), dated September 30, 2014;
+7. OSRD Site &amp; Topographic Plan Essex Crossing Beverly, Mass. Topographic Sheet 1 of 2,
+   Sheet 7 of 11, prepared by Hayes Engineering, Inc., stamped and signed by Peter Ogren and
+   James Emmanuel, Scale 1"=40', dated September 30, 2014;
+8. OSRD Site &amp; Topographic Plan Essex Crossing Beverly, Mass. Topographic Sheet 2 of 2,
+   Sheet 8 of 11, prepared by Hayes Engineering, Inc., stamped and signed by Peter Ogren and
+   James Emmanuel, Scale 1"=40', dated September 30, 2014;
+9. OSRD Site &amp; Utility Plan Essex Crossing Beverly, Mass. Utility Sheet 1 of 1, Sheet 9 of 11,
+   prepared by Hayes Engineering, Inc., stamped and signed by Peter Ogren, Scale 1"=40',
+   dated September 30, 2014;
+10. OSRD Site &amp; Detail Sheet Essex Crossing Beverly, Mass. Detail Sheet 1 of 2, Sheet 10 of
+    11, prepared by Hayes Engineering, Inc., stamped and signed by Peter Ogren, Scale 1"=as
+    shown, dated September 30, 2014;
+11. OSRD Site &amp; Detail Sheet Essex Crossing Beverly, Mass. Detail Sheet 2 of 2, Sheet 11 of
+    11, prepared by Hayes Engineering, Inc., stamped and signed by Peter Ogren, Scale 1"=as
+    shown, dated September 30, 2014;
+12. Revised Mitigative Drainage Study Essex Crossing Beverly, Massachusetts, prepare [sic] by
+    Hayes Engineering, Inc., Revised September 2, 2014;
+13. OSRD Site &amp; Existing Watershed Map Essex Crossing Beverly, Mass., Watershed Sheet 1
+    of 2, prepared by Hayes Engineering, Inc., scale 1"=60' dated September 5, 2014;
+14. OSRD Site &amp; Proposed Watershed Map Essex Crossing Beverly, Mass., Watershed Sheet 2
+    of 2, prepared by Hayes Engineering, Inc., scale 1"=60' dated September 5, 2014;
+
+================================================================
+City of Beverly Conservation Commission
+FINDINGS
+
+DEP FILE #: 5-1127
+APPLICANT: Paul DiBiase, DiBiase Corporation
+OWNER: Walker Realty LLC
+PROJECT LOCATION: Essex Street (#232 Essex Street &amp; off Ice House Lane), Map 44
+Lot 31, Beverly, MA 01915
+
+Project Description: This Order governs the construction of a subdivision roadway to
+service a 16-lot OSRD residential subdivision, with associated grading, utility and
+stormwater management BMP installation, as well as the following Lots in the subdivision
+which contain wetland resources and/or buffer zones: 7, 8, 9, 13, 14, 15, &amp; 16. Work to
+take place within the 100-foot buffer zone to bordering vegetated wetland and bank of
+pond.
+
+1. The Conservation Commission finds that the site on which the work is proposed contains
+   resource areas subject to protection under the City of Beverly Wetlands Protection
+   Ordinance Article XXXVII and City of Beverly Wetlands Protection Regulations
+   (hereafter the Regulations) issued pursuant to it, which are significant to the protection of
+   the interests identified in the Ordinance and Regulations, specifically:
+
+   The resource areas, which are depicted on "OSRD Site &amp; Existing Conditions Plan,
+   Essex Crossing, Beverly, Mass", Existing Sheets 1 and 2 of 2, as prepared by Hayes
+   Engineering, Inc., signed and stamped by Peter Ogren, scale 1"=40', dated September 5,
+   2014, and as observed and determined by the Commission, are the following:
+
+   - Land Under Water (Kelleher Pond)
+   - Inland Bank to pond
+   - Bordering Vegetated Wetland
+   - 100-Foot Buffer Zone
+
+   The project site is not known to be within or adjacent to Estimated Habitat of rare or
+   endangered species.
+
+   Portions of the proposed project are within the Beverly regulatory 25-Foot No-
+   Disturbance Zone, namely grading associated with roadway shoulder construction,
+   installation of stormwater discharge level spreader, removal of remnant historic asphalt
+   and restoration planting.
+
+2. The Commission finds that the above-mentioned resource areas are significant to the
+   protection of the following interests identified in the Ordinance:
+
+   - Public &amp; Private Water Supply
+   - Groundwater Supply
+   - Flood Control
+   - Storm Damage Prevention
+   - Prevention of Pollution
+   - Fisheries
+   - Protection of Wildlife Habitat
+   - Prevention of Erosion &amp; Sedimentation
+
+3. A Notice of Intent signed by Paul DiBiase, Robert Walker, Brian McGrail and Elizabeth
+   Wallis, with associated attachments, narrative, stormwater report, and accompanying
+   plans was submitted to the Commission on July 10, 2014. The public hearing was
+   opened on July 22, 2014, and the applicant's representative provided a presentation of the
+   project. Discussion was held, which included opportunity for public comment. The
+   hearing was continued through to September 30, 2014 to allow time for the applicant to
+   address comments from the City Engineer, who performed a peer review of, among other
+   project elements, the proposed stomwater [sic] drainage system. The Commission resumed
+   the public hearing at the September 30th meeting at which it received revised plans in
+   response to the City Engineer's peer review. The hearing was further continued to the
+   October 21, 2014 meeting to allow the Commission time to review the new material and
+   draft a set of conditions.
+
+4. After continued discussion and consideration at the October 21st hearing, and there being
+   no further questions or comments from the Commission, abutters or the public, the
+   Commission voted to close the hearing. The Commission then deliberated and made the
+   following findings:
+   a. Based on the following findings, the Commission voted to grant a partial waiver
+      from the 25-Foot No Disturb Zone (25' NDZ) performance standards pursuant to
+      Regulations Sections V. C. to allow for grading related to construction of the
+      roadway shoulder and installation of stormwater discharge level spreader:
+
+      i. The Commission finds that the applicant satisfactorily demonstrated that
+         there are no practicable alternatives that would allow this portion of the
+         project to proceed in full compliance with these Regulations, as the
+         existing roadway alignment, from which the new subdivision roadway will
+         extend, constrains the location of the new subdivision roadway and the
+         extent to which the turning radius can be manipulated away from the
+         wetland resource areas. The Commission finds that the applicant made
+         every effort to avoid locating the roadway and stormwater structures
+         within the 25' NDZ. The Commission finds that the installation of the rip
+         rap velocity reducer to be a minor incursion as this structure impacts a
+         small footprint and is a necessary component of the stormwater
+         management BMP's to avoid and reduce potential for scour and erosion
+         from overflow runoff from the subsurface infiltration system. Its location
+         at the base of the slope at the pond bank is necessary due to natural
+         hydrology and further avoids potential for erosion and associated impacts
+         that would result if placed further up the slope outside the 25' NDZ;
+
+      ii. The project element(s), or their natural and consequential effects, will
+          have no adverse effects on any of the interests protected by the Ordinance,
+          as current conditions are impaired with remnant broken bituminous
+          concrete asphalt, disturbance by past activities associated the operation of
+          a construction company on site and the presence of invasive species. The
+          Commission finds that the removal of the asphalt and management of
+          invasive species will remove current conditions that are adversely
+          impacting the buffer zone and wetland and result in mitigating current
+          impaired conditions:
+
+      iii. The project elements will improve the natural capacity of the resource area
+           to protect the interests identified in the Ordinance, as the proposed "25-
+           Foot Buffer Zone Mitigation" plan and compliance with the attached
+           Special and Standard Conditions will result in an enhanced naturalized
+           buffer zone immediately adjacent to the pond. Restoration of the 25' NDZ
+           will serve to protect and improve the functions of the buffer zone, inland
+           bank and bordering vegetated wetland as they contribute to public &amp;
+           private water supply, groundwater supply, flood control, storm damage
+           prevention, prevention of pollution, fisheries, protection of wildlife
+           habitat, prevention of erosion &amp; sedimentation.
+
+5. The Commission voted 6-0 in favor of approving the project, based on the findings above
+   and subject to compliance with the attached Special Conditions and Standard Conditions.
+
+================================================================
+City of Beverly Conservation Commission
+SPECIAL &amp; STANDARD CONDITIONS
+
+DEP FILE #: 5-1127
+APPLICANT: Paul DiBiase, DiBiase Corporation
+OWNER: Walker Realty LLC
+PROJECT LOCATION: 232 Essex Street (&amp; off Ice House Lane), Map 44 Lot 31, Beverly,
+MA 01915
+
+Project Description: This Order governs the construction of a subdivision roadway to
+service a 16-lot OSRD residential subdivision, with associated grading, utility and
+stormwater management BMP installation, as well as the following Lots in the subdivision
+which contain wetland resources and/or buffer zones: 7, 8, 9, 13, 14, 15, &amp; 16. Work to
+take place within the 100-foot buffer zone to bordering vegetated wetland and bank of
+pond.
+
+SPECIAL CONDITIONS
+
+1. Prior to construction, the applicant shall secure an environmental/erosion control
+   monitor who shall be responsible for monitoring all activity within jurisdictional areas to
+   ensure compliance with this Order. The monitor shall be a professional engineer or
+   wetland scientist and her/his name and contact number shall be provided to the
+   Commission. The monitor shall visit the site at least once every other week during the
+   active phases of construction that occur within the 100-Foot Buffer Zone (100' BZ). This
+   condition shall apply to lots within the subdivision even if ownership of lots are
+   transferred before work/construction on said lots commence.
+
+2. The environmental/erosion control monitor shall submit a report monthly to the
+   Commission or its Agent reporting inspection dates, status of construction, any erosion
+   control maintenance requirements, and who at the project site was informed. Reports
+   may be submitted by electronic mail.
+
+3. The limit of the 25-Foot No Disturb Zone shall be demarcated with markers made of a
+   weather resistant material, and shall be installed such that they are not less than 3 feet
+   above grade to ensure visibility in the field. Each No Disturbance Zone marker shall
+   bear, on their upland side, by way of permanent weather resistant plaque or engraving,
+   the following language: "No Disturbance Of Any Kind Beyond This Point By Order of
+   the Beverly Conservation Commission". Not less than 3 markers shall be installed, with
+   one being installed on Lot 15, one on Lot 16 and one at the bend along the mitigation
+   area at the northwest corner of the subsurface infiltration system — exact location of each
+   marker to be determined in the field with the Conservation Administrator. Maintaining
+   these markers in good condition is required and this requirement shall survive in
+   perpetuity beyond the issuance of a Certificate of Compliance. Maintenance of the
+   markers on Lots 15 &amp; 16 shall be the perpetual responsibility of the individual
+   homeowners of those lots. Maintenance of the marker along the bend of the mitigation
+   area shall be the perpetual responsibility of the Homeowners Association.
+
+4. Roadway snow management and storage shall not occur in wetland resource areas or
+   associated buffer zones within the development. Management, movement and storage of
+   snow on site shall take place in appropriate upland areas outside the 100-foot buffer zone
+   or taken to an appropriate off-site facility. This condition shall survive in perpetuity
+   beyond the issuance of a Certificate of Compliance. Compliance with this condition shall
+   be the perpetual responsibility of the Homeowners Association.
+
+5. The work as delineated in the of the [sic] "25-Foot Buffer Zone Mitigation, Essex Crossing,
+   Beverly Massachusetts" dated December 20, 2013 prepared by Hayes Engineering, shall
+   be a requirement of this Order and shall be completed no later than just prior to the
+   roadway binder course being laid down. Removal of remnant broken asphalt within the
+   buffer zone to the pond bank and bordering vegetated wetland is a requirement of this
+   Order and this material shall be removed from site and disposed of at an appropriate off-
+   site facility.
+
+6. Prior to the issuance of a final Certificate of Compliance for this project, all restoration
+   plantings shall exhibit 75% survivorship after two growing seasons post installation. A
+   wetland scientist or other qualified professional shall verify restoration plant
+   survivorship. A wetland scientist or other qualified professional shall monitor the
+   success of the invasive specie removal effort and his/her findings thereto, along with the
+   plant survivorship determination, shall be submitted to the Commission. A request for a
+   partial Certificate of Compliance may be submitted by the applicant and issued at the
+   discretion of the Conservation Commission at that time.
+
+7. All maintenance and inspection reports per the Stormwater Operation and Maintenance
+   Plans shall be submitted to the Conservation Agent on an annual basis no later than
+   December 31st of each year. This condition shall run in perpetuity beyond the issuance of
+   a Certificate of Compliance. Compliance with this condition shall be the perpetual
+   responsibility of the Homeowners Association.
+
+8. This Order of Conditions in its entirety shall be referenced in all Homeowners
+   Association documents.
+
+STANDARD CONDITIONS
+
+GENERAL
+
+1. This Order, issued under the Beverly Wetlands Protection Ordinance, shall expire three
+   (3) years after the date of issuance. The owner/applicant can request an extension of up
+   to one (1) year. A request for extension must be submitted at least 30 days prior to the
+   expiration date of the Order. The Commission can grant only two (2) extensions to this
+   Order.
+
+2. The Conservation Agent will be notified 48 hours prior to commencement of construction
+   activities (978-921-6000 ext. 2343). Members and agents of the Conservation
+   Commission (Commission) shall have the right to enter and inspect the premises to
+   evaluate and ensure compliance with the conditions and performance standards stated in
+   this Order, the Notice of Intent, the referenced plans, the Act, and 310 CMR 10.00, the
+   Beverly Wetlands Protection Ordinance and Regulations, and may require any
+   information, measurements, photographs, observations and/or materials or may require
+   the submittal of any data or information deemed necessary by this Commission for that
+   evaluation. Further, work shall halt on the site if the Commission, agent, or DEP
+   determines that any of the work is not in compliance with any of the above. Work shall
+   not resume until the Commission is satisfied that the work will comply, and has so
+   notified the applicant in writing.
+
+3. Approval of this application does not constitute compliance with any law or regulation
+   other than MGL Chapter 131, Section 40, and Wetlands Regulations 310 CMR 10.00 or
+   the Beverly Wetlands Protection Ordinance and Regulations.
+
+4. This Order shall apply to any successor in control or successor in interest of the property
+   described in the Notice of Intent and accompanying plans. These obligations shall be
+   expressed in covenants in all deeds to succeeding owners or portions of the property.
+
+5. This Order, in its entirety, shall be recorded at the Registry of Deeds after the expiration
+   of the 10-day appeal period and within 30 days of issuance if no appeals have been filed.
+   A copy of the stamped form shall be submitted to the Commission within 21 days of
+   recording and prior to commencement of any activities subject to the Order of
+   Conditions.
+
+6. Prior to any work commencing, a sign no less than 2 square feet or more than 3 square
+   feet, visible from the street shall be displayed reading "MA DEP File #5-1127", and not
+   placed on a living tree.
+
+7. The term "Applicant" as used in this Order of Conditions shall refer to the owner, any
+   successor in interest or successor in control of the property referenced in the Notice of
+   Intent, supporting documents and this Order of Conditions. The Commission shall be
+   notified in writing within 30 days of all transfers of title of any portion of the property
+   that takes place prior to issuance of the Certificate of Compliance.
+
+8. It is the responsibility of the applicant to procure all other applicable federal, state and
+   local permits and approvals required for this project, and no work within the
+   Commission's jurisdiction shall commence until all permits, approvals, and
+   variances required by the City of Beverly have been obtained. This is to ensure that
+   impact to jurisdictional areas are avoided in the case that any such permit is denied or
+   withheld for any period of time, thereby maintaining the integrity of the resource area
+   or buffer zone until such time all approvals are granted.
+
+9. If there are conflicting conditions within this Order, the stricter condition(s) shall rule.
+
+10. All work shall be performed so as to ensure that there will be no sedimentation into
+    wetlands and surface waters during construction or after completion of the project.
+
+11. The Commission and its Administrator shall have the discretion to modify the
+    erosion/siltation control methods and boundary during construction if necessary.
+
+12. All work shall be performed in accordance with this Order of Conditions and approved
+    site plan(s). No alteration of wetland resource areas or associated buffer zone, other than
+    that approved in this Order and approved plan, shall occur on this property without prior
+    approval from the Commission.
+
+13. If any changes are made in the above-described plan(s) which may or will alter an area
+    subject to protection under the Wetlands Protection Act M.G.L. Ch. 131, Section 40, or
+    its regulations 310 CMR 10.00, or the Beverly Wetlands Protection Ordinance or its
+    Regulations the applicant shall inquire with this Commission in writing, prior to their
+    implementation in the field, whether the change(s) is significant enough to require the
+    filing of a new Notice of Intent. Any error in the plans or information submitted by the
+    applicant shall be considered changes and the above procedures shall be followed. A
+    copy of such request shall at the same time be sent to the Department of Environmental
+    Protection.
+
+14. In conjunction with the sale of this property or any portion thereof before a Certificate of
+    Compliance has been issued, the applicant or current landowner shall submit to the
+    Commission a signed statement by the buyer that he/she is aware of an outstanding Order
+    of Conditions on the property and has received a copy of the Order of Conditions.
+
+PRIOR TO CONSTRUCTION
+
+15. Prior to commencement of any activity on this site, there shall be a PRE-
+    CONSTRUCTION MEETING between the project supervisor, the contractor
+    responsible for the work, and a member of the Commission or its administrator to ensure
+    that the requirements of the Order of Conditions are understood.
+
+16. Prior to the pre-construction meeting and commencement of any activity on this site
+    the following tasks and/or deliverables shall be ready for submission to and inspection by
+    a member of the Commission or the Conservation Administrator:
+    - Compliance with Special Condition #1;
+    - Proof that the Order of Conditions has been recorded at the Registry of Deeds;
+    - Proof that all other applicable permits have been secured for the project;
+    - Sedimentation and erosion control barriers shall be installed as shown on the
+      approved plan(s) and detail drawings. Haybales and/or silt fence must be
+      staked, or silt sock shall be secure; Erosion control barriers shall constitute the
+      limit of work;
+    - DEP File Sign shall be installed per Standard Condition # 6;
+    - Location of where the Order of Conditions and approved plans will be stored
+      on site per Standard Condition # 23;
+    - A work sequence/construction schedule shall be submitted in writing to the
+      Commission for its file;
+    - Names and phone numbers of all responsible parties shall be registered with
+      the Commission at the pre-construction meeting;
+    - The limits of wetland resource areas closest to construction activity shall be
+      flagged with surveyor's tape and shall remain in place during construction.
+
+EROSION CONTROL
+
+17. Appropriate erosion control devices shall be in place prior to the beginning of any phases
+    of construction, and shall be maintained during construction in the wetland areas and
+    buffer zones. The erosion control specification provided in the Notice of Intent and the
+    erosion control provision in the Order will be the minimum standards for this project; the
+    Commission may require additional measures.
+
+18. All construction equipment, construction materials, waste products, grubbed stumps,
+    slash, etc. shall be stored/stockpiled at least 100 feet from wetland resource areas if at all
+    possible, or at a location which will prevent sediment carried by surface runoff from
+    entering designated resource areas. At no time shall any debris or other material be
+    buried or disposed of within that line marked on the referenced plans as resource areas.
+
+19. The areas of construction shall remain in a stable condition at the close of each
+    construction day.
+
+20. Any de-watering of trenches or other excavations required during construction shall be
+    conducted so as to prevent siltation of wetland resource areas. All discharges from de-
+    watering activities shall be filtered through haybale sediment traps, silt filter bags or other
+    means approved by the Commission or its Administrator.
+
+21. Within thirty days of completion of construction on any given portion of the project, all
+    disturbed areas in the completed portion of the site shall be permanently stabilized with
+    rapidly growing vegetative cover, using sufficient top soil to assure long-term
+    stabilization of disturbed areas.
+
+22. If soils are to be disturbed for longer than two months, a temporary cover of rye or other
+    grass should be established to prevent erosion and sedimentation. If the season is not
+    appropriate for plant growth, exposed surfaces shall be stabilized by other appropriate
+    erosion control measures, firmly anchored, to prevent soils from being washed by rain or
+    flooding.
+
+DURING CONSTRUCTION
+
+23. A copy of this Order of Conditions, construction plans, and copies of the documents and
+    reports cited as approved in this Order, shall be on the site upon commencement and
+    during any site work for contractors to view and adhere to. These documents shall be
+    protected from the elements but easily assessable [sic] to contractors and agents of the City.
+
+24. Erosion and sedimentation control devices shall be inspected after each storm event and
+    repaired or replaced as necessary. Any accumulated silt adjacent to the barriers shall be
+    removed.
+
+25. Only clean fill, free of masonry, stumps, asphalt, and any other kind of waste material
+    shall be used on the site.
+
+26. Cement trucks shall not be washed out in any wetland resource or buffer zone area. Any
+    deposit of cement or concrete products into a buffer zone or wetland resource area shall
+    be removed by hand.
+
+27. No fuel, oil, or other pollutants shall be stored in any resource area or the buffer zone
+    thereto, unless specified in this Order of Conditions.
+
+28. There shall be no pumping of water from wetland resource areas.
+
+29. During construction, all drainage structures shall be inspected regularly and cleaned as
+    necessary.
+
+30. Immediately following drainage structure installation, all inlets shall be protected by hay
+    bales and/or silt bags in order to filter silt from stormwater before it enters the drainage
+    system.
+
+31. The project shall not cause an increase in run-off onto adjacent properties, either during
+    construction or when completed.
+
+32. The applicant is hereby notified that failure to comply with all requirements herein may
+    result in the issuance of enforcement actions by the Conservation Commission including,
+    but not limited to, civil administrative penalties under M.G.L. Chapter 40, Section 21D.
+
+POST CONSTRUCTION
+
+33. All disturbed areas, slopes and proposed landscape areas shall be stabilized through the
+    use of season-appropriate methods. No disturbed areas or stockpiled material will be left
+    unprotected or without erosion controls during the winter.
+
+34. Upon completion of construction, the applicant or current landowner shall submit the
+    following to the Commission to request a Certificate of Compliance:
+    (1) A letter requesting a Certificate including the following information:
+        a. Name and address of current landowner;
+        b. Name and address of the individual/trust or other entity to whom the Certificate is
+           to be issued;
+        c. Street address and lot number for the project; and
+        d. DEP file number
+    (2) A letter from a Registered Professional Engineering or Land Surveyor certifying
+        compliance of the property with this Order of Conditions
+    (3) An "As-Built" plan signed and stamped by a Registered Professional Engineer
+        showing post-construction conditions and:
+        a. As-built elevations of all drainage ways constructed within 100 feet of any
+           wetland resource area;
+        b. As-built elevations and grades of all filled or altered wetland resource areas,
+           buffer zones and replicated areas; and
+        c. Distances to all structures within 100 feet of any wetland resource area.
+
+35. When issued, the Certificate of Compliance must be recorded at the Essex County
+    Registry of Deeds.
+
+36. Erosion control devices shall remain in place and properly functioning until all exposed
+    soils have been stabilized with final vegetative cover and the Commission and/or its
+    Administrator has authorized their removal.
+
+PERPETUAL CONDITIONS
+
+37. There shall be no dumping of leaves, grass clippings, trash or any kind of refuse in the
+    resource are [sic]. Compliance with this condition shall be the perpetual responsibility of the
+    individual homeowners whose lots contain wetland resources and/or buffer zones as well
+    as the Homeowners Association where land containing wetland resource areas and/or
+    buffer zones is located within the protected open space under the ownership of the
+    Homeowners Association.
+
+38. Herbicides, pesticides or fungicides shall not be applied within 100 feet of the wetland.
+    Compliance with this condition shall be the perpetual responsibility of the individual
+    homeowners whose lots contain wetland resources and/or buffer zones as well as the
+    Homeowners Association where land containing wetland resource areas and/or buffer
+    zones is located within the protected open space under the ownership of the Homeowners
+    Association.
+
+39. No sodium-based products shall be used for control of ice or snow within 100 feet of the
+    wetland. Compliance with this condition shall be the perpetual responsibility of the
+    individual homeowners whose lots contain wetland resources and/or buffer zones as well
+    as the Homeowners Association where land/roadway containing wetland resource areas
+    and/or buffer zones is under the ownership of the Homeowners Association.
+
+40. Prevention of flooding, erosion and sedimentation are ongoing and do not expire at the
+    end of three (3) years or with the issuance of the Certificate of Compliance. Compliance
+    with this condition shall be the perpetual responsibility of the individual homeowners
+    whose lots contain wetland resources and/or buffer zones as well as the Homeowners
+    Association where land containing wetland resource areas and/or buffer zones is under
+    the ownership of the Homeowners Association.
+
+41. The following additional conditions shall remain in force in perpetuity beyond the
+    issuance of a Certificate of Compliance: Special Condition #'s 3, 4 &amp; 7.
+
+[Transcribed 2026-07-17 from the 23-page registry scan (Bk 33797 Pg 168, recorded
+1/13/2015) by vision-reading each page at 170 dpi — verbatim including original
+typographical errors (flagged [sic]); form boilerplate for unchecked/denied options
+abbreviated with [...] where noted. The scan has no machine text layer.]
+</pre>
+</details>
+

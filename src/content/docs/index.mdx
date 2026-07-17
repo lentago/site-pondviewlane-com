@@ -1,0 +1,84 @@
+---
+title: Pond View Lane
+description: A resident's guide to the rules, records, and obligations of owning a home on Pond View Lane — Beverly, Massachusetts.
+template: splash
+hero:
+  title: Pond View Lane
+  tagline: A resident's guide to owning a home on the lane — the covenants you bought into, the wetland and stormwater rules that run with the land, and the public record behind all of it. Beverly, Massachusetts.
+  image:
+    file: ../../assets/logo.svg
+  actions:
+    - text: Start here
+      link: /guides/start-here/
+      icon: right-arrow
+    - text: Document Library
+      link: /library/
+      variant: secondary
+      icon: open-book
+    - text: Timeline
+      link: /timeline/
+      variant: secondary
+      icon: seti:clock
+---
+
+import { Card, CardGrid } from '@astrojs/starlight/components';
+import AskWidget from '../../components/AskWidget.astro';
+import siteStats from '../../data/site-stats.json';
+
+<AskWidget variant="hero" />
+
+<figure class="pvl-aerial">
+  <img src="/attachments/satellite-overview-wide.jpg"
+    alt="Satellite view of Pond View Lane — sixteen homes around one cul-de-sac, wrapped by wooded open space, with Kelleher Pond at lower left"
+    loading="eager" />
+  <figcaption>The lane from directly overhead (Google satellite imagery) — sixteen homes, one shared cul-de-sac, and the protected woodland that wraps them, from Kelleher Pond (lower left) to the YMCA woods on the right.</figcaption>
+</figure>
+
+{/* not-content opts the cells out of Starlight's prose flow-spacing (margin-top
+    on every non-first sibling), which otherwise pushes cards 2+ down 1rem */}
+<div class="pvl-stats not-content">
+  <div class="pvl-stat"><b>16</b><span>homes on the lane</span></div>
+  <div class="pvl-stat"><b>5.04 ac</b><span>common open space</span></div>
+  <div class="pvl-stat"><b>5</b><span>trustees</span></div>
+  <div class="pvl-stat"><b>{siteStats.publicDocs}</b><span>public documents</span></div>
+  <div class="pvl-stat"><b>{siteStats.publicEvents}</b><span>recorded milestones</span></div>
+  <div class="pvl-stat"><b>2015</b><span>trust recorded</span></div>
+</div>
+
+<CardGrid stagger>
+  <Card title="What you agreed to when you bought" icon="open-book">
+    The covenants run with your deed whether you've read them or not.
+    What they oblige, what they restrict, and how the association works.
+    [Start here](/guides/start-here/) · [Governance](/guides/governance/) ·
+    [Assessments](/guides/assessments/)
+  </Card>
+  <Card title="Trees, wetlands & the buffer" icon="seti:image">
+    Most of the green on the lane is regulated. What the covenants say about
+    vegetation, where the Conservation Commission's jurisdiction starts, and
+    what that means before anyone cuts anything.
+    [Trees](/guides/trees/) · [Wetlands & buffers](/guides/wetlands/)
+  </Card>
+  <Card title="The common land & its duties" icon="seti:pipeline">
+    The association owns the open space — and with it, stormwater obligations
+    that never expire. [The common land](/guides/common-land/) ·
+    [Stormwater](/guides/stormwater/)
+  </Card>
+  <Card title="The public record itself" icon="seti:folder">
+    Every recorded instrument, plan, and city filing that defines the
+    neighborhood — collected and viewable in place.
+    [Document Library](/library/) · [Finding records](/guides/records/)
+  </Card>
+  <Card title="How the neighborhood came to be" icon="seti:clock">
+    From the 2014 wetlands permit to the present — {siteStats.publicEvents} recorded
+    milestones in one [chronology](/timeline/).
+  </Card>
+  <Card title="Ask, or browse" icon="magnifier">
+    Type a question in the box above, open [Ask](/ask/) for a full-screen
+    conversation, or press <kbd>/</kbd> to full-text search every page and
+    document.
+  </Card>
+</CardGrid>
+
+> A homeowner-maintained guide — **not an official publication of the
+> association, and not legal advice.** Everything here traces to a recorded
+> instrument or a public filing; see [About](/about/) for how it's built.

@@ -1,0 +1,36 @@
+---
+/**
+ * Footer override: Starlight's default footer plus a "Report an issue" link on
+ * every page. The site invites corrections (About: "Corrections are welcome")
+ * — this is the channel. The link goes to the /report/ form (Formspree-backed,
+ * 2026-07-17 — replacing the earlier JS-assembled mailto, so no email address
+ * exists anywhere in the site), carrying the current page as a query param so
+ * the form comes prefilled.
+ *
+ * Also mounts the floating Ask dock (AskDock.astro) — except on the two pages
+ * that render an inline AskWidget, since the widget's element ids must stay
+ * unique per page.
+ */
+import Default from '@astrojs/starlight/components/Footer.astro';
+import AskDock from './AskDock.astro';
+
+const path = Astro.url.pathname.replace(/\/+$/, '') || '/';
+const hasInlineAsk = path === '/' || path === '/ask';
+---
+
+<Default><slot /></Default>
+
+<div class="report-issue">
+  <a id="report-issue-link" href="/report/" rel="nofollow"
+    >Spot an error or dispute a fact? Report it — the page reference comes prefilled.</a
+  >
+</div>
+
+<script>
+  const link = document.getElementById('report-issue-link');
+  if (link && location.pathname !== '/report/') {
+    link.setAttribute('href', `/report/?page=${encodeURIComponent(location.pathname)}`);
+  }
+</script>
+
+{!hasInlineAsk && <AskDock />}

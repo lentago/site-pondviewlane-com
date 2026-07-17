@@ -1,0 +1,22 @@
+---
+import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
+import AskWidget from '../components/AskWidget.astro';
+---
+
+<StarlightPage
+  frontmatter={{
+    title: 'Ask',
+    description: 'Plain-English questions about owning a home on Pond View Lane, answered from the public record.',
+    tableOfContents: false,
+  }}
+>
+  <p>
+    Ask anything about owning a home on the lane — <em>"What did I agree to when I
+    bought?" · "Can I cut a tree behind my house?" · "Who maintains the stormwater
+    basins?"</em> — and get an answer grounded in the recorded covenants, plans, and
+    city filings, with links to the documents it came from. It explains; it doesn't
+    give legal advice.
+  </p>
+
+  <AskWidget variant="page" />
+</StarlightPage>

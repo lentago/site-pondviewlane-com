@@ -1,0 +1,107 @@
+---
+/**
+ * Report an issue — the site's corrections channel (About: "Corrections are
+ * welcome"). A native HTML POST to Formspree replaces the old JS-assembled
+ * mailto link, so no email address appears anywhere in the site (2026-07-17).
+ *
+ * The form hash is PUBLIC by design — it ships in the built HTML — so there
+ * is no secret to hide here (same convention as site-lentago-dev). Manage the
+ * form at https://formspree.io. `_next` sends the browser to the on-brand
+ * /report/thanks/ page after submission; it's filled in by script so it works
+ * on the review host and the production apex alike.
+ */
+import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
+
+const FORM_ENDPOINT = 'https://formspree.io/f/xrenprzw';
+---
+
+<StarlightPage
+  frontmatter={{
+    title: 'Report an issue',
+    description: 'Spot an error or dispute a fact on this site? Send a correction — every page cites its record, and the records win.',
+    tableOfContents: false,
+  }}
+>
+  <p>
+    Every claim on this site traces to a public record — so if something here
+    looks wrong, either the site misread the record or there's a better record.
+    Both are worth reporting. Corrections are welcome and acted on.
+  </p>
+
+  <form class="report-form" action={FORM_ENDPOINT} method="POST">
+    <input type="hidden" name="_subject" value="Pond View Lane site — issue report" />
+    <input type="hidden" name="_next" id="report-next" value="" />
+    <input
+      type="text"
+      name="_gotcha"
+      tabindex="-1"
+      autocomplete="off"
+      aria-hidden="true"
+      style="position:absolute;left:-9999px;height:0;width:0;overflow:hidden;"
+    />
+
+    <label>
+      <span>Page the issue is on</span>
+      <input type="text" name="page" id="report-page" placeholder="/guides/…" />
+    </label>
+
+    <label>
+      <span>What looks wrong or disputed <em>(required)</em></span>
+      <textarea name="message" rows="5" required></textarea>
+    </label>
+
+    <label>
+      <span>Your source, if you have one (document, date, recollection)</span>
+      <textarea name="source" rows="3"></textarea>
+    </label>
+
+    <label>
+      <span>Your email, if you'd like a reply <em>(optional)</em></span>
+      <input type="email" name="email" autocomplete="email" />
+    </label>
+
+    <button type="submit" class="tl-btn">Send the report</button>
+  </form>
+
+  <p class="report-note">
+    Reports go straight to the site's maintainer. This site is a resident's
+    reference, not an official publication of the association — for association
+    business, contact the board.
+  </p>
+</StarlightPage>
+
+<script>
+  // Prefill the page reference (?page= from the footer link, else the
+  // referring page) and point the post-submit redirect at this origin's
+  // thanks page — the site runs on more than one host.
+  const next = document.getElementById('report-next') as HTMLInputElement | null;
+  if (next) next.value = `${location.origin}/report/thanks/`;
+  const page = document.getElementById('report-page') as HTMLInputElement | null;
+  if (page && !page.value) {
+    const q = new URLSearchParams(location.search).get('page');
+    if (q) page.value = q;
+    else if (document.referrer && new URL(document.referrer).origin === location.origin) {
+      page.value = new URL(document.referrer).pathname;
+    }
+  }
+</script>
+
+<style>
+  .report-form { display: flex; flex-direction: column; gap: 1rem; margin-top: 1.5rem; }
+  .report-form label { display: flex; flex-direction: column; gap: 0.35rem; }
+  .report-form label span { font-weight: 600; font-size: var(--sl-text-sm); }
+  .report-form label span em { font-weight: 400; color: var(--sl-color-gray-3); }
+  .report-form input[type='text'],
+  .report-form input[type='email'],
+  .report-form textarea {
+    font: inherit;
+    padding: 0.5rem 0.75rem;
+    border: 1px solid var(--sl-color-gray-4);
+    border-radius: 0.4rem;
+    background: var(--sl-color-bg);
+    color: var(--sl-color-text);
+  }
+  .report-form textarea { resize: vertical; }
+  .report-form button { align-self: flex-start; margin-top: 0.35rem; cursor: pointer; }
+  .report-note { margin-top: 1.5rem; font-size: var(--sl-text-sm); color: var(--sl-color-gray-3); }
+</style>

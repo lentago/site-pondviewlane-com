@@ -1,0 +1,26 @@
+# PR build gate — proves the Astro site still builds before a PR can merge.
+# The deploy workflow only builds on push to main (post-merge), so without this
+# a PR that breaks the build would merge first and fail at deploy. This runs the
+# same `astro build` on every PR; the "Build" check is required by the repo's
+# main branch ruleset (fleet standard).
+name: CI
+
+on:
+  pull_request:
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - run: npm run build

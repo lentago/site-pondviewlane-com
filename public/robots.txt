@@ -1,0 +1,5 @@
+# Hidden trustee-review preview — not for public indexing yet.
+# Remove this file (and the noindex meta in astro.config.mjs) at the real
+# public launch of pondviewlane.com.
+User-agent: *
+Disallow: /

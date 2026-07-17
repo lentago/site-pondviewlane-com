@@ -1,0 +1,26 @@
+---
+/**
+ * Post-submit landing for the report-an-issue form. Formspree 302-redirects
+ * here (the form's `_next` field) so the correction flow stays on-site
+ * instead of ending on Formspree's generic page.
+ */
+import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
+---
+
+<StarlightPage
+  frontmatter={{
+    title: 'Report received — thank you',
+    description: 'Your correction was sent to the site maintainer.',
+    tableOfContents: false,
+  }}
+>
+  <p>
+    Thanks — the report went through. Corrections get checked against the
+    records and folded into the site; if you left an email address, you'll
+    hear back once it's been looked at.
+  </p>
+  <p>
+    <a href="/">Back to the homepage</a> · <a href="/library/">Browse the
+    document library</a>
+  </p>
+</StarlightPage>

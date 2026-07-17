@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <!-- Pond View Lane mark: a white pine over the pond -->
+  <circle cx="32" cy="46" r="14" fill="#4a90a4" opacity="0.85"/>
+  <path d="M32 6 L20 26 L27 25 L16 40 L28 38 L28 50 L36 50 L36 38 L48 40 L37 25 L44 26 Z"
+        fill="#2f6b4f"/>
+  <ellipse cx="32" cy="52" rx="11" ry="3" fill="#1d3a2a" opacity="0.35"/>
+</svg>

@@ -1,0 +1,272 @@
+---
+/**
+ * AskWidget — the "Ask" chat box, shared by the homepage hero
+ * (variant="hero"), the dedicated /ask page (variant="page"), and the
+ * site-wide floating dock (variant="dock", mounted by AskDock.astro).
+ * All variants rehydrate one transcript from sessionStorage, so a chat
+ * follows the visitor around the site for the life of the tab. One widget
+ * per page, ever — the element ids aren't namespaced.
+ *
+ * Retrieval runs client-side against /ask/rag-index.json (built by
+ * sync-content.mjs from the guides, the public-record library, and the
+ * timeline). If PUBLIC_ASK_ENDPOINT is set at build, the top passages are
+ * sent there and the Lambda composes a plain-English answer; otherwise the
+ * box degrades to passage-search mode and shows the most relevant passages.
+ * The upgrade is automatic — no page change needed once the endpoint is wired.
+ */
+const { variant = 'page' } = Astro.props;
+const endpoint = import.meta.env.PUBLIC_ASK_ENDPOINT || '';
+---
+
+<div class={`ask-widget ask-${variant}`}>
+  {variant === 'hero' && (
+    <div class="ask-hero-head">
+      <h2>Ask about living here</h2>
+      <p>
+        Type a plain-English question — the covenants, trees, wetlands, who
+        does what — and get an answer grounded in the recorded documents, with
+        links to the records it came from.
+      </p>
+    </div>
+  )}
+
+  <div class="ask-notice" id="ask-notice" hidden>
+    Composed AI answers aren't switched on yet, so this runs in
+    <strong>passage-search mode</strong>: your question returns the most relevant
+    passages from the record instead of a written answer. The full site search —
+    the button in the header, or <kbd>/</kbd> on a keyboard — works too.
+  </div>
+
+  <div id="ask-log"></div>
+
+  <form id="ask-form">
+    <input id="ask-input" type="text" placeholder="Ask a question about the HOA…"
+      autocomplete="off" maxlength="300" aria-label="Ask a question about the HOA" />
+    <button class="tl-btn" type="submit">Ask</button>
+  </form>
+
+  <div class="ask-foot not-content">
+    <p class="ask-disclaimer">
+      Answers are generated from the public record on this site and can be wrong —
+      the linked sources are the record, and nothing here is legal advice. Your
+      conversation stays in your browser — this tab only — and is sent nowhere
+      except to compose each answer.
+    </p>
+    <button type="button" id="ask-clear" class="ask-clear" hidden>New chat</button>
+  </div>
+</div>
+
+<script is:inline define:vars={{ endpoint }}>
+  const cfgEndpoint = localStorage.getItem('pvl-ask-endpoint') || endpoint;
+  const notice = document.getElementById('ask-notice');
+  if (!cfgEndpoint && notice) notice.hidden = false;
+
+  let INDEX = null;
+  async function loadIndex() {
+    if (!INDEX) INDEX = (await (await fetch('/ask/rag-index.json')).json()).chunks;
+    return INDEX;
+  }
+
+  const STOP = new Set('a an and are as at be by can do does for from has how i in is it of on or that the this to was what when where who why will with'.split(' '));
+  const tokens = (s) => s.toLowerCase().replace(/[^a-z0-9$#]/g, ' ').split(/\s+/).filter((w) => w.length > 1 && !STOP.has(w));
+
+  // Vocabulary bridge: map the words homeowners actually type to the words the
+  // recorded covenants use, so keyword retrieval surfaces the owner-facing rules
+  // that live in the Founding Documents page (docs/03 §3, Restrictive Covenants).
+  // Example: "mow my lawn" -> the covenant's "grass ... trimmed". Retrieval-only —
+  // the wiki prose and the passages sent to the model are unchanged; this only
+  // broadens what a query matches against the existing text.
+  const EXPAND = {
+    mow: ['grass', 'vegetation', 'trimmed'], mowing: ['grass', 'vegetation', 'trimmed'],
+    lawn: ['grass', 'vegetation', 'trimmed', 'hedges'], yard: ['grass', 'vegetation', 'trimmed'],
+    landscaping: ['grass', 'vegetation', 'hedges', 'pruned'], weeds: ['vegetation', 'grass'],
+    fence: ['fencing'], fencing: ['fence'], gate: ['fence'],
+    shed: ['structure', 'exterior', 'alteration', 'architectural', 'approval'],
+    deck: ['structure', 'exterior', 'alteration', 'architectural', 'approval'],
+    patio: ['structure', 'exterior', 'alteration', 'architectural'],
+    porch: ['structure', 'exterior', 'alteration'], addition: ['structure', 'exterior', 'alteration'],
+    remodel: ['exterior', 'alteration'], renovation: ['exterior', 'alteration'], renovate: ['exterior', 'alteration'],
+    paint: ['exterior', 'alteration'], painting: ['exterior', 'alteration'], siding: ['exterior', 'alteration'], color: ['exterior', 'alteration'],
+    build: ['structure', 'exterior', 'alteration', 'approval'], building: ['structure', 'exterior', 'alteration'], construct: ['structure', 'exterior', 'alteration'],
+    pet: ['pets', 'leashed', 'restrained'], pets: ['leashed', 'restrained'],
+    dog: ['pets', 'leashed', 'restrained', 'feces'], dogs: ['pets', 'leashed', 'restrained'],
+    cat: ['pets'], cats: ['pets'], animal: ['pets'], animals: ['pets'],
+    rv: ['boats', 'trailers', 'vehicles'], camper: ['boats', 'trailers', 'vehicles'], motorhome: ['boats', 'trailers', 'vehicles'],
+    boat: ['boats', 'trailers'], trailer: ['trailers', 'boats', 'vehicles'],
+    vehicle: ['vehicles', 'unregistered', 'garaged', 'boats', 'trailers'], vehicles: ['unregistered', 'garaged'],
+    car: ['vehicles', 'unregistered', 'garaged'], cars: ['vehicles', 'unregistered'],
+    park: ['vehicles', 'unregistered', 'garaged'], parking: ['vehicles', 'unregistered', 'garaged'],
+    solar: ['panels'], panel: ['solar', 'panels'], panels: ['solar'],
+    dish: ['antennas', 'dishes'], antenna: ['antennas'], antennas: ['dishes'], satellite: ['antennas', 'dishes'],
+    clothesline: ['clotheslines'], laundry: ['clotheslines'],
+    garbage: ['trash'], bins: ['trash'], bin: ['trash'], barrels: ['trash'], recycling: ['trash'],
+    sign: ['signage'], signs: ['signage'],
+    business: ['office'], office: ['business'],
+    rent: ['single', 'family', 'business'], renting: ['single', 'family', 'business'], rental: ['single', 'family', 'business'],
+    lease: ['single', 'family'], leasing: ['single', 'family'], tenant: ['single', 'family'], airbnb: ['single', 'family', 'business'],
+    easement: ['easements', 'drainage', 'planting'], drainage: ['easements', 'planting'],
+    tree: ['trees', 'vegetation', 'woodland', 'hazardous', 'dead'], trees: ['vegetation', 'woodland', 'hazardous', 'dead'],
+    cut: ['removed', 'destroyed', 'vegetation', 'woodland'], cutting: ['removed', 'destroyed', 'vegetation', 'woodland'],
+    remove: ['removed', 'vegetation', 'woodland'], clear: ['removed', 'vegetation', 'woodland'], clearing: ['removed', 'vegetation'],
+    wetland: ['buffer', 'conservation', 'resource', 'disturb'], wetlands: ['buffer', 'conservation', 'resource'],
+    buffer: ['wetland', 'disturb', 'conservation'], pond: ['kelleher', 'wetland'],
+    snow: ['sodium', 'storage', 'ice'], salt: ['sodium', 'ice', 'snow'], plow: ['snow', 'storage'],
+    pesticide: ['herbicides', 'pesticides', 'fungicides', 'wetland'], pesticides: ['herbicides', 'fungicides', 'wetland'],
+    fertilizer: ['herbicides', 'pesticides', 'fungicides', 'wetland'], spray: ['herbicides', 'pesticides', 'fungicides'],
+    dues: ['assessment', 'assessments', 'lien'], fee: ['assessment', 'assessments'], fees: ['assessment', 'assessments'],
+    pay: ['assessment', 'lien', 'interest'], paying: ['assessment', 'lien'], owe: ['assessment', 'lien', 'interest'],
+  };
+
+  function retrieve(q, chunks, k = 6) {
+    const qt = [...new Set(tokens(q).flatMap((w) => [w, ...(EXPAND[w] || [])]))];
+    const scored = chunks.map((c) => {
+      const text = c.text.toLowerCase();
+      let score = 0;
+      for (const w of qt) {
+        const n = text.split(w).length - 1;
+        if (n) score += (1 + Math.log(n)) * (w.length > 4 ? 1.5 : 1);
+        if (c.title.toLowerCase().includes(w)) score += 2;
+      }
+      return { c, score };
+    }).filter((s) => s.score > 0).sort((a, b) => b.score - a.score);
+    const seen = new Set(), out = [];
+    for (const s of scored) { if (!seen.has(s.c.page)) { out.push(s.c); seen.add(s.c.page); if (out.length === k) break; } }
+    for (const s of scored) { if (out.length >= k) break; if (!out.includes(s.c)) out.push(s.c); }
+    return out;
+  }
+
+  const log = document.getElementById('ask-log');
+  const form = document.getElementById('ask-form');
+  const input = document.getElementById('ask-input');
+  const clearBtn = document.getElementById('ask-clear');
+  const esc = (s) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;');
+
+  // Render the model's answer: escape first (XSS-safe — the model's text can
+  // never inject tags), then convert the small markdown subset the composer
+  // actually emits: **bold**, *italic*, # headings, and -/* bullet lists.
+  function md(text) {
+    const inline = (s) => s
+      .replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>')
+      .replace(/\*([^*\s][^*]*)\*/g, '<em>$1</em>');
+    let out = '', list = false;
+    for (const line of esc(text).split('\n')) {
+      const li = line.match(/^\s*[-*]\s+(.*)/);
+      if (li) {
+        if (!list) { out += '<ul>'; list = true; }
+        out += `<li>${inline(li[1])}</li>`;
+        continue;
+      }
+      if (list) { out += '</ul>'; list = false; }
+      const h = line.match(/^#{1,4}\s+(.*)/);
+      if (h) out += `<p><strong>${inline(h[1])}</strong></p>`;
+      else if (line.trim()) out += `<p>${inline(line)}</p>`;
+    }
+    return list ? out + '</ul>' : out;
+  }
+
+  function bubble(cls, html) {
+    const d = document.createElement('div');
+    d.className = `ask-msg ${cls}`;
+    d.innerHTML = html;
+    log.appendChild(d);
+    d.scrollIntoView({ behavior: 'smooth', block: 'end' });
+    return d;
+  }
+
+  function sourceLinks(ctxs) {
+    const seen = new Set();
+    return ctxs.filter((c) => !seen.has(c.page) && seen.add(c.page))
+      .map((c) => `<a href="${c.page}">${esc(c.title)}</a>`).join(' · ');
+  }
+
+  // The adopted wetland-proximity map (Trees & Open Space page): when a question
+  // or answer is actually about the wetlands, attach the picture — the geography
+  // reads better drawn than described. Shown once per conversation.
+  const MAP_RX = /wetland|buffer|no.?disturb|conservation|kelleher|resource area/i;
+  const MAP_SRC = '/attachments/parcel-wetland-proximity-2026.png';
+  let mapShown = false;
+  function wetlandMap(text) {
+    if (mapShown || !MAP_RX.test(text)) return '';
+    mapShown = true;
+    return `<figure class="ask-map"><a href="${MAP_SRC}" target="_blank" rel="noopener">` +
+      `<img src="${MAP_SRC}" loading="lazy" alt="Parcel map with the wetlands layer on — the common parcel highlighted, the wetland by Kelleher Pond at lower left, and the stream corridor along the eastern boundary"></a>` +
+      `<figcaption>The common parcel (blue) and the mapped wetlands — the full picture is in the <a href="/guides/wetlands/">Wetlands &amp; buffers guide</a>.</figcaption></figure>`;
+  }
+
+  // Conversation state — sent back each turn so the chat is multi-turn, and
+  // mirrored to sessionStorage so it survives navigation within the tab: the
+  // homepage box, /ask, and the floating dock all rehydrate the same
+  // transcript. It dies with the tab; nothing leaves the browser except each
+  // question (the disclaimer says so — keep them in sync).
+  const STORE = 'pvl-ask-chat-v1';
+  let history = [];
+
+  function persist() {
+    try {
+      sessionStorage.setItem(STORE, JSON.stringify({ history, html: log.innerHTML, map: mapShown }));
+    } catch { /* storage blocked or full — the chat still works, it just won't survive navigation */ }
+  }
+  (function restore() {
+    try {
+      const s = JSON.parse(sessionStorage.getItem(STORE) || 'null');
+      if (!s || !s.html) return;
+      history = s.history || [];
+      mapShown = !!s.map;
+      log.innerHTML = s.html; // our own rendered output, exactly as persist() saved it
+      clearBtn.hidden = false;
+    } catch { /* corrupt state — start fresh */ }
+  })();
+
+  async function ask(q) {
+    q = q.trim();
+    if (!q) return;
+    input.value = '';
+    bubble('ask-q', esc(q));
+    const thinking = bubble('ask-a', '<em>Thinking it through…</em>');
+    try {
+      const chunks = await loadIndex();
+      // Retrieve on the recent thread + this turn, so follow-ups ("what about my
+      // lot?", "and the cost?") still land on the right passages.
+      const recent = history.filter((m) => m.role === 'user').slice(-2).map((m) => m.content).join(' ');
+      const ctxs = retrieve(`${recent} ${q}`.trim(), chunks, 8);
+      if (!ctxs.length) {
+        thinking.innerHTML = 'Nothing in the record matches that — try the site search or different words.';
+        return;
+      }
+      if (cfgEndpoint) {
+        const r = await fetch(cfgEndpoint, {
+          method: 'POST',
+          headers: { 'content-type': 'application/json' },
+          body: JSON.stringify({ question: q, history: history.slice(-8), contexts: ctxs }),
+        });
+        if (!r.ok) throw new Error(`endpoint ${r.status}`);
+        const { answer } = await r.json();
+        thinking.innerHTML = `${md(answer)}${wetlandMap(`${q} ${answer}`)}<div class="sources">Sources: ${sourceLinks(ctxs)}</div>`;
+        history.push({ role: 'user', content: q }, { role: 'assistant', content: answer });
+      } else {
+        thinking.innerHTML =
+          ctxs.slice(0, 4).map((c) =>
+            `<p style="margin:.4rem 0"><a href="${c.page}"><strong>${esc(c.title)}</strong></a><br>` +
+            `<span style="font-size:.85rem">${esc(c.text.slice(0, 260))}…</span></p>`).join('') +
+          wetlandMap(q) +
+          `<div class="sources">Passage-search mode — composed AI answers not yet enabled.</div>`;
+      }
+    } catch (e) {
+      thinking.innerHTML = `Something went wrong (<code>${esc(String(e.message || e))}</code>). ` +
+        `The <a href="/guides/start-here/">guides</a> and site search still have you covered.`;
+    } finally {
+      clearBtn.hidden = false;
+      persist();
+    }
+  }
+
+  form.addEventListener('submit', (ev) => { ev.preventDefault(); ask(input.value); });
+  clearBtn.addEventListener('click', () => {
+    try { sessionStorage.removeItem(STORE); } catch { /* nothing to clear */ }
+    history = [];
+    mapShown = false;
+    log.innerHTML = '';
+    clearBtn.hidden = true;
+    input.focus();
+  });
+</script>

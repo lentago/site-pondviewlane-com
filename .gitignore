@@ -1,0 +1,11 @@
+# Build artifacts and dependencies — everything else is committed.
+#
+# This is a PUBLIC repo holding a PUBLIC-RECORD-ONLY site. Unlike the private
+# source repo (lentago-internal), the generated site content
+# (src/content/docs/library/, src/content/docs/timeline.md, src/data/site-stats.json,
+# public/attachments/, public/library/, public/ask/rag-index.json) is COMMITTED
+# here — it is published by the private repo's one-way publish tool, which runs
+# the public-record firewall before pushing. Do not re-add those paths here.
+node_modules/
+dist/
+.astro/

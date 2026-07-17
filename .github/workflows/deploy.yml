@@ -1,0 +1,99 @@
+# .github/workflows/deploy.yml
+#
+# Build & Deploy: the public Pond View Lane site (pondviewlane.com) -> ECR ->
+# ECS Fargate (solidago platform), served as a HIDDEN, UNLISTED preview for
+# trustee review until the public launch (still gated — see the site README).
+#
+# Same pattern as site-lentago-dev / site-icecreamtofightwith-com: build the
+# Astro static site (npm run build), package dist/ into nginx, push to ECR, roll
+# the ECS service. Authenticates via the solidago platform's GitHub OIDC role
+# (no long-lived AWS credentials); the ECR repo, ECS cluster/service, the Ask
+# Lambda (module.ask_pondview), and the OIDC trust for THIS repo are provisioned
+# in solidago (modules/site + modules/ask-lambda).
+#
+# This repo is PUBLIC-RECORD-ONLY. Its content is published by the private
+# source repo's one-way firewall tool; this workflow only builds what is
+# committed here (no build-time content sync).
+
+name: Build & Deploy
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch: {}
+
+concurrency:
+  group: deploy-main
+  cancel-in-progress: true
+
+permissions:
+  id-token: write
+  contents: read
+
+env:
+  AWS_REGION: us-east-1
+  ECR_REPO: solidago-dev-pondview
+  ECS_CLUSTER: solidago-dev-cluster
+  ECS_SERVICE: solidago-dev-pondview
+  AWS_ROLE_ARN: arn:aws:iam::365184644049:role/solidago-dev-github-actions
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build static site
+        env:
+          # Wires the "Ask the Wiki" box to the composed-answer Lambda
+          # (solidago module.ask_pondview). Baked into the client at build via
+          # Astro's PUBLIC_ prefix; unset => the box degrades to passage search.
+          PUBLIC_ASK_ENDPOINT: ${{ vars.PUBLIC_ASK_ENDPOINT }}
+        run: npm run build
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: ${{ env.AWS_ROLE_ARN }}
+          aws-region: ${{ env.AWS_REGION }}
+
+      - name: Login to ECR
+        id: ecr-login
+        uses: aws-actions/amazon-ecr-login@v2
+
+      - name: Build and push container image
+        env:
+          REGISTRY: ${{ steps.ecr-login.outputs.registry }}
+          IMAGE_TAG: ${{ github.sha }}
+        run: |
+          docker build \
+            -t $REGISTRY/$ECR_REPO:latest \
+            -t $REGISTRY/$ECR_REPO:$IMAGE_TAG \
+            .
+          docker push $REGISTRY/$ECR_REPO:latest
+          docker push $REGISTRY/$ECR_REPO:$IMAGE_TAG
+
+      - name: Force new ECS deployment
+        run: |
+          aws ecs update-service \
+            --cluster $ECS_CLUSTER \
+            --service $ECS_SERVICE \
+            --force-new-deployment \
+            --region $AWS_REGION \
+            --no-cli-pager
+
+      - name: Wait for deployment to stabilize
+        run: |
+          aws ecs wait services-stable \
+            --cluster $ECS_CLUSTER \
+            --services $ECS_SERVICE \
+            --region $AWS_REGION

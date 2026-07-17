@@ -1,0 +1,130 @@
+---
+title: "Form G Covenant — Beverly Planning Board (subdivision completion, in lieu of bond)"
+description: "Founding Instruments · 2015-01-27"
+sidebar:
+  order: 4
+---
+
+<iframe src="/library/founding/form-g-covenant-2015.pdf" title="Form G Covenant — Beverly Planning Board (subdivision completion, in lieu of bond)" class="doc-viewer" loading="lazy"></iframe>
+
+<a class="doc-download" href="/library/founding/form-g-covenant-2015.pdf" target="_blank" rel="noopener">Open PDF in a new tab ↗</a>
+<script>(function(){var m=location.hash.match(/^#page=(\d+)$/);if(!m)return;var f=document.querySelector('iframe.doc-viewer');if(f)f.src=f.getAttribute('src').split('#')[0]+'#page='+m[1];var a=document.querySelector('a.doc-download');if(a)a.href=a.getAttribute('href').split('#')[0]+'#page='+m[1];})()</script>
+
+| | |
+|---|---|
+| **Date** | 2015-01-27 |
+| **Category** | Founding Instruments |
+| **Status** | Public record — recorded or publicly filed |
+| **Recording** | Bk 33823 Pg 167 (rec. 1/28/2015) |
+| **Pages** | 3 |
+| **Size** | 260 KB |
+| **Notes** | Pulled from the Southern Essex Registry (salemdeeds.com) 2026-07-15. The developer's covenant with the City of Beverly, executed instead of posting a performance bond: no lot may be sold or built upon until the ways and municipal services serving it are complete; completion of all ways/services was due before 10/21/2016 or plan approval would be automatically rescinded; lots are released only by a certificate of performance from a majority of the Planning Board. Signed by Paul DiBiase (DUC Residential LLC); Enterprise Bank & Trust assented as mortgagee (mortgages at Bk 33792 Pg 512 & Pg 529). References the definitive plan, Plan 446/73. (Corrects the wiki's prior description of Bk 33823 Pg 167 as 'the earlier plan' — it is this covenant, not a plan.) |
+
+<details>
+<summary>Extracted text (searchable)</summary>
+<pre class="doc-text">[Registry stamp: 2015012800342 Bk:33823 Pg:167 — 01/28/2015 02:08 CVNT Pg 1/3]
+[Handwritten annotations: "+ Plan", "Appendix G", "3"]
+
+CITY OF BEVERLY, MASSACHUSETTS
+BEVERLY PLANNING BOARD
+
+FORM G — COVENANT
+
+See Form R for Applicant Signature Information
+One completed form and two (2) copies thereof shall be filed with the
+Beverly Planning Board.
+
+KNOW ALL MEN BY THESE PRESENTS
+
+that whereas the undersigned DUC Residential LLC, P.O. Box 780, Lynnfield,
+MA 01940 has submitted an application dated June 23, 2014 to the Beverly
+Planning Board for approval of Definitive Plan of a certain subdivision
+entitled Essex Crossing, Section(s) N/A, Sheets 11, and dated June 6, 2014,
+and has requested the Board to approve such plan without requiring a
+performance bond.
+
+NOW THEREFORE, THIS AGREEMENT WITNESSETH that in consideration of the
+Beverly Planning Board approving said plan without requiring a performance
+bond, and in consideration of one dollar in hand paid, receipt whereof is
+hereby acknowledged, the undersigned covenants and agrees with the City of
+Beverly as follows:
+
+1. The undersigned will not sell any lot in the subdivision or erect or
+place any permanent building on any such lot until the construction of ways
+and the installation of municipal services necessary to serve adequately
+such lot has been completed in the manner specified in the aforesaid
+application, and in accordance with the covenants, conditions, agreements,
+terms, and provisions thereof.
+
+2. This agreement shall be binding upon the executors, administrators,
+devisees, heirs, successors and assigns of the undersigned.
+
+It is the intention of the undersigned and it is hereby understood and
+agreed that this contract shall constitute a covenant running with the land
+included in the aforesaid subdivision and shall operate as restrictions upon
+said land. This covenant shall take effect upon the approval of said plan.
+Reference to this covenant shall be entered upon said plan and this covenant
+shall be recorded when said plan is recorded.
+
+It is understood and agreed that lots within the subdivision shall,
+respectively, be released from the foregoing conditions upon the recording
+of a certificate of performance executed by a majority of the Beverly
+Planning Board and enumerating the specific lots to be so released.
+
+3. The undersigned represents and covenants that undersigned is the
+owner(s)* in fee simple of all the land included in the aforesaid
+subdivision and that there are no mortgages of record or otherwise of any of
+said land, except such as are described below and sub-ordinated to this
+contract, and the present holders of said mortgages have assented to this
+contract prior to its execution by the undersigned.
+
+A mortgagee who acquired title to the mortgaged premises or part thereof may
+sell any such lot, subject only to the portion of this covenant which
+provides that no lot so sold shall be built upon until such ways and
+services have been provided to serve such lot.
+
+4. The construction of all ways and the installation of all municipal
+services shall be completed in accordance with the applicable Rules and
+Regulations of the City of Beverly Governing the Subdivision of Land before
+October 21, 2016 [handwritten] unless an extension of time is granted by the
+Beverly Planning Board. Failure to so complete shall automatically rescind
+approval of the plan.
+
+5. The undersigned "Not Applicable No Rights Of Homestead Exist."
+[handwritten] wife/husband of said Covenantor, hereby agrees that such
+interest as I may have in said premises shall be subject to the provisions
+of this covenant and insofar as is necessary release all rights of tenancy
+by the courtesy, dower, homestead, and other interest therein.
+
+IN WITNESS WHEREOF the undersigned, applicant as aforesaid, does hereunto
+set his hand and seal this 20th day of January 2015.
+
+Applicant's husband/wife: N/A
+Applicant(s): DUC Residential LLC, by Paul DiBiase, Manager
+
+Description of Mortgages: Mortgages to Enterprise Bank &amp; Trust Company
+recorded at Essex South Registry of Deeds at Book 33792 Page 512 and Book
+33792 Page 529.
+
+Assents of mortgagees:
+Enterprise Bank &amp; Trust Company
+By: Marlene P. Hoyt, Senior Vice President
+
+COMMONWEALTH OF MASSACHUSETTS
+Essex County, ss. — January 20, 2015
+
+Then personally appeared the above named Marlene P. Hoyt, Senior Vice
+President, and acknowledged the foregoing instrument to be her free act and
+deed, before me.
+
+Notary Public: Faith A. Walsh
+[Notary stamp: Faith A. Walsh, Notary Public, Commonwealth of Massachusetts,
+My Commission Expires February 20, 2020]
+
+*If there is more than one owner all must sign.
+
+[Transcribed 2026-07-17 from the recorded scan (200 dpi page renders) by the
+site maintainer with AI assistance.]
+</pre>
+</details>
+

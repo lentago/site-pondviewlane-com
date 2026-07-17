@@ -1,0 +1,319 @@
+---
+title: "Declaration of Restrictive Covenants"
+description: "Founding Instruments · 2015-12-09"
+sidebar:
+  order: 7
+---
+
+<iframe src="/library/founding/restrictive-covenants-2015.pdf" title="Declaration of Restrictive Covenants" class="doc-viewer" loading="lazy"></iframe>
+
+<a class="doc-download" href="/library/founding/restrictive-covenants-2015.pdf" target="_blank" rel="noopener">Open PDF in a new tab ↗</a>
+<script>(function(){var m=location.hash.match(/^#page=(\d+)$/);if(!m)return;var f=document.querySelector('iframe.doc-viewer');if(f)f.src=f.getAttribute('src').split('#')[0]+'#page='+m[1];var a=document.querySelector('a.doc-download');if(a)a.href=a.getAttribute('href').split('#')[0]+'#page='+m[1];})()</script>
+
+| | |
+|---|---|
+| **Date** | 2015-12-09 |
+| **Category** | Founding Instruments |
+| **Status** | Public record — recorded or publicly filed |
+| **Recording** | Bk 34576 Pg 471 |
+| **Pages** | 6 |
+| **Size** | 1.5 MB |
+
+<details>
+<summary>Extracted text (searchable)</summary>
+<pre class="doc-text">[Registry stamp: SO.ESSEX #116 Bk:34576 Pg:471 — 12/09/2015 09:57 CVNT Pg 1/6]
+
+DECLARATION OF RESTRICTIVE COVENANTS AND COMMON SCHEME RESTRICTIONS
+FOR ESSEX CROSSING AT MONTSERRAT, BEVERLY, MASSACHUSETTS
+
+WHEREAS, DUC Residential LLC, hereinafter referred to as the DEVELOPER, owns
+certain land in Beverly, Essex County, Massachusetts, shown on a certain
+Definitive Plan entitled, "Open Space Residential Subdivision Essex Crossing,
+Beverly, Massachusetts", prepared by Hayes Engineering, Inc. recorded as Plan
+No. 73 in Plan Book 446 at Essex South Registry of Deeds (hereinafter the
+"Plan").
+
+WHEREAS, DEVELOPER, desires to provide for the preservation of the values and
+the amenities of said subdivision and community; and, to this end, DEVELOPER
+desires to subject all lots as shown on the aforesaid plan to the Covenants
+and Restrictions hereinafter set forth, each and all of which is and are for
+the benefit of said property and each owner thereof, enforceable by and such
+owner at law or in equity, subject to Paragraph 4 and Paragraph 9 below.
+
+NOW, THEREFORE, the DEVELOPER declares for itself and its successors in
+record title, that the lots as shown on the Subdivision plan, above described
+are and shall be held, transferred, sold, conveyed, inherited and occupied
+subject to and with the benefit of the Covenants and Restrictions hereinafter
+set forth, which restriction shall run with the land, but shall expire thirty
+(30) years from the date hereof, unless otherwise extended by written notice
+recorded in the Essex South District Registry of Deeds, executed by any owner
+of such lot then holding title subject to the terms of paragraph 10 below.
+
+All lots in the subject subdivision shall be conditioned and restricted as
+follows:
+
+1. APPROVAL OF ALL PLANS. Whether or not provision therefore is specifically
+stated in any conveyance of any one or more of the aforesaid Lots by the
+DEVELOPER, the owner or occupant of each such Lot by acceptance of title
+hereto, or by taking possession thereof, covenants and agrees that no
+structure, including, but not necessarily limited to any residential
+structure, appurtenant building, fence or other permanent structural
+improvement, shall be constructed or maintained on any lot, and no alteration
+of the exterior of an existing structure or addition thereto shall be made,
+unless complete plans, specifications, and lot plans therefor, showing the
+exterior design, height, building material and color scheme thereof, the
+location of the structure on the lot, the location and size of the driveways,
+fencing, walls, and the grading plan shall have first been submitted to and
+approved in writing by the DEVELOPER or its nominee, and a copy of such
+plans, specifications and lot plans as finally approved are deposited with
+the DEVELOPER or its nominee.
+
+The DEVELOPER shall have the sole and exclusive right to refuse to approve
+any plan, design specifications or building materials, which the DEVELOPER
+deems not suitable or desirable for the overall development of the
+subdivision.
+
+[p. 1 footer: Brian D. McGrail, Esq., 599 North Avenue, Suite 7 Second Floor,
+Wakefield, MA 01880]
+
+The DEVELOPER or its nominee shall issue a written certificate, acknowledged
+for the purpose of recording, certifying that the building plans required by
+this restriction have been submitted to and have been approved by the
+DEVELOPER or its nominee as herein required. The issuance of such a
+certificate by the DEVELOPER or its nominee shall be conclusive evidence that
+such approval has been obtained.
+
+2. COMPLETION OF WORK. The DEVELOPER shall have the right to insure that any
+building on any Lot in the above-referenced subdivision is completed in
+conformity with the plans, specifications, and information submitted to it
+and approved by it. All exterior work on the principal structure, together
+with any landscaping, grading, and driveway construction undertaken in
+connection with the development of the Lot shall be completed within one (1)
+year from the date of approval of the plans and specifications so approved.
+Upon completion of the work, the DEVELOPER or its nominee shall issue a
+Certificate of Completion acknowledged for the purposes of recording,
+certifying that the work has been completed in conformity with the plans and
+specifications approved by the DEVELOPER, and within the requisite one-year
+period. The issuance of said Certificate by the DEVELOPER shall be conclusive
+evidence that such work has been completed.
+
+Any construction to be undertaken upon any lot protected hereunder shall
+commence within six (6) months of approval from the DEVELOPER. All
+construction so commenced shall be diligently pursued and shall be concluded
+with the aforesaid one (1) year period.
+
+If no notice of suit is recorded in the Essex South District Registry of
+Deeds, indexed in the grantor index under the lot owner(s) name, within two
+(2) years after completion of any building, structure, or other permanent
+structural improvement, alteration, addition, or landscaping, then the work
+so completed shall be conclusively deemed to have complied with this
+restriction and restriction Number 1, notwithstanding the lack of any
+certificate signed by the DEVELOPER or its nominee appearing in the chain of
+title. For the purposes of this paragraph, the issuance of an occupancy
+permit by the City of Beverly shall be deemed to be evidence of the date of
+the completion of any building or structure herein contemplated for which
+such permit is required.
+
+3. MISCELLANEOUS RESTRICTIONS.
+
+(A) No use shall be made of any Lot which shall be in conflict with the
+Ordinances of the City of Beverly, except as the same may be lawful by means
+of a variance or special permit granted by the Board of Appeals, Planning
+Board, or City Council.
+
+(B) Close lines and poles are prohibited. Outside television antennas,
+satellite dishes, radio aerials shall be located on or near each residence in
+such a way that they are neither visible from the street nor obtrusive in any
+way to neighbors, in addition to being minimally visible from the ways as
+shown on the plan as possible. Any solar panels must be in or on the rear of
+a building and NOT visible from the street.
+
+(C) No buildings, other than single, one-family dwelling and appurtenant
+out-buildings shall be erected, placed or maintained on any Lot. Appurtenant
+out-buildings may include a garage, a tool house, play house or similar
+structures, provided always that the plans and location for erection and
+installation of any building or out-building shall, prior to the commencement
+of construction be approved by the DEVELOPER as hereinafter provided.
+
+(D) No structures of a temporary character, trailer, tent, shack, garage, or
+barn shall be used on any Lot at any time as a residence either temporarily
+or permanently.
+
+(E) Utility service connections to any building(s) erected on any Lot, in and
+from the way shown on the Plan, shall be constructed and maintained
+underground.
+
+(F) No business, trade or profession or sanitarium shall be conducted from
+any building erected on any Lot, excepting however, that where permitted by
+applicable zoning law a lot owner may maintain an office in his residence
+thereon, provided he employees therein not more than one person, and provided
+further that notwithstanding the foregoing, so long as the DEVELOPER continue
+to own any lot in the subdivision, the DEVELOPER and its employees, agents
+and contractors may operate and maintain a real estate sales office on any
+lot or lots in the subdivision and may perform all acts necessary to
+construct the subdivision and the houses therein including, without
+limitation, storage of construction vehicles and materials and maintenance of
+an on-site office trailer or trailers.
+
+(G) No poultry house, rabbit hutch, or dog, cat or animal kennel, shall be
+erected or maintained on any Lot. No animals, livestock, poultry of any kind,
+or other barnyard animals be stabled, maintained, raised, bred, or kept
+thereon. This restriction shall not apply to household pets, including dogs
+and cats, which may be kept in a reasonable number, provided they are not
+kept, bred or maintained for any commercial purposes. All dogs must be
+restrained on the lot of the owner or on a dog leash and feces must be picked
+up on a daily basis.
+
+(H) All rubbish, trash and garbage shall be kept only in suitable sanitary
+containers to the rear of the dwellings or within them. No Lot shall be used
+or maintained as a dumping ground for rubbish, trash or garbage. All
+equipment for the storage or disposal of such material shall be kept in a
+clean and sanitary condition and not visible from any street.
+
+(I) No yard or open area on any Lot shall be used for the storage of trucks,
+machinery, supplies, materials or equipment of any business conducted by any
+Lot owner off the premises. This provision shall not apply to the DEVELOPER
+so long as any lots in the subdivision remain unsold. All boats and trailers
+shall be stored behind the homes so as to limit visibility of said boats and
+trailers from the street and adjacent houses. Any and all unregistered
+vehicles shall be stored within a garage.
+
+(J) No sign of any kind shall be displayed to the public view on any lot
+except (i) one sign of not more than 6" width and 25" length in size denoting
+the owner's name(s) and/or profession, or (ii) a sign stating that the lot
+and any house thereon is for sale or (iii) any sign required in connection
+with an Order of the Beverly Conservation Commission; provided, however, that
+all signs shall comply with the Ordinances of the City of Beverly in all
+respects. Notwithstanding the foregoing, so long as the Owner continues to
+own any lot in the subdivision, the Owner, its employees, agents and
+contractors may place, maintain and relocate any signs which they deem
+necessary in connection with the development and sale of lots in the
+subdivision.
+
+(K) Any structures at any time located upon any Lot shall be kept in good
+order and repair. All grass shall be kept neatly trimmed and hedges and other
+vegetation pruned.
+
+(L) No obnoxious or offensive activity shall be carried on upon any Lot, nor
+shall anything be done thereon which may be or may become an annoyance or
+nuisance to the neighborhood. Dogs, which bark on a continuous basis, shall
+be deemed to be obnoxious and offensive activity.
+
+(M) Mailboxes and there general location shall be approved by the Developer
+and the lot owner shall maintain the same in a good manner. The lot owner
+shall pay for the purchase and installation of the mailbox.
+
+(N) Notwithstanding any other restrictions in this document, fencing may only
+be installed between the front setback of the house and the rear lot line.
+Thus, there shall be no fencing between the actual front wall of the house
+that runs parallel to the street and the front lot line and/or the street
+line. Fencing may run from the front corner of a house to or toward the side
+lot line with the condition that it may only be 4 feet high and it may not be
+a chain link style fence.
+
+4. ENFORCEMENT OF COVENANTS. As long as the DEVELOPER shall retain legal
+title to any land shown on the Subdivision Plan aforementioned, the DEVELOPER
+alone, in its sole discretion, shall have the power to enforce the covenants
+herein contained. After all of the lots shown on the Plan have been conveyed
+by the DEVELOPER, any lot owner may enforce these restrictions. Enforcement
+of these covenants may be exercised by legal proceedings to restrain
+violation(s) or recover damages. In no event shall any enforcement of these
+restrictions result in a reversion of title from an individual lot owner to
+the DEVELOPER.
+
+5. WAIVER OF BREACH. The failure of the DEVELOPER to enforce any restriction,
+covenant, or agreement herein contained shall in no way be deemed a waiver of
+its right to do so thereafter for any subsequent or continuing breach.
+
+6. EASEMENTS. The DEVELOPER, its agents, servants, employees, successors and
+assigns and City of Beverly shall have the right and easement at any time;
+before or after conveyance of said lots to enter upon the same for the
+purpose of constructing the streets and sidewalks required in the
+subdivision, together with the right and easement, if necessary, to grade
+such lots in accordance with the requirements of the City of Beverly and any
+of its boards, commissions, or authorities having jurisdiction over the
+construction of the subdivision. All of the foregoing may be accomplished
+without being guilty of trespass or in any way answerable for damages.
+
+Easements, if any, for drainage or other utility purposes are reserved in
+perpetuity as shown on the recorded subdivision plan as the same may be
+amended from time to time. Within those easements, no structure, planting or
+other material shall be placed or permitted to remain which may damage or
+interfere with the installation and maintenance of utilities, or which may
+change to direction of flow or drainage channels in the easements. Any
+easement area on a lot and all improvements in it shall be maintained
+continuously by the lot owner except for those improvements, if any, for
+which a public authority or utility company is responsible.
+
+7. INVALIDITY. Invalidation of any one of these restrictions or covenants by
+judgment or court order shall in no way affect any of the other provisions
+which shall remain in full force and affect.
+
+8. RESERVED RIGHT TO GRANT EASEMENTS. The DEVELOPER, for itself and for its
+successors in record title, reserve the right to grant easements for utility
+purposes, cable television services, and similar services, in the ways which
+are shown on the aforementioned plans, so long as they are private ways and
+within the Open Space. Prior to the conveyance of any lot, but subsequent to
+the contracting for the sale of any such lot, the DEVELOPER may grant such
+easements as may be necessary on any lot for utilities, cable, storm water
+drainage, or similar services, provided such easements do not substantially
+affect the use of the lot for residential purposes.
+
+9. RESERVED RIGHT TO AMEND. The DEVELOPER hereby reserves the right, in its
+sole discretion, to amend this Declaration of Restrictive Covenants at any
+time prior to DEVELOPER'S conveyance of all of the lots in the subject
+subdivision; provided that no such amendment shall become effective until
+recorded with the Essex South District Registry of Deeds; and provided
+further, that no such amendment shall affect any lots within the subdivision
+conveyed by the DEVELOPER prior to the recordation of any such amendment.
+
+10. TERMINATION OR AMENDMENT OF COVENANTS BY AGREEMENT. Before the
+expiration of the terms of these restrictive covenants, said restrictions may
+be extended for successive periods of ten years unless an instrument signed
+by a majority of the owners of the lots as shown on the subdivision plan has
+been recorded, agreeing to change or terminate said covenants in whole or in
+part.
+
+11. CONVEYANCE BY THE WAY. No conveyance of any lot will convey the fee in
+any of the ways shown on said plan, the DEVELOPER reserving to itself the fee
+title, subject to the rights of the lot owners to pass and repass and to use
+the ways together with all other s entitled thereto for all purposes for
+which streets and ways are used in the City of Beverly.
+
+12. WAIVER AND VARIANCE. So long as DEVELOPER owns any lot in the
+subdivision, the DEVELOPER may in its sole unfettered discretion for any
+reason it deems appropriate waive any term or provision hereof or grant a
+variance from any term or any provision hereof. Thereafter, such authority to
+grant a waiver or variance shall be with the lot owners and may be exercised
+by owners of more than one half (1/2) of the lots then subject to these
+covenants. Any such waiver or grant of variance shall be in writing and shall
+be evidenced by a document recorded with the Essex South District Registry of
+Deeds.
+
+IN WITNESS WHEREOF, the said DUC Residential LLC, have hereto affixed their
+hands and seals this 9th day of December 2015.
+
+DUC Residential LLC
+By: Paul DiBiase, Manager
+
+COMMONWEALTH OF MASSACHUSETTS
+Middlesex, SS — December 9, 2015
+
+On this 9th day of December, 2015, before me, the undersigned notary public,
+personally appeared Paul DiBiase, Manager as aforesaid proved to me through
+satisfactory evidence of identification, which was his Massachusetts Drivers
+license to be the person whose name is signed on the preceding document and
+acknowledged to me that he/she signed it voluntarily for its stated purpose.
+
+Notary Public: Brian D. McGrail
+My Commission Expires: 3/14/19
+[Notary seal: Brian D. McGrail, Notary Public, Commonwealth of
+Massachusetts, My Comm. Expires March 14, 2019]
+
+[Transcribed 2026-07-17 from the recorded scan (200 dpi page renders) by the
+site maintainer with AI assistance; verbatim including original
+typographical errors ("continue to own", "there general location",
+"change to direction of flow", "with the aforesaid one (1) year period").]
+</pre>
+</details>
+
