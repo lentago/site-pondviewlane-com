@@ -28,10 +28,6 @@ export default defineConfig({
       // Adds the "Report an issue" mailto link under every page's footer.
       components: { Footer: './src/components/Footer.astro' },
       head: [
-        // Hidden trustee-review preview: keep it out of search indexes. The site
-        // is served on an unlisted host and is not for public discovery yet;
-        // remove this (and public/robots.txt) at the real public launch.
-        { tag: 'meta', attrs: { name: 'robots', content: 'noindex, nofollow' } },
         { tag: 'meta', attrs: { property: 'og:image', content: 'https://pondviewlane.com/og.jpg' } },
         { tag: 'meta', attrs: { property: 'og:image:width', content: '1200' } },
         { tag: 'meta', attrs: { property: 'og:image:height', content: '630' } },
