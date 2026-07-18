@@ -49,8 +49,8 @@ wetland resources and/or buffer zones: **Lots 7, 8, 9, 13, 14, 15 & 16**
 ([Findings, p. 13](/library/regulatory/order-of-conditions-2014/#page=13)).
 In street numbers, that's **#13, #18, #16, #8, #6, #4, and #2** (recorded
 Lot numbers and street numbers don't line up — the crosswalk is in
-[Finding the records](/guides/records/)). If you own one of those homes,
-part of your rear yard is likely inside the 100-foot band.
+[Finding the records](/guides/records/)). For those homes, part of the rear
+yard is likely inside the 100-foot band.
 
 ## Rules that ride on the bands, forever
 
@@ -68,7 +68,7 @@ From the recorded Certificate of Compliance's perpetual conditions
   maintained in perpetuity: the ones on recorded Lots 15 and 16 by those
   homeowners, the one at the mitigation-area bend by the association (¶1).
 
-## If you're planning work near the line
+## Planning work near the line
 
 **It has been done right on this lane, start to finish.** In 2021 a
 homeowner planning a fenced, terraced lawn area inside the buffer hired a

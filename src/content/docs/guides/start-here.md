@@ -1,15 +1,15 @@
 ---
-title: "Start here — what you agreed to"
-description: "The recorded covenants that came with your deed, and how to use this site to understand them."
+title: "Start here — the covenants that define the lane"
+description: "The recorded covenants that run with every lot on Pond View Lane, and how to use this site to understand them."
 sidebar:
   order: 1
 ---
 
-When you bought a home on Pond View Lane, you didn't just buy a house — you
-bought into a set of **recorded covenants that run with the land**. They bind
-you whether or not anyone showed them to you at closing, they bind the next
-owner when you sell, and they can't be waived by a handshake. This site
-exists to make them easy to actually understand.
+A home on Pond View Lane comes with more than the house: every lot is bound by a
+set of **recorded covenants that run with the land**. They apply to each owner
+whether or not the documents surfaced at closing, they pass to the next owner on
+a sale, and they can't be waived by a handshake. This site exists to make them
+easy to actually understand.
 
 ## The four documents that define the neighborhood
 
@@ -22,19 +22,19 @@ the [Document Library](/library/), viewable in place:
 |---|---|
 | Creates the association and its five-trustee board; every lot owner is automatically a member | [Declaration of Trust](/library/founding/trust-declaration-2015/) — Bk 34576 Pg 486 |
 | The master covenant: what the association must maintain (stormwater, open space, the access easement — its roadway clause also names the lane, since [accepted as a public way](/guides/governance/#what-the-association-must-maintain)) and how it's paid for — **the controlling document if any two conflict** ([§6.04](/library/founding/covenants-easements-2015/#page=10)) | [Declaration of Covenants, Easements & Agreements](/library/founding/covenants-easements-2015/) — Bk 34576 Pg 477 |
-| What you can and can't do **on your own lot** — fences, sheds, signs, solar placement, pets, boats, home businesses | [Declaration of Restrictive Covenants](/library/founding/restrictive-covenants-2015/) — Bk 34576 Pg 471 |
+| What is and isn't allowed **on an individual lot** — fences, sheds, signs, solar placement, pets, boats, home businesses | [Declaration of Restrictive Covenants](/library/founding/restrictive-covenants-2015/) — Bk 34576 Pg 471 |
 | The one recorded amendment: mailbox and mailbox-post upkeep became an association duty (and the City isn't liable for plow damage to them) | [First Amendment to the Trust](/library/founding/trust-first-amendment-2016/) — Bk 35266 Pg 467 |
 
-## The short version of what you agreed to
+## The short version of what they require
 
-- **You're a member of the association, automatically.** Owning a lot makes
-  you a beneficiary of the trust with a **6.25% share** (1/16) of the common
-  property and its expenses — membership can't be separated from the house
-  ([Trust, p. 4](/library/founding/trust-declaration-2015/#page=4)).
-- **You pay an equal share of the common costs.** The board sets an annual
-  assessment; unpaid assessments become a **lien with 12% interest**. How
-  that works: [Assessments](/guides/assessments/).
-- **Your own lot has rules.** Structural changes needed written approval;
+- **Every owner is a member of the association, automatically.** Owning a lot
+  makes the owner a beneficiary of the trust with a **6.25% share** (1/16) of
+  the common property and its expenses — membership can't be separated from the
+  house ([Trust, p. 4](/library/founding/trust-declaration-2015/#page=4)).
+- **Each owner pays an equal share of the common costs.** The board sets an
+  annual assessment; unpaid assessments become a **lien with 12% interest**.
+  How that works: [Assessments](/guides/assessments/).
+- **Each lot has rules of its own.** Structural changes need written approval;
   fences can't run in front of the house; solar goes on the rear; boats and
   trailers live behind the house; signs are tiny. The full list:
   [the Restrictive Covenants](/library/founding/restrictive-covenants-2015/)
@@ -51,7 +51,7 @@ the [Document Library](/library/), viewable in place:
 
 ## How to use this site
 
-- **[Ask](/ask/)** — type a plain-English question; the answer is grounded in
+- **[Ask](/ask/)** — a plain-English question returns an answer grounded in
   these documents, with links to the exact pages.
 - **The guides** (this section) — one topic each, everything cited to the
   record.
@@ -61,6 +61,6 @@ the [Document Library](/library/), viewable in place:
   recorded date.
 
 > **Not legal advice.** This site explains the public record in plain
-> English; for a real dispute, read the recorded instruments themselves and
-> talk to a Massachusetts real-estate attorney. It is also **not an official
-> publication of the association**.
+> English; a real dispute calls for the recorded instruments themselves and a
+> Massachusetts real-estate attorney. It is also **not an official publication
+> of the association**.

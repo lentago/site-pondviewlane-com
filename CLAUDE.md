@@ -61,6 +61,12 @@ the hygiene check enforces the public-record-only invariant (see Hard rules).
   greps `dist/` for source-identity tokens and fails on a hit.)
 - **Not official, not legal advice.** Keep that framing on the homepage, About,
   and the Ask page.
+- **Third-person voice in the static prose.** Guides, homepage, and About read
+  as neutral reference material — "an owner", "each lot", "residents", "the
+  homeowner at #N" — not direct address. Do **not** use second person ("you /
+  your") in the static content. The one exception is the **Ask chatbot** (the
+  answer Lambda's SYSTEM prompt and the Ask widget's own UI copy), which speaks
+  to the person asking, so second person is fine there.
 
 ## Build / deploy quick reference
 

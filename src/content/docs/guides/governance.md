@@ -1,6 +1,6 @@
 ---
 title: "How the association is governed"
-description: "The trust, the five trustees, voting, meetings, and the rules on your own lot — from the recorded instruments."
+description: "The trust, the five trustees, voting, meetings, and the rules on each lot — from the recorded instruments."
 sidebar:
   order: 2
 ---
@@ -14,8 +14,8 @@ the page.
 
 ## Membership and votes
 
-- Owning a lot **automatically** makes you a beneficiary of the trust. You
-  can't opt out, and membership can't be sold separately from the house
+- Owning a lot **automatically** makes the owner a beneficiary of the trust.
+  There is no opting out, and membership can't be sold separately from the house
   ([Trust, p. 4](/library/founding/trust-declaration-2015/#page=4)).
 - **One vote per lot**, each lot an equal **6.25% share** of the common
   property and expenses ([Trust schedule,
@@ -87,7 +87,7 @@ The master covenant assigns the association, exclusively
   the City bears no liability for mailbox damage, including from snow
   plowing or sanding.
 
-## Rules on your own lot
+## Rules on each lot
 
 The [Restrictive Covenants](/library/founding/restrictive-covenants-2015/)
 run with every lot until about 2045 (30 years, extendable in 10-year

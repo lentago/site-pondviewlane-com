@@ -1,13 +1,13 @@
 ---
 title: "Finding the records"
-description: "How to look up the neighborhood's deeds, plans, and filings yourself — with every book-and-page reference you need."
+description: "How to look up the neighborhood's deeds, plans, and filings — with every book-and-page reference."
 sidebar:
   order: 8
 ---
 
 Everything this site says traces to a public record, and every one of those
-records is something you can pull yourself. This page is the map: where to
-search, and the exact references.
+records is one anyone can pull. This page is the map: where to search, and the
+exact references.
 
 ## Where to search
 
