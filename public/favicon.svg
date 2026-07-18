@@ -1,7 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
-  <!-- Pond View Lane mark: a white pine over the pond -->
-  <circle cx="32" cy="46" r="14" fill="#4a90a4" opacity="0.85"/>
-  <path d="M32 6 L20 26 L27 25 L16 40 L28 38 L28 50 L36 50 L36 38 L48 40 L37 25 L44 26 Z"
-        fill="#2f6b4f"/>
-  <ellipse cx="32" cy="52" rx="11" ry="3" fill="#1d3a2a" opacity="0.35"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="Pond View Lane">
+  <!-- Pond View Lane mark: a white pine at the water's edge -->
+  <ellipse cx="32" cy="46" rx="23" ry="5.6" fill="#4a90a4"/>
+  <path d="M9 46 a23 5.6 0 0 0 46 0 Z" fill="#3a7a8c" opacity="0.45"/>
+  <line x1="16.5" y1="47.4" x2="25.5" y2="47.4" stroke="#cfe6ec" stroke-width="1.1" stroke-linecap="round" opacity="0.75"/>
+  <line x1="39" y1="44.4" x2="47" y2="44.4" stroke="#cfe6ec" stroke-width="1.1" stroke-linecap="round" opacity="0.6"/>
+  <rect x="30" y="40" width="4" height="6" rx="1.2" fill="#1d3a2a"/>
+  <path d="M32 6 L39 22 L34.5 22 L43.5 31.5 L38.5 31.5 L48 41 L16 41 L25.5 31.5 L20.5 31.5 L29.5 22 L25 22 Z" fill="#2f6b4f"/>
+  <path d="M32 6 L29.5 22 L25 22 L20.5 31.5 L25.5 31.5 L16 41 L28 41 Z" fill="#3a8062" opacity="0.55"/>
 </svg>

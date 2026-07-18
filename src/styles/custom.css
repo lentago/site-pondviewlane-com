@@ -2,11 +2,24 @@
    Palette: white-pine green (accent), pond blue (links/secondary),
    limestone cream (light bg). Serif display for an archival feel. */
 
+/* Lora — a warm, well-balanced text serif (SIL OFL 1.1), self-hosted as a latin
+   variable font (weight axis 400–700). It's the display face for the brand
+   wordmark (the hero + the nav title); Georgia stays the fallback and the face
+   for body-level headings. See public/fonts/OFL.txt. */
+@font-face {
+  font-family: 'Lora';
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url('/fonts/lora-latin-var.woff2') format('woff2');
+}
+
 :root {
   --pvl-pine: #2f6b4f;
   --pvl-pine-deep: #1d3a2a;
   --pvl-pond: #4a90a4;
   --sl-font-headings: Georgia, 'Times New Roman', serif;
+  --pvl-display: 'Lora', Georgia, 'Times New Roman', serif;
 }
 
 /* accent palette (dark theme) */
@@ -28,6 +41,13 @@
 h1, h2, h3, h4, .site-title {
   font-family: var(--sl-font-headings);
   letter-spacing: 0.01em;
+}
+
+/* Brand wordmark in the nav — the display serif */
+.site-title {
+  font-family: var(--pvl-display);
+  font-weight: 600;
+  letter-spacing: -0.005em;
 }
 
 /* ---------- home splash ---------- */
@@ -330,8 +350,13 @@ h1, h2, h3, h4, .site-title {
 
 /* ================= fun-color pass (2026-07-15) ================= */
 
-/* hero title: pine→pond gradient */
+/* hero title: Lora display serif + pine→pond gradient */
 .hero h1 {
+  font-family: var(--pvl-display);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  line-height: 1.05;
+  font-size: clamp(2.75rem, 6vw, 4rem);
   background: linear-gradient(92deg, var(--pvl-pine-deep) 20%, var(--pvl-pond) 90%);
   -webkit-background-clip: text;
   background-clip: text;
