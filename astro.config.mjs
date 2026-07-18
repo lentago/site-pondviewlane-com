@@ -28,6 +28,9 @@ export default defineConfig({
       // Adds the "Report an issue" mailto link under every page's footer.
       components: { Footer: './src/components/Footer.astro' },
       head: [
+        // Preload the brand display serif (Lora) so the hero wordmark doesn't
+        // flash from the Georgia fallback on first paint.
+        { tag: 'link', attrs: { rel: 'preload', href: '/fonts/lora-latin-var.woff2', as: 'font', type: 'font/woff2', crossorigin: 'anonymous' } },
         { tag: 'meta', attrs: { property: 'og:image', content: 'https://pondviewlane.com/og.jpg' } },
         { tag: 'meta', attrs: { property: 'og:image:width', content: '1200' } },
         { tag: 'meta', attrs: { property: 'og:image:height', content: '630' } },
