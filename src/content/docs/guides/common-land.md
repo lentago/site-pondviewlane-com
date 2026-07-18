@@ -28,6 +28,21 @@ center, the common woodland wrapping the homes, Kelleher Pond at lower left.*
   (Parcel B is 200 Pond View, 2.542 acres) — are **not** the association's;
   Parcel C is the association's only common land.
 
+## No tax burden on the parcel
+
+The common parcel carries **no property tax today**. The City of Beverly
+assessed 100 Pond View Lane (parcel 44-31) at **$75,600** as undeveloped land
+for FY2016 through FY2022 — a real cost, producing tax bills of roughly
+**$700–$1,000 a year** that the association paid, historically its largest
+fixed external expense. Beginning **FY2023** (assessment date January 1, 2022),
+the City's assessed value for the parcel dropped to **$0** — land, building,
+and total — and it has stayed at $0 through FY2026, so **nothing is owed on
+it**. The assessor's public record documents the change but does not state the
+mechanism behind it (revaluation, abatement, or exemption). The full
+year-by-year figures are in the library's
+[assessment history](/library/plans/assessor-history-100-pond-view/) and the
+current [assessor card](/library/plans/assessor-card-100-pond-view-fy2026/).
+
 ![Ownership schematic — three cards showing who owns and maintains each part of the neighborhood: the 16 homeowners own and maintain their own lots (under the recorded covenants), the association owns Parcel C and maintains the stormwater system and emergency access, and the City of Beverly maintains Pond View Lane as a public way; a band below shows that wetland regulation applies over the resource areas whoever owns the land](/attachments/diagram-who-owns-what.svg)
 
 ![Beverly parcel-viewer map of the neighborhood, north up — the subdivision outlined, Kelleher Pond to the south/southwest, the YMCA and wetland corridor to the east](/attachments/neighborhood-orientation-map-2026.jpg)
