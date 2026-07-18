@@ -40,16 +40,16 @@ What it deliberately does **not** publish:
 
 **Spot an error, or dispute something?** Every page has a **Report an
 issue** link at the bottom — it opens a [short form](/report/) with the
-page reference prefilled. Say what looks wrong and, if you have one, the
-record that says otherwise; pages get corrected at the source.
+page reference prefilled, for a note on what looks wrong and the record that
+says otherwise, where there is one; pages get corrected at the source.
 
 ## How it's built
 
 The site is an [Astro](https://astro.build) /
 [Starlight](https://starlight.astro.build) static build. Site search runs
-entirely in your browser (Pagefind), and the [Ask](/ask/) page retrieves
+entirely in the browser (Pagefind), and the [Ask](/ask/) page retrieves
 passages from this site's own pages and documents before composing an
-answer — nothing you type is stored. The content and code are co-written
+answer — nothing entered is stored. The content and code are co-written
 with [Claude](https://claude.com) (Anthropic) under the maintainer's
 direction and review.
 
