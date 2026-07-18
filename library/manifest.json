@@ -1,5 +1,5 @@
 {
-  "count": 35,
+  "count": 36,
   "generated": "2026-07-17",
   "documents": [
     {
@@ -196,6 +196,21 @@
       "recording": "Bk 35266 Pg 467 (rec. 9/16/2016)",
       "notes": "Discovered 2026-07-17 via a registry name search (the wiki previously did not know a recorded amendment existed). Developer-era amendment executed by DUC Residential LLC (Paul DiBiase, Manager) as sole trustee under Art. VIII: adds maintenance/replacement of mailboxes and mailbox posts to the Trust's purposes (Art. III §1) and provides the City of Beverly bears no liability for mailbox damage including from snow plowing/sanding. Recorded the same day as the Parcel C conveyance (Bk 35266 Pg 472). The instrument's internal reference to 'Book 35476, Page 486' is a typo for 34576/486.",
       "has_text": false
+    },
+    {
+      "id": "parcel-c-deed-2016",
+      "title": "Quitclaim Deed — Open Space Parcel C conveyed to the association ($1)",
+      "date": "2016-09-16",
+      "category": "founding",
+      "file": "files/founding/parcel-c-deed-2016.pdf",
+      "ext": "pdf",
+      "pages": 2,
+      "size": 112641,
+      "sha256": "b6aefd750c243e2eca37ae6f7a00258dfe38fdae5ec12a75aea7038bab7a0dac",
+      "status": "public-record",
+      "recording": "Bk 35266 Pg 472 (rec. 9/16/2016)",
+      "notes": "Pulled from the Southern Essex Registry (salemdeeds.com) 2026-07-17 — the deed that actually conveys the common land, previously referenced across the site but absent from the library. Quitclaim Deed with Quitclaim Covenants: DUC Residential LLC (Paul DiBiase, Manager) grants Open Space Parcel C (219,556 sf / 5.04 ac, as shown on Plan Book 446 Plan 73) to the Essex Crossing at Montserrat Homeowners Association Trust (u/d/t 12/9/2015, Bk 34576 Pg 486) for ONE ($1.00) DOLLAR. Conveyance subject to a drainage easement and the Emergency 20' Wide Access & Utility Easement shown on the Plan; the parcel's preservation in perpetuity is a condition of the OSRD Decision (Bk 33792 Pg 502). Title reference: deed at Bk 33792 Pg 509. Executed and acknowledged 9/13/2016; recorded 9/16/2016, the same day as the Trust's First Amendment (Bk 35266 Pg 467).",
+      "has_text": true
     },
     {
       "id": "trustee-resignation-developer-2018",

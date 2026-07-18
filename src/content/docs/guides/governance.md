@@ -75,8 +75,11 @@ The master covenant assigns the association, exclusively
   this clause is the **20-foot-wide emergency access and utility easement**
   running from Pond View Lane all the way to Ice House Lane — the recorded
   covenant names it the "Emergency 20' Wide Access & Utility Easement," so the
-  20 feet is its width, not its length. It must be kept free of all
-  obstructions (vehicles, snow, overgrown brush).
+  20 feet is its width, not its length. The
+  [recorded plan](/library/plans/subdivision-plan-book/) (Plan Book 446 Plan 73)
+  draws it as a curved way about 80 feet long where it crosses the common
+  parcel. It must be kept free of all obstructions (vehicles, snow, overgrown
+  brush).
 - The **stormwater management system**, per the recorded O&M plan — see
   [Stormwater](/guides/stormwater/).
 - **Open Space Parcel C** (5.04 acres of woods and wetland) and its trails —
