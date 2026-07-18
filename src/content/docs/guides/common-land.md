@@ -16,7 +16,9 @@ center, the common woodland wrapping the homes, Kelleher Pond at lower left.*
 ## What it is, on the record
 
 - **Deeded to the association** by the developer on 9/16/2016 for $1
-  (Bk 35266 Pg 472). The City assesses it as parcel **44-31**.
+  ([Bk 35266 Pg 472](/library/founding/parcel-c-deed-2016/) — a quitclaim deed
+  conveying the parcel "as shown on" the recorded plan). The City assesses it as
+  parcel **44-31**.
 - The recorded covenant declares it **"perpetually preserved in an open or
   natural state"** — primary purpose **wildlife habitat and conservation**,
   secondary purpose **passive, non-motorized recreation**, and it must
@@ -24,7 +26,8 @@ center, the common woodland wrapping the homes, Kelleher Pond at lower left.*
   ([Covenants §2.05, pp. 4–5](/library/founding/covenants-easements-2015/#page=4)).
 - **Every lot owner has access.** The open-space trails lead down toward
   Kelleher Pond.
-- Two other open-space parcels on the recorded plan — **Parcels A and B**
+- Two other open-space parcels on the
+  [recorded plan](/library/plans/subdivision-plan-book/) — **Parcels A and B**
   (Parcel B is 200 Pond View, 2.542 acres) — are **not** the association's;
   Parcel C is the association's only common land.
 
