@@ -42,7 +42,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      # Full history: Starlight's lastUpdated reads each page's git log — a
+      # depth-1 checkout stamps every page with the latest deploy's date.
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Setup Node
         uses: actions/setup-node@v4
