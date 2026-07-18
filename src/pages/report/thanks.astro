@@ -12,6 +12,11 @@ import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
     title: 'Report received — thank you',
     description: 'Your correction was sent to the site maintainer.',
     tableOfContents: false,
+    // Post-submit landing only — keep it out of search engines, the on-site
+    // Pagefind index, and (via the sitemap filter in astro.config.mjs) the
+    // sitemap.
+    pagefind: false,
+    head: [{ tag: 'meta', attrs: { name: 'robots', content: 'noindex' } }],
   }}
 >
   <p>
