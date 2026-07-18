@@ -33,10 +33,21 @@ the page.
   empty more than 60 days
   ([Trust, p. 5](/library/founding/trust-declaration-2015/#page=5)).
 - **Resignations take effect when recorded.** That's why the
-  [Trustee Instruments](/library/) section of the library is a complete
-  public paper trail of every board change — appointments and resignations
-  are registry documents ([Trust,
+  [Trustee Instruments](/library/) section of the library is the public
+  paper trail of the board's recorded changes — appointments and
+  resignations are registry documents ([Trust,
   p. 6](/library/founding/trust-declaration-2015/#page=6)).
+- **The recorded chain has a gap (as of 2026).** Every board change through
+  2021 is on file, but the trail ends there: the most recent recorded change
+  is a resignation on
+  [11/19/2021](/library/governance/trustee-resignation-16pv-2022/)
+  (Bk 40504 Pg 495), and no **appointment** has been recorded since
+  [12/6/2019](/library/governance/trustee-appointment-6pv-2020/). The 2022
+  appointment that filled the seat vacated in 2021 does not appear at the
+  Registry, so the public record currently documents **four of the five
+  sitting trustees**. Because the trust says an appointment "takes effect when
+  recorded," that seat's current trustee isn't reflected in the recorded chain
+  until the instrument is filed.
 - Trustees are liable only for their own "willful malfeasance and default"
   and are indemnified from trust property
   ([Trust, p. 6](/library/founding/trust-declaration-2015/#page=6)).

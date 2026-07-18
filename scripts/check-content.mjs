@@ -85,7 +85,10 @@ console.log(`\nCONTENT CHECK  ${REPO}\n`);
   if (!existsSync(dist)) { warn('C5', 'dist/ not built — run npm run build first'); }
   else {
     let hits = 0;
-    for (const f of walk(dist, ['dist/_astro', 'dist/pagefind']).filter((f) => /\.(html|json|xml|txt)$/i.test(f))) {
+    // Skip vendored framework/search bundles and the self-hosted font dir — the
+    // font's OFL license legitimately carries the project's github.com URL, which
+    // is not site content and can't de-anonymize anything.
+    for (const f of walk(dist, ['dist/_astro', 'dist/pagefind', 'dist/fonts']).filter((f) => /\.(html|json|xml|txt)$/i.test(f))) {
       const rel = relative(REPO, f), t = read(f);
       for (const re of IDENTITY) { const m = t.match(re); if (m) { fail('C5', `${rel}: source-identity "${m[0]}"`); hits++; } }
       if (!isLibDoc(rel)) { if (t.match(IDENT)) { fail('C5', `${rel}: identifier`); hits++; } if (GMAIL.test(t)) { fail('C5', `${rel}: HOA gmail`); hits++; } }

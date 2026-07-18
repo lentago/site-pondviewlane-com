@@ -240,12 +240,18 @@
     ]
   },
   {
-    "d": "2022-03-11",
-    "dl": "Mar 2022",
+    "d": "2022-05-20",
+    "dl": "2022",
     "e": "steady",
     "cat": "people",
-    "t": "Trustee turnover recorded",
-    "x": "Board turnover reaches the record: a #16 trustee's resignation (recorded May 2022) and a successor appointment from #11 (recorded June 2022) at the Registry."
+    "t": "The fifth seat is filled — but not on the record",
+    "x": "A successor trustee is appointed in 2022 to fill the seat left by the 2021 resignation, but no appointment instrument is recorded at the Registry. The last recorded appointment is from December 2019, so the recorded chain of board changes ends with the November 2021 resignation — the public record currently documents four of the five sitting trustees.",
+    "refs": [
+      {
+        "t": "last recorded appointment (2019)",
+        "d": "governance/trustee-appointment-6pv-2020"
+      }
+    ]
   },
   {
     "d": "2022-07-01",
