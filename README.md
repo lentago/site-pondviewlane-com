@@ -17,15 +17,18 @@ ECS Fargate → ALB), the same platform that runs
 [lentago.dev](https://lentago.dev) and
 [icecreamtofightwith.com](https://icecreamtofightwith.com).
 
-**Two domains, one content tree.** The same records are also published under the
+**Two domains, one fact base.** The same records are also published under the
 subdivision's legal name, **essexcrossingatmontserrat.com** — a second front door
-for buyers, attorneys, and title searchers. It is a distinct visual skin, *not*
-different content: the prose is byte-identical, and a build-time `SITE` switch
-selects only the presentation shell (site URL, title, brand assets, stylesheet).
-CI builds both variants into one nginx container that serves each by `Host`
-header. This single-content-source design is a deliberate exception to the
-fleet's one-repo-per-domain convention — it's the guard against two sites of
-record drifting apart.
+for buyers, attorneys, and title searchers, with its own visual skin *and its own
+voice* (see `essex-crossing-voice-guide.md`). The two skins share facts, not
+words: prose lives in `content/base/` with per-page Essex-voice overrides in
+`content/essex/`, composed into the build per skin, and a facts-parity check
+guarantees every figure, date, and citation in the base appears in the Essex
+variant. A build-time `SITE` switch selects the presentation shell (site URL,
+title, brand assets, stylesheet); CI builds both variants into one nginx
+container that serves each by `Host` header. This single-fact-source design is a
+deliberate exception to the fleet's one-repo-per-domain convention — it's the
+guard against two sites of record drifting apart.
 
 > **Not official, not legal advice.** This is a resident's reference, **not** a
 > publication of the homeowners association, and nothing here is legal advice.
@@ -57,7 +60,8 @@ a public record, every image on an explicit allowlist.
 
 | Path | Purpose |
 |---|---|
-| `src/content/docs/guides/` | The eight hand-written resident guides — the site's prose (start here, governance, common land, stormwater, wetlands, assessments, records, trees). |
+| `content/base/` | The hand-written prose — homepage, About, and the eight resident guides (start here, governance, common land, stormwater, wetlands, assessments, records, trees). |
+| `content/essex/` | Per-page Essex-voice overrides (The Obsequious Document), composed over the base for the essexcrossing skin. |
 | `library/` | **Source of record:** `manifest.json` (document metadata) + `files/` (the recorded instruments / city filings) + `text/` (searchable text extracts). |
 | `timeline/events.json` | **Source:** the public-records chronology, one entry per dated event. |
 | `attachments/` | **Source:** the maps, plans, and diagrams the guides embed (the allowlist the generator publishes). |

@@ -5,10 +5,13 @@
   "private": true,
   "scripts": {
     "sync": "node scripts/sync-content.mjs",
-    "predev": "npm run sync",
+    "compose": "node scripts/compose-content.mjs",
+    "predev": "npm run sync && npm run compose",
     "dev": "astro dev",
     "prebuild": "npm run sync",
-    "build": "SITE=pondview astro build && SITE=essexcrossing astro build",
+    "build": "npm run build:pondview && npm run build:essexcrossing",
+    "build:pondview": "SITE=pondview npm run compose && SITE=pondview astro build",
+    "build:essexcrossing": "SITE=essexcrossing npm run compose && SITE=essexcrossing astro build",
     "postbuild": "npm run check",
     "check": "node scripts/check-content.mjs",
     "preview": "astro preview"

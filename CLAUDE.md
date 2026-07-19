@@ -21,24 +21,31 @@ site for Pond View Lane residents (the Essex Crossing at Montserrat subdivision,
 Beverly MA). It is **fully self-contained** — it holds its own source and a
 build-time generator; there is no external dependency.
 
-**Two domains, one content tree.** This repo also publishes a sister site,
+**Two domains, one fact base.** This repo also publishes a sister site,
 **essexcrossingatmontserrat.com** — the subdivision's legal name, a second front
-door onto the *same* records for buyers/attorneys/title searchers. It is a
-different visual skin, not different content: the prose is byte-identical, and a
-build-time `SITE` switch (`pondview` default | `essexcrossing`, registry in
-`site.config.mjs`) selects only the presentation shell — `site` URL, title,
-description, brand assets, per-scheme `theme-color`, and stylesheet. CI builds
-**both** variants (`dist-pondview` / `dist-essexcrossing`) into one nginx
-container that serves each by `Host` header (see `nginx.conf`). This is a
-**deliberate deviation** from the fleet's one-repo-per-domain `site-<domain>`
-convention: a single content source of truth outweighs the naming convention
-(the failure mode we're avoiding is content drift between two repos). The
-solidago companion (DNS/TLS/ALB host rule, Ask CORS value) is issue
-`lentago/solidago#137`.
+door onto the *same* records for buyers/attorneys/title searchers. A build-time
+`SITE` switch (`pondview` default | `essexcrossing`, registry in
+`site.config.mjs`) selects the presentation shell — `site` URL, title,
+description, brand assets, per-scheme `theme-color`, and stylesheet. Since the
+Obsequious Document rewrite (#15) the two skins share **facts, not words**:
+hand-written prose lives in `content/base/` (the pondview voice) with per-page
+overrides in `content/essex/` (the Essex voice — see
+`essex-crossing-voice-guide.md`, the canonical voice reference);
+`scripts/compose-content.mjs` materializes `src/content/docs/` per build, and
+`check-content.mjs` C7 enforces that every fact token in a base page appears in
+its Essex variant. CI builds **both** variants (`dist-pondview` /
+`dist-essexcrossing`) into one nginx container that serves each by `Host` header
+(see `nginx.conf`). This is a **deliberate deviation** from the fleet's
+one-repo-per-domain `site-<domain>` convention: a single fact source of truth
+outweighs the naming convention (the failure mode we're avoiding is record
+drift between two repos). The solidago companion (DNS/TLS/ALB host rule, Ask
+CORS value) is issue `lentago/solidago#137`.
 
 **Source you edit here:**
-- `src/content/docs/guides/*.md` — the eight hand-written resident guides (the
-  site's prose).
+- `content/base/` — the hand-written prose (homepage, About, the eight resident
+  guides) in the pondview voice; `content/essex/` — per-page Essex-voice
+  overrides, same relative paths. NOTE: relative MDX imports in both are written
+  for the composed location (`src/content/docs/`).
 - `library/` — the document record: `manifest.json` (metadata), `files/` (the
   recorded instruments / city filings), `text/` (searchable extracts). Add a
   public-record document by adding its file + a `manifest.json` entry
@@ -49,10 +56,11 @@ solidago companion (DNS/TLS/ALB host rule, Ask CORS value) is issue
 - The app shell (`src/components/`, `src/pages/`, `src/styles/`, `astro.config.mjs`,
   `Dockerfile`, `nginx.conf`, the workflows) and `functions/ask/handler.mjs`.
 
-**Generated at build — do NOT hand-edit** (`scripts/sync-content.mjs` runs before
-`dev`/`build` and rewrites these from the source above; they're gitignored):
-- `src/content/docs/library/**`, `src/content/docs/timeline.md`,
-  `src/data/site-stats.json`
+**Generated at build — do NOT hand-edit** (gitignored; `scripts/sync-content.mjs`
+emits the record-derived outputs, `scripts/compose-content.mjs` materializes the
+docs tree from `content/`):
+- `src/content/docs/**` (ALL of it — prose composed from `content/base` +
+  `content/essex`, library/timeline emitted by sync), `src/data/site-stats.json`
 - `public/library/**`, `public/attachments/**`, `public/ask/rag-index.json`
 
 After a content change, run `npm run build` — it emits **both** skins
@@ -88,12 +96,17 @@ preview a single skin in dev: `SITE=essexcrossing npm run dev`.
   both.)
 - **Not official, not legal advice.** Keep that framing on the homepage, About,
   and the Ask page.
-- **Third-person voice in the static prose.** Guides, homepage, and About read
-  as neutral reference material — "an owner", "each lot", "residents", "the
-  homeowner at #N" — not direct address. Do **not** use second person ("you /
-  your") in the static content. The one exception is the **Ask chatbot** (the
-  answer Lambda's SYSTEM prompt and the Ask widget's own UI copy), which speaks
-  to the person asking, so second person is fine there.
+- **Voice is per-skin — the base prose is third-person.** In `content/base/`
+  (the pondview skin), guides, homepage, and About read as neutral reference
+  material — "an owner", "each lot", "residents", "the homeowner at #N" — not
+  direct address; do **not** use second person ("you / your") there. Exceptions:
+  the **Ask chatbot** (the answer Lambda's SYSTEM prompt and the Ask widget's UI
+  copy) speaks to the person asking, and the **`content/essex/` overlay** speaks
+  in-character as The Obsequious Document (first person as the page, "sir /
+  madam" address) per `essex-crossing-voice-guide.md` — a deliberate, scoped
+  amendment of this rule. All other hard rules (public-record-only, no resident
+  names, anonymity, no gossip) bind the Essex voice exactly as hard; C7 keeps
+  its facts honest.
 
 ## Build / deploy quick reference
 

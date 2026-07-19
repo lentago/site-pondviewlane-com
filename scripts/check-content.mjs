@@ -114,5 +114,42 @@ console.log(`\nCONTENT CHECK  ${REPO}\n`);
   if (!hits) ok('C6', `rag-index: ${(rag.chunks || []).length} chunks clean`);
 }
 
+// C7 — facts parity between the base prose and the essex overlay. The Essex
+// skin rewrites pages in its own voice (essex-crossing-voice-guide.md), but the
+// voice decorates the fact, never replaces it: every fact token found in a base
+// page must appear verbatim in its overlay variant. Vacuous pass while no
+// overlay exists; a missing token is a hard failure once it does.
+{
+  const overlayRoot = join(REPO, 'content/essex');
+  const baseRoot = join(REPO, 'content/base');
+  const files = walk(overlayRoot).filter((f) => /\.(md|mdx)$/i.test(f));
+  if (!files.length) { ok('C7', 'facts parity: no essex overlay pages yet (nothing to compare)'); }
+  else {
+    const FACT_RES = [
+      /\$[\d][\d,.]*/g,                       // dollar amounts
+      /\b(?:19|20)\d{2}\b/g,                  // years
+      /\bchapter\s+\d+[a-z]?\b/gi,            // statute chapters (e.g. Chapter 131)
+      /\bsection\s+\d+[a-z]?\b/gi,            // statute sections
+      /\bbook\s+\d+\b/gi,                     // registry book refs
+      /\bpage\s+\d+\b/gi,                     // registry page refs
+      /\b\d[\d,.]*\s*(?:feet|foot|ft|acres?)\b/gi, // distances and areas
+    ];
+    let hits = 0, pages = 0;
+    for (const f of files) {
+      const rel = relative(overlayRoot, f);
+      const baseFile = join(baseRoot, rel);
+      if (!existsSync(baseFile)) { warn('C7', `${rel}: no base counterpart (essex-only page — facts unchecked)`); continue; }
+      pages++;
+      const base = read(baseFile), variant = read(f).toLowerCase();
+      for (const re of FACT_RES) {
+        for (const m of new Set((base.match(re) || []).map((t) => t.toLowerCase()))) {
+          if (!variant.includes(m)) { fail('C7', `${rel}: base fact "${m}" missing from essex variant`); hits++; }
+        }
+      }
+    }
+    if (!hits) ok('C7', `facts parity: ${pages} overlay page(s), every base fact token present`);
+  }
+}
+
 console.log(`\n${fails ? '✗ FAIL' : '✓ PASS'} — ${fails} failure(s), ${warns} warning(s)\n`);
 process.exit(fails ? 1 : 0);
