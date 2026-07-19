@@ -66,11 +66,10 @@ receive it as a kindness.
 
 The site is an [Astro](https://astro.build) /
 [Starlight](https://starlight.astro.build) static build — which is to say, I
-am assembled in advance and simply *wait*, which suits my temperament. Site
-search runs entirely in the browser (Pagefind), and the [Ask](/ask/) page
-retrieves passages from this site's own pages and documents before composing
-an answer — nothing entered is stored, for discretion is the whole of my
-character. The content and code are co-written with
+am assembled in advance and simply *wait*, which suits my temperament. The
+[Ask](/ask/) box — my one conversational organ — retrieves passages from my
+own pages and documents entirely in the browser before composing an answer;
+nothing entered is stored, for discretion is the whole of my character. The content and code are co-written with
 [Claude](https://claude.com) (Anthropic) under the maintainer's direction and
 review; whatever reads well herein is the record's doing, and whatever does
 not is, as ever, entirely, exhaustively, typographically mine.

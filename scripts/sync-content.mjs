@@ -224,7 +224,7 @@ association: the founding declarations, every trustee appointment and
 resignation on record, the subdivision plans, the stormwater permits and
 their perpetual conditions, and the common parcel's tax bills. Every document
 page embeds a viewer and, where available, the extracted text — so the whole
-record is searchable from the site search box.
+record is there to read, and the [Ask](/ask/) box can quote from it.
 
 These are documents anyone can obtain from the
 [Southern Essex Registry of Deeds](https://salemdeeds.com), the City of

@@ -30,6 +30,13 @@ import AskWidget from './AskWidget.astro';
 
 <script is:inline>
   (() => {
+    // Hoist the dock to <body>: it renders inside Starlight's .main-pane, whose
+    // `isolation: isolate` traps our z-index below the ToC sidebar — a fixed,
+    // full-viewport-height box that owns the bottom-right corner on every page
+    // with a ToC, silently swallowing the button's clicks. At body level the
+    // dock's z-index competes at the top of the stack and wins. Geometry is
+    // unaffected (position: fixed).
+    document.body.append(document.querySelector('.ask-float'));
     const btn = document.getElementById('ask-float-btn');
     const panel = document.getElementById('ask-float-panel');
     const OPEN = 'pvl-ask-dock-open';

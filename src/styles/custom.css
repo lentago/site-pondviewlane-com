@@ -50,6 +50,13 @@ h1, h2, h3, h4, .site-title {
   letter-spacing: -0.005em;
 }
 
+/* The homepage hero repeats the wordmark right below the header — hide the
+   header's copy there (visibility, not display, so the header grid holds);
+   inner pages keep it as the way home. */
+[data-has-hero] .site-title {
+  visibility: hidden;
+}
+
 /* ---------- home splash ---------- */
 /* Compact hero (2026-07-17): the Ask box is the homepage's real hero.
    Shrink the pine-mark image (Starlight default: min(70%, 20rem)) and the

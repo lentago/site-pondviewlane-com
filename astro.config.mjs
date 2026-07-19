@@ -17,8 +17,7 @@ const LIB_GROUPS = [
 ];
 
 // Two domains, one content tree: the per-site registry (SITE switch, URLs,
-// titles, brand assets, stylesheets) lives in site.config.mjs, shared with the
-// homepage-branding route middleware (src/route-data.mjs).
+// titles, brand assets, stylesheets, content overlay) lives in site.config.mjs.
 import { SITE, cfg } from './site.config.mjs';
 
 export default defineConfig({
@@ -36,8 +35,14 @@ export default defineConfig({
       logo: { src: cfg.logo },
       favicon: cfg.favicon,
       customCss: cfg.customCss,
-      // Adds the "Report an issue" mailto link under every page's footer.
-      components: { Footer: './src/components/Footer.astro' },
+      // No Pagefind: the Ask chat retrieves over the same corpus and answers
+      // instead of listing hits; the search slot becomes an Ask entry point
+      // (HeaderAsk.astro). Footer adds the "Report an issue" link + Ask dock.
+      pagefind: false,
+      components: {
+        Footer: './src/components/Footer.astro',
+        Search: './src/components/HeaderAsk.astro',
+      },
       head: [
         // Preload the brand display face(s) so the wordmark/headings don't flash
         // the fallback on first paint.
