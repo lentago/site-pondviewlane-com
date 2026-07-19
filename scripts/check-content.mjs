@@ -32,7 +32,7 @@ function walk(dir, skip = []) {
 const IDENT = /\b[A-Z][a-z]+\s*\(#\d+\)/g;               // "James (#9)"
 const GMAIL = /essexcrossinghoa@gmail\.com/gi;
 const IDENTITY = [/cpitzi/gi, /essex-crossing-hoa/gi, /Google Drive/gi, /\blentago\b/gi, /\bsolidago\b/gi, /github\.com/gi];
-const isLibDoc = (rel) => rel.includes('/library/') && !rel.endsWith('index.md') && (rel.includes('public/library/') || rel.includes('docs/library/') || rel.includes('dist/library/'));
+const isLibDoc = (rel) => rel.includes('/library/') && !rel.endsWith('index.md') && (rel.includes('public/library/') || rel.includes('docs/library/') || /(^|\/)dist[^/]*\/library\//.test(rel));
 
 console.log(`\nCONTENT CHECK  ${REPO}\n`);
 
@@ -79,22 +79,27 @@ console.log(`\nCONTENT CHECK  ${REPO}\n`);
   if (!hits) ok('C4', 'no private-repo artifacts (docs/, timeline/index.html, build_library.py, publish tooling, …)');
 }
 
-// C5 — rendered dist/: no source-identity or names outside library docs
+// C5 — rendered dists: no source-identity or names outside library docs.
+// Two-domain build: BOTH skins must exist and sweep clean. A missing or empty
+// dist is a hard failure, not a warning — otherwise the anonymity gate could
+// report PASS without ever scanning one skin. The list is explicit (not a
+// dist* glob) so a stale legacy dist/ from an old checkout is ignored.
 {
-  const dist = join(REPO, 'dist');
-  if (!existsSync(dist)) { warn('C5', 'dist/ not built — run npm run build first'); }
-  else {
-    let hits = 0;
+  const dists = ['dist-pondview', 'dist-essexcrossing'];
+  let hits = 0;
+  for (const d of dists) {
+    const dist = join(REPO, d);
+    if (!existsSync(dist) || !readdirSync(dist).length) { fail('C5', `${d}/ missing or empty — run npm run build`); hits++; continue; }
     // Skip vendored framework/search bundles and the self-hosted font dir — the
-    // font's OFL license legitimately carries the project's github.com URL, which
-    // is not site content and can't de-anonymize anything.
-    for (const f of walk(dist, ['dist/_astro', 'dist/pagefind', 'dist/fonts']).filter((f) => /\.(html|json|xml|txt)$/i.test(f))) {
+    // fonts' OFL licenses legitimately carry the projects' github.com URLs, which
+    // are not site content and can't de-anonymize anything.
+    for (const f of walk(dist, [`${d}/_astro`, `${d}/pagefind`, `${d}/fonts`]).filter((f) => /\.(html|json|xml|txt)$/i.test(f))) {
       const rel = relative(REPO, f), t = read(f);
       for (const re of IDENTITY) { const m = t.match(re); if (m) { fail('C5', `${rel}: source-identity "${m[0]}"`); hits++; } }
       if (!isLibDoc(rel)) { if (t.match(IDENT)) { fail('C5', `${rel}: identifier`); hits++; } if (GMAIL.test(t)) { fail('C5', `${rel}: HOA gmail`); hits++; } }
     }
-    if (!hits) ok('C5', 'rendered dist/ clean of source-identity, Name(#N), HOA gmail');
   }
+  if (!hits) ok('C5', `rendered ${dists.join(', ')} clean of source-identity, Name(#N), HOA gmail`);
 }
 
 // C6 — rag-index sweep

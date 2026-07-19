@@ -1,0 +1,211 @@
+/* Essex Crossing at Montserrat — the sister skin.
+   Loaded AFTER src/styles/custom.css (see the SITE switch in astro.config.mjs):
+   custom.css is the shared structural base for both domains; this file is a pure
+   theme override layered on top. Most components read the --pvl-* and Starlight
+   --sl-color-* custom properties, so redefining those here re-skins them without
+   touching the base; the handful of rules that bake in a brand colour or font
+   (the hero gradient, the nav wordmark, the stat/card tints) are re-declared
+   below, and this file adds the ornamental layer (script wordmark, engraved
+   double rules, fleuron dividers, gilded borders).
+
+   Palette: old-money estate — ivory/cream ground, deep estate green, gilt gold.
+   The satire lives entirely in the display type and ornament; body copy stays a
+   comfortable serif at sane sizes and every control keeps accessible contrast in
+   both colour schemes. No copy changes — the prose is byte-identical to the Pond
+   View skin. Fonts self-hosted under /fonts/ (SIL OFL 1.1); see the OFL-*.txt. */
+
+/* Playfair Display — high-contrast Didone for the headings and the nav wordmark
+   (engraved-nameplate feel, still fully legible). SIL OFL 1.1. */
+@font-face {
+  font-family: 'Playfair Display';
+  font-style: normal;
+  font-weight: 400 900;
+  font-display: swap;
+  src: url('/fonts/playfair.woff2') format('woff2');
+}
+/* EB Garamond — the body serif: warm, readable, unmistakably not the Pond View
+   sans. This is the workhorse for prose, tables, nav, and the library viewers.
+   SIL OFL 1.1. */
+@font-face {
+  font-family: 'EB Garamond';
+  font-style: normal;
+  font-weight: 400 800;
+  font-display: swap;
+  src: url('/fonts/eb-garamond.woff2') format('woff2');
+}
+/* Pinyon Script — the calligraphic showpiece, reserved for the homepage hero
+   wordmark. Kept off the navigation and body so nothing legible depends on a
+   script face. SIL OFL 1.1. */
+@font-face {
+  font-family: 'Pinyon Script';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/pinyon.woff2') format('woff2');
+}
+
+:root {
+  /* Estate palette, mapped onto the base's brand variables so every component
+     that reads --pvl-* inherits the new skin. */
+  --pvl-pine: #1c4031;         /* deep estate green (was pine) */
+  --pvl-pine-deep: #10271d;
+  --pvl-pond: #9c7c38;         /* gilt gold (the secondary accent / links’ warm tone) */
+  --pvl-shadow: 16 39 29;      /* rgb triplet for the green-tinted drop shadows */
+  --pvl-display: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  --essex-script: 'Pinyon Script', 'Snell Roundhand', cursive;
+  --sl-font-headings: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  /* Body serif — the single biggest tell that this is a different house. */
+  --sl-font: 'EB Garamond', Georgia, 'Times New Roman', serif;
+}
+
+/* accent palette (dark scheme) — gilt on deep forest */
+:root {
+  --sl-color-accent-low: #26301a;
+  --sl-color-accent: #b3893f;
+  --sl-color-accent-high: #e7cd8a;
+  --sl-color-bg: #14180f;
+  --sl-color-bg-nav: #1b2015;
+  --sl-color-bg-sidebar: #1b2015;
+}
+/* accent palette (light scheme) — estate green on ivory */
+:root[data-theme='light'] {
+  --sl-color-accent-low: #e6dcc0;
+  --sl-color-accent: #1c4031;
+  --sl-color-accent-high: #123024;
+  --sl-color-bg: #f7f2e6;      /* warm ivory ground */
+  --sl-color-bg-nav: #efe7d2;  /* deeper cream for nav/sidebar/cards */
+  --sl-color-bg-sidebar: #efe7d2;
+  --sl-color-text: #23241d;
+}
+
+/* ---------- display type ---------- */
+h1, h2, h3, h4, .site-title {
+  font-family: var(--sl-font-headings);
+  letter-spacing: 0.005em;
+}
+/* Engraved estate nameplate in the top bar — Playfair small-caps, letterspaced.
+   The script face is kept off the nav so the wordmark stays legible at chrome
+   sizes. */
+.site-title {
+  font-family: var(--sl-font-headings);
+  font-weight: 700;
+  font-variant: small-caps;
+  letter-spacing: 0.06em;
+}
+
+/* Small-caps section heads with a fine gilt double rule underneath — the
+   engraved-brochure look, applied only to the in-page h2s of the prose. */
+.sl-markdown-content h2 {
+  font-variant: small-caps;
+  letter-spacing: 0.03em;
+  border-bottom: 3px double color-mix(in srgb, var(--pvl-pond) 70%, transparent);
+  padding-bottom: 0.2rem;
+}
+.sl-markdown-content h3 {
+  font-variant: small-caps;
+  letter-spacing: 0.02em;
+  color: var(--sl-color-accent-high);
+}
+
+/* Fleuron dividers — a centred gilt ornament in place of the plain horizontal
+   rule the guides emit from `---`. */
+.sl-markdown-content hr {
+  border: 0;
+  height: auto;
+  text-align: center;
+  margin: 2.2rem 0;
+}
+.sl-markdown-content hr::before {
+  content: '❦';
+  color: var(--pvl-pond);
+  font-size: 1.4rem;
+  letter-spacing: 0.5em;
+}
+
+/* Drop cap — a gilt Playfair initial on the opening paragraph of the prose.
+   Scoped to :first-child so it only fires when the page genuinely opens on a
+   paragraph (the guides, the library/timeline intros); document-viewer pages
+   open on the embedded <iframe>, so they're skipped rather than dropping a cap
+   onto the recorded text. */
+.sl-markdown-content > p:first-child::first-letter {
+  float: left;
+  font-family: var(--sl-font-headings);
+  font-weight: 700;
+  font-size: 3.1em;
+  line-height: 0.78;
+  padding: 0.06em 0.12em 0 0;
+  color: var(--pvl-pond);
+}
+
+/* ---------- home splash ---------- */
+/* Hero wordmark — the calligraphic showpiece, in a green→gilt wash. */
+.hero h1 {
+  font-family: var(--essex-script);
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  line-height: 1.1;
+  font-size: clamp(3.25rem, 8vw, 5.5rem);
+  background: linear-gradient(92deg, var(--pvl-pine-deep) 12%, var(--pvl-pond) 92%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  padding-bottom: 0.08em; /* script descenders clip against the clip-path box otherwise */
+}
+:root[data-theme='dark'] .hero h1 {
+  background: linear-gradient(92deg, #e7cd8a 12%, #cfae5f 92%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Ask hero heading — match the gilt wash, in the estate serif. */
+.ask-hero-head h2 {
+  font-variant: small-caps;
+  letter-spacing: 0.02em;
+  border-bottom: 0;
+  padding-bottom: 0;
+  background: linear-gradient(92deg, var(--pvl-pine-deep) 15%, var(--pvl-pond) 92%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+:root[data-theme='dark'] .ask-hero-head h2 {
+  background: linear-gradient(92deg, #e7cd8a 15%, #cfae5f 92%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Gilded engraving on the Ask hero — a fine gold inner keyline over the base
+   card, and a warmer ground. */
+.ask-hero {
+  border-color: color-mix(in srgb, var(--pvl-pond) 45%, var(--sl-color-gray-5));
+  border-top: 3px solid var(--pvl-pond);
+  box-shadow:
+    inset 0 0 0 1px color-mix(in srgb, var(--pvl-pond) 30%, transparent),
+    0 6px 24px rgb(var(--pvl-shadow) / 0.14);
+  background:
+    radial-gradient(120% 100% at 0% 0%, color-mix(in srgb, var(--pvl-pond) 8%, var(--sl-color-bg-nav)) 0%, var(--sl-color-bg-nav) 62%);
+}
+
+/* Stat cards — a restrained gilt/green alternation instead of the Pond View
+   rainbow, each still tinted through the --c custom property the base reads. */
+.pvl-stat { border: 1px solid color-mix(in srgb, var(--pvl-pond) 35%, var(--sl-color-gray-5)); }
+.pvl-stat:nth-child(odd) { --c: #1c4031; }
+.pvl-stat:nth-child(even) { --c: #9c7c38; }
+
+/* Home cards — alternating estate-green / gilt edges. */
+.card:nth-child(2n+1) { --c: #1c4031; }
+.card:nth-child(2n+2) { --c: #9c7c38; }
+
+/* Aerial figure — gilt frame and a green-tinted shadow. */
+.pvl-aerial img {
+  border: 1px solid color-mix(in srgb, var(--pvl-pond) 45%, var(--sl-color-gray-5));
+  box-shadow: 0 6px 24px rgb(var(--pvl-shadow) / 0.16);
+}
+
+/* Blockquotes — gilt rule, warm ground. */
+.sl-markdown-content blockquote {
+  border-inline-start-color: var(--pvl-pond);
+  background: color-mix(in srgb, var(--pvl-pond) 8%, transparent);
+}

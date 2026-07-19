@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="Essex Crossing at Montserrat">
+  <!-- Estate medallion: a gilt serrated mountain (Montserrat = "serrated mountain")
+       on a deep estate-green field, ringed by a fine gold double rule. -->
+  <defs>
+    <clipPath id="ec-field"><circle cx="32" cy="32" r="27"/></clipPath>
+  </defs>
+  <!-- field -->
+  <circle cx="32" cy="32" r="31" fill="#1c4031"/>
+  <!-- gold double rule -->
+  <circle cx="32" cy="32" r="30" fill="none" stroke="#c9a24b" stroke-width="1.4"/>
+  <circle cx="32" cy="32" r="27" fill="none" stroke="#c9a24b" stroke-width="0.8" opacity="0.85"/>
+  <g clip-path="url(#ec-field)">
+    <!-- serrated range -->
+    <path d="M5 50 L13 33 L18 41 L24 27 L29 39 L32 30 L37 42 L43 31 L48 43 L54 35 L59 50 Z"
+          fill="#c9a24b"/>
+    <!-- inner shadow tier for a touch of depth -->
+    <path d="M5 50 L13 33 L18 41 L24 27 L29 39 L32 30 L20 50 Z" fill="#b58a34" opacity="0.6"/>
+  </g>
+  <!-- estate star over the peaks -->
+  <path d="M32 12 L33.6 17.2 L39 17.2 L34.7 20.6 L36.3 25.8 L32 22.6 L27.7 25.8 L29.3 20.6 L25 17.2 L30.4 17.2 Z"
+        fill="#e7cd8a"/>
+</svg>

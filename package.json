@@ -8,7 +8,9 @@
     "predev": "npm run sync",
     "dev": "astro dev",
     "prebuild": "npm run sync",
-    "build": "astro build",
+    "build": "SITE=pondview astro build && SITE=essexcrossing astro build",
+    "postbuild": "npm run check",
+    "check": "node scripts/check-content.mjs",
     "preview": "astro preview"
   },
   "dependencies": {
