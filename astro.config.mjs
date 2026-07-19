@@ -16,37 +16,101 @@ const LIB_GROUPS = [
   ['Stormwater & Regulatory', 'regulatory'],
 ];
 
+// ── Two domains, one content tree ───────────────────────────────────────────
+// This repo builds two visually distinct front doors onto the SAME records:
+//   SITE=pondview       → pondviewlane.com              (residents' entrance)
+//   SITE=essexcrossing  → essexcrossingatmontserrat.com (the subdivision's legal
+//                                                         name — buyers/title/attorneys)
+// Only the presentation shell differs per site — the `site` URL (so sitemaps and
+// canonicals self-reference each domain), the title/description, the brand asset
+// set, the per-scheme theme-color, and the stylesheet. Everything else — the
+// sidebar, the content collections, the sitemap filter, lastUpdated — is shared,
+// so the prose stays byte-identical across both skins. CI builds both variants
+// (dist-pondview / dist-essexcrossing) into one Host-switched nginx container;
+// see nginx.conf and the Dockerfile.
+const SITES = {
+  pondview: {
+    url: 'https://pondviewlane.com',
+    title: 'Pond View Lane',
+    description:
+      'A resident’s guide to the rules, records, and obligations of owning a home on Pond View Lane — Beverly, Massachusetts.',
+    logo: './src/assets/logo.svg',
+    favicon: '/favicon.svg',
+    faviconIco: '/favicon.ico',
+    appleTouch: '/apple-touch-icon.png',
+    customCss: ['./src/styles/custom.css'],
+    // Self-hosted display serif preloaded so the hero wordmark doesn't flash the
+    // fallback on first paint.
+    preloadFonts: ['/fonts/lora-latin-var.woff2'],
+    themeColorLight: '#faf8f3',
+    themeColorDark: '#17181c',
+    ogImage: '/og.jpg',
+    ogAlt: 'Pond View Lane — a resident’s guide to the lane. A white pine at the water’s edge.',
+  },
+  essexcrossing: {
+    url: 'https://essexcrossingatmontserrat.com',
+    title: 'Essex Crossing at Montserrat',
+    description:
+      'A plain-English reference to the recorded covenants, plans, and public record of Essex Crossing at Montserrat — the subdivision on Pond View Lane in Beverly, Massachusetts.',
+    logo: './src/assets/logo-essex.svg',
+    favicon: '/favicon-essex.svg',
+    faviconIco: '/favicon-essex.ico',
+    appleTouch: '/apple-touch-icon-essex.png',
+    // custom.css is the shared structural base; essex.css layers the estate skin
+    // on top (loaded after, so it wins where it overrides).
+    customCss: ['./src/styles/custom.css', './src/styles/essex.css'],
+    // Headings (Playfair) and body (EB Garamond) are above the fold everywhere;
+    // the Pinyon hero wordmark can swap in from its fallback.
+    preloadFonts: ['/fonts/playfair.woff2', '/fonts/eb-garamond.woff2'],
+    themeColorLight: '#f7f2e6',
+    themeColorDark: '#14180f',
+    ogImage: '/og-essex.jpg',
+    ogAlt: 'Essex Crossing at Montserrat — the recorded record of the subdivision. Beverly, Massachusetts.',
+  },
+};
+
+const SITE = process.env.SITE || 'pondview';
+const cfg = SITES[SITE];
+if (!cfg) {
+  throw new Error(`Unknown SITE "${SITE}" — expected one of: ${Object.keys(SITES).join(', ')}`);
+}
+
 export default defineConfig({
-  site: 'https://pondviewlane.com',
+  site: cfg.url,
+  // Per-site output so CI can build both variants side by side and the Dockerfile
+  // can copy each into its own nginx root.
+  outDir: `./dist-${SITE}`,
   integrations: [
     // Supplying our own sitemap integration (Starlight defers to it) so the
     // post-submit /report/thanks/ page stays out of the sitemap.
     sitemap({ filter: (page) => !page.includes('/report/thanks/') }),
     starlight({
-      title: 'Pond View Lane',
-      description:
-        'A resident’s guide to the rules, records, and obligations of owning a home on Pond View Lane — Beverly, Massachusetts.',
-      logo: { src: './src/assets/logo.svg' },
-      favicon: '/favicon.svg',
-      customCss: ['./src/styles/custom.css'],
+      title: cfg.title,
+      description: cfg.description,
+      logo: { src: cfg.logo },
+      favicon: cfg.favicon,
+      customCss: cfg.customCss,
       // Adds the "Report an issue" mailto link under every page's footer.
       components: { Footer: './src/components/Footer.astro' },
       head: [
-        // Preload the brand display serif (Lora) so the hero wordmark doesn't
-        // flash from the Georgia fallback on first paint.
-        { tag: 'link', attrs: { rel: 'preload', href: '/fonts/lora-latin-var.woff2', as: 'font', type: 'font/woff2', crossorigin: 'anonymous' } },
+        // Preload the brand display face(s) so the wordmark/headings don't flash
+        // the fallback on first paint.
+        ...cfg.preloadFonts.map((href) => ({
+          tag: 'link',
+          attrs: { rel: 'preload', href, as: 'font', type: 'font/woff2', crossorigin: 'anonymous' },
+        })),
         // Icon fallbacks beyond the SVG favicon Starlight links: .ico for
         // browsers without SVG-favicon support (desktop Safari), the 180px
         // PNG for iOS home-screen/share-sheet.
-        { tag: 'link', attrs: { rel: 'icon', href: '/favicon.ico', sizes: '48x48' } },
-        { tag: 'link', attrs: { rel: 'apple-touch-icon', href: '/apple-touch-icon.png' } },
+        { tag: 'link', attrs: { rel: 'icon', href: cfg.faviconIco, sizes: '48x48' } },
+        { tag: 'link', attrs: { rel: 'apple-touch-icon', href: cfg.appleTouch } },
         // Browser-chrome tint matching the site background in each scheme.
-        { tag: 'meta', attrs: { name: 'theme-color', media: '(prefers-color-scheme: light)', content: '#faf8f3' } },
-        { tag: 'meta', attrs: { name: 'theme-color', media: '(prefers-color-scheme: dark)', content: '#17181c' } },
-        { tag: 'meta', attrs: { property: 'og:image', content: 'https://pondviewlane.com/og.jpg' } },
+        { tag: 'meta', attrs: { name: 'theme-color', media: '(prefers-color-scheme: light)', content: cfg.themeColorLight } },
+        { tag: 'meta', attrs: { name: 'theme-color', media: '(prefers-color-scheme: dark)', content: cfg.themeColorDark } },
+        { tag: 'meta', attrs: { property: 'og:image', content: `${cfg.url}${cfg.ogImage}` } },
         { tag: 'meta', attrs: { property: 'og:image:width', content: '1200' } },
         { tag: 'meta', attrs: { property: 'og:image:height', content: '630' } },
-        { tag: 'meta', attrs: { property: 'og:image:alt', content: 'Pond View Lane — a resident’s guide to the lane. A white pine at the water’s edge.' } },
+        { tag: 'meta', attrs: { property: 'og:image:alt', content: cfg.ogAlt } },
         { tag: 'meta', attrs: { name: 'twitter:card', content: 'summary_large_image' } },
         // Edge-fade scroll hints on wide tables (see public/js/table-fade.js).
         { tag: 'script', attrs: { src: '/js/table-fade.js', defer: true } },

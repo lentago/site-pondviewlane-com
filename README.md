@@ -17,6 +17,16 @@ ECS Fargate → ALB), the same platform that runs
 [lentago.dev](https://lentago.dev) and
 [icecreamtofightwith.com](https://icecreamtofightwith.com).
 
+**Two domains, one content tree.** The same records are also published under the
+subdivision's legal name, **essexcrossingatmontserrat.com** — a second front door
+for buyers, attorneys, and title searchers. It is a distinct visual skin, *not*
+different content: the prose is byte-identical, and a build-time `SITE` switch
+selects only the presentation shell (site URL, title, brand assets, stylesheet).
+CI builds both variants into one nginx container that serves each by `Host`
+header. This single-content-source design is a deliberate exception to the
+fleet's one-repo-per-domain convention — it's the guard against two sites of
+record drifting apart.
+
 > **Not official, not legal advice.** This is a resident's reference, **not** a
 > publication of the homeowners association, and nothing here is legal advice.
 > The site names no residents; board history is told through the recorded
@@ -53,28 +63,38 @@ a public record, every image on an explicit allowlist.
 | `attachments/` | **Source:** the maps, plans, and diagrams the guides embed (the allowlist the generator publishes). |
 | `scripts/sync-content.mjs` | The build-time generator: turns `library/` + `timeline/` + `attachments/` into the site's content collections + the Ask index. |
 | `scripts/check-content.mjs` | The content-hygiene check (public-record-only invariant). |
-| `src/components/` · `src/pages/` · `src/styles/` | The Ask widget/dock, the report-an-issue form, the footer, and the site styling. |
-| `functions/ask/handler.mjs` | The "Ask" answer Lambda (reference copy; vendored to solidago `modules/ask-lambda`). |
-| `Dockerfile` / `nginx.conf` | Packages the built `dist/` into an `nginx` container on port `8080` with a `/health` endpoint for the ALB. |
+| `src/components/` · `src/pages/` · `src/styles/` | The Ask widget/dock, the report-an-issue form, the footer, and the site styling — `custom.css` (shared base) + `essex.css` (the Essex Crossing estate skin, layered on top). |
+| `astro.config.mjs` | The `SITE` switch (`pondview` \| `essexcrossing`) that selects each domain's presentation shell; everything else (sidebar, content, sitemap filter) is shared. |
+| `functions/ask/handler.mjs` | The "Ask" answer Lambda (reference copy; vendored to solidago `modules/ask-lambda`). Multi-origin CORS — both domains share the one Lambda. |
+| `Dockerfile` / `nginx.conf` / `nginx-common.conf` | Packages both builds (`dist-pondview` + `dist-essexcrossing`) into one `nginx` container on port `8080`, Host-switched, with a `/health` endpoint for the ALB. |
 | `.github/workflows/deploy.yml` · `ci.yml` | Build → ECR → ECS rollout via OIDC on push to `main`; the PR `Build` gate. |
 
 ## How it's built & served
 
 ```bash
 npm install
-npm run build      # runs the content generator (sync) then astro build → dist/
-npm run preview    # local preview
+npm run build      # sync → both skins (dist-pondview/ + dist-essexcrossing/) → hygiene check
+npm run check      # re-run the public-record / anonymity sweep over every dist*/ on its own
+npm run preview    # local preview (SITE=essexcrossing npm run dev to preview the Essex skin)
 ```
+
+`npm run build` builds **both** domain skins and then runs
+`scripts/check-content.mjs` over both outputs (npm's `postbuild` hook), so CI's
+required `Build` check and the deploy both build-and-verify the two variants
+without any workflow-specific wiring.
 
 The `sync` step (hooked before `dev`/`build`) regenerates the document pages,
 the timeline, and the Ask index from `library/` + `timeline/` + `attachments/`,
 so the generated output isn't committed — the source is. 
 
-Docker copies `dist/` into `nginx` (`:8080`, `/health`); GitHub Actions builds
-the image, pushes it to ECR, and rolls the ECS service via the solidago platform
-OIDC role — no long-lived credentials. The ECR repo, ECS service, the Ask Lambda
-(`module.ask_pondview`), and the OIDC trust for this repo are provisioned in
-`solidago` (`modules/site` + `modules/ask-lambda`).
+Docker copies both `dist-pondview/` and `dist-essexcrossing/` into `nginx`
+(`:8080`, `/health` on the default vhost), which serves each by request `Host`
+header; GitHub Actions builds the image, pushes it to ECR, and rolls the ECS
+service via the solidago platform OIDC role — no long-lived credentials. The ECR
+repo, ECS service, the Ask Lambda (`module.ask_pondview`), and the OIDC trust for
+this repo are provisioned in `solidago` (`modules/site` + `modules/ask-lambda`);
+the second domain's DNS/TLS/ALB host rule and the Ask CORS value land there too
+(`lentago/solidago#137`).
 
 ## Status
 

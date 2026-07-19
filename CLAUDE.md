@@ -10,8 +10,9 @@
 
 When Claude initializes in this directory, open the first response with a brief
 self-introduction as **Pond View Site Claude** — keeper of the public
-pondviewlane.com site repo (the Astro/Starlight build, the deploy wiring, and the
-public guides). One sentence is plenty; don't make a meal of it.
+pondviewlane.com site repo — and its sister skin
+essexcrossingatmontserrat.com (the Astro/Starlight build, the deploy wiring, and
+the public guides). One sentence is plenty; don't make a meal of it.
 
 ## What this repo is — and where its content comes from
 
@@ -19,6 +20,21 @@ This is the **public** repo for **pondviewlane.com**, a public-record-only helpe
 site for Pond View Lane residents (the Essex Crossing at Montserrat subdivision,
 Beverly MA). It is **fully self-contained** — it holds its own source and a
 build-time generator; there is no external dependency.
+
+**Two domains, one content tree.** This repo also publishes a sister site,
+**essexcrossingatmontserrat.com** — the subdivision's legal name, a second front
+door onto the *same* records for buyers/attorneys/title searchers. It is a
+different visual skin, not different content: the prose is byte-identical, and a
+build-time `SITE` switch (`pondview` default | `essexcrossing`, read by
+`astro.config.mjs`) selects only the presentation shell — `site` URL, title,
+description, brand assets, per-scheme `theme-color`, and stylesheet. CI builds
+**both** variants (`dist-pondview` / `dist-essexcrossing`) into one nginx
+container that serves each by `Host` header (see `nginx.conf`). This is a
+**deliberate deviation** from the fleet's one-repo-per-domain `site-<domain>`
+convention: a single content source of truth outweighs the naming convention
+(the failure mode we're avoiding is content drift between two repos). The
+solidago companion (DNS/TLS/ALB host rule, Ask CORS value) is issue
+`lentago/solidago#137`.
 
 **Source you edit here:**
 - `src/content/docs/guides/*.md` — the eight hand-written resident guides (the
@@ -39,8 +55,17 @@ build-time generator; there is no external dependency.
   `src/data/site-stats.json`
 - `public/library/**`, `public/attachments/**`, `public/ask/rag-index.json`
 
-After a content change, run `npm run build && node scripts/check-content.mjs` —
-the hygiene check enforces the public-record-only invariant (see Hard rules).
+After a content change, run `npm run build` — it emits **both** skins
+(`dist-pondview` + `dist-essexcrossing`) and then (via npm's `postbuild` hook)
+runs `scripts/check-content.mjs` over both outputs, enforcing the
+public-record-only / anonymity invariant on each domain (see Hard rules). To
+preview a single skin in dev: `SITE=essexcrossing npm run dev`.
+
+> The CI/deploy workflows are unchanged and just call `npm run build`; the
+> two-variant build + hygiene gate lives in the `build`/`postbuild` npm scripts,
+> not the workflow YAML. (The runner bot's GitHub App can't push
+> `.github/workflows/**`, so this repo deliberately keeps the two-domain build
+> logic in `package.json` rather than the workflow files.)
 
 ## Hard rules
 
@@ -58,7 +83,8 @@ the hygiene check enforces the public-record-only invariant (see Hard rules).
   that ties this neighborhood helper to a person or a business. It shares infra
   with the fleet; it does not advertise it. (Repo-level fleet metadata — topics,
   this file — is fine; the *rendered pages* stay clean. `scripts/check-content.mjs`
-  greps `dist/` for source-identity tokens and fails on a hit.)
+  greps every `dist*/` output — **both** the pondview and essexcrossing skins —
+  for source-identity tokens and fails on a hit.)
 - **Not official, not legal advice.** Keep that framing on the homepage, About,
   and the Ask page.
 - **Third-person voice in the static prose.** Guides, homepage, and About read
@@ -72,9 +98,10 @@ the hygiene check enforces the public-record-only invariant (see Hard rules).
 
 | Item | Value |
 |---|---|
-| Build | `npm install && npm run build` → `dist/` (Node 24; no content sync) |
-| Container | `nginx:latest`, `listen 8080`, `/health` → 200 (ALB health check) |
-| ECR repo | `solidago-dev-pondview` |
+| Build | `npm install && npm run build` → `dist-pondview/` + `dist-essexcrossing/`, then hygiene check (Node 24) |
+| Domains | pondviewlane.com (`SITE=pondview`, default) · essexcrossingatmontserrat.com (`SITE=essexcrossing`) |
+| Container | `nginx:latest`, `listen 8080`, Host-switched vhosts (`nginx-common.conf` shared), `/health` → 200 on the default (pondview) server for the ALB check |
+| ECR repo | `solidago-dev-pondview` (one image serves both domains) |
 | ECS cluster / service | `solidago-dev-cluster` / `solidago-dev-pondview` |
 | Preview host | hidden, unlisted (`PONDVIEW_PREVIEW_HOST` solidago Actions var); `robots noindex` until launch |
 | Ask endpoint | `PUBLIC_ASK_ENDPOINT` Actions var (this repo) → `module.ask_pondview` |
@@ -93,6 +120,12 @@ org/repo IDs) — see the solidago `iam` module trust list.
 the header must match** — sync below-the-header only, never `cp` wholesale. When
 you change the logic or the SYSTEM prompt here, mirror it into the solidago
 vendored copy in the same change.
+
+Now that two domains share this one Lambda, `ALLOWED_ORIGIN` is a **comma-separated
+allow-list**: the handler matches the request `Origin` against it and echoes the
+match back (with `vary: origin`). Flipping the terraform `allowed_origin` value to
+include `https://essexcrossingatmontserrat.com` is the solidago side
+(`lentago/solidago#137`); this repo carries the handler logic (the reference copy).
 
 ## CI & branch protection (fleet standard)
 
