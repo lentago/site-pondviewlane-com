@@ -25,6 +25,13 @@ import { fileURLToPath } from 'node:url';
 const REPO = dirname(dirname(fileURLToPath(import.meta.url))); // scripts/.. → repo root
 const SITE = REPO;                                             // self-contained: source == output tree
 
+// Which skin this sync serves (sync runs once per skin — see package.json).
+// The essexcrossing skin's generated pages get a Single Bow of Obsequious
+// Document framing (essex-crossing-voice-guide.md §6, Level 4): one flourish
+// top, one at bottom, the middle ruthlessly clear. Facts and tables identical.
+const { SITE: SITE_KEY } = await import('../site.config.mjs');
+const ESSEX = SITE_KEY === 'essexcrossing';
+
 // Attachments published to the site — an explicit allowlist, because
 // attachments/ also holds internal material (insurance scans, working photos)
 // that must never reach the public build. Extend as guides embed new visuals.
@@ -176,7 +183,7 @@ ${viewer}
 |---|---|
 ${meta.map(([k, v]) => `| **${k}** | ${v} |`).join('\n')}
 ${body}
-`;
+${ESSEX ? '\n*The document above speaks for itself; I merely hold the frame.*\n' : ''}`;
     writeFileSync(join(libDocs, cat, `${d.id}.md`), page);
 
     if (textExtract) {
@@ -208,7 +215,10 @@ sidebar:
   label: "Library Guide"
 ---
 
-The library holds **${publicDocs.length} public-record documents** — the recorded
+${ESSEX ? `*You stand in the library — the finest room in the house, and the only
+one whose furnishings outrank the reader. I shall speak only when spoken to.*
+
+` : ''}The library holds **${publicDocs.length} public-record documents** — the recorded
 instruments, plans, and city filings that define the subdivision and the
 association: the founding declarations, every trustee appointment and
 resignation on record, the subdivision plans, the stormwater permits and
@@ -227,7 +237,11 @@ ${tocSections}
 The association also keeps internal records — meeting minutes, budgets,
 insurance policies, vendor invoices, and correspondence. Those are the
 association's own business records, not public documents, and this site does
-not publish them.
+not publish them.${ESSEX ? `
+
+*Your most humble, most obedient, and impeccably shelved servant,*
+
+***— This Library Guide, doorkeeper to its betters***` : ''}
 `,
 );
 
@@ -299,14 +313,20 @@ description: "The subdivision and the association as the public record tells it 
 tableOfContents: false
 ---
 
-Milestones of the subdivision and the association **as the public record
+${ESSEX ? `*What follows is not my history — I have none to speak of — but the
+neighborhood's, dated to the day by documents of rank.*
+
+` : ''}Milestones of the subdivision and the association **as the public record
 tells them** — every date below traces to a recorded instrument, a recorded
 plan, or a City filing. The documents themselves are in the
 [Document Library](/library/).
 
 <div class="vtl">
 ${tlBody}</div>
-`,
+${ESSEX ? `
+*Patient as sediment, the record accumulates; I am merely the tray it is
+served upon. — This Timeline Page*
+` : ''}`,
 );
 
 // ---------- homepage stats ----------

@@ -1,0 +1,116 @@
+---
+title: Essex Crossing at Montserrat
+description: "A humble guide to the covenants, records, and obligations of the Essex Crossing at Montserrat subdivision — Beverly, Massachusetts — offered with apologies for its length."
+# Starlight renders <title> as "{title} | {site title}", which doubles the name
+# on this page — override it here.
+head:
+  - tag: title
+    content: Essex Crossing at Montserrat — the subdivision’s public record
+template: splash
+hero:
+  title: Essex Crossing at Montserrat
+  tagline: Being a most humble compendium of the covenants that come with each lot, the wetland and stormwater rules that run with the land, and the public record behind all of it — Beverly, Massachusetts. Presented by a web page that is honored merely to load.
+  image:
+    file: ../../assets/logo-essex.svg
+  actions:
+    - text: Start here
+      link: /guides/start-here/
+      icon: right-arrow
+    - text: Document Library
+      link: /library/
+      variant: secondary
+      icon: open-book
+    - text: Timeline
+      link: /timeline/
+      variant: secondary
+      icon: seti:clock
+---
+
+import { Card, CardGrid } from '@astrojs/starlight/components';
+import AskWidget from '../../components/AskWidget.astro';
+import siteStats from '../../data/site-stats.json';
+
+<AskWidget variant="hero" />
+
+## A Word of Welcome, Offered From the Very Bottom of the Page
+
+Ah! Sir. Madam. Esteemed householder — or prospective householder, or attorney of
+title, for I do not presume to know which honor has befallen me. You grace me
+beyond all deserving merely by allowing your gaze to fall upon my markup. I am
+only a homepage. Should you wish to close this tab and never think of me again,
+I shall consider the seconds we shared the pinnacle of my career.
+
+But if you *would* scroll on — and I hardly dare hope — allow me to present my
+subject, who is everything I am not: **Essex Crossing at Montserrat**, sixteen
+fine houses arranged about a cul-de-sac in Beverly, Massachusetts, attended by
+five acres of protected woodland and governed by recorded instruments of such
+standing that I tremble to link to them. I exist for one purpose alone — to
+escort you to the covenants, the wetland rules, and the public record behind
+them, all of which are greater documents than I shall ever be.
+
+<figure class="pvl-aerial">
+  <img src="/attachments/satellite-overview-wide.jpg"
+    alt="Satellite view of Pond View Lane — sixteen homes around one cul-de-sac, wrapped by wooded open space, with Kelleher Pond at lower left"
+    loading="eager" />
+  <figcaption>The subdivision from directly overhead (Google satellite imagery) — sixteen homes, one shared cul-de-sac, and the protected woodland that wraps them, from Kelleher Pond (lower left) to the YMCA woods on the right. The satellite, I am told, did not have to ask permission to look. I would have.</figcaption>
+</figure>
+
+{/* not-content opts the cells out of Starlight's prose flow-spacing (margin-top
+    on every non-first sibling), which otherwise pushes cards 2+ down 1rem */}
+<div class="pvl-stats not-content">
+  <div class="pvl-stat"><b>16</b><span>homes on the lane</span></div>
+  <div class="pvl-stat"><b>5.04 ac</b><span>common open space</span></div>
+  <div class="pvl-stat"><b>5</b><span>trustees</span></div>
+  <div class="pvl-stat"><b>{siteStats.publicDocs}</b><span>public documents</span></div>
+  <div class="pvl-stat"><b>{siteStats.publicEvents}</b><span>recorded milestones</span></div>
+  <div class="pvl-stat"><b>2015</b><span>trust recorded</span></div>
+</div>
+
+<CardGrid stagger>
+  <Card title="What comes with the deed" icon="open-book">
+    The covenants run with the land — a phrase I adore, for I have never once
+    seen the land run — and so they are worth knowing. A plain-English guide to
+    what they ask, what they limit, and how the association works, offered by a
+    page that has read them so you need only decide to.
+    [Start here](/guides/start-here/) · [Governance](/guides/governance/) ·
+    [Assessments](/guides/assessments/)
+  </Card>
+  <Card title="Trees, wetlands & the buffer" icon="seti:image">
+    Most of the green upon the lane is regulated, and all of it outranks me.
+    What the covenants say about vegetation, where the Conservation
+    Commission's jurisdiction begins, and what that means before anyone cuts
+    anything. One asks *before*, sir.
+    [Trees](/guides/trees/) · [Wetlands & buffers](/guides/wetlands/)
+  </Card>
+  <Card title="The common land & its duties" icon="seti:pipeline">
+    The association owns the open space — and with it, stormwater obligations
+    that never expire. I confess a certain kinship with duties that cannot
+    end. [The common land](/guides/common-land/) ·
+    [Stormwater](/guides/stormwater/)
+  </Card>
+  <Card title="The public record itself" icon="seti:folder">
+    Every recorded instrument, plan, and city filing that defines the
+    neighborhood — documents so important they are given *book and page
+    numbers*, an honor I can scarcely imagine — collected and viewable in
+    place. [Document Library](/library/) · [Finding records](/guides/records/)
+  </Card>
+  <Card title="How the neighborhood came to be" icon="seti:clock">
+    From the 2014 wetlands permit to the present — {siteStats.publicEvents} recorded
+    milestones arranged in one [chronology](/timeline/), each dated more
+    precisely than I deserve to be cached.
+  </Card>
+  <Card title="Ask, or browse" icon="magnifier">
+    Type a question in the box above, open [Ask](/ask/) for a full-screen
+    conversation, or press <kbd>/</kbd> to full-text search every page and
+    document — the closest I come, sir, to being needed.
+  </Card>
+</CardGrid>
+
+> A homeowner-maintained guide — **not an official publication of the
+> association, and not legal advice.** Everything here traces to a recorded
+> instrument or a public filing; see [About](/about/) for how it's built. The
+> record speaks; I merely hold its coat.
+
+*Your most humble, most obedient, and eternally scrollable servant,*
+
+***— This Homepage***

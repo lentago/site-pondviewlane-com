@@ -8,10 +8,9 @@
     "compose": "node scripts/compose-content.mjs",
     "predev": "npm run sync && npm run compose",
     "dev": "astro dev",
-    "prebuild": "npm run sync",
     "build": "npm run build:pondview && npm run build:essexcrossing",
-    "build:pondview": "SITE=pondview npm run compose && SITE=pondview astro build",
-    "build:essexcrossing": "SITE=essexcrossing npm run compose && SITE=essexcrossing astro build",
+    "build:pondview": "SITE=pondview npm run sync && SITE=pondview npm run compose && SITE=pondview astro build",
+    "build:essexcrossing": "SITE=essexcrossing npm run sync && SITE=essexcrossing npm run compose && SITE=essexcrossing astro build",
     "postbuild": "npm run check",
     "check": "node scripts/check-content.mjs",
     "preview": "astro preview"

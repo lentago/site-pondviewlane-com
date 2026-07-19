@@ -64,10 +64,15 @@ docs tree from `content/`):
 - `public/library/**`, `public/attachments/**`, `public/ask/rag-index.json`
 
 After a content change, run `npm run build` — it emits **both** skins
-(`dist-pondview` + `dist-essexcrossing`) and then (via npm's `postbuild` hook)
-runs `scripts/check-content.mjs` over both outputs, enforcing the
+(`dist-pondview` + `dist-essexcrossing`; sync + compose run per skin, so the
+essex build's generated library/timeline pages carry their Single Bow of
+voice framing) and then (via npm's `postbuild` hook) runs
+`scripts/check-content.mjs` over both outputs, enforcing the
 public-record-only / anonymity invariant on each domain (see Hard rules). To
-preview a single skin in dev: `SITE=essexcrossing npm run dev`.
+preview a single skin in dev: `SITE=essexcrossing npm run dev`. Page
+"Last updated" dates come from each source file's git history, injected at
+compose time (composed copies aren't in git) — an uncommitted page shows the
+build time until committed.
 
 > The CI/deploy workflows are unchanged and just call `npm run build`; the
 > two-variant build + hygiene gate lives in the `build`/`postbuild` npm scripts,
