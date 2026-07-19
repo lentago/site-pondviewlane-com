@@ -33,8 +33,7 @@ const endpoint = import.meta.env.PUBLIC_ASK_ENDPOINT || '';
   <div class="ask-notice" id="ask-notice" hidden>
     Composed AI answers aren't switched on yet, so this runs in
     <strong>passage-search mode</strong>: your question returns the most relevant
-    passages from the record instead of a written answer. The full site search —
-    the button in the header, or <kbd>/</kbd> on a keyboard — works too.
+    passages from the record instead of a written answer.
   </div>
 
   <div id="ask-log"></div>
@@ -230,7 +229,7 @@ const endpoint = import.meta.env.PUBLIC_ASK_ENDPOINT || '';
       const recent = history.filter((m) => m.role === 'user').slice(-2).map((m) => m.content).join(' ');
       const ctxs = retrieve(`${recent} ${q}`.trim(), chunks, 8);
       if (!ctxs.length) {
-        thinking.innerHTML = 'Nothing in the record matches that — try the site search or different words.';
+        thinking.innerHTML = 'Nothing in the record matches that — try different words, or start from the <a href="/guides/start-here/">guides</a>.';
         return;
       }
       if (cfgEndpoint) {
@@ -253,7 +252,7 @@ const endpoint = import.meta.env.PUBLIC_ASK_ENDPOINT || '';
       }
     } catch (e) {
       thinking.innerHTML = `Something went wrong (<code>${esc(String(e.message || e))}</code>). ` +
-        `The <a href="/guides/start-here/">guides</a> and site search still have you covered.`;
+        `The <a href="/guides/start-here/">guides</a> still have you covered.`;
     } finally {
       clearBtn.hidden = false;
       persist();

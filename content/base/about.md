@@ -46,9 +46,8 @@ says otherwise, where there is one; pages get corrected at the source.
 ## How it's built
 
 The site is an [Astro](https://astro.build) /
-[Starlight](https://starlight.astro.build) static build. Site search runs
-entirely in the browser (Pagefind), and the [Ask](/ask/) page retrieves
-passages from this site's own pages and documents before composing an
-answer — nothing entered is stored. The content and code are co-written
+[Starlight](https://starlight.astro.build) static build. The [Ask](/ask/)
+box retrieves passages from this site's own pages and documents entirely in
+the browser before composing an answer — nothing entered is stored. The content and code are co-written
 with [Claude](https://claude.com) (Anthropic) under the maintainer's
 direction and review.

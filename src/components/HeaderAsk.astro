@@ -1,0 +1,85 @@
+---
+/**
+ * Search-slot override (astro.config components.Search): the header's center
+ * control is an entry to Ask, not a search box. Pagefind is switched off —
+ * the Ask chat retrieves over the same corpus (guides + library text extracts
+ * + timeline) and answers instead of listing hits, so the header search was a
+ * second-rate affordance sitting next to a better one. This is a real link to
+ * /ask/ so it works without JS; with JS it opens the floating dock in place,
+ * or focuses the inline widget on the two pages that render one.
+ */
+import { SITE } from '../../site.config.mjs';
+const ESSEX = SITE === 'essexcrossing';
+---
+
+<a href="/ask/" id="header-ask" class="header-ask" aria-label="Ask a question about the HOA">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+  </svg>
+  <span class="header-ask-label">{ESSEX ? 'Inquire within' : 'Ask a question'}</span>
+</a>
+
+<script>
+  document.getElementById('header-ask')?.addEventListener('click', (e) => {
+    const dockBtn = document.getElementById('ask-float-btn');
+    const panel = document.getElementById('ask-float-panel');
+    if (dockBtn && panel) {
+      e.preventDefault();
+      if (panel.hidden) dockBtn.click();
+      else (panel.querySelector('#ask-input') as HTMLElement | null)?.focus();
+      return;
+    }
+    // Homepage hero and /ask render the widget in-page instead of the dock.
+    const inline = document.getElementById('ask-input');
+    if (inline) {
+      e.preventDefault();
+      inline.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      inline.focus({ preventScroll: true });
+    }
+  });
+</script>
+
+<style>
+  /* Sized and colored like the stock Pagefind search bar it replaces, so the
+     header reads the same in both skins' palettes. */
+  .header-ask {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    width: 100%;
+    max-width: 22rem;
+    margin-inline: auto;
+    padding: 0.55rem 0.9rem;
+    border: 1px solid var(--sl-color-gray-5);
+    border-radius: 999px;
+    color: var(--sl-color-gray-2);
+    background-color: var(--sl-color-black);
+    font-size: var(--sl-text-sm);
+    text-decoration: none;
+  }
+  .header-ask:hover {
+    border-color: var(--sl-color-gray-2);
+    color: var(--sl-color-white);
+  }
+  .header-ask svg {
+    width: 1rem;
+    height: 1rem;
+    flex-shrink: 0;
+  }
+  @media (max-width: 49.99rem) {
+    .header-ask {
+      width: auto;
+      padding: 0.5rem;
+      border: 0;
+      background: none;
+    }
+    .header-ask-label {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      clip-path: inset(50%);
+    }
+  }
+</style>
