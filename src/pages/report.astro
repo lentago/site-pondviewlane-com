@@ -11,8 +11,12 @@
  * on the review host and the production apex alike.
  */
 import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
+import { SITE } from '../../site.config.mjs';
 
 const FORM_ENDPOINT = 'https://formspree.io/f/xrenprzw';
+// The essexcrossing skin's page copy takes a Single Bow (voice guide §6,
+// Level 4): one flourish in, one out; the form itself stays ruthlessly clear.
+const ESSEX = SITE === 'essexcrossing';
 ---
 
 <StarlightPage
@@ -22,11 +26,21 @@ const FORM_ENDPOINT = 'https://formspree.io/f/xrenprzw';
     tableOfContents: false,
   }}
 >
-  <p>
-    Every claim on this site traces to a public record — so if something here
-    looks wrong, either the site misread the record or there's a better record.
-    Both are worth reporting. Corrections are welcome and acted on.
-  </p>
+  {ESSEX ? (
+    <p>
+      I beg you, do not spare the site's feelings — it has none, only markup.
+      Every claim here traces to a public record, so if something looks wrong,
+      either a page misread the record or there's a better record. Both are
+      worth reporting. Corrections are welcome, acted on, and received as
+      kindnesses.
+    </p>
+  ) : (
+    <p>
+      Every claim on this site traces to a public record — so if something here
+      looks wrong, either the site misread the record or there's a better record.
+      Both are worth reporting. Corrections are welcome and acted on.
+    </p>
+  )}
 
   <form class="report-form" action={FORM_ENDPOINT} method="POST">
     <input type="hidden" name="_subject" value="Pond View Lane site — issue report" />
@@ -63,11 +77,20 @@ const FORM_ENDPOINT = 'https://formspree.io/f/xrenprzw';
     <button type="submit" class="tl-btn">Send the report</button>
   </form>
 
-  <p class="report-note">
-    Reports go straight to the site's maintainer. This site is a resident's
-    reference, not an official publication of the association — for association
-    business, contact the board.
-  </p>
+  {ESSEX ? (
+    <p class="report-note">
+      Reports go straight to the site's maintainer. This site is a homeowner's
+      reference, not an official publication of the association — for
+      association business, contact the board, who are people, and therefore
+      infinitely more useful than any page.
+    </p>
+  ) : (
+    <p class="report-note">
+      Reports go straight to the site's maintainer. This site is a resident's
+      reference, not an official publication of the association — for association
+      business, contact the board.
+    </p>
+  )}
 </StarlightPage>
 
 <script>

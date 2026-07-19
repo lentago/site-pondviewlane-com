@@ -41,7 +41,7 @@ export const SITES = {
     url: 'https://essexcrossingatmontserrat.com',
     title: 'Essex Crossing at Montserrat',
     description:
-      'A plain-English reference to the recorded covenants, plans, and public record of Essex Crossing at Montserrat — the subdivision on Pond View Lane in Beverly, Massachusetts.',
+      'A humble guide to the recorded covenants, plans, and public record of Essex Crossing at Montserrat — the subdivision on Pond View Lane in Beverly, Massachusetts — offered with apologies for its length.',
     logo: './src/assets/logo-essex.svg',
     favicon: '/favicon-essex.svg',
     faviconIco: '/favicon-essex.ico',
@@ -56,16 +56,11 @@ export const SITES = {
     themeColorDark: '#14180f',
     ogImage: '/og-essex.jpg',
     ogAlt: 'Essex Crossing at Montserrat — the recorded record of the subdivision. Beverly, Massachusetts.',
-    // Homepage branding overrides applied by src/route-data.mjs — the homepage's
-    // title/hero/head are hardcoded for pondview in index.mdx frontmatter
-    // (frontmatter is static and can't read the SITE switch).
-    home: {
-      headTitle: 'Essex Crossing at Montserrat — the subdivision’s public record',
-    },
     // Per-page prose overrides composed over content/base by
-    // scripts/compose-content.mjs — the Obsequious Document rewrite (#15)
-    // lands here. scripts/check-content.mjs C7 enforces facts parity between
-    // each overlay page and its base counterpart.
+    // scripts/compose-content.mjs — the Obsequious Document voice (#15) lives
+    // here, homepage frontmatter included (which is why no route middleware is
+    // needed for per-site homepage branding). scripts/check-content.mjs C7
+    // enforces facts parity between each overlay page and its base counterpart.
     contentOverlay: 'content/essex',
   },
 };

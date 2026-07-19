@@ -130,8 +130,11 @@ console.log(`\nCONTENT CHECK  ${REPO}\n`);
       /\b(?:19|20)\d{2}\b/g,                  // years
       /\bchapter\s+\d+[a-z]?\b/gi,            // statute chapters (e.g. Chapter 131)
       /\bsection\s+\d+[a-z]?\b/gi,            // statute sections
-      /\bbook\s+\d+\b/gi,                     // registry book refs
-      /\bpage\s+\d+\b/gi,                     // registry page refs
+      /\b(?:book|bk\.?)\s+\d+\b/gi,           // registry book refs (Book 34576 / Bk 34576)
+      /\b(?:page|pg\.?)\s+\d+\b/gi,           // registry page refs (Page 477 / Pg 477)
+      /\b\d{4,5}\s*\/\s*\d{3}\b/g,            // bare book/page pairs (34576 / 471)
+      /§\s*\d+(?:\.\d+)?/g,                   // covenant/statute section symbols (§2.06)
+      /\b\d[\d.]*%/g,                         // percentages (6.25%, 12%)
       /\b\d[\d,.]*\s*(?:feet|foot|ft|acres?)\b/gi, // distances and areas
     ];
     let hits = 0, pages = 0;

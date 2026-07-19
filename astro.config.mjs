@@ -36,9 +36,6 @@ export default defineConfig({
       logo: { src: cfg.logo },
       favicon: cfg.favicon,
       customCss: cfg.customCss,
-      // Rebrands the homepage's frontmatter-hardcoded title/hero/head on
-      // non-pondview skins (frontmatter can't read the SITE switch).
-      routeMiddleware: './src/route-data.mjs',
       // Adds the "Report an issue" mailto link under every page's footer.
       components: { Footer: './src/components/Footer.astro' },
       head: [
