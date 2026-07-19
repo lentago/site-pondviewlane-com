@@ -62,6 +62,11 @@ export const SITES = {
     home: {
       headTitle: 'Essex Crossing at Montserrat — the subdivision’s public record',
     },
+    // Per-page prose overrides composed over content/base by
+    // scripts/compose-content.mjs — the Obsequious Document rewrite (#15)
+    // lands here. scripts/check-content.mjs C7 enforces facts parity between
+    // each overlay page and its base counterpart.
+    contentOverlay: 'content/essex',
   },
 };
 

@@ -14,8 +14,9 @@
  *   attachments/ (PUBLIC_ATTACHMENTS)→ public/attachments/
  *   guides + library + timeline      → public/ask/rag-index.json
  *
- * The eight resident guides in src/content/docs/guides/ are hand-authored, never
- * generated. REPO and SITE are both this repo root (source and output live here).
+ * The eight resident guides are hand-authored in content/base/guides/ (the
+ * canonical fact-base prose; the essex overlay is voice, not facts, so the Ask
+ * index always chunks the base). REPO and SITE are both this repo root.
  */
 import { cpSync, existsSync, mkdirSync, readdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
@@ -73,7 +74,7 @@ const ragChunks = [];
 rmSync(join(SITE, 'src/content/docs/wiki'), { recursive: true, force: true });
 
 // ---------- guides (hand-authored; chunked for the Ask index only) ----------
-const guidesDir = join(SITE, 'src/content/docs/guides');
+const guidesDir = join(SITE, 'content/base/guides');
 const guideFiles = existsSync(guidesDir)
   ? readdirSync(guidesDir).filter((f) => /\.mdx?$/.test(f))
   : [];
