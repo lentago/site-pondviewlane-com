@@ -52,10 +52,3 @@ passages from this site's own pages and documents before composing an
 answer — nothing entered is stored. The content and code are co-written
 with [Claude](https://claude.com) (Anthropic) under the maintainer's
 direction and review.
-
-## The name
-
-The subdivision's legal name is *Essex Crossing at Montserrat*, and the
-association is the *Essex Crossing at Montserrat Homeowners Association
-Trust*. The street — and the neighborhood as anyone actually experiences
-it — is **Pond View Lane**, so that's the name on the door here.
