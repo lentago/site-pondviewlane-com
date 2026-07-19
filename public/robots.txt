@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://pondviewlane.com/sitemap-index.xml

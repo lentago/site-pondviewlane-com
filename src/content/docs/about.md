@@ -1,6 +1,6 @@
 ---
 title: "About this site"
-description: "What Pond View Lane is, what it publishes, and its privacy rules."
+description: "What this site is, what it publishes, and its privacy rules."
 ---
 
 **Pond View Lane** is a resident's guide to owning a home in the **Essex

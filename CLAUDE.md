@@ -25,8 +25,8 @@ build-time generator; there is no external dependency.
 **essexcrossingatmontserrat.com** — the subdivision's legal name, a second front
 door onto the *same* records for buyers/attorneys/title searchers. It is a
 different visual skin, not different content: the prose is byte-identical, and a
-build-time `SITE` switch (`pondview` default | `essexcrossing`, read by
-`astro.config.mjs`) selects only the presentation shell — `site` URL, title,
+build-time `SITE` switch (`pondview` default | `essexcrossing`, registry in
+`site.config.mjs`) selects only the presentation shell — `site` URL, title,
 description, brand assets, per-scheme `theme-color`, and stylesheet. CI builds
 **both** variants (`dist-pondview` / `dist-essexcrossing`) into one nginx
 container that serves each by `Host` header (see `nginx.conf`). This is a
@@ -83,8 +83,9 @@ preview a single skin in dev: `SITE=essexcrossing npm run dev`.
   that ties this neighborhood helper to a person or a business. It shares infra
   with the fleet; it does not advertise it. (Repo-level fleet metadata — topics,
   this file — is fine; the *rendered pages* stay clean. `scripts/check-content.mjs`
-  greps every `dist*/` output — **both** the pondview and essexcrossing skins —
-  for source-identity tokens and fails on a hit.)
+  greps **both** skins' dists for source-identity tokens, fails on a hit, and
+  hard-fails if either dist is missing — the gate can't pass without sweeping
+  both.)
 - **Not official, not legal advice.** Keep that framing on the homepage, About,
   and the Ask page.
 - **Third-person voice in the static prose.** Guides, homepage, and About read

@@ -79,27 +79,27 @@ console.log(`\nCONTENT CHECK  ${REPO}\n`);
   if (!hits) ok('C4', 'no private-repo artifacts (docs/, timeline/index.html, build_library.py, publish tooling, …)');
 }
 
-// C5 — rendered dist(s)/: no source-identity or names outside library docs.
-// Two-domain build: every dist* output (dist-pondview, dist-essexcrossing, or a
-// bare dist/) is swept, so the anonymity invariant holds on BOTH skins.
+// C5 — rendered dists: no source-identity or names outside library docs.
+// Two-domain build: BOTH skins must exist and sweep clean. A missing or empty
+// dist is a hard failure, not a warning — otherwise the anonymity gate could
+// report PASS without ever scanning one skin. The list is explicit (not a
+// dist* glob) so a stale legacy dist/ from an old checkout is ignored.
 {
-  const dists = readdirSync(REPO).filter((n) => /^dist/.test(n) && statSync(join(REPO, n)).isDirectory());
-  if (!dists.length) { warn('C5', 'no dist*/ built — run npm run build first'); }
-  else {
-    let hits = 0;
-    for (const d of dists) {
-      const dist = join(REPO, d);
-      // Skip vendored framework/search bundles and the self-hosted font dir — the
-      // fonts' OFL licenses legitimately carry the projects' github.com URLs, which
-      // are not site content and can't de-anonymize anything.
-      for (const f of walk(dist, [`${d}/_astro`, `${d}/pagefind`, `${d}/fonts`]).filter((f) => /\.(html|json|xml|txt)$/i.test(f))) {
-        const rel = relative(REPO, f), t = read(f);
-        for (const re of IDENTITY) { const m = t.match(re); if (m) { fail('C5', `${rel}: source-identity "${m[0]}"`); hits++; } }
-        if (!isLibDoc(rel)) { if (t.match(IDENT)) { fail('C5', `${rel}: identifier`); hits++; } if (GMAIL.test(t)) { fail('C5', `${rel}: HOA gmail`); hits++; } }
-      }
+  const dists = ['dist-pondview', 'dist-essexcrossing'];
+  let hits = 0;
+  for (const d of dists) {
+    const dist = join(REPO, d);
+    if (!existsSync(dist) || !readdirSync(dist).length) { fail('C5', `${d}/ missing or empty — run npm run build`); hits++; continue; }
+    // Skip vendored framework/search bundles and the self-hosted font dir — the
+    // fonts' OFL licenses legitimately carry the projects' github.com URLs, which
+    // are not site content and can't de-anonymize anything.
+    for (const f of walk(dist, [`${d}/_astro`, `${d}/pagefind`, `${d}/fonts`]).filter((f) => /\.(html|json|xml|txt)$/i.test(f))) {
+      const rel = relative(REPO, f), t = read(f);
+      for (const re of IDENTITY) { const m = t.match(re); if (m) { fail('C5', `${rel}: source-identity "${m[0]}"`); hits++; } }
+      if (!isLibDoc(rel)) { if (t.match(IDENT)) { fail('C5', `${rel}: identifier`); hits++; } if (GMAIL.test(t)) { fail('C5', `${rel}: HOA gmail`); hits++; } }
     }
-    if (!hits) ok('C5', `rendered ${dists.join(', ')} clean of source-identity, Name(#N), HOA gmail`);
   }
+  if (!hits) ok('C5', `rendered ${dists.join(', ')} clean of source-identity, Name(#N), HOA gmail`);
 }
 
 // C6 — rag-index sweep
