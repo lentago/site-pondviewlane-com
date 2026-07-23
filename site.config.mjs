@@ -21,7 +21,7 @@ export const SITES = {
     url: 'https://pondviewlane.com',
     title: 'Pond View Lane',
     description:
-      'A resident’s guide to the rules, records, and obligations of owning a home on Pond View Lane — Beverly, Massachusetts.',
+      'A public guide to the rules, records, and obligations of owning a home on Pond View Lane — Beverly, Massachusetts.',
     logo: './src/assets/logo.svg',
     favicon: '/favicon.svg',
     faviconIco: '/favicon.ico',
@@ -33,7 +33,7 @@ export const SITES = {
     themeColorLight: '#faf8f3',
     themeColorDark: '#17181c',
     ogImage: '/og.jpg',
-    ogAlt: 'Pond View Lane — a resident’s guide to the lane. A white pine at the water’s edge.',
+    ogAlt: 'Pond View Lane — a public guide to the lane. A white pine at the water’s edge.',
     // No `home` block: the homepage frontmatter in src/content/docs/index.mdx IS
     // the pondview branding; src/route-data.mjs leaves it untouched.
   },

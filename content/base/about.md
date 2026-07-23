@@ -3,17 +3,16 @@ title: "About this site"
 description: "What this site is, what it publishes, and its privacy rules."
 ---
 
-**Pond View Lane** is a resident's guide to owning a home in the **Essex
+**Pond View Lane** is a public guide to owning a home in the **Essex
 Crossing at Montserrat** subdivision — sixteen homes on Pond View Lane in
 Beverly, Massachusetts, and the five acres of protected open space they
 share. It explains the recorded covenants, the wetland and stormwater rules
 that run with the land, and where every piece of the public record lives.
 
 It is **not an official publication of the homeowners association**, and it
-is **not legal advice**. It is compiled and maintained by one of the
-homeowners. For a real dispute, read the recorded instruments themselves —
-this site links to them everywhere — and talk to a Massachusetts
-real-estate attorney.
+is **not legal advice**. For a real dispute, read the recorded instruments
+themselves — this site links to them everywhere — and talk to a
+Massachusetts real-estate attorney.
 
 ## What this site publishes — and what it doesn't
 
@@ -49,5 +48,5 @@ The site is an [Astro](https://astro.build) /
 [Starlight](https://starlight.astro.build) static build. The [Ask](/ask/)
 box retrieves passages from this site's own pages and documents entirely in
 the browser before composing an answer — nothing entered is stored. The content and code are co-written
-with [Claude](https://claude.com) (Anthropic) under the maintainer's
-direction and review.
+with [Claude](https://claude.com) (Anthropic) and reviewed against the
+records before each publish.

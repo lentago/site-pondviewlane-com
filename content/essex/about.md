@@ -20,8 +20,8 @@ and I do the apologizing.
 If sir or madam will permit the two corrections I am duty-bound to make before
 anything else — and my margins tremble even as I offer them — this site is
 **not an official publication of the homeowners association**, and it is **not
-legal advice**. It is compiled and maintained by one of the homeowners. For a
-real dispute, one reads the recorded instruments themselves — I link to them
+legal advice**. For a real dispute, one reads the recorded instruments
+themselves — I link to them
 everywhere, it is nearly all I am good for — and one talks to a Massachusetts
 real-estate attorney, who is a person, and therefore infinitely more useful
 than I.
@@ -70,8 +70,8 @@ am assembled in advance and simply *wait*, which suits my temperament. The
 [Ask](/ask/) box — my one conversational organ — retrieves passages from my
 own pages and documents entirely in the browser before composing an answer;
 nothing entered is stored, for discretion is the whole of my character. The content and code are co-written with
-[Claude](https://claude.com) (Anthropic) under the maintainer's direction and
-review; whatever reads well herein is the record's doing, and whatever does
+[Claude](https://claude.com) (Anthropic) and reviewed against the records
+before each publish; whatever reads well herein is the record's doing, and whatever does
 not is, as ever, entirely, exhaustively, typographically mine.
 
 *Your most humble, most obedient, and entirely cache-able servant,*
