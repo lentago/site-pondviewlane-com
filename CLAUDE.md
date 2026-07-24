@@ -146,6 +146,53 @@ match back (with `vary: origin`). Flipping the terraform `allowed_origin` value 
 include `https://essexcrossingatmontserrat.com` is the solidago side
 (`lentago/solidago#137`); this repo carries the handler logic (the reference copy).
 
+## Ask logging (Axiom)
+
+`functions/ask/handler.mjs` emits one structured `{"event":"ask_query",...}`
+JSON line per invocation via `console.log`, on **both** the success and
+failure paths (`logAsk()`), so it's a single greppable event key in the
+`cjp-solidago-ecs` Axiom dataset. Fields: `site` (`pondview` |
+`essexcrossing`), `question`, `outcome`, `latency_ms`, `model`,
+`input_tokens` / `output_tokens`, `answer_produced`, `grounded`,
+`upstream_status`, `error`. `outcome` is one of `success` | `upstream_error` |
+`rate_limited` | `rejected`; `timeout` is reserved but not currently
+reachable — the platform Lambda timeout kills the process before any line can
+be written, so there's no code path to emit it from today. The one-time
+`console.log('anthropic_error', ...)` line this replaced is folded into the
+structured event (`outcome: 'upstream_error'`) rather than kept alongside it,
+to hold the one-line-per-invocation invariant FireLens' `json_lines` output
+needs — a second line for the same request would ship as a second, unrelated
+record.
+
+**Privacy decision (question text).** The handler already truncates
+`question` to 500 characters before using it in the prompt
+(`String(body.question || '').slice(0, 500)`); the log reuses that same
+already-bounded value rather than hashing or redacting it. Reasoning: a
+resident's own phrasing is the site's highest-value signal for finding
+content gaps (issue #23) and a bare hash destroys that value entirely, while
+truncation already bounds the blast radius of any one line. This is a
+narrower privacy surface than it looks: the log carries no client IP, no
+session/cookie, and no header that could tie a question to a person — `site`
+and `question` are the only per-request fields, everything else is
+outcome/performance metadata. The residual risk is that a resident could
+*type* an identifying detail into the question itself (a neighbor's name, a
+specific address); the handler can't distinguish that from an ordinary
+question, so **Axiom retention on this event should be set short** (30–90
+days, not the default/indefinite) — long enough for content-gap and
+cost/abuse analysis, short enough to bound that residual exposure. The
+`grounded` field is a best-effort heuristic (pattern-matched against the
+model's decline phrasing, since the model returns no structured grounding
+signal) — treat it as directional, not authoritative.
+
+**Delivery is currently unverifiable.** Container stdout reaches Axiom
+through a FireLens sidecar, and that path has been broken since 2026-07-08 —
+the Axiom ingest secret in AWS still holds an unreplaced placeholder value
+(`lentago/solidago#143`, root-caused, fix tracked separately). The logging
+above is implemented and locally verified to emit well-formed single-line
+JSON on every code path, but end-to-end arrival in the `cjp-solidago-ecs`
+dataset cannot be confirmed until #143 lands — confirm delivery and build the
+outcome/latency/cost panels (`lentago/drosera#161`) only after that.
+
 ## CI & branch protection (fleet standard)
 
 Follows the Lentago Labs fleet standard (`~/repos/dotgithub/fleet-ops`):
