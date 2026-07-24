@@ -541,6 +541,21 @@
       "recording": null,
       "notes": "Excerpt of agenda item 6(b), pp. 6–7 of the official 7/1/2025 minutes (beverlyma.gov Agenda Center _07012025-2365): the after-the-fact RDA for work on the HOA's common parcel resolves with a Negative 3 Determination whose condition 1 — no further alteration of areas under Commission jurisdiction — survives in perpetuity. Resident names redacted.",
       "has_text": true
+    },
+    {
+      "id": "concom-agenda-2026-07-28",
+      "title": "Beverly Conservation Commission agenda — July 28, 2026 (RDA: 100 Pond View Lane, removal of 9 pine trees)",
+      "date": "2026-07-28",
+      "category": "regulatory",
+      "file": "files/regulatory/concom-agenda-2026-07-28.pdf",
+      "ext": "pdf",
+      "pages": 3,
+      "size": 163645,
+      "sha256": "c40c0b12fc7a44e9a65b4fd14d39f512c19590abc5ea0482667ace37874fc4a8",
+      "status": "public-record",
+      "recording": null,
+      "notes": "Scanned 3-page City agenda (no text layer; key item hand-transcribed to library/text/concom-agenda-2026-07-28.txt). Item 6(a) is a Request for Determination of Applicability by Essex Crossing at Montserrat to remove 9 pine trees at 100 Pond View Lane (the common parcel), heard 7/28/2026 — confirms the HOA's ConCom filing type (RDA) and the species as pine. The Commission's determination is a separate record still to pull.",
+      "has_text": true
     }
   ]
 }
