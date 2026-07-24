@@ -1,0 +1,63 @@
+---
+// Extends Starlight's <head> with anonymity-safe JSON-LD structured data:
+//   • a site-level WebSite node on the homepage
+//   • a per-page BreadcrumbList everywhere else
+// Nothing here identifies a person or the fleet — no author/publisher/sameAs
+// (the anonymity hard rule; scripts/check-content.mjs greps the rendered dists
+// for source-identity tokens either way).
+//
+// Registered via astro.config.mjs `components.Head`. <Default /> renders every
+// tag Starlight already assembles (title, canonical, OG, the config head[]
+// entries); we only append the JSON-LD.
+import Default from '@astrojs/starlight/components/Head.astro';
+import { cfg } from '../../site.config.mjs';
+
+const abs = (p) => new URL(p, cfg.url).href;
+const pathname = Astro.url.pathname;
+
+// Section roots that actually resolve (HTTP 200) — the middle breadcrumb link.
+// /guides/ and /library/<category>/ have no index page, so guides point at the
+// Start-here landing and library documents step straight up to the library root.
+const ROOTS = {
+  guides: { name: 'Guides', path: '/guides/start-here/' },
+  library: { name: 'Document Library', path: '/library/' },
+  timeline: { name: 'Timeline', path: '/timeline/' },
+};
+
+let jsonLd = null;
+if (pathname === '/') {
+  jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: cfg.title,
+    url: cfg.url,
+    description: cfg.description,
+    inLanguage: 'en',
+  };
+} else {
+  const segs = pathname.split('/').filter(Boolean);
+  const crumbs = [{ name: 'Home', item: abs('/') }];
+  const root = ROOTS[segs[0]];
+  if (root && pathname !== root.path) crumbs.push({ name: root.name, item: abs(root.path) });
+  const title = Astro.locals.starlightRoute?.entry?.data?.title;
+  const leaf = abs(pathname);
+  if (title && !crumbs.some((c) => c.item === leaf)) crumbs.push({ name: title, item: leaf });
+  if (crumbs.length >= 2) {
+    jsonLd = {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: crumbs.map((c, i) => ({
+        '@type': 'ListItem',
+        position: i + 1,
+        name: c.name,
+        item: c.item,
+      })),
+    };
+  }
+}
+
+// Escape "<" so a page title containing "</script>" can't break out of the tag.
+const ld = jsonLd && JSON.stringify(jsonLd).replace(/</g, '\\u003c');
+---
+<Default />
+{ld && <script type="application/ld+json" set:html={ld} />}

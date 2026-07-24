@@ -11,6 +11,7 @@ dist-essexcrossing/
 # src/content/docs/.
 src/content/docs/
 src/data/site-stats.json
+src/data/page-dates.json
 public/attachments/
 public/library/
 public/ask/rag-index.json
