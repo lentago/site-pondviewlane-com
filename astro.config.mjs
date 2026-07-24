@@ -1,7 +1,24 @@
 // @ts-check
+import { readFileSync } from 'node:fs';
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
 import sitemap from '@astrojs/sitemap';
+
+// Per-page <lastmod> for the sitemap. scripts/compose-content.mjs writes a
+// { "/path/": "<git ISO date>" } map at build time (prose pages carry their
+// source file's git date; library/timeline pages carry their data source's).
+// Absent/uncommitted pages simply get no lastmod. Read lazily + cached.
+let _pageDates;
+function pageDates() {
+  if (!_pageDates) {
+    try {
+      _pageDates = JSON.parse(readFileSync(new URL('./src/data/page-dates.json', import.meta.url), 'utf8'));
+    } catch {
+      _pageDates = {};
+    }
+  }
+  return _pageDates;
+}
 
 // Public-record library categories only. The library content committed here is
 // produced by the private source repo's one-way publish tool, which publishes
@@ -27,8 +44,16 @@ export default defineConfig({
   outDir: `./dist-${SITE}`,
   integrations: [
     // Supplying our own sitemap integration (Starlight defers to it) so the
-    // post-submit /report/thanks/ page stays out of the sitemap.
-    sitemap({ filter: (page) => !page.includes('/report/thanks/') }),
+    // post-submit /report/thanks/ page stays out of the sitemap, and each URL
+    // carries a git-derived <lastmod> (see pageDates() above).
+    sitemap({
+      filter: (page) => !page.includes('/report/thanks/'),
+      serialize(item) {
+        const date = pageDates()[new URL(item.url).pathname];
+        if (date) item.lastmod = date;
+        return item;
+      },
+    }),
     starlight({
       title: cfg.title,
       description: cfg.description,
@@ -42,6 +67,8 @@ export default defineConfig({
       components: {
         Footer: './src/components/Footer.astro',
         Search: './src/components/HeaderAsk.astro',
+        // Appends JSON-LD (WebSite on the homepage, BreadcrumbList elsewhere).
+        Head: './src/components/Head.astro',
       },
       head: [
         // Preload the brand display face(s) so the wordmark/headings don't flash
