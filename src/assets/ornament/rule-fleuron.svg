@@ -1,0 +1,22 @@
+<!-- Engraved divider for `hr`: a central acanthus fleuron between two tapering
+     hairlines. Sized 240×24 and used at its intrinsic aspect with background-size
+     contain, centred — so it reads the same width on a phone and a desktop. -->
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="24" viewBox="0 0 240 24">
+  <defs>
+    <linearGradient id="r" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#b8912f" stop-opacity="0"/>
+      <stop offset=".5" stop-color="#c9a24b"/>
+      <stop offset="1" stop-color="#b8912f" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <!-- tapering rules -->
+  <rect x="0" y="11.4" width="92" height="1.2" fill="url(#r)"/>
+  <rect x="148" y="11.4" width="92" height="1.2" fill="url(#r)"/>
+  <!-- centre fleuron: a lozenge with acanthus wings -->
+  <g fill="#c9a24b">
+    <path d="M120 4 L125 12 L120 20 L115 12 Z"/>
+    <path d="M113 12 Q106 6 98 9 Q106 10 108 12 Q106 14 98 15 Q106 18 113 12 Z"/>
+    <path d="M127 12 Q134 6 142 9 Q134 10 132 12 Q134 14 142 15 Q134 18 127 12 Z"/>
+  </g>
+  <circle cx="120" cy="12" r="1.6" fill="#f7ecc6"/>
+</svg>

@@ -1,0 +1,11 @@
+<!-- Engine-turned guilloche band, as found on banknotes and share certificates:
+     two counter-rotating sine waves crossing a centre rule. Tiles horizontally at
+     64px (both waves complete a whole period across the tile, so the phase matches
+     at the seam). Used as a hairline band under the header and beneath the hero. -->
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="12" viewBox="0 0 64 12">
+  <g fill="none" stroke="#b8912f" stroke-width="0.8" stroke-opacity="0.85">
+    <path d="M0 6 C 8 0, 24 0, 32 6 C 40 12, 56 12, 64 6"/>
+    <path d="M0 6 C 8 12, 24 12, 32 6 C 40 0, 56 0, 64 6"/>
+  </g>
+  <rect x="0" y="5.6" width="64" height="0.8" fill="#c9a24b" fill-opacity="0.45"/>
+</svg>
