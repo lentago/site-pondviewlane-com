@@ -138,7 +138,11 @@ org/repo IDs) — see the solidago `iam` module trust list.
 **headers deliberately differ** (each describes its own home); **everything below
 the header must match** — sync below-the-header only, never `cp` wholesale. When
 you change the logic or the SYSTEM prompt here, mirror it into the solidago
-vendored copy in the same change.
+vendored copy in the same change. **Merging a handler change in this repo alone
+deploys nothing** — the vendored copy at `modules/ask-lambda/src/handler.mjs`
+is what gets packaged by `archive_file` from `source_dir` and deployed; landing
+that change in solidago is a real infra change (it falls under the
+`modules/*/src/**` Terraform change filter in that repo).
 
 Now that two domains share this one Lambda, `ALLOWED_ORIGIN` is a **comma-separated
 allow-list**: the handler matches the request `Origin` against it and echoes the
@@ -150,8 +154,8 @@ include `https://essexcrossingatmontserrat.com` is the solidago side
 
 `functions/ask/handler.mjs` emits one structured `{"event":"ask_query",...}`
 JSON line per invocation via `console.log`, on **both** the success and
-failure paths (`logAsk()`), so it's a single greppable event key in the
-`cjp-solidago-ecs` Axiom dataset. Fields: `site` (`pondview` |
+failure paths (`logAsk()`), so it's a single greppable event key in
+CloudWatch Logs (see delivery note below). Fields: `site` (`pondview` |
 `essexcrossing`), `question`, `outcome`, `latency_ms`, `model`,
 `input_tokens` / `output_tokens`, `answer_produced`, `grounded`,
 `upstream_status`, `error`. `outcome` is one of `success` | `upstream_error` |
@@ -160,9 +164,8 @@ reachable — the platform Lambda timeout kills the process before any line can
 be written, so there's no code path to emit it from today. The one-time
 `console.log('anthropic_error', ...)` line this replaced is folded into the
 structured event (`outcome: 'upstream_error'`) rather than kept alongside it,
-to hold the one-line-per-invocation invariant FireLens' `json_lines` output
-needs — a second line for the same request would ship as a second, unrelated
-record.
+to maintain one log line per invocation — a second line for the same request
+would land as a second, unrelated record.
 
 **Privacy decision (question text).** The handler already truncates
 `question` to 500 characters before using it in the prompt
@@ -184,14 +187,18 @@ cost/abuse analysis, short enough to bound that residual exposure. The
 model's decline phrasing, since the model returns no structured grounding
 signal) — treat it as directional, not authoritative.
 
-**Delivery is currently unverifiable.** Container stdout reaches Axiom
-through a FireLens sidecar, and that path has been broken since 2026-07-08 —
-the Axiom ingest secret in AWS still holds an unreplaced placeholder value
-(`lentago/solidago#143`, root-caused, fix tracked separately). The logging
-above is implemented and locally verified to emit well-formed single-line
-JSON on every code path, but end-to-end arrival in the `cjp-solidago-ecs`
-dataset cannot be confirmed until #143 lands — confirm delivery and build the
-outcome/latency/cost panels (`lentago/drosera#161`) only after that.
+**Delivery — CloudWatch today, Axiom pending.** The Ask endpoint is an AWS
+Lambda (deployed by solidago's `modules/ask-lambda`), not an ECS container —
+it has no FireLens sidecar and no Axiom wiring. `console.log` lands in
+CloudWatch Logs at `/aws/lambda/<function-name>`, with **14-day default
+retention** — shorter than the 30–90 days recommended above for this event
+(a default nobody chose for this purpose; raise it in the solidago module
+when addressing #144). Delivery to CloudWatch is verifiable today; the
+structured events emit on every code path as locally verified. Routing these
+logs onward to Axiom requires a CloudWatch Logs subscription filter or
+equivalent — that plumbing does not exist yet and is tracked in
+`lentago/solidago#144`. Build the outcome/latency/cost panels
+(`lentago/drosera#161`) only after #144 lands.
 
 ## CI & branch protection (fleet standard)
 
