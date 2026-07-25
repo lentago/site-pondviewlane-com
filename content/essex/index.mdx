@@ -8,7 +8,12 @@ head:
     content: Essex Crossing at Montserrat — the subdivision’s public record
 template: splash
 hero:
-  title: Essex Crossing at Montserrat
+  # Same words, split into a lockup: "Essex Crossing" is the showpiece and "at
+  # Montserrat" drops to a carved subtitle beneath it. Starlight renders hero.title
+  # with set:html, so the markup is supported. The leading space before the <span>
+  # is load-bearing — without it the accessible name runs together as
+  # "Essex Crossingat Montserrat".
+  title: 'Essex Crossing <span class="hero-at">at Montserrat</span>'
   tagline: Being a most humble compendium of the covenants that come with each lot, the wetland and stormwater rules that run with the land, and the public record behind all of it — Beverly, Massachusetts. Presented by a web page that is honored merely to load.
   image:
     file: ../../assets/logo-essex.svg
