@@ -682,24 +682,37 @@ h1, h2, h3, h4, .site-title {
 }
 .sl-markdown-content td { border-top: 1px solid color-mix(in srgb, var(--gilt) 22%, transparent); }
 
-/* Blockquotes get an engraved bracket and an oversized script quotation mark. */
+/* Blockquotes on this site are not quotations — every one of them is a standing
+   notice ("not an official publication of the association, and not legal
+   advice"). An earlier pass hung an oversized script quotation mark off the top
+   corner, which was wrong twice over: it announced a quotation that isn't one,
+   and Pinyon draws its ‟ as two hairline ticks that read as a stray mark rather
+   than as ornament. The mark is gone; these are engraved notice panels instead,
+   ruled top and bottom and bracketed by the gilt double rule.
+
+   The ground is set per scheme rather than by one formula. Mixing a mid-gold into
+   the ground works on paper but turns the dark panel a murky olive, so the dark
+   scheme recesses (darkens) instead of tinting — which reads as engraved rather
+   than as a stain. */
 .sl-markdown-content blockquote {
-  position: relative;
   border-inline-start: 3px double var(--gilt);
-  background: color-mix(in srgb, var(--gilt) 8%, transparent);
-  padding-inline-start: 2.6rem;
+  border-top: 1px solid color-mix(in srgb, var(--gilt) 30%, transparent);
+  border-bottom: 1px solid color-mix(in srgb, var(--gilt) 30%, transparent);
+  background: color-mix(in srgb, #000 28%, var(--essex-paper));
+  padding: 0.85rem 1.2rem;
 }
-.sl-markdown-content blockquote::before {
-  content: '\201C';
-  position: absolute;
-  inset-inline-start: 0.55rem;
-  top: -0.35rem;
-  font-family: var(--essex-script);
-  font-size: 3.2rem;
-  line-height: 1;
-  color: color-mix(in srgb, var(--gilt) 70%, transparent);
-  pointer-events: none;
+:root[data-theme='light'] .sl-markdown-content blockquote {
+  background: color-mix(in srgb, var(--gilt-pale) 55%, var(--essex-paper));
 }
+
+/* The Ask small print. The base layer sets this to --sl-color-gray-4, which is
+   only ≈3.2:1 light / ≈2.5:1 dark at 12px and fails AA. That shortfall is
+   inherited, not introduced here — the unmodified Pond View skin measures the
+   same — but this skin claims AA throughout, so it is corrected on this domain.
+   The base rule is deliberately left alone: editing it would change Pond View's
+   rendered output, which this re-skin otherwise leaves byte-identical. */
+.ask-disclaimer { color: #9a947f; }
+:root[data-theme='light'] .ask-disclaimer { color: #5f5a49; }
 
 /* Prose links: a gilt rule under the text that thickens on hover. The link colour
    itself is untouched — it carries the contrast, the gold is decoration only. */
