@@ -49,9 +49,14 @@ export const SITES = {
     // custom.css is the shared structural base; essex.css layers the estate skin
     // on top (loaded after, so it wins where it overrides).
     customCss: ['./src/styles/custom.css', './src/styles/essex.css'],
-    // Headings (Playfair) and body (EB Garamond) are above the fold everywhere;
-    // the Pinyon hero wordmark can swap in from its fallback.
-    preloadFonts: ['/fonts/playfair.woff2', '/fonts/eb-garamond.woff2'],
+    // Headings (Cinzel Decorative for h2/nav, Playfair for h3/h4) and body
+    // (EB Garamond) are above the fold everywhere; the Pinyon hero wordmark and
+    // Cinzel's 900 weight can swap in from their fallbacks.
+    preloadFonts: [
+      '/fonts/cinzel-decorative-700.woff2',
+      '/fonts/playfair.woff2',
+      '/fonts/eb-garamond.woff2',
+    ],
     themeColorLight: '#f7f2e6',
     themeColorDark: '#14180f',
     ogImage: '/og-essex.jpg',

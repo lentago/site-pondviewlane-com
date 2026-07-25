@@ -1,21 +1,31 @@
 /* Essex Crossing at Montserrat — the sister skin.
    Loaded AFTER src/styles/custom.css (see the SITE switch in astro.config.mjs):
    custom.css is the shared structural base for both domains; this file is a pure
-   theme override layered on top. Most components read the --pvl-* and Starlight
-   --sl-color-* custom properties, so redefining those here re-skins them without
-   touching the base; the handful of rules that bake in a brand colour or font
-   (the hero gradient, the nav wordmark, the stat/card tints) are re-declared
-   below, and this file adds the ornamental layer (script wordmark, engraved
-   double rules, fleuron dividers, gilded borders).
+   theme override layered on top. Because it is only ever loaded on the
+   SITE=essexcrossing build, every rule here is skin-scoped by construction — no
+   wrapper class is needed, and the Pond View skin is untouchable from this file.
 
-   Palette: old-money estate — ivory/cream ground, deep estate green, gilt gold.
-   The satire lives entirely in the display type and ornament; body copy stays a
-   comfortable serif at sane sizes and every control keeps accessible contrast in
-   both colour schemes. No copy changes — the prose is byte-identical to the Pond
-   View skin. Fonts self-hosted under /fonts/ (SIL OFL 1.1); see the OFL-*.txt. */
+   Register: a gilded estate document — ivory/parchment ground under a brocade
+   damask, deep estate green, and gold treated as a *material* rather than a
+   colour (a multi-stop foil ramp clipped to display type, with a letterpress
+   emboss and a slow shine sweep). The satire lives in the ornament and the
+   display type; body copy stays EB Garamond at a comfortable size and every
+   control keeps accessible contrast in both colour schemes. No copy changes —
+   the prose is composed from content/essex and is byte-identical to what the
+   voice guide specifies.
 
-/* Playfair Display — high-contrast Didone for the headings and the nav wordmark
-   (engraved-nameplate feel, still fully legible). SIL OFL 1.1. */
+   Readability firewall: the foil ramp and the ornament are for display type
+   (≥24px), frames, rules, and grounds ONLY. Body copy, links, labels, and UI
+   text keep solid, contrast-checked colours — gold-on-cream at reading sizes
+   fails AA and is off-limits.
+
+   Fonts self-hosted under /fonts/ (SIL OFL 1.1); see the OFL-*.txt files. */
+
+/* ══════════════════════════ faces ══════════════════════════ */
+
+/* Playfair Display — high-contrast Didone. Demoted by the gilding pass from the
+   headline face to the sub-head face (h3/h4, table heads, small chrome), where
+   its tighter fit beats Cinzel's monumental width. SIL OFL 1.1. */
 @font-face {
   font-family: 'Playfair Display';
   font-style: normal;
@@ -24,8 +34,8 @@
   src: url('/fonts/playfair.woff2') format('woff2');
 }
 /* EB Garamond — the body serif: warm, readable, unmistakably not the Pond View
-   sans. This is the workhorse for prose, tables, nav, and the library viewers.
-   SIL OFL 1.1. */
+   sans. This is the workhorse for prose, tables, nav, and the library viewers,
+   and the gilding pass deliberately leaves it alone. SIL OFL 1.1. */
 @font-face {
   font-family: 'EB Garamond';
   font-style: normal;
@@ -33,9 +43,9 @@
   font-display: swap;
   src: url('/fonts/eb-garamond.woff2') format('woff2');
 }
-/* Pinyon Script — the calligraphic showpiece, reserved for the homepage hero
-   wordmark. Kept off the navigation and body so nothing legible depends on a
-   script face. SIL OFL 1.1. */
+/* Pinyon Script — the calligraphic showpiece: the homepage hero wordmark, pull
+   quotes, and figure captions. Kept off navigation and body copy so nothing
+   load-bearing depends on a script face. SIL OFL 1.1. */
 @font-face {
   font-family: 'Pinyon Script';
   font-style: normal;
@@ -43,6 +53,27 @@
   font-display: swap;
   src: url('/fonts/pinyon.woff2') format('woff2');
 }
+/* Cinzel Decorative — inscriptional Roman capitals with leaf flourishes; the
+   headline face of the gilded pass (h2, the nav wordmark, card titles, stat
+   numerals, buttons). Latin subset, two weights only — 700 for headings and
+   chrome, 900 for the monumental moments. Its lowercase is drawn as small
+   capitals, so it is used WITHOUT font-variant: small-caps. SIL OFL 1.1. */
+@font-face {
+  font-family: 'Cinzel Decorative';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('/fonts/cinzel-decorative-700.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Cinzel Decorative';
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url('/fonts/cinzel-decorative-900.woff2') format('woff2');
+}
+
+/* ══════════════════════════ tokens ══════════════════════════ */
 
 :root {
   /* Estate palette, mapped onto the base's brand variables so every component
@@ -51,11 +82,46 @@
   --pvl-pine-deep: #10271d;
   --pvl-pond: #9c7c38;         /* gilt gold (the secondary accent / links’ warm tone) */
   --pvl-shadow: 16 39 29;      /* rgb triplet for the green-tinted drop shadows */
+
+  /* ── gold as a material ───────────────────────────────────────────────
+     A five-step ramp from shadowed gold to blown highlight. Ornament and
+     frames pick single steps; display type gets the full --gilt-foil ramp. */
+  --gilt-deep: #6f5318;
+  --gilt: #a8842c;
+  --gilt-mid: #c9a24b;
+  --gilt-bright: #e3c46a;
+  --gilt-pale: #f7ecc6;
+  /* Gold used as INK rather than as ornament. The ramp above is tuned for
+     borders, rules and fills, where contrast doesn't matter; --gilt itself is
+     only ≈3.1:1 on the light ground, which fails AA for anything under 18.66px
+     bold. Any rule that puts gold on *text* uses this token instead, and it
+     flips per scheme so it always has the ground to push against. */
+  --gilt-ink: #e3c46a;
+
+  /* The foil itself: alternating shadow/highlight stops read as brushed metal
+     when clipped to glyphs. Oversized background-size + a shifted starting
+     position put a highlight inside the word rather than at its edge. */
+  --gilt-foil: linear-gradient(100deg,
+    #a8842c 0%, #d8b155 9%, #fbf3d8 20%, #e3c46a 29%,
+    #b8912f 41%, #f2dd9e 55%, #fffaf0 65%, #dcb95e 76%,
+    #a8842c 88%, #e3c46a 100%);
+  /* Letterpress edge for foil-clipped type. drop-shadow (not text-shadow):
+     with a transparent fill, text-shadow smears a solid blob through the glyph
+     interior, while a filter shadows the *rendered* result. */
+  --gilt-emboss:
+    drop-shadow(0 1px 1px rgb(0 0 0 / 0.55))
+    drop-shadow(0 0 12px rgb(227 196 106 / 0.20));
+
   --pvl-display: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  --essex-display: 'Cinzel Decorative', 'Playfair Display', Georgia, serif;
   --essex-script: 'Pinyon Script', 'Snell Roundhand', cursive;
   --sl-font-headings: 'Playfair Display', Georgia, 'Times New Roman', serif;
   /* Body serif — the single biggest tell that this is a different house. */
   --sl-font: 'EB Garamond', Georgia, 'Times New Roman', serif;
+
+  --essex-damask: url('../assets/ornament/damask-dark.svg');
+  /* The sheet the prose is printed on, floated over the damask wall. */
+  --essex-paper: #1a1f14;
 }
 
 /* accent palette (dark scheme) — gilt on deep forest */
@@ -76,136 +142,613 @@
   --sl-color-bg-nav: #efe7d2;  /* deeper cream for nav/sidebar/cards */
   --sl-color-bg-sidebar: #efe7d2;
   --sl-color-text: #23241d;
+
+  /* On the ivory ground the blown-highlight stops vanish into the paper, so the
+     light-scheme foil runs a darker ramp with the highlights capped at mid-gold.
+     The ramp is weighted toward #5c4413–#8a6a22 (≈6.5:1 on the cream ground) so
+     the letterform stays legible and only narrow bands catch the light. */
+  --gilt-foil: linear-gradient(100deg,
+    #5c4413 0%, #7a5c1e 14%, #c9a24b 21%, #8a6a22 28%,
+    #5c4413 44%, #a8842c 54%, #d8b155 60%, #a8842c 66%,
+    #6f5318 82%, #8a6a22 100%);
+  --gilt-emboss:
+    drop-shadow(0 1px 0 rgb(255 255 255 / 0.75))
+    drop-shadow(0 -1px 0 rgb(60 40 0 / 0.30));
+
+  --essex-damask: url('../assets/ornament/damask-light.svg');
+  --essex-paper: #fffdf5;
+  --gilt-ink: #6f5318;
 }
 
-/* ---------- display type ---------- */
+/* ══════════════════════════ grounds ══════════════════════════ */
+
+/* Brocade wallpaper. body already paints --sl-color-bg; the damask tile layers
+   over it and shows through .page/.main-frame/.content-panel, none of which
+   paint a background of their own.
+
+   The tile (src/assets/ornament/damask-*.svg) is seamless at 64px: the ogee
+   diamond meets each edge at its midpoint with mirrored tangents, and the corner
+   rosettes are centred exactly on the tile corners, so the SVG viewport clips
+   each to a quarter that four neighbouring tiles reassemble. Colour and opacity
+   are baked into the file — a CSS background-image can't be recoloured — which
+   is why there are light and dark twins rather than one recoloured asset. Vite
+   inlines both as base64 data URIs (they fall under its 4KB threshold), so the
+   files themselves are kept free of comments. */
+body {
+  background-image: var(--essex-damask);
+  background-repeat: repeat;
+  background-size: 64px 64px;
+}
+
+/* Nav and sidebar are opaque panes over that wallpaper, so they get their own
+   copy of the tile at half scale — a finer weave for the chrome. */
+header.header,
+.sidebar-pane {
+  background-image: var(--essex-damask);
+  background-repeat: repeat;
+  background-size: 32px 32px;
+}
+
+/* ══════════════════════════ the foil treatment ══════════════════════════ */
+
+/* Everything that gets gilded type. Kept as one selector list so the ramp,
+   the clip, and the emboss can never drift apart between components. */
+.site-title,
+.hero h1,
+.content-panel .sl-container > h1,
+.sl-markdown-content h2,
+.ask-hero-head h2,
+.pvl-stat b,
+.card .title {
+  background-image: var(--gilt-foil);
+  background-size: 250% 100%;
+  background-position: 12% 0;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  filter: var(--gilt-emboss);
+}
+
+/* The base layer ships its own dark-scheme gradients for the two hero headings
+   (`:root[data-theme='dark'] .hero h1` and `… .ask-hero-head h2`, specificity
+   0-3-1). Those out-specify the foil list above, which would repaint both in the
+   Pond View mint. Re-assert the foil at matching specificity — this file loads
+   last, so it wins the tie. background-size and -position have to be repeated:
+   the base declares them through the `background` shorthand, which resets both,
+   and per-declaration specificity would otherwise hand them back to the base. */
+:root[data-theme='dark'] .hero h1,
+:root[data-theme='dark'] .ask-hero-head h2 {
+  background-image: var(--gilt-foil);
+  background-size: 250% 100%;
+  background-position: 12% 0;
+}
+
+/* The slow shine. Only the three showpieces animate — a page of shimmering
+   headings is a repaint cost and a migraine. Motion is opt-in by preference. */
+@keyframes essex-gilt-sweep {
+  from { background-position: 220% 0; }
+  to { background-position: -20% 0; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .hero h1,
+  .site-title,
+  .ask-hero-head h2 {
+    animation: essex-gilt-sweep 12s linear infinite;
+  }
+}
+
+/* ══════════════════════════ display type ══════════════════════════ */
+
 h1, h2, h3, h4, .site-title {
   font-family: var(--sl-font-headings);
   letter-spacing: 0.005em;
 }
-/* Engraved estate nameplate in the top bar — Playfair small-caps, letterspaced.
-   The script face is kept off the nav so the wordmark stays legible at chrome
-   sizes. */
+
+/* Engraved estate nameplate in the top bar — Cinzel caps, letterspaced, foiled.
+   Slightly reduced from Starlight's default so the long legal name still fits
+   the header slot before its ellipsis truncation kicks in. */
 .site-title {
-  font-family: var(--sl-font-headings);
+  font-family: var(--essex-display);
   font-weight: 700;
-  font-variant: small-caps;
-  letter-spacing: 0.06em;
+  font-size: 0.92em;
+  letter-spacing: 0.05em;
 }
 
-/* Small-caps section heads with a fine gilt double rule underneath — the
-   engraved-brochure look, applied only to the in-page h2s of the prose. */
+/* The page title — the article's own h1, not the homepage hero (which lives
+   deeper inside .hero and keeps the script face). Monumental inscriptional caps
+   at a slightly tightened size, since Cinzel sets much wider than Playfair. */
+.content-panel .sl-container > h1 {
+  font-family: var(--essex-display);
+  font-weight: 700;
+  font-size: clamp(1.9rem, 1.3rem + 2.2vw, 2.6rem);
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+}
+
+/* Monumental inscriptional section heads over a fine gilt double rule. Cinzel's
+   lowercase is already drawn as small capitals, so no font-variant here. */
 .sl-markdown-content h2 {
-  font-variant: small-caps;
+  font-family: var(--essex-display);
+  font-weight: 700;
   letter-spacing: 0.03em;
-  border-bottom: 3px double color-mix(in srgb, var(--pvl-pond) 70%, transparent);
-  padding-bottom: 0.2rem;
+  line-height: 1.25;
+}
+
+/* The engraved double rule goes on the heading's block WRAPPER, not the heading.
+   Starlight sets `display: inline` on autolinked headings so the anchor link can
+   sit beside the text, and a border-bottom on an inline box is painted under
+   every line fragment — a two-line h2 grew a rule through its middle. The
+   wrapper is a block, so it rules once, under the whole heading. */
+.sl-markdown-content .sl-heading-wrapper.level-h2 {
+  border-bottom: 3px double color-mix(in srgb, var(--gilt) 70%, transparent);
+  padding-bottom: 0.25rem;
 }
 .sl-markdown-content h3 {
   font-variant: small-caps;
   letter-spacing: 0.02em;
   color: var(--sl-color-accent-high);
 }
+.sl-markdown-content h4 {
+  font-variant: small-caps;
+  letter-spacing: 0.02em;
+  color: var(--gilt-ink);
+}
 
-/* Fleuron dividers — a centred gilt ornament in place of the plain horizontal
-   rule the guides emit from `---`. */
+/* Fleuron dividers — an engraved ornament in place of the plain horizontal rule
+   the guides emit from `---`: a central acanthus lozenge between two tapering
+   hairlines, drawn as art rather than as a `❦` glyph so it doesn't depend on
+   which fleuron the visitor's font stack happens to carry. */
 .sl-markdown-content hr {
   border: 0;
-  height: auto;
-  text-align: center;
-  margin: 2.2rem 0;
-}
-.sl-markdown-content hr::before {
-  content: '❦';
-  color: var(--pvl-pond);
-  font-size: 1.4rem;
-  letter-spacing: 0.5em;
+  height: 24px;
+  margin: 2.6rem 0;
+  background: url('../assets/ornament/rule-fleuron.svg') no-repeat center / contain;
 }
 
-/* Drop cap — a gilt Playfair initial on the opening paragraph of the prose.
-   Scoped to :first-child so it only fires when the page genuinely opens on a
-   paragraph (the guides, the library/timeline intros); document-viewer pages
-   open on the embedded <iframe>, so they're skipped rather than dropping a cap
-   onto the recorded text. */
+/* ── illuminated initial ──────────────────────────────────────────────
+   A gilt Cinzel capital on the opening paragraph of the prose, set into a
+   tinted panel. Scoped to :first-child so it only fires when the page genuinely
+   opens on a paragraph (the guides, the library/timeline intros); document
+   viewer pages open on the embedded <iframe> and are skipped rather than
+   dropping a cap onto the recorded text.
+   ::first-letter accepts background/padding/text-shadow but NOT filter, so the
+   emboss here is a text-shadow pair rather than the --gilt-emboss drop-shadows. */
 .sl-markdown-content > p:first-child::first-letter {
   float: left;
-  font-family: var(--sl-font-headings);
-  font-weight: 700;
-  font-size: 3.1em;
-  line-height: 0.78;
-  padding: 0.06em 0.12em 0 0;
-  color: var(--pvl-pond);
+  font-family: var(--essex-display);
+  font-weight: 900;
+  font-size: 3.6em;
+  line-height: 0.82;
+  margin: 0.02em 0.14em 0 0;
+  padding: 0.06em 0.1em 0.02em;
+  color: var(--gilt-bright);
+  background: linear-gradient(150deg,
+    color-mix(in srgb, var(--pvl-pine) 30%, transparent),
+    color-mix(in srgb, var(--gilt) 16%, transparent));
+  border: 1px solid color-mix(in srgb, var(--gilt) 45%, transparent);
+  border-radius: 0.2rem;
+  text-shadow: 0 1px 1px rgb(0 0 0 / 0.45);
+}
+/* On the light scheme the dark-scheme panel (green over gold) muddies to grey
+   against the paper, so the initial sits in a warm gilt-on-cream panel instead. */
+:root[data-theme='light'] .sl-markdown-content > p:first-child::first-letter {
+  color: var(--gilt-deep);
+  background: linear-gradient(150deg,
+    color-mix(in srgb, var(--gilt) 26%, transparent),
+    color-mix(in srgb, var(--gilt-pale) 55%, transparent));
+  border-color: color-mix(in srgb, var(--gilt) 65%, transparent);
+  text-shadow: 0 1px 0 rgb(255 255 255 / 0.8);
 }
 
-/* ---------- home splash ---------- */
-/* Hero wordmark — the calligraphic showpiece, in a green→gilt wash. */
+/* ══════════════════════════ home splash ══════════════════════════ */
+
+/* Hero wordmark — the calligraphic showpiece, now carrying the full foil ramp
+   and the shine sweep rather than a two-stop gradient. */
 .hero h1 {
   font-family: var(--essex-script);
   font-weight: 400;
   letter-spacing: 0.01em;
   line-height: 1.1;
   font-size: clamp(3.25rem, 8vw, 5.5rem);
-  background: linear-gradient(92deg, var(--pvl-pine-deep) 12%, var(--pvl-pond) 92%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
   padding-bottom: 0.08em; /* script descenders clip against the clip-path box otherwise */
 }
-:root[data-theme='dark'] .hero h1 {
-  background: linear-gradient(92deg, #e7cd8a 12%, #cfae5f 92%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-}
 
-/* Ask hero heading — match the gilt wash, in the estate serif. */
+/* Ask hero heading — same foil, in the inscriptional face. */
 .ask-hero-head h2 {
-  font-variant: small-caps;
+  font-family: var(--essex-display);
+  font-weight: 700;
   letter-spacing: 0.02em;
   border-bottom: 0;
   padding-bottom: 0;
-  background: linear-gradient(92deg, var(--pvl-pine-deep) 15%, var(--pvl-pond) 92%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-}
-:root[data-theme='dark'] .ask-hero-head h2 {
-  background: linear-gradient(92deg, #e7cd8a 15%, #cfae5f 92%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
 }
 
 /* Gilded engraving on the Ask hero — a fine gold inner keyline over the base
    card, and a warmer ground. */
 .ask-hero {
-  border-color: color-mix(in srgb, var(--pvl-pond) 45%, var(--sl-color-gray-5));
-  border-top: 3px solid var(--pvl-pond);
+  border-color: color-mix(in srgb, var(--gilt) 45%, var(--sl-color-gray-5));
+  border-top: 3px solid var(--gilt);
   box-shadow:
-    inset 0 0 0 1px color-mix(in srgb, var(--pvl-pond) 30%, transparent),
+    inset 0 0 0 1px color-mix(in srgb, var(--gilt) 30%, transparent),
     0 6px 24px rgb(var(--pvl-shadow) / 0.14);
   background:
-    radial-gradient(120% 100% at 0% 0%, color-mix(in srgb, var(--pvl-pond) 8%, var(--sl-color-bg-nav)) 0%, var(--sl-color-bg-nav) 62%);
+    radial-gradient(120% 100% at 0% 0%, color-mix(in srgb, var(--gilt) 8%, var(--sl-color-bg-nav)) 0%, var(--sl-color-bg-nav) 62%);
 }
 
 /* Stat cards — a restrained gilt/green alternation instead of the Pond View
-   rainbow, each still tinted through the --c custom property the base reads. */
-.pvl-stat { border: 1px solid color-mix(in srgb, var(--pvl-pond) 35%, var(--sl-color-gray-5)); }
+   rainbow, each still tinted through the --c custom property the base reads.
+   The numerals take the foil (they clear 24px); the labels stay solid. */
+.pvl-stat { border: 1px solid color-mix(in srgb, var(--gilt) 35%, var(--sl-color-gray-5)); }
 .pvl-stat:nth-child(odd) { --c: #1c4031; }
 .pvl-stat:nth-child(even) { --c: #9c7c38; }
-
-/* Home cards — alternating estate-green / gilt edges. */
-.card:nth-child(2n+1) { --c: #1c4031; }
-.card:nth-child(2n+2) { --c: #9c7c38; }
-
-/* Aerial figure — gilt frame and a green-tinted shadow. */
-.pvl-aerial img {
-  border: 1px solid color-mix(in srgb, var(--pvl-pond) 45%, var(--sl-color-gray-5));
-  box-shadow: 0 6px 24px rgb(var(--pvl-shadow) / 0.16);
+.pvl-stat b {
+  font-family: var(--essex-display);
+  font-weight: 900;
+  font-size: 1.75rem;
 }
 
-/* Blockquotes — gilt rule, warm ground. */
+/* Home cards — alternating estate-green / gilt edges, inscriptional titles.
+   The foil treatment puts a transparent fill on .title; the icon nested inside it
+   is unaffected, because background-clip only clips the element's own background
+   and never its child boxes. The icon's colour is re-set further down. */
+.card:nth-child(2n+1) { --c: #1c4031; }
+.card:nth-child(2n+2) { --c: #9c7c38; }
+.card .title {
+  font-family: var(--essex-display);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+/* Hero action buttons — inscriptional lettering; the plate itself is struck
+   further down, with the rest of the framed blocks. */
+.hero .sl-link-button {
+  font-family: var(--essex-display);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+/* Aerial figure — the green-tinted drop shadow. Its gilt frame is applied with
+   the other framed blocks below. */
+.pvl-aerial img {
+  box-shadow: 0 6px 24px rgb(var(--pvl-shadow) / 0.16);
+}
+/* Figure captions in the script hand. Sized up from the base's 0.85rem: Pinyon's
+   x-height is far smaller than a text serif's at the same em, so the script needs
+   the extra size to stay comfortably readable rather than merely decorative. */
+.pvl-aerial figcaption {
+  font-family: var(--essex-script);
+  font-size: 1.35rem;
+  line-height: 1.45;
+}
+
+/* ══════════════════════════ the framed sheet ══════════════════════════ */
+
+/* The prose is printed on a sheet of stock and hung on the damask wall: an opaque
+   parchment panel inside a gilt 9-slice frame, with the wallpaper left showing in
+   the gutters, the sidebar and the table-of-contents rail. Reading long guides off
+   clean stock rather than off patterned ground is the whole point — the ornament
+   goes around the text, not under it.
+   .main-pane (not .content-panel) is the framed element: a page stacks TWO content
+   panels, one for the title and one for the body, so framing those would draw two
+   frames per page. .main-pane wraps both and is a sibling of the ToC rail, which
+   is exactly the boundary we want. */
+.main-pane {
+  background-color: var(--essex-paper);
+  border: 22px solid color-mix(in srgb, var(--gilt) 55%, transparent);
+  border-image: url('../assets/ornament/frame-gilt.svg') 32 / 22px / 0 round;
+  border-radius: 2px;
+  margin: 1rem 0.75rem 2rem;
+  box-shadow: 0 10px 34px rgb(var(--pvl-shadow) / 0.20);
+}
+/* On a phone the frame would eat a quarter of the column, so it thins out. */
+@media (max-width: 50rem) {
+  .main-pane {
+    border-width: 10px;
+    border-image-width: 10px;
+    margin: 0.4rem 0.3rem 1.2rem;
+  }
+}
+
+/* The hairline Starlight rules between the title panel and the body becomes an
+   engraved gilt separator on the sheet. */
+.content-panel { border-color: color-mix(in srgb, var(--gilt) 40%, transparent) !important; }
+
+/* ══════════════════════════ hero ══════════════════════════ */
+
+/* An engine-turned guilloche band under the script name — the banknote device,
+   which is the correct register for a document that takes itself this seriously.
+   `content: ''` only: no words are introduced anywhere in this stylesheet. */
+.hero .copy h1::after {
+  content: '';
+  display: block;
+  height: 12px;
+  margin-top: 0.5rem;
+  background: url('../assets/ornament/guilloche.svg') repeat-x center / 64px 12px;
+}
+
+/* The carved subtitle. The hero tagline's FIRST LINE is set in the inscriptional
+   face — the classic printed lede, where the opening line is lettered differently
+   from the paragraph it introduces. Done with ::first-line rather than by adding a
+   subtitle element, so no copy is invented and the line re-flows naturally with
+   the viewport. Only font, colour and spacing properties are permitted on
+   ::first-line, which is all this needs.
+
+   Scoped to heroes that carry action buttons — in practice, the homepage. The 404
+   is also a splash page with a tagline, and there the arbitrary wrap point landed
+   mid-clause ("…a page that does NOT / exist"), which reads as a rendering bug
+   rather than as a lede. The homepage tagline is long enough that its first line
+   always breaks somewhere innocuous. Browsers without :has() simply drop the rule
+   and render the tagline plain, which is a safe way to lose it. */
+.hero:has(.actions) .tagline::first-line {
+  font-family: var(--essex-display);
+  font-weight: 700;
+  font-size: 0.88em;
+  letter-spacing: 0.06em;
+  color: var(--gilt-ink);
+}
+
+/* Hero action buttons — struck gold plates with a bevel highlight; the secondary
+   variant stays an outline and keeps the accent colour for its label.
+   The plate's ramp stops at --gilt rather than running down to --gilt-deep: the
+   ink is #17140a, which clears 5.26:1 on --gilt but only 2.57:1 on --gilt-deep.
+   Bottoming out at the darker tone would have put the lower part of the plate
+   below AA for any label that sat over it. The deep tone survives as the border
+   and the inset shade, where it carries the bevel without carrying text. */
+.hero .sl-link-button.primary {
+  background: linear-gradient(180deg, var(--gilt-pale) 0%, var(--gilt-bright) 45%, var(--gilt) 100%);
+  border: 1px solid var(--gilt-deep);
+  color: #17140a;
+  box-shadow:
+    inset 0 1px 0 rgb(255 255 255 / 0.55),
+    inset 0 -1px 0 rgb(0 0 0 / 0.25),
+    0 2px 8px rgb(var(--pvl-shadow) / 0.30);
+}
+.hero .sl-link-button.secondary {
+  border: 1px solid color-mix(in srgb, var(--gilt) 60%, transparent);
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--gilt) 22%, transparent);
+}
+@media (prefers-reduced-motion: no-preference) {
+  .hero .sl-link-button { transition: transform 0.14s ease, filter 0.14s ease; }
+  .hero .sl-link-button:hover { transform: translateY(-1px); filter: brightness(1.07); }
+}
+
+/* ══════════════════════════ framed blocks ══════════════════════════ */
+
+/* Four corner bosses from one asset (see corner-fleuron.svg on why it is drawn
+   4-fold symmetric). Applied to every card-like block on the site. */
+.card,
+.pvl-stat,
+.ask-hero,
+.pvl-aerial img {
+  background-image:
+    url('../assets/ornament/corner-fleuron.svg'),
+    url('../assets/ornament/corner-fleuron.svg'),
+    url('../assets/ornament/corner-fleuron.svg'),
+    url('../assets/ornament/corner-fleuron.svg');
+  background-position: left 4px top 4px, right 4px top 4px, left 4px bottom 4px, right 4px bottom 4px;
+  background-repeat: no-repeat;
+  background-size: 16px 16px;
+}
+/* The Ask hero and the stat tiles paint a tinted ground of their own; the bosses
+   have to be re-layered over it, since background-image replaces rather than adds. */
+.ask-hero {
+  background-image:
+    url('../assets/ornament/corner-fleuron.svg'),
+    url('../assets/ornament/corner-fleuron.svg'),
+    url('../assets/ornament/corner-fleuron.svg'),
+    url('../assets/ornament/corner-fleuron.svg'),
+    radial-gradient(120% 100% at 0% 0%, color-mix(in srgb, var(--gilt) 10%, var(--sl-color-bg-nav)) 0%, var(--sl-color-bg-nav) 62%);
+  background-position: left 5px top 5px, right 5px top 5px, left 5px bottom 5px, right 5px bottom 5px, 0 0;
+  background-repeat: no-repeat;
+  background-size: 18px 18px, 18px 18px, 18px 18px, 18px 18px, cover;
+}
+
+.card {
+  border: 1px solid color-mix(in srgb, var(--gilt) 45%, var(--sl-color-gray-5));
+  background-color: var(--sl-color-bg-nav);
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--gilt) 16%, transparent);
+  padding-top: 1.35rem;
+}
+/* Starlight tints each card's icon chip a different pastel (lavender, mint, pink)
+   — cheerful, and completely wrong next to gilt and estate green. Every chip
+   becomes the same gilt-on-tint plaque instead. The chip colour is set outside
+   this stylesheet's cascade, so the override is marked important; the icon's own
+   colour already carries an !important from the base layer. */
+.card .title .icon {
+  background: color-mix(in srgb, var(--gilt) 16%, transparent) !important;
+  color: var(--gilt) !important;
+  border: 1px solid color-mix(in srgb, var(--gilt) 45%, transparent);
+  border-radius: 0.3rem;
+}
+:root[data-theme='dark'] .card .title .icon { color: var(--gilt-bright) !important; }
+
+@media (prefers-reduced-motion: no-preference) {
+  .card { transition: transform 0.14s ease, box-shadow 0.14s ease; }
+  .card:hover {
+    transform: translateY(-2px);
+    box-shadow:
+      inset 0 0 0 1px color-mix(in srgb, var(--gilt) 30%, transparent),
+      0 8px 22px rgb(var(--pvl-shadow) / 0.22);
+  }
+}
+
+/* Stat tiles become struck medallions: a bevelled gilt ring over a tinted ground. */
+.pvl-stat {
+  background-color: color-mix(in srgb, var(--c, var(--gilt)) 8%, var(--sl-color-bg-nav));
+  box-shadow:
+    inset 0 0 0 1px color-mix(in srgb, var(--gilt) 40%, transparent),
+    inset 0 1px 0 rgb(255 255 255 / 0.30),
+    0 2px 8px rgb(var(--pvl-shadow) / 0.14);
+  padding-block: 1.25rem;
+}
+
+/* Figures hang in the same gilt frame as the sheet. */
+.pvl-aerial img {
+  border: 14px solid color-mix(in srgb, var(--gilt) 55%, transparent);
+  border-image: url('../assets/ornament/frame-gilt.svg') 32 / 14px / 0 round;
+  border-radius: 2px;
+}
+.pvl-aerial figcaption { color: var(--sl-color-gray-2); }
+
+/* ══════════════════════════ prose furniture ══════════════════════════ */
+
+/* Ledger tables: a struck-gold header band over ruled, alternately tinted rows. */
+.sl-markdown-content table {
+  border-collapse: collapse;
+  border: 1px solid color-mix(in srgb, var(--gilt) 45%, transparent);
+}
+.sl-markdown-content th {
+  font-family: var(--essex-display);
+  font-weight: 700;
+  font-size: 0.92em;
+  letter-spacing: 0.04em;
+  background: linear-gradient(180deg, var(--gilt-bright) 0%, var(--gilt) 100%);
+  color: #17140a;                       /* dark ink on gold — ≈8:1 */
+  border-bottom: 2px solid var(--gilt-deep);
+  text-shadow: 0 1px 0 rgb(255 255 255 / 0.35);
+}
+.sl-markdown-content tbody tr:nth-child(even) {
+  background: color-mix(in srgb, var(--gilt) 6%, transparent);
+}
+.sl-markdown-content td { border-top: 1px solid color-mix(in srgb, var(--gilt) 22%, transparent); }
+
+/* Blockquotes get an engraved bracket and an oversized script quotation mark. */
 .sl-markdown-content blockquote {
-  border-inline-start-color: var(--pvl-pond);
-  background: color-mix(in srgb, var(--pvl-pond) 8%, transparent);
+  position: relative;
+  border-inline-start: 3px double var(--gilt);
+  background: color-mix(in srgb, var(--gilt) 8%, transparent);
+  padding-inline-start: 2.6rem;
+}
+.sl-markdown-content blockquote::before {
+  content: '\201C';
+  position: absolute;
+  inset-inline-start: 0.55rem;
+  top: -0.35rem;
+  font-family: var(--essex-script);
+  font-size: 3.2rem;
+  line-height: 1;
+  color: color-mix(in srgb, var(--gilt) 70%, transparent);
+  pointer-events: none;
+}
+
+/* Prose links: a gilt rule under the text that thickens on hover. The link colour
+   itself is untouched — it carries the contrast, the gold is decoration only. */
+.sl-markdown-content a {
+  text-decoration-color: color-mix(in srgb, var(--gilt) 65%, transparent);
+  text-underline-offset: 0.16em;
+}
+.sl-markdown-content a:hover { text-decoration-thickness: 2px; }
+
+/* ══════════════════════════ chrome ══════════════════════════ */
+
+/* A guilloche band rules off the header, and again above the footer. */
+header.header {
+  border-bottom: 1px solid color-mix(in srgb, var(--gilt) 40%, transparent);
+  box-shadow: 0 3px 0 -1px color-mix(in srgb, var(--gilt) 20%, transparent);
+}
+
+/* Sidebar: inscriptional section labels, engraved separators, and a small gilt
+   lozenge marking each leaf link (drawn with a rotated square, so no glyph is
+   introduced and nothing depends on the visitor's font stack). */
+.sidebar-content .large {
+  font-family: var(--essex-display);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+.sidebar-content ul.top-level > li + li {
+  border-top: 1px solid color-mix(in srgb, var(--gilt) 22%, transparent);
+  padding-top: 0.35rem;
+  margin-top: 0.35rem;
+}
+.sidebar-content ul ul > li > a {
+  position: relative;
+  padding-inline-start: 1.15rem;
+}
+.sidebar-content ul ul > li > a::before {
+  content: '';
+  position: absolute;
+  inset-inline-start: 0.25rem;
+  top: 0.75em;
+  width: 5px;
+  height: 5px;
+  background: var(--gilt);
+  transform: rotate(45deg);
+  opacity: 0.75;
+}
+
+/* The table-of-contents rail gets the same inscriptional heading as the sheet. */
+.right-sidebar-panel h2 {
+  font-family: var(--essex-display);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--gilt-ink);
+}
+
+/* Footer plate: a wax seal over an engraved double rule. .report-issue is this
+   repo's own footer addition (Footer.astro) and renders last on every page, which
+   makes it the natural place to stamp the document. */
+.report-issue {
+  border-top: 3px double color-mix(in srgb, var(--gilt) 55%, transparent);
+  margin-top: 2rem;
+  padding-top: 1.1rem;
+  text-align: center;
+}
+.report-issue::before {
+  content: '';
+  display: block;
+  width: 54px;
+  height: 54px;
+  margin: 0 auto 0.7rem;
+  background: url('../assets/ornament/seal.svg') no-repeat center / contain;
+  opacity: 0.92;
+}
+
+/* The floating Ask dock, gilded to match the plates. */
+/* Same ramp cap as the hero plate — the dock icon is drawn in the same dark ink
+   and needs the same floor under it. */
+.ask-float-btn {
+  background: linear-gradient(180deg, var(--gilt-pale) 0%, var(--gilt-bright) 45%, var(--gilt) 100%);
+  border: 1px solid var(--gilt-deep);
+  color: #17140a;
+  box-shadow: inset 0 1px 0 rgb(255 255 255 / 0.5), 0 6px 20px rgb(var(--pvl-shadow) / 0.40);
+}
+.ask-float-btn:hover { background: linear-gradient(180deg, #fffaf0 0%, var(--gilt-pale) 45%, var(--gilt-mid) 100%); }
+.ask-float-panel { border-top-color: var(--gilt); }
+
+/* ══════════════════════════ print ══════════════════════════ */
+
+/* An attorney printing a guide gets the engraving, not the wallpaper: drop the
+   damask and the foil (which prints as a grey smear) for solid ink. */
+@media print {
+  body,
+  header.header,
+  .sidebar-pane,
+  .card,
+  .pvl-stat,
+  .ask-hero { background-image: none; }
+  /* The frames and the seal are screen ornament; paper gets a plain sheet. */
+  .main-pane,
+  .pvl-aerial img {
+    border-image: none;
+    border-width: 1px;
+    border-color: #999;
+    box-shadow: none;
+    margin: 0;
+  }
+  .report-issue::before { display: none; }
+  .sl-markdown-content th { background: none; color: #000; text-shadow: none; }
+  /* Must mirror the foil selector list above exactly — a selector that gets the
+     foil but not this override prints its heading as a pale gold smear on white.
+     (The page h1 did exactly that until it was added here.) */
+  .site-title,
+  .hero h1,
+  .content-panel .sl-container > h1,
+  .sl-markdown-content h2,
+  .ask-hero-head h2,
+  .pvl-stat b,
+  .card .title {
+    background-image: none;
+    color: #000;
+    filter: none;
+    animation: none;
+  }
 }

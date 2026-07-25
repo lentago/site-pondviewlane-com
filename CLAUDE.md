@@ -55,6 +55,11 @@ CORS value) is issue `lentago/solidago#137`.
   its name to the `PUBLIC_ATTACHMENTS` allowlist in `scripts/sync-content.mjs`).
 - The app shell (`src/components/`, `src/pages/`, `src/styles/`, `astro.config.mjs`,
   `Dockerfile`, `nginx.conf`, the workflows) and `functions/ask/handler.mjs`.
+- `src/assets/ornament/` — the Essex skin's ornament (damask tiles, the gilt
+  9-slice frame, fleuron rule, guilloche band, corner boss, seal), referenced by
+  `url()` from `src/styles/essex.css` and bundled by Vite. The small tiles are
+  inlined as base64 data URIs in render-blocking CSS, so those files are kept
+  free of comments — the drawing notes live in `essex.css` instead.
 
 **Generated at build — do NOT hand-edit** (gitignored; `scripts/sync-content.mjs`
 emits the record-derived outputs, `scripts/compose-content.mjs` materializes the

@@ -1,0 +1,18 @@
+<!-- Brocade ground tile, light scheme. Kept comment-free by design: Vite inlines
+     this file as a base64 data URI in render-blocking CSS, so prose here would
+     ship to every visitor. The tiling geometry is documented in essex.css. -->
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <defs>
+    <g id="r" fill="none" stroke="#7a5c1e" stroke-opacity="0.30" stroke-width="0.8">
+      <path d="M0 -6 Q2.6 -3 0 0 Q-2.6 -3 0 -6 Z"/>
+      <path d="M0 6 Q2.6 3 0 0 Q-2.6 3 0 6 Z"/>
+      <path d="M-6 0 Q-3 2.6 0 0 Q-3 -2.6 -6 0 Z"/>
+      <path d="M6 0 Q3 2.6 0 0 Q3 -2.6 6 0 Z"/>
+    </g>
+  </defs>
+  <path d="M0 32 Q16 16 32 0 Q48 16 64 32 Q48 48 32 64 Q16 48 0 32 Z"
+        fill="none" stroke="#7a5c1e" stroke-opacity="0.13" stroke-width="0.8"/>
+  <use href="#r" x="32" y="32"/>
+  <use href="#r" x="0" y="0"/><use href="#r" x="64" y="0"/>
+  <use href="#r" x="0" y="64"/><use href="#r" x="64" y="64"/>
+</svg>

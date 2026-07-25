@@ -1,13 +1,26 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="Essex Crossing at Montserrat">
-  <!-- Estate medallion (bolder for tiny sizes): gilt serrated mountain on a deep
-       estate-green field — Montserrat = "serrated mountain". -->
+  <!-- Favicon reduction of the armorial in src/assets/logo-essex.svg: the shield
+       alone, filling the frame. The coronet, mantling and scroll are dropped and
+       every remaining stroke is thickened — at 16px the full achievement collapses
+       into an indistinct gold smudge, while a green shield carrying gold peaks and
+       a star still reads. Montserrat = "serrated mountain". -->
   <defs>
-    <clipPath id="ec-field"><circle cx="32" cy="32" r="28"/></clipPath>
+    <linearGradient id="fe-g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#e3c46a"/>
+      <stop offset=".5" stop-color="#c9a24b"/>
+      <stop offset="1" stop-color="#8a6a22"/>
+    </linearGradient>
+    <clipPath id="fe-c">
+      <path d="M32 3 L60 9 V34 Q60 51 32 61 Q4 51 4 34 V9 Z"/>
+    </clipPath>
   </defs>
-  <circle cx="32" cy="32" r="31" fill="#1c4031"/>
-  <circle cx="32" cy="32" r="29.5" fill="none" stroke="#c9a24b" stroke-width="2.2"/>
-  <g clip-path="url(#ec-field)">
-    <path d="M3 52 L13 31 L19 41 L25 25 L30 38 L32 29 L38 41 L44 29 L49 43 L55 34 L61 52 Z" fill="#c9a24b"/>
+  <path d="M32 3 L60 9 V34 Q60 51 32 61 Q4 51 4 34 V9 Z" fill="#1c4031"/>
+  <g clip-path="url(#fe-c)">
+    <path d="M4 58 L13 34 L20 44 L27 27 L32 41 L37 30 L44 45 L51 31 L60 52 L60 61 L4 61 Z"
+          fill="url(#fe-g)"/>
   </g>
-  <path d="M32 11 L34 17.6 L40.8 17.6 L35.4 21.8 L37.4 28.4 L32 24.3 L26.6 28.4 L28.6 21.8 L23.2 17.6 L30 17.6 Z" fill="#e7cd8a"/>
+  <path d="M32 3 L60 9 V34 Q60 51 32 61 Q4 51 4 34 V9 Z"
+        fill="none" stroke="url(#fe-g)" stroke-width="3.4"/>
+  <path d="M32 9.5 L34.4 16.6 L41.9 16.6 L35.8 21 L38.1 28.1 L32 23.7 L25.9 28.1 L28.2 21 L22.1 16.6 L29.6 16.6 Z"
+        fill="#f7ecc6"/>
 </svg>
