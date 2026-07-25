@@ -342,15 +342,86 @@ h1, h2, h3, h4, .site-title {
 
 /* ══════════════════════════ home splash ══════════════════════════ */
 
-/* Hero wordmark — the calligraphic showpiece, now carrying the full foil ramp
-   and the shine sweep rather than a two-stop gradient. */
+/* ── the hero lockup ──────────────────────────────────────────────────
+   Starlight lays the hero out as a two-column grid on wide screens (copy left,
+   image right) with the copy capped at 50ch. That arrangement puts a ceiling on
+   how large the name can go, so the Essex skin collapses it to a single centred
+   column: crest on top, name enormous beneath it, everything centre-aligned.
+   Starlight's own rules live in @layer starlight.core and unlayered styles beat
+   layered ones outright, so these overrides win without a specificity contest. */
+@media (min-width: 50rem) {
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    padding-block: clamp(2rem, calc(1rem + 6vmin), 5rem);
+  }
+  .hero > img {
+    order: 0;                       /* crest above the name, not beside it */
+    width: min(45%, 10rem);
+  }
+  .stack { text-align: center; }
+  .copy { align-items: center; }
+  .actions { justify-content: center; }
+}
+/* The name needs the full column width; the tagline still wants a sane measure,
+   so the 50ch cap is re-applied to it alone rather than to every child. */
+.hero .copy > * { max-width: none; }
+.hero .tagline { max-width: 46ch; }
+
+/* Hero wordmark — the calligraphic showpiece, carrying the full foil ramp, the
+   shine sweep, an outlined edge and a hard offset shadow. Deliberately overdone:
+   this is the one element on the site allowed to be too much. */
 .hero h1 {
   font-family: var(--essex-script);
   font-weight: 400;
-  letter-spacing: 0.01em;
-  line-height: 1.1;
-  font-size: clamp(3.25rem, 8vw, 5.5rem);
-  padding-bottom: 0.08em; /* script descenders clip against the clip-path box otherwise */
+  letter-spacing: 0.005em;
+  line-height: 0.95;
+  font-size: clamp(3.5rem, 14vw, 12rem);
+  padding-bottom: 0.1em; /* script descenders clip against the clip-path box otherwise */
+  -webkit-text-stroke: 1px color-mix(in srgb, var(--gilt-deep) 70%, transparent);
+  filter:
+    drop-shadow(3px 4px 0 color-mix(in srgb, var(--gilt-deep) 55%, transparent))
+    drop-shadow(0 10px 26px rgb(var(--pvl-shadow) / 0.45));
+}
+:root[data-theme='dark'] .hero h1 {
+  -webkit-text-stroke: 1px color-mix(in srgb, #000 45%, transparent);
+  filter:
+    drop-shadow(3px 4px 0 rgb(0 0 0 / 0.45))
+    drop-shadow(0 0 30px rgb(227 196 106 / 0.35));
+}
+
+/* "at Montserrat" — the carved subtitle under the script name. It sits inside the
+   h1 (see the hero.title markup in content/essex/index.mdx), so it inherits the
+   transparent fill the foil treatment applies and has to re-assert its own ink,
+   stroke and letterfit. Flanking rules run out to either side. */
+.hero h1 .hero-at {
+  display: flex;                    /* flex so the flanking rules can be pseudo-items */
+  align-items: center;
+  justify-content: center;
+  gap: 0.6em;
+  /* Clears the swooping descender of "Crossing", which otherwise crosses the
+     right-hand flanking rule. */
+  margin-top: 0.3em;
+  font-family: var(--essex-display);
+  font-weight: 700;
+  font-size: clamp(0.95rem, 2.4vw, 2rem);
+  letter-spacing: 0.34em;
+  line-height: 1.2;
+  /* Keeps "at Montserrat" on one line at every width — the flanking rules are
+     the flexible items and give up their width first, rather than the words
+     wrapping to leave a stranded "AT" above "MONTSERRAT" on a phone. */
+  white-space: nowrap;
+  color: var(--gilt-ink);
+  -webkit-text-fill-color: var(--gilt-ink);
+  -webkit-text-stroke: 0;
+}
+.hero h1 .hero-at::before,
+.hero h1 .hero-at::after {
+  content: '';
+  flex: 0 1 4.5em;
+  min-width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--gilt), transparent);
 }
 
 /* Ask hero heading — same foil, in the inscriptional face. */
@@ -751,4 +822,15 @@ header.header {
     filter: none;
     animation: none;
   }
+  /* The hero subtitle sets its own fill colour, so clearing the h1 alone would
+     leave "at Montserrat" printing gold under a black name. */
+  .hero h1 {
+    -webkit-text-stroke: 0;
+  }
+  .hero h1 .hero-at {
+    color: #000;
+    -webkit-text-fill-color: #000;
+  }
+  .hero h1 .hero-at::before,
+  .hero h1 .hero-at::after { background: #999; }
 }
