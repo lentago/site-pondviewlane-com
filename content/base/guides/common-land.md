@@ -9,9 +9,13 @@ Behind the sixteen homes is **5.04 acres of protected woodland** — Open Space
 Parcel C, known to the City as **100 Pond View Lane**. The association owns
 it, every owner may use it, and a web of recorded obligations governs it.
 
-![Satellite view of Pond View Lane — sixteen homes around one cul-de-sac, wrapped by wooded open space, with Kelleher Pond at lower left](/attachments/satellite-overview-wide.jpg)
-*The whole holding at a glance (Google satellite imagery): the lane in the
-center, the common woodland wrapping the homes, Kelleher Pond at lower left.*
+![Beverly parcel-viewer map with the wetlands layer on — Open Space Parcel C shaded blue, wrapping the sixteen house lots around the cul-de-sac, with the separate 200 Pond View open space at the upper left, Kelleher Pond at the lower left, and the stream corridor along the eastern boundary](/attachments/parcel-wetland-proximity-2026.png)
+*The parcel itself (Beverly MapGeo, wetlands layer on): Parcel C in blue —
+100 Pond View Lane, parcel 44-31 — wrapping the sixteen house lots on nearly
+every side, with the separate 200 Pond View open space (44-31X) at the upper
+left and Kelleher Pond at the lower left. Screening layers are approximate; the
+authoritative boundary is the one drawn on the
+[recorded subdivision plan](/library/plans/subdivision-plan-book/).*
 
 ## What it is, on the record
 
@@ -64,6 +68,11 @@ holding permanent oversight. That trade is recorded in the
 can't be undone by an owner vote — the trust may not even be amended to
 avoid a Planning Board condition without the City's written consent
 ([Trust, p. 20](/library/founding/trust-declaration-2015/#page=20)).
+
+![Satellite view of Pond View Lane — sixteen homes around one cul-de-sac, wrapped by wooded open space, with Kelleher Pond at lower left](/attachments/satellite-overview-wide.jpg)
+*The trade seen from above (Google satellite imagery): sixteen homes on small
+lots pulled tight around a single cul-de-sac, the preserved woodland wrapping
+them, Kelleher Pond at lower left.*
 
 ## What the association must do with it
 
