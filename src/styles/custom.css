@@ -86,7 +86,10 @@ h1, h2, h3, h4, .site-title {
   font-family: var(--sl-font-headings);
   color: var(--sl-color-accent-high);
 }
-.pvl-stat span { font-size: 0.85rem; color: var(--sl-color-gray-3); }
+/* gray-2 rather than gray-3: these labels sit on the stat card's tinted ground,
+   where gray-3 measured 4.23:1 in the dark scheme — under the 4.5:1 AA floor for
+   text this size. */
+.pvl-stat span { font-size: 0.85rem; color: var(--sl-color-gray-2); }
 
 /* ---------- home aerial ---------- */
 .pvl-aerial { margin: 2.5rem 0 0.5rem; }
@@ -206,17 +209,24 @@ h1, h2, h3, h4, .site-title {
   gap: 1rem;
   margin-top: 0.6rem;
 }
+/* gray-3, not gray-4: at 0.75rem this is small print, but it is the line that
+   says the answers can be wrong and are not legal advice, so it has to be
+   readable. gray-4 over the Ask panel measured ≈3.2:1 (light) and ≈2.5:1 (dark),
+   short of the 4.5:1 AA needs at this size; gray-3 is the token Starlight and
+   this file already use for muted-but-readable secondary text. */
 .ask-disclaimer {
   font-size: 0.75rem;
-  color: var(--sl-color-gray-4);
+  color: var(--sl-color-gray-3);
   margin: 0;
 }
+/* gray-2 for the same reason as .pvl-stat span — as a button label on the nav
+   ground, gray-3 measured 4.49:1 in the dark scheme, a hair under AA. */
 .ask-clear {
   flex-shrink: 0;
   border: 1px solid var(--sl-color-gray-5);
   border-radius: 999px;
   background: var(--sl-color-bg-nav);
-  color: var(--sl-color-gray-3);
+  color: var(--sl-color-gray-2);
   font-size: 0.75rem;
   padding: 0.2rem 0.7rem;
   cursor: pointer;
