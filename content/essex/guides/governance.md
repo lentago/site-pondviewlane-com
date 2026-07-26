@@ -13,6 +13,16 @@ page, and I beg you to prefer their word to mine in every particular. They are
 recorded; I am merely rendered.
 
 ![Diagram of the governance structure — sixteen lot owners elect five trustees, who maintain the emergency access, stormwater system, and open space; the City of Beverly holds perpetual enforcement power, and every board change is recorded at the Registry](/attachments/diagram-governance.svg)
+*A drawing of a structure I did not invent and could not: the trustee board
+comes from [Trust Art. IV, pp. 5–6](/library/founding/trust-declaration-2015/#page=5),
+the maintenance duties from
+[Covenants Art. II, pp. 3–4](/library/founding/covenants-easements-2015/#page=3),
+the City's enforcement power from
+[Covenants Art. III, pp. 6–7](/library/founding/covenants-easements-2015/#page=6),
+and the recording requirement from
+[Trust, p. 6](/library/founding/trust-declaration-2015/#page=6) — each of
+which may be pulled, without my assistance, from the
+[Southern Essex District Registry of Deeds](https://salemdeeds.com/).*
 
 ## Part the First: Membership and Votes
 
@@ -106,8 +116,15 @@ and I present the list with the reverence an inventory of duties deserves:
 ## Part the Fifth: Rules on Each Lot
 
 The [Restrictive Covenants](/library/founding/restrictive-covenants-2015/)
-run with every lot until about 2045 (30 years, extendable in 10-year
-increments). The highlights, from the recorded text — recited exactly, for
+run with every lot until about 2045 — the instrument fixes its own 30-year term
+and provides for extension "for successive periods of ten years" unless a
+majority of owners record an instrument changing or terminating it (¶10).
+Thirty years is likewise the ceiling Massachusetts sets on restrictions written
+with no time limit at all
+([M.G.L. c.184 §23](https://malegislature.gov/Laws/GeneralLaws/PartII/TitleI/Chapter184/Section23);
+the mechanics of extending one live at
+[§27](https://malegislature.gov/Laws/GeneralLaws/PartII/TitleI/Chapter184/Section27)).
+The highlights, from the recorded text — recited exactly, for
 paraphrase is a liberty I do not take:
 
 - **Architectural control** — no structure, fence, or exterior alteration
@@ -148,8 +165,12 @@ paraphrase is a liberty I do not take:
 
 ## Part the Seventh: The City's Permanent Seat at the Table
 
-Essex Crossing is an **Open Space Residential Design (OSRD)** subdivision,
-and the City of Beverly retains oversight **in perpetuity**: if the
+Essex Crossing is an **Open Space Residential Design (OSRD)** subdivision —
+permitted under what is today
+[§ 300-54 of Beverly's zoning ordinance](https://ecode360.com/29283330), which
+the City sets out on its own
+[OSRD page](https://www.beverlyma.gov/418/OSRD-Plan-Ordinance) — and the City
+of Beverly retains oversight **in perpetuity**: if the
 association lets required maintenance slide, the City may enter on 14 days'
 notice, do the work, and bill the association and owners — with the City's
 own judgment controlling whether the work was necessary, backed by a $3,000

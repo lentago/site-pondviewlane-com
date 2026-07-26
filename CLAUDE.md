@@ -49,10 +49,24 @@ CORS value) is issue `lentago/solidago#137`.
 - `library/` — the document record: `manifest.json` (metadata), `files/` (the
   recorded instruments / city filings), `text/` (searchable extracts). Add a
   public-record document by adding its file + a `manifest.json` entry
-  (`status: "public-record"`) + its text extract.
+  (`status: "public-record"`) + its text extract. **Every entry carries a
+  `verify: {label, url}`** — the public portal a reader can pull the same
+  record from independently (Registry, assessor, Agenda Center, MassGIS,
+  ePLACE); it renders as the **"Verify at source"** row on the document page.
+  A record nobody can check independently doesn't belong in the library. Use a
+  deep link where the portal has stable ones (Agenda Center file IDs, the
+  assessor account) and the portal root where it doesn't — salemdeeds.com is
+  search-only behind a WAF, so the label carries the book-and-page to search.
 - `timeline/events.json` — the public chronology; add a dated event object.
+  Refs are `{t, d}` (a library document) or `{t, u}` (an external URL — the
+  issuing authority's own copy; these render with a `↗` and open in a new tab).
 - `attachments/` — the maps/plans/diagrams the guides embed (add the file **and**
   its name to the `PUBLIC_ATTACHMENTS` allowlist in `scripts/sync-content.mjs`).
+  **A screenshot of a public portal names that portal in its caption and links
+  to it** — every map on the site is a capture of Beverly MapGeo, the assessor
+  database, or the MassGIS property viewer, and says so, so a reader can
+  reproduce the view. Diagrams drawn for the site say they are drawings and
+  cite the records they depict.
 - The app shell (`src/components/`, `src/pages/`, `src/styles/`, `astro.config.mjs`,
   `Dockerfile`, `nginx.conf`, the workflows) and `functions/ask/handler.mjs`.
 - `src/assets/ornament/` — the Essex skin's ornament (damask tiles, the gilt

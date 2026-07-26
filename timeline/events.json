@@ -204,6 +204,14 @@
       {
         "t": "Certificate of Compliance — minutes excerpt",
         "d": "regulatory/concom-minutes-2022-08-02-excerpt"
+      },
+      {
+        "t": "City minutes 7/13/2021",
+        "u": "https://www.beverlyma.gov/AgendaCenter/ViewFile/Minutes/_07132021-477"
+      },
+      {
+        "t": "City minutes 8/2/2022",
+        "u": "https://www.beverlyma.gov/AgendaCenter/ViewFile/Minutes/_08022022-926"
       }
     ]
   },
@@ -272,6 +280,10 @@
       {
         "t": "a 2018 tax bill",
         "d": "finances/re-tax-bill-2018-q1"
+      },
+      {
+        "t": "City assessor record (account 12074)",
+        "u": "https://beverly.patriotproperties.com/summary.asp?AccountNumber=12074"
       }
     ]
   },
@@ -290,6 +302,14 @@
       {
         "t": "Enforcement Order — minutes excerpt",
         "d": "regulatory/concom-minutes-2024-11-26-excerpt"
+      },
+      {
+        "t": "City minutes 9/24/2024",
+        "u": "https://www.beverlyma.gov/AgendaCenter/ViewFile/Minutes/_09242024-1956"
+      },
+      {
+        "t": "City minutes 11/26/2024",
+        "u": "https://www.beverlyma.gov/AgendaCenter/ViewFile/Minutes/_11262024-2054"
       }
     ]
   },
@@ -304,6 +324,10 @@
       {
         "t": "minutes excerpt",
         "d": "regulatory/concom-minutes-2025-07-01-excerpt"
+      },
+      {
+        "t": "City minutes 7/1/2025",
+        "u": "https://www.beverlyma.gov/AgendaCenter/ViewFile/Minutes/_07012025-2365"
       }
     ]
   }

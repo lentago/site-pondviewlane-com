@@ -59,6 +59,11 @@ Everything above is in two instruments in the library:
 [the Declaration of Trust](/library/founding/trust-declaration-2015/) (how
 the assessment is set) and
 [the Declaration of Covenants](/library/founding/covenants-easements-2015/)
-(the equal split, the lien, and the interest). The common parcel's own tax
-bills — the association's largest fixed external cost historically — are in
-[the library's City Tax Bills section](/library/).
+(the equal split, the lien, and the interest). Both were recorded at Book
+34576 and can be pulled independently from the
+[Southern Essex District Registry of Deeds](https://salemdeeds.com/) — this
+site's copies are convenience copies, not the record. The common parcel's own
+tax bills — the association's largest fixed external cost historically — are in
+[the library's City Tax Bills section](/library/), and the parcel's live
+assessment is on the City's assessor database at
+[Patriot Properties, account 12074](https://beverly.patriotproperties.com/summary.asp?AccountNumber=12074).

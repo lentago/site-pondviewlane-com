@@ -58,6 +58,16 @@ into the site's pages. There is no external dependency and no internal
 association material: meeting minutes, budgets, insurance, vendor invoices, and
 correspondence are **not** public records and are simply not here.
 
+**And it's checkable.** Every library document carries a **"Verify at source"**
+link to the portal it can be pulled from independently — the Registry
+([salemdeeds.com](https://salemdeeds.com/)), the City assessor
+([Patriot Properties](https://beverly.patriotproperties.com/)), the
+[Beverly Agenda Center](https://www.beverlyma.gov/AgendaCenter),
+[MassGIS](https://massgis.maps.arcgis.com/apps/OnePane/basicviewer/index.html?appid=47689963e7bb4007961676ad9fc56ae9),
+or [EEA ePLACE](https://eplace.eea.mass.gov/EEAPublicApp) — and every map on
+the site names the public viewer it was captured from and links to it, so a
+reader can reproduce the view rather than take the site's word for it.
+
 A content-hygiene check (`scripts/check-content.mjs`) guards the invariant — no
 resident names outside the recorded documents, every library document marked as
 a public record, every image on an explicit allowlist.
@@ -68,7 +78,7 @@ a public record, every image on an explicit allowlist.
 |---|---|
 | `content/base/` | The hand-written prose — homepage, About, and the eight resident guides (start here, governance, common land, stormwater, wetlands, assessments, records, trees). |
 | `content/essex/` | Per-page Essex-voice overrides (The Obsequious Document), composed over the base for the essexcrossing skin. |
-| `library/` | **Source of record:** `manifest.json` (document metadata) + `files/` (the recorded instruments / city filings) + `text/` (searchable text extracts). |
+| `library/` | **Source of record:** `manifest.json` (document metadata, including the `verify` portal link rendered as each page's "Verify at source" row) + `files/` (the recorded instruments / city filings) + `text/` (searchable text extracts). |
 | `timeline/events.json` | **Source:** the public-records chronology, one entry per dated event. |
 | `attachments/` | **Source:** the maps, plans, and diagrams the guides embed (the allowlist the generator publishes). |
 | `scripts/sync-content.mjs` | The build-time generator: turns `library/` + `timeline/` + `attachments/` into the site's content collections + the Ask index. |

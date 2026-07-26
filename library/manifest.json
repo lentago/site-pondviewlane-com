@@ -1,5 +1,5 @@
 {
-  "count": 36,
+  "count": 37,
   "generated": "2026-07-17",
   "documents": [
     {
@@ -14,6 +14,10 @@
       "sha256": "c32f4007ff9dc3e7fb997e7a05bf552e1a4414b50f089ac5df8b123b62e6225b",
       "status": "public-record",
       "recording": null,
+      "verify": {
+        "label": "City of Beverly Assessor (Patriot Properties) — parcel 44-31, account 12074",
+        "url": "https://beverly.patriotproperties.com/summary.asp?AccountNumber=12074"
+      },
       "notes": null,
       "has_text": false
     },
@@ -29,6 +33,10 @@
       "sha256": "f9a5a3f3b68646a98bb7b9d99946fbdde0c3b77685a56b92afee0b3a80b4a30b",
       "status": "public-record",
       "recording": null,
+      "verify": {
+        "label": "City of Beverly Assessor (Patriot Properties) — parcel 44-31, account 12074",
+        "url": "https://beverly.patriotproperties.com/summary.asp?AccountNumber=12074"
+      },
       "notes": null,
       "has_text": false
     },
@@ -44,6 +52,10 @@
       "sha256": "f98debb168e09b73842d0f36f406e70001f47ef0969e2f97683c1e3920e550ec",
       "status": "public-record",
       "recording": null,
+      "verify": {
+        "label": "City of Beverly Assessor (Patriot Properties) — parcel 44-31, account 12074",
+        "url": "https://beverly.patriotproperties.com/summary.asp?AccountNumber=12074"
+      },
       "notes": null,
       "has_text": false
     },
@@ -59,6 +71,10 @@
       "sha256": "55824aab7de7bfa0ea7ffc634d07b3887f676e66fae73bd695cc51224470c9dd",
       "status": "public-record",
       "recording": null,
+      "verify": {
+        "label": "City of Beverly Assessor (Patriot Properties) — parcel 44-31, account 12074",
+        "url": "https://beverly.patriotproperties.com/summary.asp?AccountNumber=12074"
+      },
       "notes": null,
       "has_text": false
     },
@@ -74,6 +90,10 @@
       "sha256": "ddfe51bc692f9f878097e229c1f685793c199763adda7f404dea401f34aa733c",
       "status": "public-record",
       "recording": null,
+      "verify": {
+        "label": "City of Beverly Assessor (Patriot Properties) — parcel 44-31, account 12074",
+        "url": "https://beverly.patriotproperties.com/summary.asp?AccountNumber=12074"
+      },
       "notes": null,
       "has_text": false
     },
@@ -89,6 +109,10 @@
       "sha256": "d15f9c1841d4f4f14fca5405a96c2d0ad3bef3982ddd44cf3f7aa4d81e7a3f9c",
       "status": "public-record",
       "recording": "Bk 33792 Pg 507 (rec. 1/12/2015)",
+      "verify": {
+        "label": "Southern Essex District Registry of Deeds — search Bk 33792 Pg 507",
+        "url": "https://salemdeeds.com/"
+      },
       "notes": "Pulled from the Southern Essex Registry (salemdeeds.com) 2026-07-17. Special permit under Beverly zoning §38-34.G.2.b allowing the developer to pay a fee in lieu of providing affordable units on-site; public hearing concluded and voted 9/16/2014; 2-page registry image.",
       "has_text": false
     },
@@ -104,6 +128,10 @@
       "sha256": "1ff938c95cd536d3dd868501337a88dd44fb94a509c6abdb7dc9c66808997a1c",
       "status": "public-record",
       "recording": "Bk 33792 Pg 502 (rec. 1/12/2015)",
+      "verify": {
+        "label": "Southern Essex District Registry of Deeds — search Bk 33792 Pg 502",
+        "url": "https://salemdeeds.com/"
+      },
       "notes": "Pulled from the Southern Essex Registry (salemdeeds.com) 2026-07-17. The Beverly Planning Board's OSRD site-plan decision for 232 Essex Street (DUC Residential LLC & Walker Realty LLC), the instrument every lot deed cites as 'REF 33792/502'. 5-page registry image; decision letter of November 25, 2014 to the City Clerk; hearings 7/15, 9/16, 10/21/2014; site visit 10/18/2014.",
       "has_text": false
     },
@@ -119,6 +147,10 @@
       "sha256": "7ff3c3c0f4f68a46002f57f513ab1b845f50ffc7bdc9e7fea1b446284258db04",
       "status": "public-record",
       "recording": "Bk 33792 Pg 499 (rec. 1/12/2015)",
+      "verify": {
+        "label": "Southern Essex District Registry of Deeds — search Bk 33792 Pg 499",
+        "url": "https://salemdeeds.com/"
+      },
       "notes": "Pulled from the Southern Essex Registry (salemdeeds.com) 2026-07-17. The Board's approval of the definitive subdivision plan for 232 Essex Street under the Subdivision Control Law (M.G.L. c.41 §81 and ch. 39 §23D certifications), 3-page registry image.",
       "has_text": false
     },
@@ -134,6 +166,10 @@
       "sha256": "19adefa5a5d9b77a73e8b497cd56ead4bb7f9c0ac956fc0455241652b90e2f98",
       "status": "public-record",
       "recording": "Bk 33823 Pg 167 (rec. 1/28/2015)",
+      "verify": {
+        "label": "Southern Essex District Registry of Deeds — search Bk 33823 Pg 167",
+        "url": "https://salemdeeds.com/"
+      },
       "notes": "Pulled from the Southern Essex Registry (salemdeeds.com) 2026-07-15. The developer's covenant with the City of Beverly, executed instead of posting a performance bond: no lot may be sold or built upon until the ways and municipal services serving it are complete; completion of all ways/services was due before 10/21/2016 or plan approval would be automatically rescinded; lots are released only by a certificate of performance from a majority of the Planning Board. Signed by Paul DiBiase (DUC Residential LLC); Enterprise Bank & Trust assented as mortgagee (mortgages at Bk 33792 Pg 512 & Pg 529). References the definitive plan, Plan 446/73. (Corrects the wiki's prior description of Bk 33823 Pg 167 as 'the earlier plan' — it is this covenant, not a plan.)",
       "has_text": true
     },
@@ -149,6 +185,10 @@
       "sha256": "1f86975e36e7cd6a97b484785e8f0c782254c353a662b9aa38e612148af5009c",
       "status": "public-record",
       "recording": "Bk 34576 Pg 486",
+      "verify": {
+        "label": "Southern Essex District Registry of Deeds — search Bk 34576 Pg 486",
+        "url": "https://salemdeeds.com/"
+      },
       "notes": null,
       "has_text": true
     },
@@ -164,6 +204,10 @@
       "sha256": "6af7e22258e7cc8883afcf976b6c2632b9afc5907cb76c1df320cdbeb6ffbdb0",
       "status": "public-record",
       "recording": "Bk 34576 Pg 477",
+      "verify": {
+        "label": "Southern Essex District Registry of Deeds — search Bk 34576 Pg 477",
+        "url": "https://salemdeeds.com/"
+      },
       "notes": null,
       "has_text": true
     },
@@ -179,6 +223,10 @@
       "sha256": "421da8a53c271707ca97a2965831cdb207fa2cb1ba84beb7cf3c1e09a3d9a923",
       "status": "public-record",
       "recording": "Bk 34576 Pg 471",
+      "verify": {
+        "label": "Southern Essex District Registry of Deeds — search Bk 34576 Pg 471",
+        "url": "https://salemdeeds.com/"
+      },
       "notes": null,
       "has_text": true
     },
@@ -194,6 +242,10 @@
       "sha256": "0e9f210e00e5f214a952ca3a1a1113fb88afdff5e831e8a33e85b32905d48e09",
       "status": "public-record",
       "recording": "Bk 35266 Pg 467 (rec. 9/16/2016)",
+      "verify": {
+        "label": "Southern Essex District Registry of Deeds — search Bk 35266 Pg 467",
+        "url": "https://salemdeeds.com/"
+      },
       "notes": "Discovered 2026-07-17 via a registry name search (the wiki previously did not know a recorded amendment existed). Developer-era amendment executed by DUC Residential LLC (Paul DiBiase, Manager) as sole trustee under Art. VIII: adds maintenance/replacement of mailboxes and mailbox posts to the Trust's purposes (Art. III §1) and provides the City of Beverly bears no liability for mailbox damage including from snow plowing/sanding. Recorded the same day as the Parcel C conveyance (Bk 35266 Pg 472). The instrument's internal reference to 'Book 35476, Page 486' is a typo for 34576/486.",
       "has_text": false
     },
@@ -209,6 +261,10 @@
       "sha256": "b6aefd750c243e2eca37ae6f7a00258dfe38fdae5ec12a75aea7038bab7a0dac",
       "status": "public-record",
       "recording": "Bk 35266 Pg 472 (rec. 9/16/2016)",
+      "verify": {
+        "label": "Southern Essex District Registry of Deeds — search Bk 35266 Pg 472",
+        "url": "https://salemdeeds.com/"
+      },
       "notes": "Pulled from the Southern Essex Registry (salemdeeds.com) 2026-07-17 — the deed that actually conveys the common land, previously referenced across the site but absent from the library. Quitclaim Deed with Quitclaim Covenants: DUC Residential LLC (Paul DiBiase, Manager) grants Open Space Parcel C (219,556 sf / 5.04 ac, as shown on Plan Book 446 Plan 73) to the Essex Crossing at Montserrat Homeowners Association Trust (u/d/t 12/9/2015, Bk 34576 Pg 486) for ONE ($1.00) DOLLAR. Conveyance subject to a drainage easement and the Emergency 20' Wide Access & Utility Easement shown on the Plan; the parcel's preservation in perpetuity is a condition of the OSRD Decision (Bk 33792 Pg 502). Title reference: deed at Bk 33792 Pg 509. Executed and acknowledged 9/13/2016; recorded 9/16/2016, the same day as the Trust's First Amendment (Bk 35266 Pg 467).",
       "has_text": true
     },
@@ -224,6 +280,10 @@
       "sha256": "34a4bcabe0cb3ea2767fa81cf72c3e2e6547c7885a2ad5562c5feebd85b80bca",
       "status": "public-record",
       "recording": "Bk 36570 Pg 215 (rec. 3/6/2018)",
+      "verify": {
+        "label": "Southern Essex District Registry of Deeds — search Bk 36570 Pg 215",
+        "url": "https://salemdeeds.com/"
+      },
       "notes": "Added 2026-07-17 (registry image; the library previously lacked the developer's own resignation). Executed 2/2/2018 by Paul DiBiase, Manager; recorded 3/6/2018 together with the acceptance (36570/213) and appointment (36570/216) instruments — the recorded developer hand-over.",
       "has_text": false
     },
@@ -239,6 +299,10 @@
       "sha256": "498b36c2211aefea12a2ceb50ab6384c4c450ec75715dcbb113aba8e4f3bd60b",
       "status": "public-record",
       "recording": "Bk 36570 Pg 216 (rec. 3/6/2018)",
+      "verify": {
+        "label": "Southern Essex District Registry of Deeds — search Bk 36570 Pg 216",
+        "url": "https://salemdeeds.com/"
+      },
       "notes": "Stamped registry image replaced the unstamped Drive copy 2026-07-17.",
       "has_text": false
     },
@@ -254,6 +318,10 @@
       "sha256": "656fbc93502b80e6fea545638fa34dbf0f1ea50c3cb79a324213d7d0dc4097ff",
       "status": "public-record",
       "recording": "Bk 36570 Pg 213 (rec. 3/6/2018)",
+      "verify": {
+        "label": "Southern Essex District Registry of Deeds — search Bk 36570 Pg 213",
+        "url": "https://salemdeeds.com/"
+      },
       "notes": "Stamped registry image replaced the unstamped Drive copy 2026-07-17.",
       "has_text": false
     },
@@ -269,6 +337,10 @@
       "sha256": "687fc5ae26d3e42f867539efa96dfac017aba73610d62aefad41281a00fceaec",
       "status": "public-record",
       "recording": "Bk 37475 Pg 250 (rec. 4/30/2019)",
+      "verify": {
+        "label": "Southern Essex District Registry of Deeds — search Bk 37475 Pg 250",
+        "url": "https://salemdeeds.com/"
+      },
       "notes": "Stamped registry image replaced the Drive copy 2026-07-17.",
       "has_text": false
     },
@@ -284,6 +356,10 @@
       "sha256": "37802f5549a9b75ac60232de9ffb46c8e64b50654c232bb1fb203e0d594ee6dd",
       "status": "public-record",
       "recording": "Bk 37709 Pg 525 (rec. 7/30/2019)",
+      "verify": {
+        "label": "Southern Essex District Registry of Deeds — search Bk 37709 Pg 525",
+        "url": "https://salemdeeds.com/"
+      },
       "notes": "Stamped registry image replaced the Drive copy 2026-07-17.",
       "has_text": false
     },
@@ -299,6 +375,10 @@
       "sha256": "c993888c5868683cc92b9227df8b5797b2e61eac765e4c62173cee60f0a9f757",
       "status": "public-record",
       "recording": "Bk 37933 Pg 5 (eRecorded 10/15/2019)",
+      "verify": {
+        "label": "Southern Essex District Registry of Deeds — search Bk 37933 Pg 5",
+        "url": "https://salemdeeds.com/"
+      },
       "notes": "Stamped registry image replaced the Drive copy 2026-07-17, and corrects the wiki's earlier reading: the resignation was eRecorded 10/15/2019 — the same day as the #11 home sale — not January 2020. (The id keeps its earlier '-2020' label for link stability.)",
       "has_text": false
     },
@@ -314,6 +394,10 @@
       "sha256": "488e9c3aeb63cc9c6b91756b4347fbcb92a096fcfe148e9ca491ea7b057b84b6",
       "status": "public-record",
       "recording": "Bk 38092 Pg 423 (rec. 12/6/2019)",
+      "verify": {
+        "label": "Southern Essex District Registry of Deeds — search Bk 38092 Pg 423",
+        "url": "https://salemdeeds.com/"
+      },
       "notes": "Stamped registry image replaced the Drive copy 2026-07-17; recorded 12/6/2019 following the November 25, 2019 annual-meeting appointment. (The id keeps its earlier '-2020' label for link stability.)",
       "has_text": false
     },
@@ -329,6 +413,10 @@
       "sha256": "1b34720b3dcf77c7050e69a5f56369bbbe20c4757e1ae2432f1893b069f012a4",
       "status": "public-record",
       "recording": "Bk 40504 Pg 495 (rec. 11/19/2021)",
+      "verify": {
+        "label": "Southern Essex District Registry of Deeds — search Bk 40504 Pg 495",
+        "url": "https://salemdeeds.com/"
+      },
       "notes": "Stamped registry image replaced the Drive copy 2026-07-17; executed and recorded 11/19/2021 (the wiki previously dated this to the 2022 turnover). (The id keeps its earlier '-2022' label for link stability.)",
       "has_text": false
     },
@@ -344,6 +432,10 @@
       "sha256": "9cc94fbb82aec8461a6adf8dbb36a3ab6bab374843e9b0d3313b0efec27be181",
       "status": "public-record",
       "recording": "Plan No. 73, Plan Book 446",
+      "verify": {
+        "label": "Southern Essex District Registry of Deeds — Plan Book 446, Plan 73",
+        "url": "https://salemdeeds.com/"
+      },
       "notes": null,
       "has_text": false
     },
@@ -359,6 +451,10 @@
       "sha256": "eba4b992ec59912cadf047ae5f6336ac56f839a17ae43baa021c3514849e31d3",
       "status": "public-record",
       "recording": null,
+      "verify": {
+        "label": "MassGIS Massachusetts Interactive Property Map — the viewer this was captured from",
+        "url": "https://massgis.maps.arcgis.com/apps/OnePane/basicviewer/index.html?appid=47689963e7bb4007961676ad9fc56ae9"
+      },
       "notes": null,
       "has_text": true
     },
@@ -374,6 +470,10 @@
       "sha256": "98aa252e7faa18fb48f8974beb92710d41f402073edcf3911209c4ad3ac65b49",
       "status": "public-record",
       "recording": "Parcel 0044-0031",
+      "verify": {
+        "label": "City of Beverly Assessor (Patriot Properties) — parcel 44-31, account 12074",
+        "url": "https://beverly.patriotproperties.com/summary.asp?AccountNumber=12074"
+      },
       "notes": "Full AssessPro field card, print-dated 05/08/18: parcel valued at $75,600 (class 132). Its PREVIOUS ASSESSMENT block includes an FY2013 'PAB1' (abatement) row from the pre-subdivision era — value reduced 2,714,200 → 1,618,500 effective 4/1/2013, under prior ownership.",
       "has_text": false
     },
@@ -389,6 +489,10 @@
       "sha256": "22b2b352200080bb66bbc08d37caf486101061cf696f8ac7cbe5fe66319e1398",
       "status": "public-record",
       "recording": "Parcel 44-31",
+      "verify": {
+        "label": "City of Beverly Assessor (Patriot Properties) — parcel 44-31, account 12074",
+        "url": "https://beverly.patriotproperties.com/summary.asp?AccountNumber=12074"
+      },
       "notes": "Captured 2026-07-17 from beverly.patriotproperties.com (account 12074). FY2026 assessment: land, building, and total all $0 on 5.040 acres; legal description 'PLAN BOOK 446 PLAN 73 OPEN SPACE PARCEL C - 5.04 AC'; sale reference 35266-472 (9/16/2016, $1, grantor DUC Residential LLC). Context: the FY2026 Beverly residential tax rate is $10.81 per $1,000 (city Assessors page).",
       "has_text": true
     },
@@ -404,6 +508,10 @@
       "sha256": "1d477abc77bc7a512101a7fbd0bd2715e15ddd3c2bea67999a9c3795ab863587",
       "status": "public-record",
       "recording": "Parcel 44-31",
+      "verify": {
+        "label": "City of Beverly Assessor (Patriot Properties) — parcel 44-31, account 12074",
+        "url": "https://beverly.patriotproperties.com/summary.asp?AccountNumber=12074"
+      },
       "notes": "Verbatim capture (2026-07-17) of the Patriot 'Previous Assessments' page for account 12074. Documents the common parcel valued at $75,600 (class 132, Undev. Land) FY2016–FY2022 — the basis of the ~$700–$1,000/yr tax bills the association paid — then $0 from FY2023 (assessment date 1/1/2022) through FY2026. The database does not state the mechanism of the FY2023 zeroing (revaluation vs. abatement vs. exemption). Pre-FY2016 rows show the parcel's pre-subdivision life (Dev. Land FY2010–15; Comm. Whs. FY1999–2009).",
       "has_text": true
     },
@@ -419,6 +527,10 @@
       "sha256": "08f29b20772839c7ebc1141ee58d57c3812a3bce4f13780db8b24481a4157206",
       "status": "public-record",
       "recording": "Bk 33797 Pg 168 (rec. 1/13/2015)",
+      "verify": {
+        "label": "Southern Essex District Registry of Deeds — search Bk 33797 Pg 168",
+        "url": "https://salemdeeds.com/"
+      },
       "notes": "Pulled from the Southern Essex Registry (salemdeeds.com) 2026-07-15 — closes the wiki's longest-standing records gap. 23-page registry scan (no text layer): WPA Form 5 with general conditions pp. 1–12; Beverly ConCom Findings pp. 13–15 (lots with wetland resources: 7, 8, 9, 13, 14, 15 & 16; 25-ft No-Disturb-Zone partial waiver for roadway-shoulder grading and the level spreader); Special & Standard Conditions pp. 16–23 (¶3 on p. 16 is the origin of the 25-ft NDZ marker duty the 2017 Certificate of Compliance carried forward in perpetuity).",
       "has_text": true
     },
@@ -434,6 +546,10 @@
       "sha256": "7dde246e7a5bc15c0bdaa8997bb6a2e68fd57cb6a35df9054dccbd4a729529d6",
       "status": "public-record",
       "recording": null,
+      "verify": {
+        "label": "City of Beverly Conservation Commission — the subdivision's wetlands file, MassDEP #5-1127",
+        "url": "https://www.beverlyma.gov/410/Conservation-Commission"
+      },
       "notes": null,
       "has_text": true
     },
@@ -449,6 +565,10 @@
       "sha256": "48dd266531c7c2433b8fe3060057626e10c62b757e2f4b680e6c295801285262",
       "status": "public-record",
       "recording": "Bk 36443 Pg 213 (rec. 12/29/2017)",
+      "verify": {
+        "label": "Southern Essex District Registry of Deeds — search Bk 36443 Pg 213",
+        "url": "https://salemdeeds.com/"
+      },
       "notes": "Corrected 2026-07-15: the Drive filename ('DEP.PDF') had this mislabeled as the 2014 Order of Conditions. It is the recorded Certificate of Compliance — Form 8B (site inspection 10/10/2017, pp. 1–3) plus the 'On-Going Conditions' attachment (pp. 4–5) listing seven conditions that survive in perpetuity as HOA/homeowner responsibilities. The underlying Order of Conditions (11/4/2014, Bk 33797 Pg 168) is referenced on p. 1 and is not yet in the library.",
       "has_text": true
     },
@@ -464,6 +584,10 @@
       "sha256": "5c7249c8d6f1a693e99c9a52e1b4c6b625e4f528d8c084c8cee70b681d8ed2a4",
       "status": "public-record",
       "recording": null,
+      "verify": {
+        "label": "City of Beverly Agenda Center — official 7/13/2021 Conservation Commission minutes (PDF)",
+        "url": "https://www.beverlyma.gov/AgendaCenter/ViewFile/Minutes/_07132021-477"
+      },
       "notes": "Excerpt of the official 7/13/2021 minutes (beverlyma.gov Agenda Center _07132021-477), pp. 2–3 and 8: the DEP #5-1341 Notice of Intent for a fenced terraced lawn (Seekamp Environmental; ~600 sq ft of grading, wetland ~30 ft below the yard) is heard, the hearing closed, and the Order of Conditions issued 4-0 the same evening — the buffer-zone process done right. Owner name redacted.",
       "has_text": true
     },
@@ -479,6 +603,10 @@
       "sha256": "21b0f6c0a6b39f21f70236e356d0366a27a5743bf6cbae579656adfe58241bf7",
       "status": "public-record",
       "recording": null,
+      "verify": {
+        "label": "City of Beverly Agenda Center — official 12/7/2021 special meeting Conservation Commission minutes (PDF)",
+        "url": "https://www.beverlyma.gov/AgendaCenter/ViewFile/Minutes/_12072021-626"
+      },
       "notes": "Excerpt of the official 12/7/2021 special-meeting minutes (beverlyma.gov Agenda Center _12072021-626), pp. 4–5: an after-the-fact Request for Determination of Applicability (filed 11/19/2021) for already-completed patio construction and landscaping resolves with a Negative 3 Determination with conditions, 4-0 — the retroactive-approval path through Commission review. Owner names redacted.",
       "has_text": true
     },
@@ -494,6 +622,10 @@
       "sha256": "1ee716c205ec0d876b3064eff6aa9c7ab0760a5cfc6b1e93b5c3229d085a5000",
       "status": "public-record",
       "recording": null,
+      "verify": {
+        "label": "City of Beverly Agenda Center — official 8/2/2022 Conservation Commission minutes (PDF)",
+        "url": "https://www.beverlyma.gov/AgendaCenter/ViewFile/Minutes/_08022022-926"
+      },
       "notes": "Excerpt of the official 8/2/2022 minutes (beverlyma.gov Agenda Center _08022022-926), pp. 4–5: on a GA Consultants as-built and a staff site visit finding the site stable and compliant, the Commission votes 4-0 to issue a complete Certificate of Compliance for DEP #5-1341, closing out the 2021 Order. Owner name redacted.",
       "has_text": true
     },
@@ -509,6 +641,10 @@
       "sha256": "1aff2828ea4d50a1a966973fdfc3005757c245139c8078801bb097c0c9a46e2b",
       "status": "public-record",
       "recording": null,
+      "verify": {
+        "label": "City of Beverly Agenda Center — official 9/24/2024 Conservation Commission minutes (PDF)",
+        "url": "https://www.beverlyma.gov/AgendaCenter/ViewFile/Minutes/_09242024-1956"
+      },
       "notes": "Excerpt of agenda item 7(b)(i), pp. 9–10 of the official 9/24/2024 minutes (beverlyma.gov Agenda Center _09242024-1956): the Conservation Agent's discovery of an unpermitted stone retaining wall and patio in the buffer zone, the owners' account, and the cease-and-desist. Resident names redacted in this excerpt; the City's unredacted minutes are linked in the document.",
       "has_text": true
     },
@@ -524,6 +660,10 @@
       "sha256": "7762c0c6eb479e1f989d584c68c8e6e752c1a04c5218d8c4485163ea6a4e94b2",
       "status": "public-record",
       "recording": null,
+      "verify": {
+        "label": "City of Beverly Agenda Center — official 11/26/2024 Conservation Commission minutes (PDF)",
+        "url": "https://www.beverlyma.gov/AgendaCenter/ViewFile/Minutes/_11262024-2054"
+      },
       "notes": "Excerpt of agenda item (b)(i), pp. 6–7 of the official 11/26/2024 minutes (beverlyma.gov Agenda Center _11262024-2054): the Commission issues an Enforcement Order requiring winter stabilization and an after-the-fact RDA for the wall/patio work. Resident names redacted; two year-typos in the original motion text are flagged [sic].",
       "has_text": true
     },
@@ -539,6 +679,10 @@
       "sha256": "8c56a0317b2a729a4c9a0ca00f2faeb7cc6c40f22e6650055936bce550457cc3",
       "status": "public-record",
       "recording": null,
+      "verify": {
+        "label": "City of Beverly Agenda Center — official 7/1/2025 Conservation Commission minutes (PDF)",
+        "url": "https://www.beverlyma.gov/AgendaCenter/ViewFile/Minutes/_07012025-2365"
+      },
       "notes": "Excerpt of agenda item 6(b), pp. 6–7 of the official 7/1/2025 minutes (beverlyma.gov Agenda Center _07012025-2365): the after-the-fact RDA for work on the HOA's common parcel resolves with a Negative 3 Determination whose condition 1 — no further alteration of areas under Commission jurisdiction — survives in perpetuity. Resident names redacted.",
       "has_text": true
     },
@@ -554,6 +698,10 @@
       "sha256": "c40c0b12fc7a44e9a65b4fd14d39f512c19590abc5ea0482667ace37874fc4a8",
       "status": "public-record",
       "recording": null,
+      "verify": {
+        "label": "City of Beverly Agenda Center — Conservation Commission agenda, 7/28/2026 (PDF)",
+        "url": "https://www.beverlyma.gov/AgendaCenter/ViewFile/Agenda/_07282026-2852"
+      },
       "notes": "Scanned 3-page City agenda (no text layer; key item hand-transcribed to library/text/concom-agenda-2026-07-28.txt). Item 6(a) is a Request for Determination of Applicability by Essex Crossing at Montserrat to remove 9 pine trees at 100 Pond View Lane (the common parcel), heard 7/28/2026 — confirms the HOA's ConCom filing type (RDA) and the species as pine. The Commission's determination is a separate record still to pull.",
       "has_text": true
     }

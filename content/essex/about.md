@@ -36,6 +36,26 @@ filings, statutes, and published case law. The
 every one — and the guides cite them at the page, for a claim without a
 citation is a page putting on airs.
 
+**And nothing here asks to be taken on my word**, which would be a poor
+security. Every document in the library names the portal it came from and
+links to it — the "Verify at source" row upon each document page — and every
+map or screenshot names the viewer it was captured from. These are the houses
+I sent to:
+
+| Source | What it holds |
+|---|---|
+| [Southern Essex District Registry of Deeds](https://salemdeeds.com/) (Salem) | Every recorded instrument: deeds, the trust and covenant declarations, trustee filings, the recorded subdivision plan |
+| [City of Beverly Assessor](https://beverly.patriotproperties.com/) (Patriot Properties) | Parcel records, assessed values, assessment history — the common parcel is [account 12074](https://beverly.patriotproperties.com/summary.asp?AccountNumber=12074) |
+| [Beverly Agenda Center](https://www.beverlyma.gov/AgendaCenter) | Official agendas and minutes of the [Planning Board](https://www.beverlyma.gov/337/Planning-Board) and [Conservation Commission](https://www.beverlyma.gov/410/Conservation-Commission) |
+| [Beverly MapGeo](https://beverlyma.mapgeo.io/) and the [Massachusetts Interactive Property Map](https://www.mass.gov/info-details/massachusetts-interactive-property-map) | The parcel and wetlands screening layers behind every map upon this site |
+| [MassDEP / EEA ePLACE](https://eplace.eea.mass.gov/EEAPublicApp) | Wetlands filings — this subdivision is file **#5-1127** |
+| [Beverly city code (eCode360)](https://ecode360.com/BE3208) | The zoning, wetlands, and stormwater ordinances the guides cite |
+| [malegislature.gov](https://malegislature.gov/Laws/GeneralLaws) and [masscases.com](http://masscases.com/) | Massachusetts statutes and the Supreme Judicial Court's opinions |
+
+[Finding the records](/guides/records/) sets out how each search is run, with
+the exact book-and-page references. Should any of them contradict me, they are
+right and I am pulped.
+
 What the site deliberately does **not** publish — and here I draw myself up to
 my full height, which is one viewport:
 
