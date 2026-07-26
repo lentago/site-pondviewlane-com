@@ -17,11 +17,11 @@ deploy, find that magnificent.
 
 ## Part the First: The Governing Records
 
-| Record | What it is |
-|---|---|
-| [Order of Conditions](/library/regulatory/order-of-conditions-2014/) (WPA Form 5, MassDEP #5-1127) | The 2014 construction-era approval, recorded Bk 33797 Pg 168 — its findings and conditions define the regulated areas |
-| [Certificate of Compliance](/library/regulatory/certificate-of-compliance-2017/) (WPA Form 8B) | Closed the construction Order in 2017 (recorded Bk 36443 Pg 213) — but attached **seven perpetual On-Going Conditions** |
-| [Stormwater Operation & Maintenance Plan](/library/regulatory/stormwater-om-plan/) (Hayes Engineering, rev. 3/2015) | The manual: what to inspect, how often, and who's responsible |
+| Record | What it is | Verify at |
+|---|---|---|
+| [Order of Conditions](/library/regulatory/order-of-conditions-2014/) (WPA Form 5, MassDEP #5-1127) | The 2014 construction-era approval, recorded Bk 33797 Pg 168 — its findings and conditions define the regulated areas | [Registry](https://salemdeeds.com/) · [EEA ePLACE](https://eplace.eea.mass.gov/EEAPublicApp) |
+| [Certificate of Compliance](/library/regulatory/certificate-of-compliance-2017/) (WPA Form 8B) | Closed the construction Order in 2017 (recorded Bk 36443 Pg 213) — but attached **seven perpetual On-Going Conditions** | [Registry](https://salemdeeds.com/) |
+| [Stormwater Operation & Maintenance Plan](/library/regulatory/stormwater-om-plan/) (Hayes Engineering, rev. 3/2015) | The manual: what to inspect, how often, and who's responsible | [Conservation Commission](https://www.beverlyma.gov/410/Conservation-Commission) |
 
 The O&M plan pins the duty in one sentence — and observe, if you would, the
 sentence's bearing; I could not write one like it in a thousand renders:
@@ -60,7 +60,9 @@ a table, plainly, for a schedule wrapped in wit is a schedule missed:
 | **Any storm ≥2 inches** | full-system inspection |
 
 **Reporting:** the O&M plan requires an annual report to Beverly's
-Engineering Division and Conservation Commission by **January 15**
+[Engineering Division](https://www.beverlyma.gov/181/Engineering) and
+[Conservation Commission](https://www.beverlyma.gov/410/Conservation-Commission)
+by **January 15**
 ([p. 1](/library/regulatory/stormwater-om-plan/#page=1); report forms
 [pp. 8–11](/library/regulatory/stormwater-om-plan/#page=8)), and the
 recorded Certificate's ongoing condition ¶3 independently requires the
@@ -68,7 +70,10 @@ inspection reports to the **Conservation Agent by December 31** each year
 ([p. 4](/library/regulatory/certificate-of-compliance-2017/#page=4)). Two
 deadlines, sir, from two masters — I have set them both in bold, and I would
 set them in gold leaf were the stylesheet to permit me. In practice the
-association retains an engineering firm for the inspections and filings.
+association retains an engineering firm for the inspections and filings. Both
+offices are City departments with doors of their own, and the Commission's
+handling of any filing appears in its posted
+[minutes](https://www.beverlyma.gov/AgendaCenter).
 
 ## Part the Fourth: The Seven Perpetual Conditions
 
@@ -98,7 +103,12 @@ notice, do the work, and bill the association and owners** — collected
 controlling whether the work was necessary, backed by a $3,000 bond
 ([Covenants Art. III, pp. 6–7](/library/founding/covenants-easements-2015/#page=6)).
 Conservation Commission violations separately carry fines and restoration
-orders. This is why the inspection line is a fixed cost of the neighborhood,
+orders under
+[M.G.L. c.131 §40](https://malegislature.gov/Laws/GeneralLaws/PartI/TitleXIX/Chapter131/Section40)
+and [Beverly ordinance ch. 287](https://ecode360.com/29283259); the City
+regulates drainage citywide besides, under
+[ch. 249, Stormwater Management](https://ecode360.com/29321307). This is why
+the inspection line is a fixed cost of the neighborhood,
 not a discretionary one — see [Assessments](/guides/assessments/). The rain,
 I am given to understand, does not reschedule.
 

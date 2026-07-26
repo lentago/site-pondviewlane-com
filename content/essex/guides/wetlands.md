@@ -17,11 +17,17 @@ before the covenants, and very much before me; everything on this page is
 etiquette for approaching them.
 
 ![Beverly GIS view of Pond View Lane with wetlands layers on — the wetland corridor runs along the eastern edge of the neighborhood](/attachments/gis-wetlands-context-2026.jpg)
-*The City GIS viewer with the MassGIS wetlands layers on: the mapped
-corridor (blue) — the intermittent stream and bordering vegetated wetland —
-runs along the neighborhood's eastern edge. Kelleher Pond is a separate
-resource area to the south/southwest, off-frame — it does not pose for
-screenshots, and I honor that.*
+*The mapped corridor (blue) — the intermittent stream and bordering vegetated
+wetland — runs along the neighborhood's eastern edge. Kelleher Pond is a
+separate resource area to the south/southwest, off-frame — it does not pose
+for screenshots, and I honor that.*<br />
+*Source: [Beverly MapGeo](https://beverlyma.mapgeo.io/), the City's public
+parcel viewer, with the
+[MassDEP Wetlands](https://www.mass.gov/info-details/massgis-data-massdep-wetlands-2005)
+layer on. MassGIS states the caveat far better than I could: those boundaries
+are photo-interpreted and "do not represent, and should not be used as,
+wetlands delineations under the Massachusetts Wetlands Protection Act." I
+repeat it exactly, and add nothing.*
 
 ## Part the First: The Three Bands
 
@@ -30,12 +36,14 @@ applies — three concentric courtesies, if you will, each stricter than the
 last:
 
 ![Diagram of the regulated bands around a wetland edge — the 25-foot no-disturbance zone, the 50-foot no-build zone, and the 100-foot Conservation Commission buffer, with a house safely beyond them](/attachments/diagram-buffer-bands.svg)
+*My own drawing, and thus the least authoritative object on this page; the
+sources beneath it are the authorities.*
 
 | Band | Distance | Effect | Source |
 |---|---|---|---|
-| **Commission jurisdiction** | within **100 ft** | Cutting, grading, or clearing needs Conservation Commission review — an RDA or a Notice of Intent | [M.G.L. c.131 §40](https://malegislature.gov/Laws/GeneralLaws/PartI/TitleXIX/Chapter131/Section40) + [Beverly ordinance ch. 287](https://ecode360.com/29283259) |
-| **No-Build Zone** | within **50 ft** | City ordinance prohibits certain construction — stricter than the state act | [Beverly ConCom FAQ](https://beverlyma.gov/DocumentCenter/View/842/Frequently-Asked-Questions-PDF) |
-| **No-Disturbance Zone** | within **25 ft** | No activity or structures at all; drawn on the recorded plan, with marked boundaries | [ConCom FAQ](https://beverlyma.gov/DocumentCenter/View/842/Frequently-Asked-Questions-PDF) · [recorded plan, Sheet 8](/library/plans/subdivision-plan-book/#page=8) |
+| **Commission jurisdiction** | within **100 ft** | Cutting, grading, or clearing needs Conservation Commission review — an RDA or a Notice of Intent | [M.G.L. c.131 §40](https://malegislature.gov/Laws/GeneralLaws/PartI/TitleXIX/Chapter131/Section40) · [310 CMR 10.00](https://www.law.cornell.edu/regulations/massachusetts/310-CMR-10-02) · [Beverly ordinance ch. 287](https://ecode360.com/29283259) |
+| **No-Build Zone** | within **50 ft** | City ordinance prohibits certain construction — stricter than the state act | [Beverly ConCom FAQ](https://beverlyma.gov/DocumentCenter/View/842/Frequently-Asked-Questions-PDF) · [Wetlands Protection Regulations](https://ecode360.com/29286482) |
+| **No-Disturbance Zone** | within **25 ft** | No activity or structures at all; drawn on the recorded plan, with marked boundaries | [ConCom FAQ](https://beverlyma.gov/DocumentCenter/View/842/Frequently-Asked-Questions-PDF) · [recorded plan, Sheet 8](/library/plans/subdivision-plan-book/#page=8) · [Order of Conditions ¶3, p. 16](/library/regulatory/order-of-conditions-2014/#page=16) |
 
 **The authoritative wetland line is the surveyed one** — wetland flags
 WFB2–WFB16 on [Sheet 8 of the recorded plan](/library/plans/subdivision-plan-book/#page=8)
@@ -48,7 +56,12 @@ build script. We are not the same.
 ![Recorded topographic plan detail — the surveyed wetland edge (WFB flags), 100-ft wetland buffer, and 25-ft no-disturb lines behind the upper lots](/attachments/plan-p8-wetland-buffer-upper-lots.jpg)
 *Sheet 8 of the recorded plan: the surveyed flag line with the 100′ buffer
 and 25′ no-disturb lines running through the open-space strip behind the
-upper cul-de-sac (recorded Lots 6–9).*
+upper cul-de-sac (recorded Lots 6–9).*<br />
+*Source: a detail of [Plan Book 446, Plan 73](/library/plans/subdivision-plan-book/#page=8),
+recorded at the
+[Southern Essex District Registry of Deeds](https://salemdeeds.com/). The full
+eleven sheets are in the library; the original is at the Registry, where it
+outranks us both.*
 
 ## Part the Second: Which Lots the Buffer Touches
 
@@ -90,12 +103,14 @@ wetland consultant (Seekamp Environmental), filed a **Notice of Intent**
 wetland roughly 30 feet below the yard), and revised the plan once in
 response to review. The Commission heard the NOI on July 13, 2021 and
 **issued the Order of Conditions the same evening, 4-0**
-([minutes excerpt](/library/regulatory/concom-minutes-2021-07-13-excerpt/)).
+([minutes excerpt](/library/regulatory/concom-minutes-2021-07-13-excerpt/) ·
+[the City's own full 7/13/2021 minutes](https://www.beverlyma.gov/AgendaCenter/ViewFile/Minutes/_07132021-477)).
 The work was built to the approved plan, and on an as-built survey and a
 staff site visit finding the site stable and compliant, the Commission
 issued a **complete Certificate of Compliance** on August 2, 2022 —
 file opened, permitted, built, closed
-([minutes excerpt](/library/regulatory/concom-minutes-2022-08-02-excerpt/)).
+([minutes excerpt](/library/regulatory/concom-minutes-2022-08-02-excerpt/) ·
+[the City's own full 8/2/2022 minutes](https://www.beverlyma.gov/AgendaCenter/ViewFile/Minutes/_08022022-926)).
 Roughly a year of process for a permanent, fully legal yard.
 
 The other paths have also been walked. In late 2021, already-completed
@@ -104,7 +119,8 @@ Commission by an **after-the-fact** Request for Determination of
 Applicability: at a December 7, 2021 special meeting the Commission
 reviewed the permeable construction and the 50-foot No-Build line and
 granted a Negative 3 Determination with conditions, 4-0
-([minutes excerpt](/library/regulatory/concom-minutes-2021-12-07-excerpt/))
+([minutes excerpt](/library/regulatory/concom-minutes-2021-12-07-excerpt/) ·
+[the City's own full 12/7/2021 minutes](https://www.beverlyma.gov/AgendaCenter/ViewFile/Minutes/_12072021-626))
 — retroactive approval is possible, but it runs through the same review,
 on the Commission's terms. And in 2024–25 the Commission **enforced**
 against unpermitted structures on the common parcel itself
@@ -120,6 +136,13 @@ holds the subdivision's file and is the point of contact for
 "do I need a filing?" questions. An RDA is a short form with a modest fee;
 a Notice of Intent with a consultant is the fuller path for real
 construction — and retroactive enforcement is costlier than either.
+
+Every meeting I have cited above is on the public record, and I would far
+rather you read it there than here: agendas and minutes for every Commission
+meeting are posted at the
+[Beverly Agenda Center](https://www.beverlyma.gov/AgendaCenter), and the
+subdivision's own MassDEP wetlands file (**#5-1127**) may be pulled from
+[EEA ePLACE](https://eplace.eea.mass.gov/EEAPublicApp).
 
 *Your most humble, most obedient, and thoroughly dry-land servant,*
 

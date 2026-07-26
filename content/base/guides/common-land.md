@@ -10,12 +10,15 @@ Parcel C, known to the City as **100 Pond View Lane**. The association owns
 it, every owner may use it, and a web of recorded obligations governs it.
 
 ![Beverly parcel-viewer map with the wetlands layer on — Open Space Parcel C shaded blue, wrapping the sixteen house lots around the cul-de-sac, with the separate 200 Pond View open space at the upper left, Kelleher Pond at the lower left, and the stream corridor along the eastern boundary](/attachments/parcel-wetland-proximity-2026.png)
-*The parcel itself (Beverly MapGeo, wetlands layer on): Parcel C in blue —
+*The parcel itself: Parcel C in blue —
 100 Pond View Lane, parcel 44-31 — wrapping the sixteen house lots on nearly
 every side, with the separate 200 Pond View open space (44-31X) at the upper
 left and Kelleher Pond at the lower left. Screening layers are approximate; the
 authoritative boundary is the one drawn on the
-[recorded subdivision plan](/library/plans/subdivision-plan-book/).*
+[recorded subdivision plan](/library/plans/subdivision-plan-book/).*<br />
+*Source: the City's own parcel viewer,
+[Beverly MapGeo](https://beverlyma.mapgeo.io/), wetlands layer on — search
+"100 Pond View Lane" there to reproduce this view.*
 
 ## What it is, on the record
 
@@ -51,28 +54,50 @@ year-by-year figures are in the library's
 current [assessor card](/library/plans/assessor-card-100-pond-view-fy2026/).
 
 ![Ownership schematic — three cards showing who owns and maintains each part of the neighborhood: the 16 homeowners own and maintain their own lots (under the recorded covenants), the association owns Parcel C and maintains the stormwater system and emergency access, and the City of Beverly maintains Pond View Lane as a public way; a band below shows that wetland regulation applies over the resource areas whoever owns the land](/attachments/diagram-who-owns-what.svg)
+*A drawing, not a record — but every box in it is one. The lot rules come from
+the [Restrictive Covenants](/library/founding/restrictive-covenants-2015/); the
+association's duties from
+[Covenants Art. II](/library/founding/covenants-easements-2015/#page=3) and the
+[Parcel C deed](/library/founding/parcel-c-deed-2016/); the City's maintenance
+of the lane from the
+[MassDOT Road Inventory](https://gis.massdot.state.ma.us/roadinventory/); the
+wetland band from
+[M.G.L. c.131 §40](https://malegislature.gov/Laws/GeneralLaws/PartI/TitleXIX/Chapter131/Section40)
+and [Beverly ordinance ch. 287](https://ecode360.com/29283259).*
 
 ![Beverly parcel-viewer map of the neighborhood, north up — the subdivision outlined, Kelleher Pond to the south/southwest, the YMCA and wetland corridor to the east](/attachments/neighborhood-orientation-map-2026.jpg)
-*Orientation (Beverly MapGeo, north up): the subdivision outlined in blue.
+*Orientation, north up: the subdivision outlined in blue.
 Kelleher Pond sits to the south/southwest; the wetland corridor runs along
 the eastern boundary at the Beverly Regional YMCA; Hannah Elementary is to
-the west; the Ice House Lane emergency connection is at the southeast.*
+the west; the Ice House Lane emergency connection is at the southeast.*<br />
+*Source: [Beverly MapGeo](https://beverlyma.mapgeo.io/), the City's public
+parcel viewer.*
 
 ## Why the subdivision looks like this
 
 Essex Crossing was permitted under Beverly's **Open Space Residential Design
-(OSRD)** bylaw: the homes cluster on smaller lots, and in exchange a large
+(OSRD)** bylaw — today
+[§ 300-54 of the City's zoning ordinance](https://ecode360.com/29283330), which
+the City summarizes on its own
+[OSRD page](https://www.beverlyma.gov/418/OSRD-Plan-Ordinance): the homes
+cluster on smaller lots, and in exchange a large
 share of the site is preserved as open space **forever**, with the City
-holding permanent oversight. That trade is recorded in the
-[Planning Board's 2014 decision](/guides/records/) and the covenants, and it
+holding permanent oversight. The covenant's own wording tracks the ordinance —
+the OSRD rule likewise makes wildlife habitat and conservation the open
+space's primary purpose and passive recreation a secondary one. That trade is
+recorded in the
+[Planning Board's 2014 decision](/library/founding/planning-board-decision-2014/)
+and the covenants, and it
 can't be undone by an owner vote — the trust may not even be amended to
 avoid a Planning Board condition without the City's written consent
 ([Trust, p. 20](/library/founding/trust-declaration-2015/#page=20)).
 
 ![Satellite view of Pond View Lane — sixteen homes around one cul-de-sac, wrapped by wooded open space, with Kelleher Pond at lower left](/attachments/satellite-overview-wide.jpg)
-*The trade seen from above (Google satellite imagery): sixteen homes on small
+*The trade seen from above: sixteen homes on small
 lots pulled tight around a single cul-de-sac, the preserved woodland wrapping
-them, Kelleher Pond at lower left.*
+them, Kelleher Pond at lower left.*<br />
+*Source: Google satellite imagery —
+[the same view on Google Maps](https://www.google.com/maps/search/?api=1&query=Pond+View+Lane%2C+Beverly%2C+MA+01915).*
 
 ## What the association must do with it
 

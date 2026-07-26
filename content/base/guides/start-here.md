@@ -14,9 +14,11 @@ easy to actually understand.
 ## The four documents that define the neighborhood
 
 The first three were signed December 9, 2015 by the developer (DUC
-Residential LLC) and recorded consecutively at the Southern Essex District
-Registry of Deeds; one recorded amendment followed in 2016. Every one is in
-the [Document Library](/library/), viewable in place:
+Residential LLC) and recorded consecutively at the
+[Southern Essex District Registry of Deeds](https://salemdeeds.com/); one
+recorded amendment followed in 2016. Every one is in
+the [Document Library](/library/), viewable in place — and every one can be
+pulled from the Registry by its book and page, by anyone, without this site:
 
 | What it does | The instrument |
 |---|---|

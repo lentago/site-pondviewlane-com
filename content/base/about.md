@@ -23,6 +23,24 @@ wetlands filings, statutes, and published case law. The
 [Document Library](/library/) holds those records; the guides cite them at
 the page.
 
+**Nothing here asks to be taken on trust.** Every document in the library
+names the portal it came from and links to it — the "Verify at source" row on
+each document page — and every map or screenshot on the site names the viewer
+it was captured from. These are the sources:
+
+| Source | What it holds |
+|---|---|
+| [Southern Essex District Registry of Deeds](https://salemdeeds.com/) (Salem) | Every recorded instrument: deeds, the trust and covenant declarations, trustee filings, the recorded subdivision plan |
+| [City of Beverly Assessor](https://beverly.patriotproperties.com/) (Patriot Properties) | Parcel records, assessed values, assessment history — the common parcel is [account 12074](https://beverly.patriotproperties.com/summary.asp?AccountNumber=12074) |
+| [Beverly Agenda Center](https://www.beverlyma.gov/AgendaCenter) | Official agendas and minutes of the [Planning Board](https://www.beverlyma.gov/337/Planning-Board) and [Conservation Commission](https://www.beverlyma.gov/410/Conservation-Commission) |
+| [Beverly MapGeo](https://beverlyma.mapgeo.io/) and the [Massachusetts Interactive Property Map](https://www.mass.gov/info-details/massachusetts-interactive-property-map) | The parcel and wetlands screening layers behind the maps on this site |
+| [MassDEP / EEA ePLACE](https://eplace.eea.mass.gov/EEAPublicApp) | Wetlands filings — this subdivision is file **#5-1127** |
+| [Beverly city code (eCode360)](https://ecode360.com/BE3208) | The zoning, wetlands, and stormwater ordinances the guides cite |
+| [malegislature.gov](https://malegislature.gov/Laws/GeneralLaws) and [masscases.com](http://masscases.com/) | Massachusetts statutes and Supreme Judicial Court opinions |
+
+[Finding the records](/guides/records/) explains how to run each search, with
+the exact book-and-page references.
+
 What it deliberately does **not** publish:
 
 - **The association's internal records** — meeting minutes, budgets,

@@ -50,7 +50,10 @@ project through NOI → Order of Conditions → Certificate of Compliance in
 Unpermitted cutting there is an independent violation of the Wetlands
 Protection Act and Beverly's ordinance — fines can reach $25,000 with
 restoration orders
-([M.G.L. c.131 §40](https://malegislature.gov/Laws/GeneralLaws/PartI/TitleXIX/Chapter131/Section40)).
+([M.G.L. c.131 §40](https://malegislature.gov/Laws/GeneralLaws/PartI/TitleXIX/Chapter131/Section40);
+[Beverly ordinance ch. 287](https://ecode360.com/29283259), which the City
+adopted to protect more than the state act does, and its
+[Wetlands Protection Regulations](https://ecode360.com/29286482)).
 
 The Commission actively watches this corridor. In 2024 its agent spotted
 unpermitted stone walls and a patio on the common parcel **from the public
@@ -61,12 +64,14 @@ actually falls, and the stricter 50-foot and 25-foot bands inside it, are
 mapped on [Wetlands & buffers](/guides/wetlands/).
 
 ![Beverly parcel map with the wetlands layer on — the common parcel highlighted in blue, the hatched wetland by Kelleher Pond overlapping its southwestern lobe, and the stream corridor along the eastern boundary](/attachments/parcel-wetland-proximity-2026.png)
-*Where the wetlands sit relative to the common parcel (Beverly MapGeo,
-wetlands layer on): the parcel in blue wraps the sixteen lots; the mapped
+*Where the wetlands sit relative to the common parcel: the parcel in blue
+wraps the sixteen lots; the mapped
 wetland overlaps its southwestern lobe by Kelleher Pond, and the
 intermittent-stream corridor runs along the eastern boundary. Screening
 layers approximate — the authoritative line is the surveyed delineation on
-[Plan Book 446/73, Sheet 8](/library/plans/subdivision-plan-book/#page=8).*
+[Plan Book 446/73, Sheet 8](/library/plans/subdivision-plan-book/#page=8).*<br />
+*Source: [Beverly MapGeo](https://beverlyma.mapgeo.io/), the City's public
+parcel viewer, wetlands layer on.*
 
 ## Layer 3 — Massachusetts tree law
 

@@ -19,9 +19,12 @@ easy to actually understand; I exist to hold the door.
 
 I introduce them as one introduces visiting nobility, which is precisely what
 they are. The first three were signed December 9, 2015 by the developer (DUC
-Residential LLC) and recorded consecutively at the Southern Essex District
-Registry of Deeds; one recorded amendment followed in 2016. Every one is in
-the [Document Library](/library/), viewable in place — do call upon them.
+Residential LLC) and recorded consecutively at the
+[Southern Essex District Registry of Deeds](https://salemdeeds.com/); one
+recorded amendment followed in 2016. Every one is in
+the [Document Library](/library/), viewable in place — do call upon them —
+and every one may be drawn from the Registry by its book and page, by anyone,
+with no reference whatever to me.
 
 | What it does | The instrument |
 |---|---|

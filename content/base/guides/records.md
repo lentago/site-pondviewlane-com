@@ -11,20 +11,50 @@ exact references.
 
 ## Where to search
 
+These are the same portals every document in the
+[library](/library/) was pulled from — each library page names its own
+source and links back to it under **"Verify at source."**
+
 - **Registry of Deeds** — the subdivision records at the **Southern Essex
   District Registry** (Salem): [salemdeeds.com](https://salemdeeds.com/).
   Search grantor **DUC RESIDENTIAL LLC**, or street **Pond View Lane** /
-  **232 Essex Street** (the pre-subdivision address), Beverly.
+  **232 Essex Street** (the pre-subdivision address), Beverly. Every book-and-page
+  reference on this page can be searched there directly.
 - **Assessor** — Beverly uses **Patriot Properties**:
   [beverly.patriotproperties.com](https://beverly.patriotproperties.com/).
-  All the neighborhood's parcels are Assessor **Map 44, Block 31**.
+  All the neighborhood's parcels are Assessor **Map 44, Block 31**; the common
+  parcel is
+  [account 12074](https://beverly.patriotproperties.com/summary.asp?AccountNumber=12074).
+- **Parcel maps and layers** — the City's public parcel viewer,
+  [Beverly MapGeo](https://beverlyma.mapgeo.io/) (linked from the City's
+  [City Maps](https://www.beverlyma.gov/182/City-Maps) page), and the statewide
+  [Massachusetts Interactive Property Map](https://www.mass.gov/info-details/massachusetts-interactive-property-map).
+  The maps on this site are screenshots of these viewers — they are screening
+  layers, not surveys. MassGIS says so itself: assessor parcel mapping is a
+  representation of property boundaries and not an authoritative source; the
+  authoritative record is what is recorded at the registries of deeds, and only
+  a professional land surveyor can produce a legally authoritative boundary
+  map.
 - **City boards** — minutes and agendas at the
   [Beverly Agenda Center](https://www.beverlyma.gov/AgendaCenter):
   [Planning Board](https://www.beverlyma.gov/337/Planning-Board) ·
   [Conservation Commission](https://www.beverlyma.gov/410/Conservation-Commission).
+- **City ordinances** — Beverly's code is published in full at
+  [eCode360](https://ecode360.com/BE3208): the ones that touch this
+  neighborhood are [ch. 300 Zoning](https://ecode360.com/29283330) (§ 300-54 is
+  the OSRD rule this subdivision was permitted under),
+  [ch. 287 Wetlands Protection](https://ecode360.com/29283259) with its
+  [regulations](https://ecode360.com/29286482), and
+  [ch. 249 Stormwater Management](https://ecode360.com/29321307).
 - **MassDEP wetlands filings** — 
   [EEA ePLACE](https://eplace.eea.mass.gov/EEAPublicApp); the subdivision's
   file number is **5-1127**.
+- **Statutes and case law** — the General Laws at
+  [malegislature.gov](https://malegislature.gov/Laws/GeneralLaws), the wetlands
+  regulations at
+  [310 CMR 10.00](https://www.law.cornell.edu/regulations/massachusetts/310-CMR-10-02),
+  and Supreme Judicial Court opinions at
+  [masscases.com](http://masscases.com/).
 
 ## The founding instruments (recorded 12/09/2015)
 
@@ -103,7 +133,9 @@ The City's assessor card for the common parcel is
 the [FY2026 card](/library/plans/assessor-card-100-pond-view-fy2026/)
 (current assessment: $0, as preserved open space) and the parcel's full
 [assessment history](/library/plans/assessor-history-100-pond-view/) —
-valued at $75,600 through FY2022, $0 every year since FY2023.
+valued at $75,600 through FY2022, $0 every year since FY2023. All three are
+captures of the City's live record, which can be read directly at
+[Patriot Properties, account 12074](https://beverly.patriotproperties.com/summary.asp?AccountNumber=12074).
 
 ## Reading a deed from the lane
 

@@ -156,15 +156,29 @@ for (const [cat, docs] of Object.entries(byCat)) {
       const txtPath = join(REPO, 'library/text', `${d.id}.txt`);
       if (existsSync(txtPath)) {
         textExtract = readFileSync(txtPath, 'utf8');
-        body = `\n<details>\n<summary>Extracted text (searchable)</summary>\n<pre class="doc-text">${esc(textExtract).slice(0, 60000)}</pre>\n</details>\n`;
+        // The whole <details> must be ONE physical line with no blank line in
+        // it. A CommonMark raw-HTML block ends at the first blank line, and
+        // these extracts are full of them — leaving the rest of the document's
+        // own text to be re-parsed as Markdown (headings invented from stray
+        // '#', emphasis eaten, bare URLs auto-linked). The extract is evidence
+        // and must render verbatim, so newlines go in as &#10; character
+        // references: the HTML parser turns them back into real newlines and
+        // <pre> preserves them. Truncation happens before escaping so a cut can
+        // never land inside an entity.
+        const shown = esc(textExtract.slice(0, 60000)).replace(/\r\n?|\n/g, '&#10;');
+        body = `\n<details><summary>Extracted text (searchable)</summary><pre class="doc-text">${shown}</pre></details>\n`;
       }
     }
 
+    // "Verify at source" — the public portal a reader can independently pull
+    // this same record from (registry, assessor, Agenda Center, MassGIS). Every
+    // manifest entry carries one; nothing on this site asks to be taken on faith.
     const meta = [
       ['Date', d.date || '—'],
       ['Category', CATEGORY_LABELS[d.category]],
       ['Status', 'Public record — recorded or publicly filed'],
       d.recording ? ['Recording', d.recording] : null,
+      d.verify ? ['Verify at source', `[${d.verify.label}](${d.verify.url})`] : null,
       d.pages ? ['Pages', String(d.pages)] : null,
       ['Size', kb(d.size)],
       d.notes ? ['Notes', d.notes] : null,
@@ -226,9 +240,23 @@ their perpetual conditions, and the common parcel's tax bills. Every document
 page embeds a viewer and, where available, the extracted text — so the whole
 record is there to read, and the [Ask](/ask/) box can quote from it.
 
-These are documents anyone can obtain from the
-[Southern Essex Registry of Deeds](https://salemdeeds.com), the City of
-Beverly, or MassDEP; they are collected here so residents don't have to.
+**Nothing here has to be taken on this site's word.** Every document page
+carries a **"Verify at source"** link to the public portal the record can be
+pulled from independently — the same portals used to assemble this library:
+
+| Source | What it holds | Portal |
+|---|---|---|
+| Southern Essex District Registry of Deeds (Salem) | Every recorded instrument — deeds, declarations, trustee filings, the recorded plan | [salemdeeds.com](https://salemdeeds.com/) |
+| City of Beverly Assessor (Patriot Properties) | Parcel records, assessed values, assessment history | [beverly.patriotproperties.com](https://beverly.patriotproperties.com/) |
+| City of Beverly Agenda Center | Official board and commission agendas and minutes | [beverlyma.gov/AgendaCenter](https://www.beverlyma.gov/AgendaCenter) |
+| MassGIS / Massachusetts Interactive Property Map | Statewide parcel and wetlands screening layers | [massgis.maps.arcgis.com](https://massgis.maps.arcgis.com/apps/OnePane/basicviewer/index.html?appid=47689963e7bb4007961676ad9fc56ae9) |
+| MassDEP (EEA ePLACE) | Wetlands filings — this subdivision is file **#5-1127** | [eplace.eea.mass.gov](https://eplace.eea.mass.gov/EEAPublicApp) |
+
+They are collected here so residents don't have to make the trip — not so
+they have to trust the transcription. Where a page here summarizes a
+document, the document itself is one click away, and the portal that issued
+it is one more. [Finding the records](/guides/records/) explains how to run
+each search.
 
 ${tocSections}
 
@@ -279,7 +307,12 @@ function tlRefs(ev) {
     .filter((r) => r.u || publicDocIds.has(r.d.split('/')[1]))
     .map((r) => {
       const href = r.u || `/library/${r.d}/${r.p ? `#page=${r.p}` : ''}`;
-      return `<a href="${href}">${esc(r.t)}</a>`;
+      // External refs point at the issuing authority's own copy (City minutes,
+      // the assessor database) — mark them so a reader can tell at a glance
+      // which links leave this site for the source itself.
+      return r.u
+        ? `<a href="${href}" target="_blank" rel="noopener">${esc(r.t)} ↗</a>`
+        : `<a href="${href}">${esc(r.t)}</a>`;
     });
   return links.length ? `<p class="vtl-refs">Records: ${links.join(' · ')}</p>` : '';
 }

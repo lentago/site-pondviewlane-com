@@ -11,6 +11,16 @@ this page comes from the recorded instruments — the citations open them at
 the page.
 
 ![Diagram of the governance structure — sixteen lot owners elect five trustees, who maintain the emergency access, stormwater system, and open space; the City of Beverly holds perpetual enforcement power, and every board change is recorded at the Registry](/attachments/diagram-governance.svg)
+*A drawing of the structure the recorded instruments create — the trustee
+board from [Trust Art. IV, pp. 5–6](/library/founding/trust-declaration-2015/#page=5),
+the maintenance duties from
+[Covenants Art. II, pp. 3–4](/library/founding/covenants-easements-2015/#page=3),
+the City's enforcement power from
+[Covenants Art. III, pp. 6–7](/library/founding/covenants-easements-2015/#page=6),
+and the recording requirement from
+[Trust, p. 6](/library/founding/trust-declaration-2015/#page=6). Each of those
+instruments can be pulled independently from the
+[Southern Essex District Registry of Deeds](https://salemdeeds.com/).*
 
 ## Membership and votes
 
@@ -95,8 +105,15 @@ The master covenant assigns the association, exclusively
 ## Rules on each lot
 
 The [Restrictive Covenants](/library/founding/restrictive-covenants-2015/)
-run with every lot until about 2045 (30 years, extendable in 10-year
-increments). The highlights, from the recorded text:
+run with every lot until about 2045 — the instrument sets its own 30-year term
+and provides for extension "for successive periods of ten years" unless a
+majority of owners record an instrument changing or terminating it (¶10).
+Thirty years is also the statutory ceiling Massachusetts puts on restrictions
+written without a time limit
+([M.G.L. c.184 §23](https://malegislature.gov/Laws/GeneralLaws/PartII/TitleI/Chapter184/Section23);
+the mechanics of extending one are at
+[§27](https://malegislature.gov/Laws/GeneralLaws/PartII/TitleI/Chapter184/Section27)).
+The highlights, from the recorded text:
 
 - **Architectural control** — no structure, fence, or exterior alteration
   without written approval; work completed within one year of approval (¶¶1–2).
@@ -136,8 +153,12 @@ increments). The highlights, from the recorded text:
 
 ## The City's permanent seat at the table
 
-Essex Crossing is an **Open Space Residential Design (OSRD)** subdivision,
-and the City of Beverly retains oversight **in perpetuity**: if the
+Essex Crossing is an **Open Space Residential Design (OSRD)** subdivision —
+permitted under what is now
+[§ 300-54 of Beverly's zoning ordinance](https://ecode360.com/29283330), which
+the City describes on its
+[OSRD page](https://www.beverlyma.gov/418/OSRD-Plan-Ordinance) — and the City
+of Beverly retains oversight **in perpetuity**: if the
 association lets required maintenance slide, the City may enter on 14 days'
 notice, do the work, and bill the association and owners — with the City's
 own judgment controlling whether the work was necessary, backed by a $3,000
