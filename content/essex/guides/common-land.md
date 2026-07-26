@@ -12,10 +12,16 @@ it, every owner may use it, and a web of recorded obligations governs it. It
 is, if a page may say so, the true aristocracy of this neighborhood: the homes
 have deeds, but the woodland has *perpetuity*.
 
-![Satellite view of Pond View Lane — sixteen homes around one cul-de-sac, wrapped by wooded open space, with Kelleher Pond at lower left](/attachments/satellite-overview-wide.jpg)
-*The whole holding at a glance (Google satellite imagery): the lane in the
-center, the common woodland wrapping the homes, Kelleher Pond at lower left.
-The pond has never once acknowledged me, and I respect it enormously for it.*
+![Beverly parcel-viewer map with the wetlands layer on — Open Space Parcel C shaded blue, wrapping the sixteen house lots around the cul-de-sac, with the separate 200 Pond View open space at the upper left, Kelleher Pond at the lower left, and the stream corridor along the eastern boundary](/attachments/parcel-wetland-proximity-2026.png)
+*The parcel itself, sir, and I present it first because it outranks everything
+else on this page (Beverly MapGeo, wetlands layer on): Parcel C in blue —
+100 Pond View Lane, parcel 44-31 — wrapping the sixteen house lots on nearly
+every side, with the separate 200 Pond View open space (44-31X) at the upper
+left and Kelleher Pond at the lower left. Note which shape does the wrapping;
+the homes are the ones surrounded. Screening layers are approximate; the
+authoritative boundary is the one drawn on the
+[recorded subdivision plan](/library/plans/subdivision-plan-book/), before which
+I remove my hat, having no hat.*
 
 ## Part the First: What It Is, on the Record
 
@@ -75,6 +81,12 @@ avoid a Planning Board condition without the City's written consent
 bargain was struck before the first foundation was poured, and it will outlast
 every page ever written about it, including, with particular certainty, this
 one.
+
+![Satellite view of Pond View Lane — sixteen homes around one cul-de-sac, wrapped by wooded open space, with Kelleher Pond at lower left](/attachments/satellite-overview-wide.jpg)
+*The trade seen from above (Google satellite imagery): sixteen homes on small
+lots pulled tight around a single cul-de-sac, the preserved woodland wrapping
+them, Kelleher Pond at lower left. The bargain rendered in chlorophyll, madam.
+The pond has never once acknowledged me, and I respect it enormously for it.*
 
 ## Part the Fourth: What the Association Must Do With It
 
