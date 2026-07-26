@@ -705,12 +705,10 @@ h1, h2, h3, h4, .site-title {
   background: color-mix(in srgb, var(--gilt-pale) 55%, var(--essex-paper));
 }
 
-/* The Ask small print. The base layer sets this to --sl-color-gray-4, which is
-   only ≈3.2:1 light / ≈2.5:1 dark at 12px and fails AA. That shortfall is
-   inherited, not introduced here — the unmodified Pond View skin measures the
-   same — but this skin claims AA throughout, so it is corrected on this domain.
-   The base rule is deliberately left alone: editing it would change Pond View's
-   rendered output, which this re-skin otherwise leaves byte-identical. */
+/* The Ask small print. The base layer now carries the contrast fix (gray-3), so
+   this override is purely tonal: the gilded skin runs warm greys throughout, and
+   the base token is a cool neutral that reads slightly blue under a gilt panel.
+   Both values clear AA — the base on the Pond View ground, these on this one. */
 .ask-disclaimer { color: #9a947f; }
 :root[data-theme='light'] .ask-disclaimer { color: #5f5a49; }
 
