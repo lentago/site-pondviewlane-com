@@ -141,7 +141,7 @@ build time until committed.
 | Container | `nginx:latest`, `listen 8080`, Host-switched vhosts (`nginx-common.conf` shared), `/health` → 200 on the default (pondview) server for the ALB check |
 | ECR repo | `solidago-dev-pondview` (one image serves both domains) |
 | ECS cluster / service | `solidago-dev-cluster` / `solidago-dev-pondview` |
-| Preview host | hidden, unlisted (`PONDVIEW_PREVIEW_HOST` solidago Actions var); `robots noindex` until launch |
+| Indexing | public on both domains — `robots.txt` `Allow: /` + per-skin sitemap. Only `/report/thanks/` is `noindex` (also filtered from the sitemap and Pagefind) |
 | Ask endpoint | `PUBLIC_ASK_ENDPOINT` Actions var (this repo) → `module.ask_pondview` |
 | OIDC deploy role | `arn:aws:iam::365184644049:role/solidago-dev-github-actions` |
 | Platform repo | [solidago](https://github.com/lentago/solidago) (`modules/site`, `modules/ask-lambda`) |
