@@ -229,7 +229,10 @@ every PR. Arm merges with `gh pr merge <N> --auto --squash --delete-branch`.
 
 ## When in doubt
 
-- Content/records question, or anything about the private source + publish flow →
-  ask; public facts change in the source repo and republish, not here.
+- Content/records question → the record lives here. Add or correct it in
+  `library/` (file + `manifest.json` entry + text extract) or `timeline/`, then
+  rebuild. If a claim can't be traced to a recorded instrument, a city filing,
+  the assessor, or a statute, ask before publishing it — don't source it from
+  association material.
 - Deploy question → mirror the other `site-*` repos' `deploy.yml` / `Dockerfile` /
   `nginx.conf`, swapping the `solidago-dev-pondview` ECR/ECS names.
