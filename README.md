@@ -118,10 +118,17 @@ the second domain's DNS/TLS/ALB host rule and the Ask CORS value land there too
 
 ## Status
 
-The site currently serves as a **hidden, unlisted preview** for association
-trustees to review; it carries `robots noindex` and is not yet at its public
-`pondviewlane.com` domain. The public launch (real domain + removing `noindex`)
-is a deliberate, separate step.
+The site is **live and public** on both domains — `pondviewlane.com` and
+`essexcrossingatmontserrat.com` — and open to search engines: each skin's
+`robots.txt` is `User-agent: * / Allow: /` and advertises its own sitemap. The
+trustee-review preview that predated the launch, and the site-wide `robots
+noindex` that went with it, were removed at the `pondviewlane.com` launch.
+
+One page is deliberately excluded: `/report/thanks/`, the post-submit landing
+the correction form redirects to. It carries `robots noindex`, is filtered out
+of the sitemap (`astro.config.mjs`), and is kept out of the on-site Pagefind
+index (`pagefind: false`) — a dead-end confirmation page with no reference
+value should not surface in a search for the records.
 
 ---
 

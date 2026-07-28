@@ -1,8 +1,9 @@
 # .github/workflows/deploy.yml
 #
-# Build & Deploy: the public Pond View Lane site (pondviewlane.com) -> ECR ->
-# ECS Fargate (solidago platform), served as a HIDDEN, UNLISTED preview for
-# trustee review until the public launch (still gated — see the site README).
+# Build & Deploy: the public Pond View Lane site (pondviewlane.com) and its
+# sister skin (essexcrossingatmontserrat.com) -> ECR -> ECS Fargate (solidago
+# platform). Both domains are live, public, and open to search engines; the
+# pre-launch trustee-review preview and its site-wide noindex are long gone.
 #
 # Same pattern as site-lentago-dev / site-icecreamtofightwith-com: build the
 # Astro static site (npm run build), package dist/ into nginx, push to ECR, roll
