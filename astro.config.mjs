@@ -20,11 +20,11 @@ function pageDates() {
   return _pageDates;
 }
 
-// Public-record library categories only. The library content committed here is
-// produced by the private source repo's one-way publish tool, which publishes
-// just the manifest documents whose status is "public-record"; internal
-// categories (meetings, insurance, vendors, correspondence, internal finances)
-// never reach this repo or the site.
+// Public-record library categories only. Documents are added directly to this
+// repo's library/ with manifest status "public-record"; internal categories
+// (meetings, insurance, vendors, correspondence, internal finances) have no
+// home here at all, and scripts/check-content.mjs fails the build if such
+// material reaches the rendered output.
 const LIB_GROUPS = [
   ['Founding Instruments', 'founding'],
   ['Plans & Property', 'plans'],

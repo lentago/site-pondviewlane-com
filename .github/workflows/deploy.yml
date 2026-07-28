@@ -6,8 +6,9 @@
 # pre-launch trustee-review preview and its site-wide noindex are long gone.
 #
 # Same pattern as site-lentago-dev / site-icecreamtofightwith-com: build the
-# Astro static site (npm run build), package dist/ into nginx, push to ECR, roll
-# the ECS service. Authenticates via the solidago platform's GitHub OIDC role
+# Astro static site (npm run build emits both skins), package dist-pondview/ and
+# dist-essexcrossing/ into nginx, push to ECR, roll the ECS service, which serves
+# each domain by Host header. Authenticates via the solidago GitHub OIDC role
 # (no long-lived AWS credentials); the ECR repo, ECS cluster/service, the Ask
 # Lambda (module.ask_pondview), and the OIDC trust for THIS repo are provisioned
 # in solidago (modules/site + modules/ask-lambda).
