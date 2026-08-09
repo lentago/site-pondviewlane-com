@@ -13,10 +13,9 @@
 # Lambda (module.ask_pondview), and the OIDC trust for THIS repo are provisioned
 # in solidago (modules/site + modules/ask-lambda).
 #
-# This repo is PUBLIC-RECORD-ONLY and fully self-contained — it holds its own
-# source and build-time generator (scripts/sync-content.mjs,
-# scripts/compose-content.mjs); there is no external source repo or publish
-# pipeline. This workflow only builds what is committed here.
+# This repo is PUBLIC-RECORD-ONLY. Its content is published by the private
+# source repo's one-way firewall tool; this workflow only builds what is
+# committed here (no build-time content sync).
 
 name: Build & Deploy
 
