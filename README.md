@@ -47,6 +47,72 @@ the guide copy, and reviews the output; Claude writes the code and the tooling.
 The maintainer is an infrastructure operator, not a software engineer — please
 don't read this repo as a portfolio of one.
 
+## 📚 Ask this codebase (DeepWiki)
+
+<a href="https://deepwiki.com/lentago/site-pondviewlane-com"><img src="https://deepwiki.com/badge.svg" alt="Ask DeepWiki" height="32"></a>
+
+[DeepWiki](https://deepwiki.com/lentago/site-pondviewlane-com) maintains an
+AI-generated wiki over this repository — architecture pages, diagrams, and a
+Q&A box grounded in the actual code. Every public Lentago Labs repo is indexed
+([deepwiki.com/lentago](https://deepwiki.com/lentago)); it is the fastest way
+to orient before reading source. It is AI-generated: trust it to orient you,
+verify against the code before you act on it.
+
+**Good first questions:**
+- How does the site keep pondviewlane.com and essexcrossingatmontserrat.com in
+  factual sync while giving each its own voice and visual skin?
+- How does adding a new public-record document flow from `library/manifest.json`
+  into a live page with a Verify-at-source link?
+- How does the Ask box answer questions without logging or storing what
+  visitors ask?
+
+## 🧭 What this repo demonstrates
+
+This is a working exhibit, not just a static site — the table below points at
+the actual mechanism behind each pattern.
+
+| Pattern | How it shows up here |
+|---|---|
+| PR-gated required status checks | `Build` ([ci.yml](.github/workflows/ci.yml)) and `docs-check` ([docs-check.yml](.github/workflows/docs-check.yml)) are required on the `main` branch ruleset — no PR merges unless the site actually builds both skins and every markdown link resolves. |
+| Apply-on-merge deploy | [deploy.yml](.github/workflows/deploy.yml) triggers on push to `main` — change management where the merged PR *is* the change record; no separate manual release step. |
+| OIDC federated AWS auth | [deploy.yml#L74](.github/workflows/deploy.yml#L74) assumes `solidago-dev-github-actions` via `id-token: write` — short-lived, workflow-scoped credentials, no static AWS keys in secrets. |
+| Reusable/shared CI workflows | [claude.yml](.github/workflows/claude.yml) and [docs-check.yml](.github/workflows/docs-check.yml) both `uses: lentago/shared-workflows/...@main` — the paved road; a fix lands once centrally and every consuming repo inherits it. |
+| Automated content-integrity gate | [`scripts/check-content.mjs`](scripts/check-content.mjs), run via the `postbuild` hook in [package.json](package.json), enforces public-record-only, no-resident-names, and (its C7 check) facts-parity between the two skins in CI, not by review discipline. |
+| Scoped agent-in-CI responder | [claude.yml](.github/workflows/claude.yml) wires an `@claude` responder whose `allowed_tools` are fenced to this repo's own git/gh/npm build commands — it can iterate on a PR but can't touch CI config or secrets. |
+| Full git history checkout for accurate metadata | [deploy.yml#L53](.github/workflows/deploy.yml#L53) uses `fetch-depth: 0` because Starlight's `lastUpdated` reads each page's git log — a shallow clone would silently stamp every page with the deploy date instead. |
+| Deliberate, documented deviation from a fleet convention | This README's ["Two domains, one fact base"](README.md#L26) paragraph names and justifies the exception to the fleet's one-repo-per-domain convention, rather than silently diverging. |
+
+## 🛠️ Make a change yourself
+
+This is a lab — the systems are real, the stakes are not. Pick a vector:
+
+**Add a recorded document to the library.** Drop the file into `library/files/`,
+add a `manifest.json` entry with a `verify: {label, url}` portal link, add its
+text extract, and open a PR. CI's `Build` check runs the full generator and the
+content-hygiene check (public-record-only, verify link present) on every PR;
+merging to `main` rebuilds both skins, pushes to ECR, and rolls the ECS service.
+**Proof this works:**
+- [#9 — Add the Parcel C deed to the library; document the easement dimensions](https://github.com/lentago/site-pondviewlane-com/pull/9)
+- [#21 — Publish the July 28, 2026 Beverly ConCom agenda to the library](https://github.com/lentago/site-pondviewlane-com/pull/21)
+
+**Edit one skin without letting the domains drift apart.** Edit `content/base/`
+(the pondview voice) or `content/essex/` (the Essex-voice override), then open a
+PR. The facts-parity check (`check-content.mjs`, C7) fails the `Build` gate if a
+base fact, date, or citation is missing from the Essex variant, so drift between
+the two public-facing domains is caught before merge, not after.
+**Proof this works:**
+- [#16 — Per-site prose architecture: content/base + essex overlay, composed docs tree, C7 facts-parity gate](https://github.com/lentago/site-pondviewlane-com/pull/16)
+- [#12 — Essex Crossing sister skin: two-domain build and Host-switched container](https://github.com/lentago/site-pondviewlane-com/pull/12)
+- [#17 — The Obsequious Document: Essex-skin rewrite, per-origin Ask persona, voiced generated framing](https://github.com/lentago/site-pondviewlane-com/pull/17)
+
+**Ship a privacy-by-design fix to the Ask endpoint.** Edit
+`functions/ask/handler.mjs` (the Ask Lambda reference copy) and open a PR
+against this repo. Merging here does not deploy the live Lambda — the change
+still needs replaying into solidago's `modules/ask-lambda`, which is what
+actually gets packaged and deployed.
+**Proof this works:**
+- [#24 — Ask box records nothing — no question, outcome, or cost is captured](https://github.com/lentago/site-pondviewlane-com/pull/24)
+
 ## Public-record-only, and self-contained
 
 Everything here traces to a **public record** (Southern Essex Registry of Deeds,
@@ -132,4 +198,7 @@ value should not surface in a search for the records.
 
 ---
 
-*Part of the [Lentago Labs](https://github.com/lentago) portfolio.*
+> 🌱 **Lentago Labs** is a team learning lab — real systems, non-critical stakes, modern
+> operations patterns demonstrated in the open. Start at the
+> [org profile](https://github.com/lentago), and read this repo on
+> [DeepWiki](https://deepwiki.com/lentago/site-pondviewlane-com).
