@@ -1,5 +1,14 @@
 # Architecture decision records
 
+> **Why `adr/` and not the fleet's usual `docs/adr/`:** the content gate
+> (`scripts/check-content.mjs`, check C4) deliberately treats a top-level
+> `docs/` as a private-source-repo artifact — the severed private repo's
+> wiki lives in a `docs/` tree, so its reappearance here is a tripwire for
+> leaked private content. The tripwire is kept intact and the decision
+> records live at root-level `adr/` instead: one more
+> governance-constraint-driven placement, in the same spirit as
+> [ADR-0004](0004-two-domain-build-logic-in-package-json-not-workflow-yaml.md).
+
 These records were reconstructed on 2026-08-13 from this repo's commit
 history, issues, and pull requests, and from `CLAUDE.md`'s accumulated
 operational notes — not written contemporaneously with the decisions

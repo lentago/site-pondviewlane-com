@@ -187,7 +187,9 @@ the second domain's DNS/TLS/ALB host rule and the Ask CORS value land there too
 Reconstructed decision records for this repo's notable design calls — the
 two-domain build, the self-contained content pipeline, Ask-box logging
 privacy, and where the two-variant build logic lives — are in
-[`docs/adr/`](docs/adr/).
+[`adr/`](adr/) (root-level rather than the fleet's usual `docs/adr/`,
+because the content gate's C4 tripwire deliberately forbids a top-level
+`docs/` here — see the note in the index).
 
 ## Status
 
