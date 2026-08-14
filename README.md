@@ -182,6 +182,13 @@ this repo are provisioned in `solidago` (`modules/site` + `modules/ask-lambda`);
 the second domain's DNS/TLS/ALB host rule and the Ask CORS value land there too
 (`lentago/solidago#137`).
 
+## Architecture decisions
+
+Reconstructed decision records for this repo's notable design calls — the
+two-domain build, the self-contained content pipeline, Ask-box logging
+privacy, and where the two-variant build logic lives — are in
+[`docs/adr/`](docs/adr/).
+
 ## Status
 
 The site is **live and public** on both domains — `pondviewlane.com` and
