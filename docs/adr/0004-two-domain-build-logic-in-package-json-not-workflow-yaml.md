@@ -35,8 +35,8 @@ access to it.
   make later, since only a human can push that file.
 - **Retrospective — not considered at the time:** grant the runner bot's
   GitHub App the `workflows` permission so it can push CI changes directly.
-  *Worse* — that permission is scoped fleet-wide (`~/repos/CLAUDE.md`), not
-  per-repo; broadening it to unblock one repo's two-variant build would
+  *Worse* — GitHub App permissions are granted per installation, not per
+  repo, so broadening it to unblock one repo's two-variant build would
   hand every agent in the fleet write access to CI definitions across every
   repo it touches — a far larger blast radius than the problem it solves.
 - **Retrospective — not considered at the time:** have a human pre-author a
