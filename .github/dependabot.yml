@@ -5,12 +5,36 @@ updates:
     schedule:
       interval: weekly
     open-pull-requests-limit: 5
+    # Groups collapse weekly churn to at most two PRs per ecosystem:
+    # -routine (minor/patch) is reviewable on green checks;
+    # -major is where breaking changes land and gets read deliberately.
+    # One big group would hide a major bump in a pile of patches;
+    # no groups produces a 28-PR flood (see lentago/.github#114).
+    groups:
+      actions-routine:
+        applies-to: version-updates
+        patterns: ["*"]
+        update-types: ["minor", "patch"]
+      actions-major:
+        applies-to: version-updates
+        patterns: ["*"]
+        update-types: ["major"]
 
   - package-ecosystem: npm
     directory: "/"
     schedule:
       interval: weekly
     open-pull-requests-limit: 5
+    # Same two-PR shape as actions above — see comment there.
+    groups:
+      npm-routine:
+        applies-to: version-updates
+        patterns: ["*"]
+        update-types: ["minor", "patch"]
+      npm-major:
+        applies-to: version-updates
+        patterns: ["*"]
+        update-types: ["major"]
 
   # The Dockerfile pins its nginx base by digest (supply-chain integrity), which
   # also freezes it — without this ecosystem, base-image security patches would
@@ -20,3 +44,13 @@ updates:
     schedule:
       interval: weekly
     open-pull-requests-limit: 5
+    # Same two-PR shape as actions above — see comment there.
+    groups:
+      docker-routine:
+        applies-to: version-updates
+        patterns: ["*"]
+        update-types: ["minor", "patch"]
+      docker-major:
+        applies-to: version-updates
+        patterns: ["*"]
+        update-types: ["major"]
