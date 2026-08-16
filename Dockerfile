@@ -9,7 +9,8 @@
 # from its own root, Host-switched (see nginx.conf).
 # PDFs in the library are served with long cache headers; see nginx-common.conf.
 
-FROM nginx:latest
+# nginx:latest
+FROM nginx@sha256:8541484afbc9c8a5a8a99b379568ebbc957f658583ec9448fc43104229c03cf8
 
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 # Shared vhost config, included by both server blocks. Kept out of conf.d/ (it is
