@@ -15,6 +15,10 @@ COPY nginx.conf /etc/nginx/conf.d/default.conf
 # Shared vhost config, included by both server blocks. Kept out of conf.d/ (it is
 # not a standalone server, so nginx must not auto-load it at http level).
 COPY nginx-common.conf /etc/nginx/nginx-common.conf
+# Security-header set, `include`d from nginx-common.conf and re-`include`d in
+# every location block that declares its own add_header (see nginx-common.conf
+# and nginx.conf's www redirects) — same reason this is kept out of conf.d/.
+COPY nginx-security-headers.conf /etc/nginx/nginx-security-headers.conf
 COPY dist-pondview/ /usr/share/nginx/html/pondview/
 COPY dist-essexcrossing/ /usr/share/nginx/html/essex/
 
