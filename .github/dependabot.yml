@@ -25,8 +25,22 @@ updates:
     schedule:
       interval: weekly
     open-pull-requests-limit: 5
-    # Same two-PR shape as actions above — see comment there.
+    # Same two-PR shape as actions above — see comment there. astro-stack is
+    # declared first so it matches before -routine/-major: astro and its
+    # @astrojs/* integrations are version-locked to each other (e.g.
+    # starlight declares a peer on a specific astro major), but starlight is
+    # still pre-1.0, where semver puts breaking changes in the *minor*
+    # position. That got starlight's peer-breaking bump classified as
+    # "minor" and grouped into npm-routine, where it failed npm ci with an
+    # unresolvable peer conflict. No update-types filter here on purpose —
+    # every astro-stack change should move together regardless of how
+    # semver labels it. Don't "simplify" this back into npm-routine.
     groups:
+      astro-stack:
+        applies-to: version-updates
+        patterns:
+          - "astro"
+          - "@astrojs/*"
       npm-routine:
         applies-to: version-updates
         patterns: ["*"]
