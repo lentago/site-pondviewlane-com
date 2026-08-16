@@ -1,0 +1,65 @@
+name: Accessibility smoke test
+
+# Deliberately no `paths:` filter — this workflow must trigger on every PR so
+# it always reports a conclusion. A required check whose workflow never fires on
+# some PRs gets stuck "Expected" and deadlocks the merge queue.
+# This check is NOT marked required; required-check config is settings-as-code
+# owned by lentago/.github and is a separate change.
+on:
+  pull_request:
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+
+# Two skins are served on separate ports so pa11y can reach both:
+#   port 4321 — dist-pondview   (pondviewlane.com rendering)
+#   port 4322 — dist-essexcrossing (essexcrossingatmontserrat.com rendering)
+# pa11yci.config.json targets one page from each skin so a regression in
+# either skin's generated markup or CSS fails the check.
+
+jobs:
+  a11y:
+    name: pa11y WCAG2AA
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout PR branch
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref }}
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build both skins
+        run: npm run build
+
+      - name: Serve pondview skin on port 4321
+        run: |
+          python3 -m http.server 4321 --directory dist-pondview &
+          echo $! > /tmp/serve-pondview.pid
+
+      - name: Serve essex skin on port 4322
+        run: |
+          python3 -m http.server 4322 --directory dist-essexcrossing &
+          echo $! > /tmp/serve-essex.pid
+
+      - name: Wait for both servers to be ready
+        run: |
+          timeout 30 bash -c 'until curl -sf http://127.0.0.1:4321/ > /dev/null; do sleep 1; done'
+          timeout 30 bash -c 'until curl -sf http://127.0.0.1:4322/ > /dev/null; do sleep 1; done'
+
+      - name: Run pa11y against both skins
+        run: npm run test:a11y
+
+      - name: Stop preview servers
+        if: always()
+        run: |
+          kill "$(cat /tmp/serve-pondview.pid)" 2>/dev/null || true
+          kill "$(cat /tmp/serve-essex.pid)" 2>/dev/null || true
