@@ -20,7 +20,7 @@
     "@astrojs/sitemap": "^3.7.3",
     "@astrojs/starlight": "^0.41.7",
     "astro": "^7.2.2",
-    "sharp": "^0.33.0"
+    "sharp": "^0.35.3"
   },
   "devDependencies": {
     "pa11y-ci": "^4.1.1"
