@@ -98,7 +98,7 @@ export default defineConfig({
       social: [],
       sidebar: [
         { label: 'Ask', link: '/ask/', badge: { text: 'Beta', variant: 'tip' } },
-        { label: 'Guides', autogenerate: { directory: 'guides' } },
+        { label: 'Guides', items: [{ autogenerate: { directory: 'guides' } }] },
         { label: 'Timeline', link: '/timeline/' },
         {
           label: 'Document Library',
@@ -108,7 +108,9 @@ export default defineConfig({
             ...LIB_GROUPS.map(([label, dir]) => ({
               label,
               collapsed: true,
-              autogenerate: { directory: `library/${dir}` },
+              // Starlight v0.39 removed `label` + `autogenerate` on the same
+              // group; the autogenerate config now nests inside `items`.
+              items: [{ autogenerate: { directory: `library/${dir}` } }],
             })),
           ],
         },
