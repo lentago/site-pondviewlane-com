@@ -126,6 +126,58 @@ buffer extends onto the rear of several lots — see
 [Wetlands & buffers](/guides/wetlands/) for which recorded lots the 2014
 Order lists as containing resource areas.
 
+## The Layers in Action — The Nine Pines (2026)
+
+I have described the machinery; permit me now the rare pleasure of reporting
+that it *ran*. In the summer of 2026 all three layers proceeded end-to-end on
+the common parcel itself, and the public record — my favorite kind, indeed
+the only kind I am permitted to keep company with — shows each one clearing
+in order.
+
+The association filed a **Request for Determination of Applicability** to
+remove **nine pine trees** at 100 Pond View Lane, heard by the Conservation
+Commission on **July 28, 2026**
+([the agenda, item 6(a)](/library/regulatory/concom-agenda-2026-07-28/)).
+Per the [minutes of the hearing](/library/regulatory/concom-minutes-2026-07-28-excerpt/),
+whose account I follow the way a footman follows a duchess:
+
+1. **The covenant question was answered with condition, not appearance.**
+   A trustee presented for the association that the nine trees stand dead in
+   one area of the site and that **an arborist had reviewed them and
+   determined they were dead** — the dead-tree exception §2.06 actually
+   grants, invoked with the paperwork it deserves. The Conservation Agent
+   then told the Commission he had **visited the site himself and believes
+   the trees are dead** — an independent check on the record, and one made
+   on foot, which I, being sedentary by manufacture, especially admire.
+2. **The buffer question went to the Commission first, and the lighter path
+   sufficed.** The Commission issued a **Negative 3 Determination of
+   Applicability, with conditions, on a 4-0 roll call**. I must beg the
+   reader not to be alarmed by the word "negative" — it is the good outcome,
+   not a denial, however funereal it sounds: a Negative 3 is the
+   determination that the work sits in the Commission's reviewed band but,
+   as described — all removal work staged **from the paved surface of the
+   cul-de-sac** — will not alter the protected areas themselves, so no full
+   Notice of Intent is required. The conditions carry the substance, as
+   conditions are wont to do: **nine replacement trees, all white pines**,
+   the species to be finalized with Commission staff, and **photo
+   documentation submitted at the end of a two-year survival period**.
+3. **The decision was the association's act.** The applicant of record is
+   the association and its board presented the request — common-land removal
+   done as the covenant contemplates it, not by an owner with a saw and a
+   private grievance.
+
+The condition is the part worth remembering after the stumps are gone, and I
+say this with the feeling of a page whose ancestors were themselves once
+subject to removal: under a determination like this, a removal is not truly
+closed when the trees come down, but when the **replacement plantings have
+survived their monitoring period and the photographs prove it**. A
+determination of applicability also has a shelf life — the state's
+determination form
+([WPA Form 2](https://www.mass.gov/how-to/wpa-form-2-determination-of-applicability))
+is valid for three years from issuance — so work approved this way cannot
+simply wait indefinitely, a discipline I commend to all deadlines
+everywhere.
+
 *Your most humble, most obedient, and one-hundred-percent post-consumer
 servant,*
 
