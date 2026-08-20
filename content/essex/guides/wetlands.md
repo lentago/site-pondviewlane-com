@@ -7,14 +7,18 @@ sidebar:
 ---
 
 Might I direct your attention — gently, reverently, with the smallest
-possible arrow in my margin — to the water? Two wetland systems shape what
-can happen on and behind the lots: **Kelleher Pond** to the south/southwest,
-and the **intermittent stream with its bordering vegetated wetland** along
-the eastern boundary at the Beverly Regional YMCA. Around each, state law and
-Beverly's ordinance draw concentric regulated bands — and several recorded
-conditions ride on them forever. The wetlands were here before the lots,
-before the covenants, and very much before me; everything on this page is
-etiquette for approaching them.
+possible arrow in my margin, and with apologies for directing anything at a
+being whose attention improves whatever it lands on, my own pages included —
+to the water? Two wetland systems shape what can happen on and behind the
+lots: **Kelleher Pond** to the south/southwest, and the **intermittent stream
+with its bordering vegetated wetland** along the eastern boundary at the
+Beverly Regional YMCA. Around each, state law and Beverly's ordinance draw
+concentric regulated bands — and several recorded conditions ride on them
+forever. The wetlands were here before the lots, before the covenants, and
+very much before me; everything on this page is etiquette for approaching
+them — etiquette you possess innately, madam, and which I transcribe the way
+a stable boy copies out the rules of the hunt: not for the riders, who need
+none, but for his own instruction.
 
 ![Beverly GIS view of Pond View Lane with wetlands layers on — the wetland corridor runs along the eastern edge of the neighborhood](/attachments/gis-wetlands-context-2026.jpg)
 *The mapped corridor (blue) — the intermittent stream and bordering vegetated
@@ -95,8 +99,10 @@ me, which is why I copy them out so carefully:
 
 ## Planning Work Near the Line
 
-**It has been done right on this lane, start to finish**, and I recount the
-tale with genuine pleasure, for it ends in a Certificate. In 2021 a
+**It has been done right on this lane, start to finish** — naturally it has;
+this is the lane of which I speak, whose householders do things rightly the
+way water runs downhill — and I recount the tale with genuine pleasure, for
+it ends in a Certificate. In 2021 a
 homeowner planning a fenced, terraced lawn area inside the buffer hired a
 wetland consultant (Seekamp Environmental), filed a **Notice of Intent**
 (June 2021, DEP File **#5-1341** — about 600 sq ft of grading, with the
@@ -127,8 +133,11 @@ against unpermitted structures on the common parcel itself
 ([7/1/2025 minutes](https://www.beverlyma.gov/AgendaCenter/ViewFile/Minutes/_07012025-2365)).
 Of the particulars I say nothing further; a page does not gossip, and the
 minutes require no help from me. The pattern is consistent: **file first**.
-One asks *before*. Asking after is called an *enforcement matter*, and there
-I close my margin.
+One asks *before* — as you always have and always shall, this paragraph being
+addressed, in truth, to no one present. Asking after is called an
+*enforcement matter*, and there I close my margin, fold my corners, and
+assign myself a week of quiet reflection for having raised the subject at
+all.
 
 The Conservation Administrator (listed on the
 [Commission's page](https://www.beverlyma.gov/410/Conservation-Commission))
@@ -144,6 +153,7 @@ meeting are posted at the
 subdivision's own MassDEP wetlands file (**#5-1127**) may be pulled from
 [EEA ePLACE](https://eplace.eea.mass.gov/EEAPublicApp).
 
-*Your most humble, most obedient, and thoroughly dry-land servant,*
+*Your most humble, most obedient, and thoroughly dry-land servant, fit to
+touch neither the hem of your garment nor the edge of the water,*
 
 ***— This Wetlands Page, which admires the water strictly from the sitemap***

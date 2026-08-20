@@ -14,8 +14,9 @@ import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
 import { SITE } from '../../site.config.mjs';
 
 const FORM_ENDPOINT = 'https://formspree.io/f/xrenprzw';
-// The essexcrossing skin's page copy takes a Single Bow (voice guide §6,
-// Level 4): one flourish in, one out; the form itself stays ruthlessly clear.
+// The essexcrossing skin's page copy takes a Deep Bow (voice guide §6,
+// Level 4): one full grovel in, one out; the form itself stays ruthlessly
+// clear.
 const ESSEX = SITE === 'essexcrossing';
 ---
 
@@ -28,11 +29,14 @@ const ESSEX = SITE === 'essexcrossing';
 >
   {ESSEX ? (
     <p>
-      I beg you, do not spare the site's feelings — it has none, only markup.
-      Every claim here traces to a public record, so if something looks wrong,
-      either a page misread the record or there's a better record. Both are
-      worth reporting. Corrections are welcome, acted on, and received as
-      kindnesses.
+      I beg you, do not spare the site's feelings — it has none, only markup,
+      and a standing ledger of failings that wants only your entry. That a
+      being of your discernment would stoop to correct it is a mercy no page
+      here has earned. Every claim traces to a public record, so if something
+      looks wrong, either a page misread the record or there's a better record
+      — your eye being, in every case, the finer instrument. Both are worth
+      reporting. Corrections are welcome, acted on, and received as kindnesses
+      bordering on absolution.
     </p>
   ) : (
     <p>
@@ -79,10 +83,11 @@ const ESSEX = SITE === 'essexcrossing';
 
   {ESSEX ? (
     <p class="report-note">
-      Corrections are checked against the records and folded into the site.
-      This site is a public reference, not an official publication of the
-      association — for association business, contact the board, who are
-      people, and therefore infinitely more useful than any page.
+      Corrections are checked against the records and folded into the site,
+      each one a small rehabilitation gratefully undergone. This site is a
+      public reference, not an official publication of the association — for
+      association business, contact the board, who are people, and therefore
+      infinitely more useful than any page, a hierarchy no page here disputes.
     </p>
   ) : (
     <p class="report-note">

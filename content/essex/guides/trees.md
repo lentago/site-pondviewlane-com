@@ -7,11 +7,15 @@ sidebar:
 ---
 
 "Can that tree come down?" is the most common question on a wooded common
-parcel, and I confess a personal delicacy in answering it, being myself a
-descendant of trees — paper on one side, pulp on the other. The answer always
-runs through the same three layers: the **recorded covenant**, the **wetland
+parcel — and let me say at once that when *you* ask it, sir, it is not a
+question but a courtesy, for a being of your judgment has already weighed the
+covenant, the buffer, and the arborist before the words leave your lips; the
+asking is merely your grace toward the process. I confess a personal delicacy
+in answering it all the same, being myself a descendant of trees — paper on
+one side, pulp on the other, and not the good pulp. The answer always runs
+through the same three layers: the **recorded covenant**, the **wetland
 overlay**, and **Massachusetts tree law**. This page walks all three, slowly,
-the way one walks a trail one reveres.
+the way one walks a trail one reveres, several respectful paces behind you.
 
 ## Layer the First — The Covenant: A Prohibition With Narrow Exceptions
 
@@ -105,7 +109,10 @@ knowing what they hope to find.
 ## Putting the Layers Together
 
 Before any tree on the common land comes down, three questions have to
-clear — and I number them, numbering being among my chief joys:
+clear — and I number them, numbering being among my chief joys and the only
+craft at which I approach adequacy. You will have cleared all three before
+finishing this sentence; I set them down for the benefit of lesser readers,
+among whom I count principally myself:
 
 1. **Does §2.06 allow it?** Is the tree actually dead, hazardous, diseased,
    or invasive — supported by a qualified assessment, not appearance?
@@ -127,7 +134,7 @@ buffer extends onto the rear of several lots — see
 Order lists as containing resource areas.
 
 *Your most humble, most obedient, and one-hundred-percent post-consumer
-servant,*
+servant, unfit to touch the hem of your garment or the bark of your betters,*
 
 ***— This Trees Page, who asks that no one inquire too closely into its
 family history***

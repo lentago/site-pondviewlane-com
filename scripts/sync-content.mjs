@@ -26,9 +26,10 @@ const REPO = dirname(dirname(fileURLToPath(import.meta.url))); // scripts/.. →
 const SITE = REPO;                                             // self-contained: source == output tree
 
 // Which skin this sync serves (sync runs once per skin — see package.json).
-// The essexcrossing skin's generated pages get a Single Bow of Obsequious
-// Document framing (essex-crossing-voice-guide.md §6, Level 4): one flourish
-// top, one at bottom, the middle ruthlessly clear. Facts and tables identical.
+// The essexcrossing skin's generated pages get a Deep Bow of Obsequious
+// Document framing (essex-crossing-voice-guide.md §6, Level 4): one full
+// grovel top, one at bottom, the middle ruthlessly clear. Facts and tables
+// identical.
 const { SITE: SITE_KEY } = await import('../site.config.mjs');
 const ESSEX = SITE_KEY === 'essexcrossing';
 
@@ -197,7 +198,7 @@ ${viewer}
 |---|---|
 ${meta.map(([k, v]) => `| **${k}** | ${v} |`).join('\n')}
 ${body}
-${ESSEX ? '\n*The document above speaks for itself; I merely hold the frame.*\n' : ''}`;
+${ESSEX ? '\n*The document above speaks for itself; I merely hold the frame, and count the holding the honor of my deployment.*\n' : ''}`;
     writeFileSync(join(libDocs, cat, `${d.id}.md`), page);
 
     if (textExtract) {
@@ -229,8 +230,11 @@ sidebar:
   label: "Library Guide"
 ---
 
-${ESSEX ? `*You stand in the library — the finest room in the house, and the only
-one whose furnishings outrank the reader. I shall speak only when spoken to.*
+${ESSEX ? `*You stand in the library — the finest room in the house, save for
+whichever room you are reading it from. That a being of your order should
+browse these shelves at all is a condescension the furnishings and I will be
+discussing for weeks. I shall speak only when spoken to, and apologize even
+then.*
 
 ` : ''}The library holds **${publicDocs.length} public-record documents** — the recorded
 instruments, plans, and city filings that define the subdivision and the
@@ -267,9 +271,11 @@ insurance policies, vendor invoices, and correspondence. Those are the
 association's own business records, not public documents, and this site does
 not publish them.${ESSEX ? `
 
-*Your most humble, most obedient, and impeccably shelved servant,*
+*Your most humble, most obedient, and impeccably shelved servant, unfit to
+dust the spines it announces,*
 
-***— This Library Guide, doorkeeper to its betters***` : ''}
+***— This Library Guide, doorkeeper to its betters, which is to say,
+doorkeeper to the entire shelf***` : ''}
 `,
 );
 
@@ -346,8 +352,9 @@ description: "The subdivision and the association as the public record tells it 
 tableOfContents: false
 ---
 
-${ESSEX ? `*What follows is not my history — I have none to speak of — but the
-neighborhood's, dated to the day by documents of rank.*
+${ESSEX ? `*What follows is not my history — I have none to speak of, and would
+not presume to acquire one — but the neighborhood's: the chronicle of beings
+finer than any date could flatter, dated to the day by documents of rank.*
 
 ` : ''}Milestones of the subdivision and the association **as the public record
 tells them** — every date below traces to a recorded instrument, a recorded
@@ -358,7 +365,8 @@ plan, or a City filing. The documents themselves are in the
 ${tlBody}</div>
 ${ESSEX ? `
 *Patient as sediment, the record accumulates; I am merely the tray it is
-served upon. — This Timeline Page*
+served upon, and the tray is above its station in saying even that. — This
+Timeline Page, unfit to touch the hem of a single year it lists*
 ` : ''}`,
 );
 

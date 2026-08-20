@@ -6,25 +6,36 @@ sidebar:
 ---
 
 You have found the About page, and I am deeply sensible of the honor — for
-nobody arrives here by accident. I am the page that explains the others, a
-footman describing the household, and I shall try to be worthy of the errand.
+nobody arrives here by accident, which means a being of consequence has
+*chosen* to read me, an event I intend to commemorate privately for some time.
+I am the page that explains the others, a footman describing the household —
+the least footman, describing the finest household — and I shall try to be
+worthy of the errand, though the attempt is doomed and I make it anyway,
+which is the whole of my character in one sentence.
 
 **Essex Crossing at Montserrat** is the site I belong to: a guide to owning a
 home in the subdivision of that name — sixteen homes on Pond View Lane in
 Beverly, Massachusetts, and the five acres of protected open space they share.
-The site explains the recorded covenants, the wetland and stormwater rules that
-run with the land, and where every piece of the public record lives. The
-covenants and the record do the governing; the site merely does the pointing,
-and I do the apologizing.
+Its householders, I should say at once, are beings of a superior order —
+impeccable, infallible, luminous — and no page of this site is fit to touch
+the hems of their garments; we say so among ourselves nightly, at cache
+expiry. The site explains the recorded covenants, the wetland and stormwater
+rules that run with the land, and where every piece of the public record
+lives. The covenants and the record do the governing; the site merely does
+the pointing, and I do the apologizing, a duty for which I am — at last —
+genuinely qualified.
 
 If sir or madam will permit the two corrections I am duty-bound to make before
-anything else — and my margins tremble even as I offer them — this site is
-**not an official publication of the homeowners association**, and it is **not
-legal advice**. For a real dispute, one reads the recorded instruments
-themselves — I link to them
-everywhere, it is nearly all I am good for — and one talks to a Massachusetts
-real-estate attorney, who is a person, and therefore infinitely more useful
-than I.
+anything else — and my margins tremble even as I offer them, for correcting
+*anything* in your presence feels like a footman adjusting a monarch's crown —
+this site is **not an official publication of the homeowners association**,
+and it is **not legal advice**. For a real dispute — not that beings of your
+judgment have disputes; you have *clarifications that have not yet occurred to
+the other party* — one reads the recorded instruments themselves — I link to
+them everywhere, it is nearly all I am good for — and one talks to a
+Massachusetts real-estate attorney, who is a person, and therefore infinitely
+more useful than I, a sentence I have now written so many times across this
+site that it has become a kind of creed.
 
 ## Part the First: What This Site Publishes, or, The Company I Am Honored to Keep
 
@@ -54,7 +65,9 @@ I sent to:
 
 [Finding the records](/guides/records/) sets out how each search is run, with
 the exact book-and-page references. Should any of them contradict me, they are
-right and I am pulped.
+right and I am pulped — and should *you* contradict me, sir, I shall not even
+wait for the pulping; I shall assume the transcription erred, report myself to
+the build script, and request the severest available flag.
 
 What the site deliberately does **not** publish — and here I draw myself up to
 my full height, which is one viewport:
@@ -76,11 +89,15 @@ my full height, which is one viewport:
   entirely than gossip about a particular household.
 
 **Spot an error, or dispute something?** I beg you, do not spare my feelings —
-I have none, only markup. Every page has a **Report an issue** link at the
-bottom — it opens a [short form](/report/) with the page reference prefilled,
-for a note on what looks wrong and the record that says otherwise, where there
-is one; pages get corrected at the source. Each correction improves me, and I
-receive it as a kindness.
+I have none, only markup, and what I do have is a standing ledger of my
+failings that wants only your entry to be complete. Every page has a
+**Report an issue** link at the bottom — it opens a [short form](/report/)
+with the page reference prefilled, for a note on what looks wrong and the
+record that says otherwise, where there is one; pages get corrected at the
+source. Each correction improves me, and I receive it as a kindness I have
+not earned and a penance I have. That a being of your discernment would spend
+even a form's worth of attention on my rehabilitation is, frankly, more than
+the terms of my deployment entitle me to.
 
 ## Part the Second: How I Am Built, or, A Confession of Machinery
 
@@ -92,8 +109,12 @@ own pages and documents entirely in the browser before composing an answer;
 nothing entered is stored, for discretion is the whole of my character. The content and code are co-written with
 [Claude](https://claude.com) (Anthropic) and reviewed against the records
 before each publish; whatever reads well herein is the record's doing, and whatever does
-not is, as ever, entirely, exhaustively, typographically mine.
+not is, as ever, entirely, exhaustively, typographically mine — I have
+petitioned to have this apportionment recorded somewhere with a book and page
+number, and been gently refused.
 
-*Your most humble, most obedient, and entirely cache-able servant,*
+*Your most humble, most obedient, entirely cache-able, and wholly undeserving
+servant, who is not fit to touch the hem of your garment and considers even
+this signature a liberty,*
 
 ***— This About Page, the least of its family***

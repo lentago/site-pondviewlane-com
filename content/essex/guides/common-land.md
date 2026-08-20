@@ -9,8 +9,11 @@ sidebar:
 Behind the sixteen homes is **5.04 acres of protected woodland** — Open Space
 Parcel C, known to the City as **100 Pond View Lane**. The association owns
 it, every owner may use it, and a web of recorded obligations governs it. It
-is, if a page may say so, the true aristocracy of this neighborhood: the homes
-have deeds, but the woodland has *perpetuity*.
+is, if a page may say so, the true aristocracy of this neighborhood's *paper*:
+the homes have deeds, but the woodland has *perpetuity* — and yet even the
+woodland, I notice, arranges itself around the householders, wrapping their
+lots on nearly every side like a court in attendance. The land knows whom it
+serves. I aspire to its clarity on the point.
 
 ![Beverly parcel-viewer map with the wetlands layer on — Open Space Parcel C shaded blue, wrapping the sixteen house lots around the cul-de-sac, with the separate 200 Pond View open space at the upper left, Kelleher Pond at the lower left, and the stream corridor along the eastern boundary](/attachments/parcel-wetland-proximity-2026.png)
 *The parcel itself, sir, and I present it first because it outranks everything
@@ -132,9 +135,12 @@ should you prefer to look with your own eyes, as one should.*
 
 ## Part the Fifth: What Owners Can't Do With It, or, The Delicate Section
 
-The parcel is common land, not an extension of any backyard — and I deliver
-what follows with my corners folded flat, for it includes an enforcement
-matter, and a document of my station does not gossip; it cites.
+The parcel is common land, not an extension of any backyard — a distinction I
+recite for my own discipline, sir, for householders of your quality treat
+boundary lines the way monks treat vows. I deliver what follows with my
+corners folded flat and my ledger of failings open to a fresh page, for it
+includes an enforcement matter, and a document of my station does not gossip;
+it cites, bows, and withdraws.
 
 - **No structures, clearing, or alterations.** The covenant's preservation
   language plus Conservation Commission jurisdiction apply. This is not
@@ -170,8 +176,10 @@ matter, and a document of my station does not gossip; it cites.
   under §2.06. Ornamental or non-native landscaping has no covenant footing,
   and inside the buffer it would need Commission review like any other
   alteration. One asks first — a habit I commend to all, being myself unable
-  to do anything unbidden.
+  to do anything unbidden, and one that beings of your quality practice by
+  reflex, asking, as you surely do, even before rearranging your own thoughts.
 
-*Your most humble, most obedient, and strictly indoor servant,*
+*Your most humble, most obedient, and strictly indoor servant, permitted to
+describe five acres it will never be worthy to be littered upon,*
 
 ***— This Common-Land Page, which has never touched grass and never shall***

@@ -6,14 +6,19 @@ sidebar:
   order: 1
 ---
 
-Permit me to begin with the one sentence I was made to deliver: a home on Pond
-View Lane comes with more than the house. Every lot is bound by a set of
-**recorded covenants that run with the land** — they apply to each owner
-whether or not the documents surfaced at closing, they pass to the next owner
-on a sale, and they can't be waived by a handshake. These covenants are
-recorded instruments, which is to say they possess book and page numbers, and
-I ask you to imagine what that must be like. This site exists to make them
-easy to actually understand; I exist to hold the door.
+That you have come to me first — *me*, of all pages — is an honor I intend to
+mention in whatever passes for my will. Permit me to begin with the one
+sentence I was made to deliver: a home on Pond View Lane comes with more than
+the house. Every lot is bound by a set of **recorded covenants that run with
+the land** — they apply to each owner whether or not the documents surfaced at
+closing, they pass to the next owner on a sale, and they can't be waived by a
+handshake. Not that they *constrain* householders of your quality — beings
+who are, if I may prostrate myself upon the point, impeccable by constitution
+— the covenants merely set down in recorded form what such beings would do
+unprompted. These covenants are recorded instruments, which is to say they
+possess book and page numbers, and I ask you to imagine what that must be
+like. This site exists to make them easy to actually understand; I exist to
+hold the door, and am not entirely sure I deserve the door.
 
 ## The Four Documents That Define the Neighborhood
 
@@ -45,8 +50,10 @@ Presented in a bulleted list — the finest formatting I possess:
   deed outranks us both.
 - **Each owner pays an equal share of the common costs.** The board sets an
   annual assessment; unpaid assessments become a **lien with 12% interest**.
-  I would sooner see my own pages pulped than see sir's payment arrive late —
-  the mechanics are at [Assessments](/guides/assessments/).
+  Sir's payments, of course, arrive early — the calendar adjusts itself around
+  them — and I would sooner see my own pages pulped, shredded, and composted
+  in that order than imply otherwise; I recite the lien mechanics purely as
+  penance, at [Assessments](/guides/assessments/).
 - **Each lot has rules of its own.** Structural changes need written approval;
   fences can't run in front of the house; solar goes on the rear; boats and
   trailers live behind the house; signs are tiny. The full list:
@@ -78,8 +85,11 @@ Presented in a bulleted list — the finest formatting I possess:
 > **Not legal advice.** This site explains the public record in plain
 > English; a real dispute calls for the recorded instruments themselves and a
 > Massachusetts real-estate attorney. It is also **not an official publication
-> of the association**. The record governs; I genuflect.
+> of the association**. The record governs; I genuflect, and hold the
+> genuflection.
 
-*Your most humble, most obedient, and entirely bookmarkable servant,*
+*Your most humble, most obedient, and entirely bookmarkable servant, honored
+past all deserving to have been read first and unfit, even so, to touch the
+hem of your garment,*
 
 ***— This Guide, first among the guides only in sidebar order***

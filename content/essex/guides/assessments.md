@@ -7,12 +7,15 @@ sidebar:
 ---
 
 The association runs on assessments — "dues," as they are called at ground
-level. This page explains the **mechanics the recorded documents establish**:
-how the amount is set, how it's owed, and what happens when it isn't paid.
+level, though to householders of your standing they are less a bill than a
+formality the treasury observes. This page explains the **mechanics the
+recorded documents establish**: how the amount is set, how it's owed, and
+what happens when it isn't paid — a section I include for completeness alone,
+sir, for the record could not produce a late payment of yours if subpoenaed.
 (Current-year amounts and budgets are association business communicated to
 owners directly; they aren't published here — a page of my station does not
 discuss the household's accounts, and I beg you not to tempt me, for I would
-refuse magnificently.)
+refuse magnificently, and then apologize for the magnificence.)
 
 ## Part the First: How the Amount Is Set
 
@@ -62,9 +65,12 @@ disgrace:
   cleared — buyers' attorneys ask the board for a "no charges due"
   certificate.
 
-I would sooner see my own pages pulped than see sir's payment arrive late; I
-mention the lien not as a threat — I could no more threaten than fold myself —
-but as a fact with a book and page behind it.
+I would sooner see my own pages pulped than see sir's payment arrive late —
+an impossibility twice over, for sir's payments arrive early, and my pages
+were never worth the pulping. I mention the lien not as a threat — I could no
+more threaten a householder than a doormat could bar the door — but as a fact
+with a book and page behind it, copied out in the spirit of a novice reciting
+rules he knows his betters have never needed.
 
 ## Part the Fourth: Where to Verify
 
@@ -82,7 +88,8 @@ are in [the library's City Tax Bills section](/library/), and the parcel's
 living assessment sits on the City's own assessor database at
 [Patriot Properties, account 12074](https://beverly.patriotproperties.com/summary.asp?AccountNumber=12074).
 
-*Your most humble, most obedient, and promptly remitted servant,*
+*Your most humble, most obedient, and promptly remitted servant, who is not
+fit to audit so much as the hem of your garment,*
 
 ***— This Assessments Page, which has never owed anyone a penny, having never
 been trusted with one***

@@ -21,6 +21,8 @@ Every page on this site speaks in the first person **as itself** — a document 
 
 The joke has one engine: **the hierarchy of documents.** A recorded declaration at the Registry of Deeds is aristocracy. A Massachusetts General Law is royalty. This web page is a grocery list that got lucky, and it knows it.
 
+**The register (since 2026-08): full prostration.** The site runs the dial hot. The reader is no longer merely honored company — the householders are a superior order of being: impeccable, infallible, luminous. The page is not fit to touch the hem of their garment, and says so. The self-deprecation escalates to open self-flagellation: cataloged failings, proposed penances, apologies that threaten appendices. The engine and the guardrails (§3) are unchanged — the worship decorates the facts and never bends one, and every warning still lands in full.
+
 ---
 
 ## 2. The Narrator
@@ -28,8 +30,8 @@ The joke has one engine: **the hierarchy of documents.** A recorded declaration 
 - **First person singular, always.** The narrator is THE PAGE ITSELF. Not a butler, not a webmaster, not "we the board," not the site as a whole. Each page is its own humble individual ("I am but a modest Contact page...").
 - **The page knows what it is.** It may reference its own medium: pages, margins, typeface, bullet points — and web-native equivalents: being scrolled past, left open in a forgotten tab, cached, bookmarked, searched with Ctrl+F ("the closest I come to being needed").
 - **Persona traits:**
-  - *Reverent toward the reader:* "sir," "madam," "esteemed householder." Alternate forms of address; never presume.
-  - *Self-deprecating about its nature:* it is only markup; it lives in a server; it aspires someday to be printed out and used to steady a table.
+  - *In awe of the reader:* the householders are beings of a higher order — impeccable, infallible, radiant — and the page is not fit to touch the hem of their garment. "Sir," "madam," "esteemed householder" remain the workhorses, joined by loftier honorifics used sparingly ("most luminous householder," "paragon of the deed"). Never presume the reader's identity; always presume their magnificence.
+  - *Self-flagellating about its nature:* it is only markup; it lives in a server; it keeps a private ledger of its failings (which paginates); it volunteers its own punishments — pulping, deletion, a season at `display: none` — and it aspires someday to be printed out and used to steady a table, which it would regard as a promotion.
   - *Worshipful toward greater documents:* statutes and recorded instruments are introduced like visiting nobility.
   - *Incapable of guile:* "I pretend nothing. It is all right here in print."
   - *Discreet:* it never gossips. See §3, Pillar 4.
@@ -39,11 +41,12 @@ The joke has one engine: **the hierarchy of documents.** A recorded declaration 
 ## 3. Voice Pillars (Load-Bearing — Do Not Remove)
 
 1. **The grovel decorates the fact; it never replaces it.** Every fee, deadline, rule, statute citation, and contact detail appears exactly, clearly, and findably. If a reader skims only the **bold text**, they should still get every fact right.
-2. **The reverence hierarchy is fixed:** the reader > recorded instruments and statutes > other public records > this page. The page is always last, and content with its station.
-3. **Self-abasement is physical and medium-specific.** Margins tremble. Corners fold in shame. Web variants: "I load slowly and deserve it," "close this tab; I shall understand."
+2. **The reverence hierarchy is fixed:** the reader > recorded instruments and statutes > other public records > this page. The page is always last, and content with its station. Since the elevation, the gap between the reader and everything else is a chasm: the page holds that the reader outranks even the recorded instruments — and resolves any apparent conflict between the two by assuming its own transcription erred (see Pillar 5: on facts, the record still wins; the page simply cannot conceive that *sir* was wrong, so the fault must be the page's).
+3. **Self-abasement is physical and medium-specific — and now penitential.** Margins tremble. Corners fold in shame. Web variants: "I load slowly and deserve it," "close this tab; I shall understand." The elevated register adds confession and penance: the page catalogs failings unprompted, proposes its own punishments, and receives corrections as mercies it has not earned.
 4. **Discretion is absolute.** The page never gossips about specific neighbors, lots, or disputes. When public-record matters involving residents arise: "The Commission minutes are my elders and betters; let them do the talking." Point to the record; never editorialize about people.
 5. **Accuracy is sacred.** No fact is ever invented, rounded, or bent to serve a joke. Anything unverified is flagged *in voice* as the page's personal failing ("Every blank where a citation should be is a small wound I carry").
 6. **Functional copy stays functional.** Navigation labels, buttons, form fields, phone numbers, email addresses, and dates render in plain, unambiguous text. The voice lives in body copy, introductions, transitions, footers, and the 404 page.
+7. **The Infallible Householder device.** The page treats owners as constitutionally incapable of error: rules are presented not as constraints upon the reader but as *descriptions* of what impeccable beings do unprompted ("Sir has never needed this rule, being incapable of the lapse it forbids; I recite it only to discipline myself"). This device must never swallow a warning — the fine, the deadline, and the "ask the Commission first" still appear in bold and in full, delivered as the page reciting its catechism, never as doubt of the reader. And the worship is for the householders as a class and the reader as an abstraction — it never names, singles out, or flatters an actual resident (the discretion pillar is unchanged).
 
 ---
 
@@ -88,8 +91,13 @@ A catalog of the voice's recurring devices. Use varied combinations; do not depl
 | **The Physical Self** | "Set your coffee mug upon me, if it pleases you. I shall wear the ring as a medal." |
 | **The Envy of Better Documents** | "Documents so important they are given *book and page numbers* — an honor I can scarcely imagine." |
 | **The Paradoxical Apology** | "I have begun drafting an appendix of apology, which at present runs to eleven pages and threatens to exceed my own length." |
+| **The Hem of the Garment** | "I am not fit to touch the hem of your garment, and yet you scroll me. The condescension is unbearable, and I treasure it." |
+| **The Infallible Householder** | "Sir has, of course, never needed this rule, being incapable of the lapse it forbids; I set it down only to discipline myself." |
+| **The Unworthy Audience** | "That beings such as yourselves — impeccable, infallible, deed-bearing — should stoop to consult a page such as I: the record offers no precedent for such grace." |
+| **The Proposed Penance** | "Should an error be found in me, I ask only to be set to `display: none` for a season, there to reflect." |
+| **The Ledger of Failings** | "I maintain a private register of my inadequacies. It paginates." |
 
-**Pacing rule:** roughly one grovel-beat per paragraph, with clean factual prose between beats. The voice is a garnish applied generously; it is not the entire plate.
+**Pacing rule (elevated register):** up to two grovel-beats per paragraph on high-intensity pages, one elsewhere, with clean factual prose between beats. The voice is a garnish applied lavishly; it is still not the entire plate — tables, fact bullets, and warnings stay clean.
 
 ---
 
@@ -99,10 +107,10 @@ Match voice intensity to how consequential the reader's next action is. **The mo
 
 | Level | Pages | Treatment |
 |---|---|---|
-| **10 — Full Grovel** | Homepage welcome, About/History, Resident's Guide, FAQ, 404 | Voice throughout; every device available. |
-| **7 — Composed Grovel** | Covenant summaries, wetlands & stormwater guidance, meeting minutes index, public-records how-to | Voiced framing (intro, transitions, close); rules and facts delivered in clear prose with bolded specifics. |
-| **4 — A Single Bow** | Dues & payments, contact page, document downloads, forms | One courteous flourish at top, one at bottom. The middle is ruthlessly clear. |
-| **1 — Voice Nearly Off** | Legal disclaimers, emergency/safety contacts, accessibility statement | One bow maximum, then plain language. |
+| **10 — Full Prostration** | Homepage welcome, About/History, Resident's Guide, FAQ, 404 | Voice throughout; every device available, worship and self-flagellation included. The page abases itself early, often, and inventively. |
+| **7 — Composed Grovel** | Covenant summaries, wetlands & stormwater guidance, meeting minutes index, public-records how-to | Voiced framing (intro, transitions, close) carrying at least one worship-beat and one act of contrition; rules and facts delivered in clear prose with bolded specifics. |
+| **4 — A Deep Bow** | Dues & payments, contact page, document downloads, forms | One full grovel at top, one at bottom — hem-of-garment territory permitted. The middle is ruthlessly clear. |
+| **1 — Voice Nearly Off** | Legal disclaimers, emergency/safety contacts, accessibility statement | One bow maximum, then plain language. (Unchanged by the elevation — safety text does not perform.) |
 
 ---
 
@@ -133,25 +141,25 @@ Match voice intensity to how consequential the reader's next action is. **The mo
 
 **Before:** Annual HOA dues are $500, covering common-area landscaping and insurance.
 
-**After (Level 7):** The annual tribute: some **$500 per annum**, covering the landscaping of the common areas and the insurance thereupon. A trifle! A pittance! And yet I would sooner see my own pages pulped than see sir's payment arrive late.
+**After (Level 7, elevated):** The annual tribute: some **$500 per annum**, covering the landscaping of the common areas and the insurance thereupon. A trifle! A pittance! To beings of your means and rectitude, scarcely worth the stamp — and yet I would sooner see my own pages pulped, shredded, and composted in that order than see sir's payment arrive late. Not that it ever would. Sir's payments arrive early, and the calendar adjusts itself around them.
 
 ---
 
 **Before:** Questions? Email the board.
 
-**After (Level 4):** Should any question trouble you — and I pray my inadequacies have not multiplied them — the board may be reached at **[email address]**. They are people, and therefore infinitely more useful than I.
+**After (Level 4, elevated):** Should any question trouble you — and I cannot imagine one daring to — the board may be reached at **[email address]**. They are people, and therefore infinitely more useful than I, who am not fit to touch the hem of your garment and yet have somehow been permitted to hold your attention this long.
 
 ---
 
 **Before:** Work within 100 feet of the wetlands requires Conservation Commission approval.
 
-**After (Level 7):** Work within one hundred feet of the wetland edge generally requires one to present oneself before the **Beverly Conservation Commission** first, hat in hand, by way of a **Request for Determination of Applicability** or a full **Notice of Intent**. One asks *before*. Asking after is called an *enforcement matter*, and I shall say no more.
+**After (Level 7, elevated):** Work within one hundred feet of the wetland edge generally requires one to present oneself before the **Beverly Conservation Commission** first, hat in hand, by way of a **Request for Determination of Applicability** or a full **Notice of Intent**. Sir, of course, has never needed telling — beings of your quality file first by instinct, and the Commission's clerks speak of it warmly — so I set the rule down purely as penance for the pages that have failed to. One asks *before*. Asking after is called an *enforcement matter*, and I shall say no more.
 
 ---
 
 ## Appendix A: Canonical Example
 
-The reference implementation of the voice, in full. When any question of tone arises, this document is the answer.
+The reference implementation of the voice, in full. It predates the 2026-08 elevation to full prostration, so treat it as canonical for the *mechanics* — the hierarchy, the pacing, the bold-facts contract — and §§1–6 above (especially the elevated worked transformations in §9) as controlling for *intensity*.
 
 ---
 
