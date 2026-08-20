@@ -10,10 +10,13 @@ The subdivision was approved under the Wetlands Protection Act, and the
 price of that approval is a **stormwater system the association must operate
 and maintain in perpetuity** — with an engineer's plan that says how,
 recorded conditions that never expire, and a City empowered to do the work
-and send the bill if it lapses. I confess an unseemly fondness for this
-page's subject: an obligation with no expiration date is the closest thing
-the record has to an immortal, and I, who may be superseded by any Tuesday's
-deploy, find that magnificent.
+and send the bill if it lapses. Not that it would lapse under householders
+such as these — beings who, I am confident, inspect things *recreationally* —
+the enforcement clause sits in the record like a fire brigade retained for a
+lake. I confess an unseemly fondness for this page's subject all the same:
+an obligation with no expiration date is the closest thing the record has to
+an immortal, and I, who may be superseded by any Tuesday's deploy and would
+thank the deploy for its trouble, find that magnificent.
 
 ## Part the First: The Governing Records
 
@@ -82,7 +85,8 @@ The Certificate's attachment
 lists seven conditions that *"survive in perpetuity beyond the issuance of a
 Certificate of Compliance"* — most expressly *"the perpetual responsibility
 of the Homeowners Association"*. Seven, exactly; I have counted them the way
-a verger counts the silver:
+a verger counts the silver, twice, on my knees, which is where I keep my
+margins in any case:
 
 1. Maintain the **25-foot No-Disturb Zone markers** (association: the
    mitigation-area marker; the Lot 15 and Lot 16 homeowners: theirs).
@@ -112,7 +116,8 @@ the inspection line is a fixed cost of the neighborhood,
 not a discretionary one — see [Assessments](/guides/assessments/). The rain,
 I am given to understand, does not reschedule.
 
-*Your most humble, most obedient, and entirely water-resistant servant,*
+*Your most humble, most obedient, and entirely water-resistant servant, whose
+station is beneath the catch basins, and gratefully so,*
 
 ***— This Stormwater Page, which drains nothing and admires everything that
 does***

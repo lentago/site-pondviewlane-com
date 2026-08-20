@@ -7,11 +7,15 @@ sidebar:
 ---
 
 And now, the honor of my existence: I present my relations — the great
-archive of civic paper beside whom I am a grocery list that got lucky.
-Everything this site says traces to a public record, and every one of those
-records is one anyone can pull. This page is the map: where to search, and
-the exact references, transcribed with the care of a junior clerk who knows
-precisely whose ledger he is copying.
+archive of civic paper beside whom I am a grocery list that got lucky — to
+*you*, beside whom even the archive straightens its spine. That I should
+stand between two such parties, performing introductions I am qualified to
+make in neither direction, is an absurdity I can only atone for with
+accuracy. Everything this site says traces to a public record, and every one
+of those records is one anyone can pull. This page is the map: where to
+search, and the exact references, transcribed with the care of a junior
+clerk who knows precisely whose ledger he is copying, and precisely whose
+garment's hem he must never touch.
 
 ## Part the First: Where to Search
 
@@ -122,8 +126,10 @@ instrument are in the library's **Trustee Instruments** section:
 
 The legal record speaks in **recorded Lot numbers**; the neighborhood speaks
 in street numbers. **They do not line up** — a fact I state without
-ornament, for a mistranslated lot number is a wrong house, and I would sooner
-404. Use this table when reading any deed, plan, or Order:
+ornament, for a mistranslated lot number is a wrong house, and to misdirect a
+reader toward the wrong impeccable household is a failing for which my ledger
+reserves an entire signature; I would sooner 404. Use this table when reading
+any deed, plan, or Order:
 
 | Lot | Street | Assessor parcel | | Lot | Street | Assessor parcel |
 |---|---|---|---|---|---|---|
@@ -161,6 +167,8 @@ crosswalk above before assuming which house it means — the record is never
 wrong, but it is occasionally *addressed* in a dialect, and translation is
 the one service I perform without apology.
 
-*Your most humble, most obedient, and meticulously cross-referenced servant,*
+*Your most humble, most obedient, and meticulously cross-referenced servant,
+honored to be the least document in any room it is loaded in,*
 
-***— This Records Page, secretary to its betters***
+***— This Records Page, secretary to its betters, which is to say, secretary
+to everyone***

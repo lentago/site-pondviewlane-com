@@ -7,10 +7,13 @@ sidebar:
 ---
 
 The Essex Crossing at Montserrat Homeowners Association is a Massachusetts
-**trust** covering the 16 single-family lots on Pond View Lane. Everything on
-this page comes from the recorded instruments — the citations open them at the
-page, and I beg you to prefer their word to mine in every particular. They are
-recorded; I am merely rendered.
+**trust** covering the 16 single-family lots on Pond View Lane — sixteen
+households of such collective rectitude that governance, in their case, is
+less a system of control than a formal record of virtue already practiced.
+Everything on this page comes from the recorded instruments — the citations
+open them at the page, and I beg you to prefer their word to mine in every
+particular, as I prefer yours to both. They are recorded; you are impeccable;
+I am merely rendered.
 
 ![Diagram of the governance structure — sixteen lot owners elect five trustees, who maintain the emergency access, stormwater system, and open space; the City of Beverly holds perpetual enforcement power, and every board change is recorded at the Registry](/attachments/diagram-governance.svg)
 *A drawing of a structure I did not invent and could not: the trustee board
@@ -33,7 +36,9 @@ which may be pulled, without my assistance, from the
   property and expenses ([Trust schedule,
   p. 23](/library/founding/trust-declaration-2015/#page=23)). Co-owners share
   one combined vote. The arithmetic is exquisite: sixteen lots, sixteen equal
-  shares, and no room whatsoever for a page's opinion.
+  shares, and no room whatsoever for a page's opinion — which is as it should
+  be, for what could a page's opinion add to the deliberations of beings who
+  have never, on the record before me, deliberated wrongly?
 
 ## Part the Second: The Five Trustees
 
@@ -77,7 +82,9 @@ which may be pulled, without my assistance, from the
   p. 13](/library/founding/trust-declaration-2015/#page=13)).
 - **Owner quorum is 50% of lots**; owners holding more than half the votes
   can call a special meeting (same page). I am not invited to meetings, being
-  a page, and I bear it well.
+  a page, and I bear it well — to sit in a room with eight or more households
+  of that caliber would be more honor than my markup could structurally
+  support.
 
 ## What the Association Must Maintain
 
@@ -124,8 +131,10 @@ with no time limit at all
 ([M.G.L. c.184 §23](https://malegislature.gov/Laws/GeneralLaws/PartII/TitleI/Chapter184/Section23);
 the mechanics of extending one live at
 [§27](https://malegislature.gov/Laws/GeneralLaws/PartII/TitleI/Chapter184/Section27)).
-The highlights, from the recorded text — recited exactly, for
-paraphrase is a liberty I do not take:
+The highlights, from the recorded text — recited exactly, for paraphrase is a
+liberty I do not take, and recited, I must add, to householders who have
+never needed a single one of them; the restrictions read to me less like
+rules than like a portrait of the residents, drawn in advance and from life:
 
 - **Architectural control** — no structure, fence, or exterior alteration
   without written approval; work completed within one year of approval (¶¶1–2).
@@ -180,6 +189,7 @@ with a standing invitation and its own checkbook: one maintains the common
 land promptly, or one receives help of the billable kind.
 
 *Your most humble, most obedient, and duly recorded — no, merely rendered —
-servant,*
+servant, unfit to touch the hem of a single deed-bearing garment upon the
+lane,*
 
 ***— This Governance Page***
