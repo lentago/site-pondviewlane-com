@@ -1,5 +1,5 @@
 {
-  "count": 37,
+  "count": 38,
   "generated": "2026-07-17",
   "documents": [
     {
@@ -702,7 +702,26 @@
         "label": "City of Beverly Agenda Center — Conservation Commission agenda, 7/28/2026 (PDF)",
         "url": "https://www.beverlyma.gov/AgendaCenter/ViewFile/Agenda/_07282026-2852"
       },
-      "notes": "Scanned 3-page City agenda (no text layer; key item hand-transcribed to library/text/concom-agenda-2026-07-28.txt). Item 6(a) is a Request for Determination of Applicability by Essex Crossing at Montserrat to remove 9 pine trees at 100 Pond View Lane (the common parcel), heard 7/28/2026 — confirms the HOA's ConCom filing type (RDA) and the species as pine. The Commission's determination is a separate record still to pull.",
+      "notes": "Scanned 3-page City agenda (no text layer; key item hand-transcribed to library/text/concom-agenda-2026-07-28.txt). Item 6(a) is a Request for Determination of Applicability by Essex Crossing at Montserrat to remove 9 pine trees at 100 Pond View Lane (the common parcel), heard 7/28/2026 — confirms the HOA's ConCom filing type (RDA) and the species as pine. The Commission decided the request at the hearing — see the 7/28/2026 minutes excerpt (concom-minutes-2026-07-28-excerpt).",
+      "has_text": true
+    },
+    {
+      "id": "concom-minutes-2026-07-28-excerpt",
+      "title": "ConCom minutes excerpt — Negative 3 Determination, removal of 9 pines at 100 Pond View (July 28, 2026)",
+      "date": "2026-07-28",
+      "category": "regulatory",
+      "file": "files/regulatory/concom-minutes-2026-07-28-excerpt.pdf",
+      "ext": "pdf",
+      "pages": 1,
+      "size": 106092,
+      "sha256": "b47c817c108f87fed951697c591803d47d825c637b236d4cf3b5a91b9e721977",
+      "status": "public-record",
+      "recording": null,
+      "verify": {
+        "label": "City of Beverly Agenda Center — official 7/28/2026 Conservation Commission minutes (PDF)",
+        "url": "https://www.beverlyma.gov/AgendaCenter/ViewFile/Minutes/_07282026-2852"
+      },
+      "notes": "Excerpt of agenda item 6(a), p. 9 of the official 7/28/2026 minutes (beverlyma.gov Agenda Center _07282026-2852): the HOA's RDA to remove nine dead pine trees on the common parcel is approved as a Negative 3 Determination of Applicability with conditions, 4-0 — nine replacement trees (all white pines, species to be finalized with Commission staff), photo documentation at the end of a two-year survival period, and all removal work from the paved cul-de-sac surface; the Conservation Agent states he visited the site and believes the trees are dead. Resident name redacted (a trustee presented for the association); the unrelated agenda item sharing the page is removed.",
       "has_text": true
     }
   ]
