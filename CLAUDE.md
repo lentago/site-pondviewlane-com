@@ -117,7 +117,13 @@ build time until committed.
   this file — is fine; the *rendered pages* stay clean. `scripts/check-content.mjs`
   greps **both** skins' dists for source-identity tokens, fails on a hit, and
   hard-fails if either dist is missing — the gate can't pass without sweeping
-  both.)
+  both.) **The one permitted crosslink is between the two skins of this site**:
+  the essexcrossing footer links each page to its counterpart on
+  pondviewlane.com (`Footer.astro`, the `.plain-english` line) so a reader who
+  doesn't want the Obsequious Document can read the same records plainly. Both
+  domains are this repo and this neighborhood — the link reveals no person and
+  no business, which is what the rule protects. It is deliberately one-way; the
+  pondview skin does not advertise the estate skin.
 - **Not official, not legal advice.** Keep that framing on the homepage, About,
   and the Ask page.
 - **Voice is per-skin — the base prose is third-person.** In `content/base/`

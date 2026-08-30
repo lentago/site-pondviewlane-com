@@ -784,6 +784,26 @@ header.header {
   opacity: 0.92;
 }
 
+/* The escape hatch to the plainer sister skin (Footer.astro, essex skin only):
+   one quiet line under the seal pointing at the same page on pondviewlane.com.
+   It is the way *out* of the finery, so it wears none of it — no foil, no
+   display face, no ornament — and it sits below the seal so it reads as a
+   colophon rather than as navigation. Kept small deliberately, which is also
+   the joke: the page provides the door and would rather nobody used it. */
+.plain-english {
+  margin-top: 0.9rem;
+  text-align: center;
+  font-size: 0.78rem;
+  font-style: italic;
+}
+.plain-english a {
+  color: var(--sl-color-gray-3);
+  text-decoration: underline;
+  text-decoration-color: color-mix(in srgb, var(--gilt) 55%, transparent);
+  text-underline-offset: 0.2em;
+}
+.plain-english a:hover { color: var(--sl-color-accent-high); }
+
 /* The floating Ask dock, gilded to match the plates. */
 /* Same ramp cap as the hero plate — the dock icon is drawn in the same dark ink
    and needs the same floor under it. */

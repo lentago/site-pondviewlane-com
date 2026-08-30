@@ -7,15 +7,33 @@
  * exists anywhere in the site), carrying the current page as a query param so
  * the form comes prefilled.
  *
+ * On the essexcrossing skin it also renders the escape hatch to the plainer
+ * sister skin — a one-line way out of the Obsequious Document into the same
+ * page on pondviewlane.com (see below).
+ *
  * Also mounts the floating Ask dock (AskDock.astro) — except on the two pages
  * that render an inline AskWidget, since the widget's element ids must stay
  * unique per page.
  */
 import Default from '@astrojs/starlight/components/Footer.astro';
 import AskDock from './AskDock.astro';
+import { SITE, SITES } from '../../site.config.mjs';
 
 const path = Astro.url.pathname.replace(/\/+$/, '') || '/';
 const hasInlineAsk = path === '/' || path === '/ask';
+
+// Essex skin only: the same page, in plain dress, on the sister domain. Both
+// skins render the same route tree from the same facts (see site.config.mjs),
+// so the counterpart URL is just this pathname on pondviewlane.com. The one
+// exception is /404, which exists only in content/essex — send that to the
+// pondview homepage rather than to a 404 about a 404.
+//
+// The link text names no domain on purpose: the page would not deign to
+// pronounce the address of the servants' edition. The href carries it.
+const plainHref =
+  SITE === 'essexcrossing'
+    ? `${SITES.pondview.url}${path === '/404' ? '/' : Astro.url.pathname}`
+    : null;
 ---
 
 <Default><slot /></Default>
@@ -32,5 +50,16 @@ const hasInlineAsk = path === '/' || path === '/ask';
     link.setAttribute('href', `/report/?page=${encodeURIComponent(location.pathname)}`);
   }
 </script>
+
+{
+  plainHref && (
+    <div class="plain-english">
+      <a href={plainHref}>
+        Not a royal? A plainer edition is kept below stairs, for the common sort,
+        who are said to prefer it.
+      </a>
+    </div>
+  )
+}
 
 {!hasInlineAsk && <AskDock />}
