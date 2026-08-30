@@ -123,7 +123,13 @@ build time until committed.
   doesn't want the Obsequious Document can read the same records plainly. Both
   domains are this repo and this neighborhood — the link reveals no person and
   no business, which is what the rule protects. It is deliberately one-way; the
-  pondview skin does not advertise the estate skin.
+  pondview skin does not advertise the estate skin. Its link text is drawn
+  per-page from the `SNEERS` pool in `Footer.astro` — terse, rude, and the one
+  place the Essex voice stops worshipping its audience, because this link
+  addresses whoever proved unequal to sir rather than sir himself. That is a
+  scoped, intentional exception to the voice rule below, not drift; the pool
+  carries one profanity by request. The visible text is the joke, so the
+  anchor's `aria-label` states the function for screen readers (WCAG 2.4.4).
 - **Not official, not legal advice.** Keep that framing on the homepage, About,
   and the Ask page.
 - **Voice is per-skin — the base prose is third-person.** In `content/base/`

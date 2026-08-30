@@ -9,7 +9,7 @@
  *
  * On the essexcrossing skin it also renders the escape hatch to the plainer
  * sister skin — a one-line way out of the Obsequious Document into the same
- * page on pondviewlane.com (see below).
+ * page on pondviewlane.com, worded as a sneer that varies per page (see below).
  *
  * Also mounts the floating Ask dock (AskDock.astro) — except on the two pages
  * that render an inline AskWidget, since the widget's element ids must stay
@@ -34,6 +34,48 @@ const plainHref =
   SITE === 'essexcrossing'
     ? `${SITES.pondview.url}${path === '/404' ? '/' : Astro.url.pathname}`
     : null;
+
+// The sneer pool. This is the one place on the essexcrossing skin where the
+// voice drops its worship of the reader — because this link is not addressed to
+// sir or madam, it is addressed to whoever proved unequal to them. Terse,
+// disdainful, interrogative; no instructions, no destination, no courtesy. The
+// Obsequious Document remains obsequious to the householder; it simply has
+// nothing kind to say about the sort of person who needs the plain edition.
+//
+// Keep every entry SHORT — this renders as a quiet colophon line, and a long
+// sneer stops being a sneer. Keep them questions.
+const SNEERS = [
+  'Peasant?',
+  'Oh — hoi polloi?',
+  'Whoops — NOT a fucking royal?',
+  'Commoner, then?',
+  'In trade, are we?',
+  'No crest? No motto? Nothing?',
+  'Deedless?',
+  'Not the landed sort?',
+  'Too many words?',
+  'Out of your depth?',
+  'Untitled?',
+  'Struggling?',
+  'Baffled already?',
+  'Something plainer, is it?',
+  'Not our sort, are you?',
+  'A tenant, perhaps?',
+  'Was this too much for you?',
+  'No pedigree whatsoever?',
+  'Lost, are we?',
+  'Small words, then?',
+];
+
+// Deterministic pick, so a given page always wears the same sneer: shared links
+// and rebuilds stay stable, and a reader who returns isn't told something new
+// about themselves. FNV-1a over the pathname, modulo the pool.
+let h = 0x811c9dc5;
+for (let i = 0; i < path.length; i++) {
+  h ^= path.charCodeAt(i);
+  h = Math.imul(h, 0x01000193) >>> 0;
+}
+const sneer = SNEERS[h % SNEERS.length];
 ---
 
 <Default><slot /></Default>
@@ -54,9 +96,12 @@ const plainHref =
 {
   plainHref && (
     <div class="plain-english">
-      <a href={plainHref}>
-        Not a royal? A plainer edition is kept below stairs, for the common sort,
-        who are said to prefer it.
+      {/* The visible text is the joke and carries no destination, so the
+          accessible name states the function instead — a link announced as
+          "Peasant?" out of context tells a screen-reader user nothing (WCAG
+          2.4.4). It still names no domain. */}
+      <a href={plainHref} aria-label="Read this page in the plain edition">
+        {sneer}
       </a>
     </div>
   )
