@@ -17,8 +17,8 @@
     "test:a11y": "pa11y-ci --config pa11yci.config.json"
   },
   "dependencies": {
-    "@astrojs/sitemap": "^3.7.3",
-    "@astrojs/starlight": "^0.41.9",
+    "@astrojs/sitemap": "^3.7.4",
+    "@astrojs/starlight": "^0.42.0",
     "astro": "^7.2.8",
     "sharp": "^0.35.3"
   },
