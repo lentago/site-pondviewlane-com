@@ -8,7 +8,7 @@
 # Thin caller for the shared site-deploy reusable workflow. The full pipeline
 # (full-history checkout, Astro build, Trivy scan, SLSA-v1 provenance
 # attestation, ECS roll) lives in:
-#   lentago/shared-workflows/.github/workflows/site-deploy.yml @ v1.1.1
+#   lentago/shared-workflows/.github/workflows/site-deploy.yml @ v1.2.3
 #
 # TWO-SKIN BUILD: npm run build (via package.json scripts) emits BOTH skins
 # (dist-pondview/ + dist-essexcrossing/) in one pass — the two-domain logic
@@ -46,7 +46,7 @@ jobs:
       contents: read
       attestations: write  # store SLSA v1 build provenance in GitHub's attestation store
       packages: read       # required by actions/attest-build-provenance
-    uses: lentago/shared-workflows/.github/workflows/site-deploy.yml@v1.2.2
+    uses: lentago/shared-workflows/.github/workflows/site-deploy.yml@v1.2.3
     with:
       ecr_repo: solidago-dev-pondview
       ecs_cluster: solidago-dev-cluster
