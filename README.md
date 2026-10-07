@@ -2,7 +2,7 @@
      Regenerate there; do not hand-edit the banner or badge URLs. -->
 <a href="https://lentago.dev"><img src="./assets/banner.svg" alt="site-pondviewlane-com — pondviewlane.com · public-record reference" width="100%"></a>
 
-[![main](https://img.shields.io/github/check-runs/lentago/site-pondviewlane-com/main?style=flat-square&labelColor=0e2b1a&color=1b4b2e&label=main)](https://github.com/lentago/site-pondviewlane-com/actions) [![License](https://img.shields.io/github/license/lentago/site-pondviewlane-com?style=flat-square&labelColor=0e2b1a&color=1b4b2e)](https://github.com/lentago/site-pondviewlane-com/blob/main/LICENSE) [![Ask DeepWiki](https://img.shields.io/badge/Ask-DeepWiki-1b4b2e?style=flat-square&labelColor=0e2b1a&logo=readthedocs&logoColor=E0A81C)](https://deepwiki.com/lentago/site-pondviewlane-com)
+[![main](https://img.shields.io/github/check-runs/lentago/site-pondviewlane-com/main?style=flat-square&labelColor=0e2b1a&color=1b4b2e&label=main)](https://github.com/lentago/site-pondviewlane-com/actions) [![License](https://img.shields.io/github/license/lentago/site-pondviewlane-com?style=flat-square&labelColor=0e2b1a&color=1b4b2e)](https://github.com/lentago/site-pondviewlane-com/blob/main/LICENSE)
 
 ![Starlight](https://img.shields.io/badge/Starlight-1b4b2e?style=flat-square&labelColor=0e2b1a&logo=astro&logoColor=E0A81C) ![AWS](https://img.shields.io/badge/AWS-1b4b2e?style=flat-square&labelColor=0e2b1a&logo=amazonwebservices&logoColor=E0A81C) ![Ask endpoint](https://img.shields.io/badge/Ask%20endpoint-1b4b2e?style=flat-square&labelColor=0e2b1a)
 
@@ -46,25 +46,6 @@ guard against two sites of record drifting apart.
 the guide copy, and reviews the output; Claude writes the code and the tooling.
 The maintainer is an infrastructure operator, not a software engineer — please
 don't read this repo as a portfolio of one.
-
-## 📚 Ask this codebase (DeepWiki)
-
-<a href="https://deepwiki.com/lentago/site-pondviewlane-com"><img src="https://deepwiki.com/badge.svg" alt="Ask DeepWiki" height="32"></a>
-
-[DeepWiki](https://deepwiki.com/lentago/site-pondviewlane-com) maintains an
-AI-generated wiki over this repository — architecture pages, diagrams, and a
-Q&A box grounded in the actual code. Every public Lentago Labs repo is indexed
-([deepwiki.com/lentago](https://deepwiki.com/lentago)); it is the fastest way
-to orient before reading source. It is AI-generated: trust it to orient you,
-verify against the code before you act on it.
-
-**Good first questions:**
-- How does the site keep pondviewlane.com and essexcrossingatmontserrat.com in
-  factual sync while giving each its own voice and visual skin?
-- How does adding a new public-record document flow from `library/manifest.json`
-  into a live page with a Verify-at-source link?
-- How does the Ask box answer questions without logging or storing what
-  visitors ask?
 
 ## 🧭 What this repo demonstrates
 
@@ -210,5 +191,4 @@ value should not surface in a search for the records.
 > 🌱 **Lentago Labs** is a pro-bono operations practice for organizations that
 > run on volunteers, donations, and one overworked tech person. Everything here
 > is free to take, and we practice what we publish: our own estate runs this
-> way, in the open. Start at the [org profile](https://github.com/lentago), and
-> read this repo on [DeepWiki](https://deepwiki.com/lentago/site-pondviewlane-com).
+> way, in the open. Start at the [org profile](https://github.com/lentago).
