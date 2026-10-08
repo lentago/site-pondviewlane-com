@@ -56,3 +56,11 @@ jobs:
       node_version: "24"
       fetch_depth: 0
       build_env_vars: "PUBLIC_ASK_ENDPOINT=${{ vars.PUBLIC_ASK_ENDPOINT }}"
+      # The shared workflow writes public/version.json with `repo` and `run_url`
+      # fields, and this site's content guard (scripts/check-content.mjs, C5)
+      # rightly refuses any source identity ("lentago", "github.com") in the
+      # published dists. Overwrite the file with the commit and build time only;
+      # the change-pipeline probe needs just `sha` (lentago/drosera#268).
+      pre_build_command: >-
+        printf '{"sha":"%s","built_at":"%s"}\n' "$GITHUB_SHA"
+        "$(date -u +%Y-%m-%dT%H:%M:%SZ)" > public/version.json
