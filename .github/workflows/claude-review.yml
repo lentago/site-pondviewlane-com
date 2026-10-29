@@ -98,7 +98,8 @@ jobs:
           below must match). Check origin allow-list handling, input bounds
           (question truncated to 500 characters), prompt-injection resistance,
           and that each invocation emits exactly one single-line JSON ask_query
-          log with no IP or header data.
+          log with no IP or header data, and the
+          logged question text must not carry identifying detail.
         - **Serving and deploy surface**: nginx.conf and Dockerfile changes
           (Host-switched vhosts, /health, CSP and security headers, same-origin
           framing for the PDF viewer, Ask connect-src), workflow permissions and
