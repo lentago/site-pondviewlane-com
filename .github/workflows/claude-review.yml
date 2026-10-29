@@ -1,0 +1,129 @@
+# ============================================================================
+# Claude Code — Automated PR Review (advisory)
+# ============================================================================
+# Thin wrapper around lentago/shared-workflows/claude-review.yml, per
+# lentago/.github ADR-0013. This file is copied from repo-template's; only the
+# review_prompt differs.
+#
+# - Runs when a PR is opened or marked ready for review, and again when it is
+#   labelled `re-review` (Haiku) or `review:sonnet` (Sonnet). It does NOT run on
+#   every push: it shares the fleet's Claude subscription with the bullpen.
+# - Advisory, never a required status check (shared-workflows ADR-0003). The
+#   gate is the arming rule: don't arm until a review has posted and every
+#   finding is triaged on the PR (shared-workflows CLAUDE.md, Auto-merge
+#   arming). A "could not complete" soft-fail comment is not a review —
+#   label `re-review`.
+# - After a labelled run, `clear-label` removes the label so adding it again
+#   triggers again.
+# - A PR that adds or changes THIS file is not reviewed by it: the Claude Code
+#   action skips unless the workflow is identical to the default branch's copy,
+#   and the reusable workflow (v1.5.0+) posts a "not a review" notice instead.
+#   Review such PRs locally and post the result as "Review (Haiku, local)"
+#   (ADR-0013 Decision 2).
+# - Dependabot PRs are skipped: Dependabot runs don't receive Actions secrets,
+#   so the required token would fail the call. Review a bump locally if it
+#   warrants one.
+# - Drafts are skipped (by the reusable workflow) and keep their trigger label
+#   until they are ready.
+# ============================================================================
+
+name: Claude Code Review
+
+on:
+  pull_request:
+    types: [opened, ready_for_review, labeled]
+
+jobs:
+  review:
+    if: >-
+      github.actor != 'dependabot[bot]' &&
+      github.event.pull_request.draft == false &&
+      (github.event.action != 'labeled' ||
+       github.event.label.name == 're-review' ||
+       github.event.label.name == 'review:sonnet')
+    # One review at a time per PR: a re-label during a running review queues
+    # behind it instead of posting a duplicate.
+    concurrency:
+      group: claude-review-${{ github.event.pull_request.number }}
+      cancel-in-progress: false
+    permissions:
+      contents: read
+      pull-requests: write
+      issues: write
+      id-token: write
+    uses: lentago/shared-workflows/.github/workflows/claude-review.yml@v1.5.0
+    secrets: inherit
+    with:
+      model: ${{ github.event.label.name == 'review:sonnet' && 'sonnet' || 'haiku' }}
+      review_prompt: |
+        This repository is lentago/site-pondviewlane-com, the public Astro/Starlight
+        source for pondviewlane.com and its sister skin
+        essexcrossingatmontserrat.com: a public-record-only helper site for the
+        Pond View Lane subdivision in Beverly, MA. Hand-written prose
+        (content/base, content/essex), the document record (library/,
+        timeline/events.json) and a build-time generator produce both skins,
+        which ship in one nginx container; functions/ask/handler.mjs is the Ask
+        chatbot Lambda. Focus your review on:
+
+        - **Public-record-only and anonymity**: every claim and document must
+          trace to a recorded instrument, city filing, the assessor, or a
+          statute. Flag resident or trustee names outside the recorded
+          documents, content drawn from association correspondence, budgets,
+          insurance or vendors, and any rendered link or token that ties the
+          site to a person, the operator, or other Lentago sites (the sole
+          permitted crosslink is the essex-to-pondview footer link). New
+          library entries need status "public-record", a verify {label, url}
+          pointing at an independent portal, and a text extract; screenshots
+          must name and link their public portal.
+        - **Voice and fact parity**: content/base is third-person (no
+          "you/your"); content/essex speaks as the Obsequious Document per
+          essex-crossing-voice-guide.md. Every fact token in a base page must
+          survive in its Essex override (check-content C7). Keep the "not
+          official, not legal advice" framing on the homepage, About and Ask.
+        - **Generated vs. source files**: src/content/docs/**,
+          src/data/site-stats.json, public/library/**, public/attachments/**
+          and public/ask/rag-index.json are build output and must not be
+          committed or hand-edited. New attachments must be added to the
+          PUBLIC_ATTACHMENTS allowlist in scripts/sync-content.mjs. Relative
+          MDX imports must be written for the composed location.
+        - **Two-skin build integrity**: changes to astro.config.mjs,
+          site.config.mjs, the compose/sync/check scripts, or the styles must
+          not break either skin (custom.css untouched by Essex; essex.css
+          layered after it) or weaken check-content.mjs, which must still sweep
+          both dists. Ornament assets stay comment-free. Build logic belongs in
+          package.json scripts rather than workflow YAML.
+        - **Ask Lambda**: handler.mjs is the reference copy of a handler
+          vendored in solidago; logic or SYSTEM-prompt changes must be flagged
+          as needing a mirrored solidago change (headers differ, everything
+          below must match). Check origin allow-list handling, input bounds
+          (question truncated to 500 characters), prompt-injection resistance,
+          and that each invocation emits exactly one single-line JSON ask_query
+          log with no IP or header data.
+        - **Serving and deploy surface**: nginx.conf and Dockerfile changes
+          (Host-switched vhosts, /health, CSP and security headers, same-origin
+          framing for the PDF viewer, Ask connect-src), workflow permissions and
+          pins, and anything that would break indexing rules (only
+          /report/thanks/ is noindex) or accessibility (pa11y).
+
+  clear-label:
+    needs: review
+    if: >-
+      always() && github.event.action == 'labeled' &&
+      github.event.pull_request.draft == false &&
+      (github.event.label.name == 're-review' || github.event.label.name == 'review:sonnet')
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
+    steps:
+      - name: Remove the trigger label so it can be added again
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPO: ${{ github.repository }}
+          PR: ${{ github.event.pull_request.number }}
+          LABEL: ${{ github.event.label.name }}
+        # REST, not `gh pr edit`: the GraphQL path can trip on PR project
+        # fields with GITHUB_TOKEN, and a label left behind would make the
+        # next re-add a no-op (no `labeled` event).
+        run: |
+          enc=$(jq -rn --arg l "$LABEL" '$l|@uri')
+          gh api --method DELETE "repos/$REPO/issues/$PR/labels/$enc" >/dev/null
