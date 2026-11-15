@@ -10,7 +10,7 @@
 # PDFs in the library are served with long cache headers; see nginx-common.conf.
 
 # nginx:latest
-FROM nginx@sha256:332d0beea97cff8c0d5d27976c0778a4b00345b9d74c2feaaf8efde548314948
+FROM nginx@sha256:165ddde8751e75a1c907d24ef10d9f6deb08b57e0fe56caf67512486aff76d82
 
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 # Shared vhost config, included by both server blocks. Kept out of conf.d/ (it is
